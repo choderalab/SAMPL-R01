@@ -1,0 +1,106 @@
+\documentclass[11pt]{article}
+\usepackage[top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{helvet}
+\usepackage{url} % hypderref?
+\usepackage{graphicx}
+\graphicspath{{figures/}} % The figures are in a figures/ subdirectory.
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+%\pagestyle{plain}
+
+\usepackage{setspace}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\usepackage{sidecap}
+\usepackage[abs]{overpic}
+\usepackage{wrapfig}
+
+%\usepackage[round,authoryear]{natbib}
+\usepackage{cite}
+%\setlength{\bibsep}{0.00in}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=black, citecolor=black, linkcolor=black}
+
+\newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{doi:#1}}
+
+\newcommand{\ac}[1]{{\sc \lowercase{#1}}}
+
+\renewcommand{\baselinestretch}{.93}
+%\renewcommand{\baselinestretch}{.90}
+\usepackage{wrapfig} 
+
+\usepackage{bibspacing}
+\setlength{\bibspacing}{\baselineskip}
+
+
+\graphicspath{{figs/}}
+
+\makeatletter
+
+\newcommand{\captionfonts}{\footnotesize}
+
+\makeatletter  % Allow the use of @ in command names
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{{\captionfonts #1: #2}}%
+  \ifdim \wd\@tempboxa >\hsize
+    {\captionfonts #1. #2\par}
+  \else
+    \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}      
+\makeatother
+
+\renewcommand{\figurename}{Fig.}
+
+% Page numbering.
+%\pagestyle{plain}
+%\pagenumbering{arabic}
+
+\setlength{\abovecaptionskip}{-5pt}
+
+\makeatother
+
+\renewcommand{\refname}{Bibliography and References Cited}
+
+\setlength{\parindent}{0pt} % Don't indent first line
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex} % Add some space between paragraphs
+
+\begin{document}
+
+%======================================
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADING
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{centering}
+{\bf PROJECT NARRATIVE}
+
+\end{centering}
+
+% Using no more than two or three sentences, describe the relevance of this research training program to public health. In this section, use plain language that can be understood by a general, lay audience.
+Current physical modeling approaches to the design of small molecule therapeutics are hindered by their inability to treat the dynamic nature of protein and ligand protonation states---elementary chemical effects involving acids and bases that give up or take on protons depending upon their environment.
+Recently, these effects have been identified as having the potential to play a significant role in the selective inhibition of kinases---a class of biomolecular targets of high relevance to cancer and other diseases.
+In this proposal, we rectify this deficiency by building a dynamic treatment of protonation states into state-of-the-art alchemical binding free energy calculations, and utilize a combined computational-experimental approach to assess the prevalence and magnitude of protonation state effects in selective kinase inhibition.
+
+%======================================
+
+%\setlength{\bibsep}{0.000in}
+
+%\bibliographystyle{gec_nih}
+%\bibliographystyle{ieeetr}
+%\bibliographystyle{myrefstyle}
+%\bibliography{chodera-research}
+
+
+\end{document}
+
+
+
+
+
+

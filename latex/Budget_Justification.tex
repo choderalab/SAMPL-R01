@@ -1,0 +1,174 @@
+\documentclass[11pt]{article}
+\usepackage[top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{helvet}
+\usepackage{url} % hypderref?
+\usepackage{graphicx}
+\graphicspath{{figures/}} % The figures are in a figures/ subdirectory.
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+%\pagestyle{plain}
+
+\usepackage{setspace}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\usepackage{sidecap}
+\usepackage[abs]{overpic}
+\usepackage{wrapfig}
+
+%\usepackage[round,authoryear]{natbib}
+\usepackage{cite}
+%\setlength{\bibsep}{0.00in}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=black, citecolor=black, linkcolor=black}
+
+\newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{doi:#1}}
+
+\newcommand{\ac}[1]{{\sc \lowercase{#1}}}
+
+\renewcommand{\baselinestretch}{.93}
+%\renewcommand{\baselinestretch}{.90}
+\usepackage{wrapfig} 
+
+\usepackage{bibspacing}
+\setlength{\bibspacing}{\baselineskip}
+
+
+\graphicspath{{figs/}}
+
+\makeatletter
+
+\newcommand{\captionfonts}{\footnotesize}
+
+\makeatletter  % Allow the use of @ in command names
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{{\captionfonts #1: #2}}%
+  \ifdim \wd\@tempboxa >\hsize
+    {\captionfonts #1. #2\par}
+  \else
+    \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}      
+\makeatother
+
+\renewcommand{\figurename}{Fig.}
+
+% Page numbering.
+%\pagestyle{plain}
+%\pagenumbering{arabic}
+
+\setlength{\abovecaptionskip}{-5pt}
+
+\makeatother
+
+\renewcommand{\refname}{Bibliography and References Cited}
+
+\setlength{\parindent}{0pt} % Don't indent first line
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex} % Add some space between paragraphs
+
+\begin{document}
+
+%======================================
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HEADING
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\noindent{\bf BUDGET JUSTIFICATION - CHODERA LABORATORY}
+
+{\bf Senior/Key Personnel}
+
+{\bf John D. Chodera, Ph.D., Principal Investigator (2.0 calendar months effort)} will serve as PI and Project Director on this project.
+He is an Assistant Member (Assistant Professor equivalent rank) at the Sloan Kettering Institute---the basic science arm of the Memorial Sloan Kettering Cancer Center---with extensive experience in biomolecular simulation, molecular simulation algorithm development, alchemical free energy calculations for ligand binding, and the use and interpretation of biophysical experiments.
+He has a publication track record spanning over 15 years of highly regarded work in these fields.
+He has a decade of experience with the Folding@home worldwide distributed computing project, wrote the GPU-accelerated alchemical free energy calculation code that will be used to compute small molecule binding affinities, has contributed to the development of the GPU-accelerated OpenMM simulation code that will be used for constant-pH simulations, and designed the automated biophysical wetlab that will be used for experimentally measuring binding affinities.
+He also has extensive experience with computing biophysical observables---including NMR data---from biomolecular simulations.
+He will manage the overall project and actively supervise the work being performed in this proposal.
+He will specifically direct the development, implementation, and use of constant-pH algorithms into the OpenMM molecular simulation package and the alchemical free energy computation code.
+He will also direct the fluorescence binding affinity experiments performed using the automated platform in his laboratory, and coordinate with co-PI Seeliger on other experimental aspects of this project.
+Together with co-PIs Seeliger and Gunner, he will help design experiments and author publications, and will supervise the training of students and postdocs in his laboratory involved in this project.
+%Prof.~Chodera is requesting 25\% salary support (3 person-months) to be direct charged to the sponsor, and his salary is capped at the NIH recommended level.
+
+{\bf Other Personnel}
+
+{\bf Gregory Ross, D.Phil., Postdoctoral Fellow (3.0 calendar months effort)} has extensive experience in biomolecular simulation, free energy calculations, and hybrid Monte Carlo / molecular dynamics algorithm development.
+Dr.~Ross received his D.Phil.\ from Oxford University, working with Mark Sansom, and worked with Jonathan Essex as a postdoctoral research fellow.
+Dr.~Ross has particularly relevant expertise for this project, having developed grand canonical Monte Carlo / molecular dynamics methodologies during his work with Jonathan Essex.
+Dr.~Ross will help develop and implement algorithms for constant-pH molecular dynamics and binding free energy calculations.
+Effort outside the 5 calendar months of effort budgeted for this project will be spent on other projects and career development activities.
+
+{\bf Ari\"{e}n Sebastian Rusteburg, Graduate Student in the Weill Cornell Graduate School of Medical Sciences Program in Physiology, Biophysics, and Systems Biology (12.0 calendar months effort)} BSc in Pharmaceutical Sciences and an MSc in Drug Discovery and Safety from VU University Amsterdam.
+Mr.~Rustenburg will design, implement, and apply the constant-pH Monte Carlo / molecular dynamics simulation algorithms into OpenMM and YANK (the alchemical free energy code developed by the Chodera lab).
+Mr.~Rustenburg will also carry out the automated pH-dependent binding affinity and isothermal titration calorimetry experiments in the Chodera laboratory.
+
+{\bf OTHER DIRECT COSTS}
+
+{\bf Travel.}
+We ask for travel expenses for project personnel to travel to relevant scientific meetings (such as the Annual Biophysical Society Meeting, the American Chemical Society meeting, relevant kinase-specific meetings, and the Computer Aided Drug Discovery GRC) to present the results of this project.
+
+{\bf Publication fees.}
+We request funds to be used for publication charges to allow work to be made fully open access when possible.
+
+{\bf Experiments.}
+
+%We ask for approximately \$50K for experimental consumables the first year tapering to \$25K in the final year.
+%These funds will be used for both the kinase construct engineering and expression screening efforts in the early phase of the proposal, protein production for the fluorescence assay in the middle phase, and finally primarily funding the engineering of protein mutants to validate the computational models in the final phase.
+
+%The experimental components of the proposal have the following estimated costs:
+%
+%Aim 4.1: Development of a human kinase catalytic domain panel that expresses well in E. coli: \$181,600
+%
+%This includes costs associated with acquisition of the CCBS-Broad kinase ORF plasmid library (\$1600), twelve rounds of 96-well cloning, sequencing, expression testing, and analytical gel filtration performed via robotics facilities at the QB3 MacroLab to generate highly expressing constructs (\$90,000), and scale-up expression of the final panel for thorough biophysical characterization (\$90,000).
+%
+%The QB3 MacroLab [http://qb3.berkeley.edu/qb3/macrolab/] is a fully staffed, robot-assisted facility specializing in high-throughput cloning, mutagenesis, and bacterial protein expression in 96-well plate formats---one of only a few such facilities in the country.  Dr. Chodera’s laboratory has extensive experiencing utilizing their services for large-scale cloning, mutagenesis, and expression.  We have negotiated highly discounted rates: \$7500 per 96-well plate of cloning, sequencing, expression testing, and analytical gel filtration, including all labor and materials.  While there are only ~500 human kinases and previous bacterial expression studies from Vertex Pharmaceuticals found ~50% of full-length kinases express well in bacterial culture, we estimate 12 such 96-well plates will be necessary to generate 96 kinase catalytic domain constructs that express sufficiently well in Rosetta2 cells, since multiple constructs per kinase must be tested.  Further biophysical characterization to ensure we have produced stable, well-folded kinase catalytic domain monomers will require large-scale (2L) culture, expression, and purification to generate >10 mg/kinase, which the MacroLab charges \$3750 per 4 proteins.  Materials produced by the MacroLab will be shipped to the Chodera lab at MSKCC.
+%
+%Aim 4.2: Measuring binding affinities of purchased kinase inhibitors to kinase panel: \$129,390
+%
+%This includes costs associated with purchase of sufficient quantities of fluorescent reporter compounds (\$5000), acquisition of 64 kinase inhibitor assay compounds (\$32,000), outsourced compound physical property analysis (\$20,480), robotic expression and purification of kinases by the QB3 MacroLab (\$41,300), and assay consumables (\$30,610) for running 96-well assays in triplicate with a 1.2x safety factor.
+%
+%High-throughput expression and purification in 1 mL culture will again be handled by the QB3 MacroLab, which charges \$2065 per 96-well plate, including labor and materials.  We anticipate having selected kinases that express >100 ug/well (we have seen up to 170 ug/mL culture in preliminary tests on full-length kinases without phosphatase coexpression).  We anticipate 20 such plates will be required for the current 96-well fluorescence assay format, which requires ~10 ug kinase/well.  Fluorescence assay consumables are estimated at \$66.40 per 96-well assay plate, and 461 assay plates are required for this Aim.
+%
+%Aim 4.3: Expression of clinically characterized mutants and assessment of inhibitor susceptibility: \$149,470
+%
+%This includes robotic generation of 960 site-directed mutants by the QB3 MacroLab (\$83,750), supplemental expression and purification (\$20,650), and assay consumables (\$45,070) for the assay scaled to a 384-well format in duplicate.
+%
+%The QB3 MacroLab charges a rate of \$8375 per 96-well plate for “quick-change” single-primer mutagenesis, inclusive of materials and labor.  We anticipate having scaled the fluorescence assay to 384-well format at this stage for increased cost savings and throughput, requiring only 2 ug kinase/well.  This reduces high-throuhgput protein production needs to 10 plates at \$2065/plate (again produced by the MacroLab).  We anticipate using 384 assay plates for this Aim, where the per-plate consumable cost of the fluorescence assay rises to \$117.37, but achieves overall cost savings due to diminished protein needs and 4x higher density.
+%
+%Aim 4.4: Adaptive-learning driven mutations and measurements of changes in inhibitor affinity: \$179,388
+%
+%This includes robotic generation of 12 rounds of 96-mutant sets with associated expression testing and analytical gel filtration by the QB3 MacroLab (\$100,500), supplemental robotic expression and purification (\$24,780), and assay consumables (\$54,108) for the 384-well assay format in duplicate.
+%
+%We anticipate going through 12 cycles (roughly one per month) of adaptive learning-driven mutagenesis, with one plate of 96 mutants produced by the MacroLab per month at \$8375 per plate, inclusive of labor and materials.  Protein production by the MacroLab consumes another \$2065 per plate, and fluorescence assay consumables will utilize 461 assay plates at \$117.37 per plate in consumables cost.
+%
+%Aim 5.1: Susceptibility of clinically-characterized point mutants mutants to kinase inhibitors: \$74,735
+%
+%This includes the generation of 480 clinically-characterized point mutants with subsequent expression testing and gel filtration analysis by the MacroLab (\$41,875), supplemental kinase expression (\$10,325), and assay consumables (\$22,534) for the 384-well assay format in duplicate.
+%
+%Generation of 480 mutants requires 5 plates at \$8375 per plate, inclusive of labor and materials.  Expression 5 plates at \$2065 per plate.  Fluorescence assays require 192 plates at \$117.37 per plate.
+%
+%Aim 5.2: Experimental validation of predicted susceptibilities to repurposed drugs: \$40,177.52
+%
+%This includes the acquisition of 128 drugs hypothesized to have repurposing potential (\$25,600), supplemental kinase expression and purification by the MacroLab (\$28,910), and assay consumables to test predicted susceptibilities (\$11,267) for the 384-well assay format in triplicate.
+%
+%We anticipate these drugs can be obtained for approximately \$200 each in sufficient quantities.  We require 14 plates of protein production at \$2065 per plate.  We will use 96 assay plates in the fluorescence assay at \$117.37 per plate.
+
+%======================================
+
+%\setlength{\bibsep}{0.000in}
+
+%\bibliographystyle{gec_nih}
+%\bibliographystyle{ieeetr}
+%\bibliographystyle{myrefstyle}
+%\bibliography{chodera-research}
+
+
+\end{document}
+
+
+
+
+
+

@@ -1,0 +1,119 @@
+\documentclass[11pt]{article}
+\usepackage[top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{helvet}
+\usepackage{url} % hypderref?
+\usepackage{graphicx}
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+%\pagestyle{plain}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\usepackage{sidecap}
+
+%\usepackage[round,authoryear]{natbib}
+\usepackage{cite}
+%\setlength{\bibsep}{0.00in}
+
+\usepackage{hyperref}
+\renewcommand*{\UrlFont}{\normalsize}
+\hypersetup{colorlinks=true, urlcolor=black, citecolor=black, linkcolor=black}
+
+\newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{doi:#1}}
+
+%\usepackage{atbeginend}
+%\AfterBegin{itemize}{\addtolength{\itemsep}{-0.7\baselineskip}}
+
+\newcommand{\ac}[1]{{\sc \lowercase{#1}}}
+
+%\renewcommand{\baselinestretch}{.9}
+\usepackage{wrapfig} 
+
+\graphicspath{{figs/}}
+
+\makeatletter
+
+\newcommand{\captionfonts}{\small}
+
+\makeatletter  % Allow the use of @ in command names
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{{\captionfonts #1: #2}}%
+  \ifdim \wd\@tempboxa >\hsize
+    {\captionfonts #1. #2\par}
+  \else
+    \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}      
+\makeatother
+
+\renewcommand{\figurename}{Fig.}
+
+\setlength{\abovecaptionskip}{-5pt}
+
+\makeatother
+
+
+\renewcommand{\refname}{Bibliography and References Cited}
+
+\setlength{\parindent}{0pt} % Don't indent first line
+%\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex} % Add some space between paragraphs
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex} % Add some space between paragraphs
+
+
+\newcommand{\kT}{k_{\mathrm B}T} 
+\newcommand{\kB}{k_\mathrm{B}}
+
+\newcommand{\mytitle}{Title}
+
+\begin{document}
+
+%======================================
+
+{\bf RESOURCES SHARING PLAN}
+
+Numerous useful and shareable resources will be generated during the course of these project, all of which will be made freely available to the research community at the earliest opportunity.
+
+In addition to the release of information through timely open-access publications (with emphasis on complete inclusion of all primary data), we will make every attempt to also release materials and data as they are generated.
+
+This includes, but is not limited to:
+
+{\bf Software.} All computer software developed for this project will be made freely available through free (libre) open source software licenses (such as LGPL) on online collaborative public code repositories such as GitHub [\url{http://github.com}], where codes produced by our laboratory are currently hosted [\url{http://github.com/choderalab/}].
+
+{\bf Simulation datasets.} All simulation and model datasets will be shared, when practical, through the online repositories such as GitHub [\url{http://github.com}], Dryad [\url{http://datadryad.org/}], FigShare [\url{http://figshare.com}], and our group website [\url{http://www.choderalab.org/data/}]. 
+
+{\bf Simulation protocols and best practices.} We will continue to actively support and help maintain the online repository of simulation protocols, best practices, and references for alchemical free energy calculations at the community site \url{alchemistry.org}
+
+{\bf Experimental protocols.} In addition to publishing detailed accounts in papers, all experimental protocols will be made available online on our group website [\url{http://choderalab.org}].
+
+{\bf Kinase constructs and mutants.} Plasmids containing kinase constructs and mutants with verified expression will be made available through nonprofit plasmid banks such as AddGene [\url{http://www.addgene.org}] or DNASU [\url{http://dnasu.org}].
+
+{\bf Experimental datasets.} Experimental datasets---including affinity measurements, NMR measurements, and experimental structures---will be made available as Supplementary Data in publications and through online repositories such as GitHub [\url{http://github.com}], Dryad [\url{http://datadryad.org/}] and FigShare [\url{http://figshare.com}]. 
+Kinase inhibitor binding affinity measurements to wild-type and mutant kinase catalytic domains will be submitted (along with primary data) to a public database such as BindingDB [\url{http://www.bindingdb.org}].
+Primary data will be made available through our group website [\url{http://choderalab.org}].
+
+%{\bf Kinome conformational atlas.} An aggregated database of information for our human kinase catalytic domain structural and energetic atlas---along with aggregated mutation data, structural models, inhibitor bound models, computed and measured affinities, and other associated data---will be made available through a web portal accessible through our group website [\url{http://choderalab.org}].
+
+{\bf 3D printable laboratory parts.} Numerous useful 3D printed parts are fabricated in our laboratory to aid in our research projects. Electronic printable versions of these parts are made available on both our group website [\url{http://www.choderalab.org/3dparts/}] and the NIH 3D Print Exchange [\url{http://3dprint.nih.gov}].
+
+%{\bf Compounds.} Any compounds synthesized and characterized during the execution of this project will have structural, synthesis, and characterization details published in open access publications.
+
+ %======================================
+
+\newpage
+%\setlength{\bibsep}{0.000in}
+
+%\bibliographystyle{gec_nih}
+%\bibliographystyle{ieeetr}
+\bibliographystyle{myrefstyle}
+\bibliography{chodera-research}
+
+
+\end{document}
+
+
+
+
+
+

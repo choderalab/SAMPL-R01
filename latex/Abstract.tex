@@ -1,0 +1,137 @@
+\documentclass[11pt]{article}
+\usepackage[top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{helvet}
+\usepackage{url} % hypderref?
+\usepackage{graphicx}
+\graphicspath{{figures/}} % The figures are in a figures/ subdirectory.
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+%\pagestyle{plain}
+
+\usepackage{setspace}
+\usepackage{microtype}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\usepackage{sidecap}
+\usepackage[abs]{overpic}
+\usepackage{wrapfig}
+
+%\usepackage[round,authoryear]{natbib}
+\usepackage{cite}
+%\setlength{\bibsep}{0.00in}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=black, citecolor=black, linkcolor=black}
+
+\newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{doi:#1}}
+
+\newcommand{\ac}[1]{{\sc \lowercase{#1}}}
+
+\renewcommand{\baselinestretch}{.93}
+%\renewcommand{\baselinestretch}{.90}
+\usepackage{wrapfig} 
+
+\usepackage{bibspacing}
+\setlength{\bibspacing}{\baselineskip}
+
+
+\graphicspath{{figs/}}
+
+\makeatletter
+
+\newcommand{\captionfonts}{\footnotesize}
+
+\makeatletter  % Allow the use of @ in command names
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{{\captionfonts #1: #2}}%
+  \ifdim \wd\@tempboxa >\hsize
+    {\captionfonts #1. #2\par}
+  \else
+    \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}      
+\makeatother
+
+\renewcommand{\figurename}{Fig.}
+
+% Page numbering.
+%\pagestyle{plain}
+%\pagenumbering{arabic}
+
+\setlength{\abovecaptionskip}{-5pt}
+
+\makeatother
+
+\renewcommand{\refname}{Bibliography and References Cited}
+
+\setlength{\parindent}{0pt} % Don't indent first line
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex} % Add some space between paragraphs
+
+\begin{document}
+
+%======================================
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PROJECT SUMMARY / ABSTRACT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%PROJECT SUMMARY/ABSTRACT
+%Project Summary: The purpose of the Project Summary/Abstract is to describe succinctly every major aspect of the proposed project. It should contain a statement of objectives and methods to be employed. Members of the Study Section who are not primary reviewers may rely heavily on the abstract to understand your application. Consider the significance and innovation of the research proposed when preparing the Project Summary.
+%The Project Summary must be no longer than 30 lines of text, and follow the required font and margin specifications.
+%The second component of the Project Summary is relevance of this research to public health. Use plain language that can be understood by a general, lay audience. The Project Summary should not contain proprietary confidential information.
+%The abstract should include:
+%? a brief background of the project;
+%? specific aims, objectives, or hypotheses;
+%? the significance of the proposed research and relevance to public health; ? the unique features and innovation of the project;
+%? the methodology (action steps) to be used;
+%? expected results; and
+%? description of how your results will affect other research areas.
+%Suggestions
+%? Be complete, but brief.
+%? Use all the space allotted.
+%? Avoid describing past accomplishments and the use of the first person.
+%? Write the abstract last so that it reflects the entire application.
+%? Remember that the abstract will be used for purposes other than the review,
+%such as to provide a brief description of the grant in annual reports, presentations, and dissemination to the public.
+
+\begin{centering}
+{\bf PROJECT SUMMARY /  ABSTRACT}
+
+% 29 lines so far
+\underline{\it The long-term goal} of the Chodera lab is to develop quantitatively accurate physical modeling techniques that enable the truly rational engineering of novel small molecules to manipulate cellular pathways in desired ways.
+\underline{\it This proposal addresses} the current inability of the physical modeling field to account for the dynamic nature of both protein and ligand protonation states, which currently hinders the quantitative accuracy of physical modeling approaches to help guide the synthesis of novel molecules for drug discovery and chemical biology.
+Neglect of protonation state effects---either the population of a mixture of protonation states or a shift in dominant states upon binding---can lead to errors of several kcal/mol, significant enough to frustrate the ability of physical modeling techniques to prioritize ligands for lead optimization in systems where these effects are present.
+While protonation state effects in ligand binding have only been studied in detail in a handful of systems, recent evidence suggests that these effects may play an important role in the binding of selective tyrosine kinase inhibitors like imatinib.
+\underline{\it The objective of this proposal} is to overcome current limitations in physical modeling approaches by integrating a dynamic treatment of protonation states into quantitatively accurate alchemical binding free energy calculations.
+We utilize a combined computational-experimental approach to both validate this approach and characterize the pervasiveness of protonation state effects (and the magnitude of errors stemming from their neglect) in the binding of selective kinase inhibitors to their targets of therapy.
+To accomplish this, we adopt a combined computational-experimental approach.
+In {\bf Aim 1}, we use fast constant-pH Monte Carlo simulation techniques to identify a set of candidate kinase:inhibitor complexes likely to exhibit significant protonation state effects.
+In {\bf Aim 2}, we use our unique expertise to develop GPU-accelerated constant-pH alchemical free energy techniques and apply them to characterize the nature and magnitude of protonation-state effects in selective kinase inhibitor recognition.
+In {\bf Aim 3}, we utilize a variety of experimental techniques---including isothermal titration calorimetry, fluorescence binding affinity measurements, and NMR---to validate the computational predictions of the nature and magnitude of protonation state effects in a set of kinase:inhibitor systems predicted to exhibit significant effects.
+This approach is \underline{\it innovative} because it incorporates a dynamic treatment of protonation states into state-of-the-art alchemical binding free energy calculations, using both recent results from nonequilibrium statistical mechanics to drastically boost acceptance rates and optimal multistate reweighting techniques to estimate binding affinities with minimal error.
+This research is \underline{\it significant} because it both eliminates a major barrier to the quantitative prediction of protein-ligand binding affinities and establishes the pervasiveness and magnitude of protonation state effects in the binding of selective kinase inhibitors.
+The research proposed here will ultimately lead to both significant improvements in the quantitative accuracy and domain of applicability of quantitative physical modeling techniques as well as a detailed understanding of the role of protonation state effects in selective kinase inhibitor recognition.
+\end{centering}
+
+
+
+%======================================
+
+%\setlength{\bibsep}{0.000in}
+
+%\bibliographystyle{gec_nih}
+%\bibliographystyle{ieeetr}
+%\bibliographystyle{myrefstyle}
+%\bibliography{chodera-research}
+
+
+\end{document}
+
+
+
+
+
+

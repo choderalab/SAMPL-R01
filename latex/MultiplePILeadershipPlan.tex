@@ -1,0 +1,134 @@
+\documentclass[11pt]{article}
+\usepackage[top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{helvet}
+\usepackage{url} % hypderref?
+\usepackage{graphicx}
+\graphicspath{{figures/}} % The figures are in a figures/ subdirectory.
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+%\pagestyle{plain}
+
+\usepackage{setspace}
+\usepackage{microtype}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\usepackage{sidecap}
+\usepackage[abs]{overpic}
+\usepackage{wrapfig}
+
+%\usepackage[round,authoryear]{natbib}
+\usepackage{cite}
+%\setlength{\bibsep}{0.00in}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=black, citecolor=black, linkcolor=black}
+
+\newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{doi:#1}}
+
+\newcommand{\ac}[1]{{\sc \lowercase{#1}}}
+
+\renewcommand{\baselinestretch}{.93}
+%\renewcommand{\baselinestretch}{.90}
+\usepackage{wrapfig} 
+
+\usepackage{bibspacing}
+\setlength{\bibspacing}{\baselineskip}
+
+
+\graphicspath{{figs/}}
+
+\makeatletter
+
+\newcommand{\captionfonts}{\footnotesize}
+
+\makeatletter  % Allow the use of @ in command names
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{{\captionfonts #1: #2}}%
+  \ifdim \wd\@tempboxa >\hsize
+    {\captionfonts #1. #2\par}
+  \else
+    \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}      
+\makeatother
+
+\renewcommand{\figurename}{Fig.}
+
+% Page numbering.
+%\pagestyle{plain}
+%\pagenumbering{arabic}
+
+\setlength{\abovecaptionskip}{-5pt}
+
+\makeatother
+
+\renewcommand{\refname}{Bibliography and References Cited}
+
+\setlength{\parindent}{0pt} % Don't indent first line
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex} % Add some space between paragraphs
+
+\begin{document}
+
+%======================================
+
+{\bf MULTIPLE PI LEADERSHIP PLAN}
+
+
+The PIs, {\bf Chodera} at Memorial Sloan Kettering Cancer Center (MSKCC), {\bf Gunner} at the City College of New York, and {\bf Seeliger} at Stony Brook University, have worked together for the past 3 years.  
+In particular, Chodera and Gunner have worked together to develop new methodologies for constant-pH simulation, while Chodera and Seeliger have worked to develop new bacterially-expressing kinase constructs and a novel fluorescence assay for measuring kinase inhibitor binding affinities.
+The Chodera and Gunner laboratories are located in New York City, while the Seeliger laboratory is located a short distance away ($<$2 hours) by car or train.
+
+{\bf General Plan.}  
+PI Chodera at MSKCC will be responsible for the oversight and coordination of the overall project.
+PIs Gunner and Chodera will work closely on the identification of candidate kinase:inhibitor systems (Aim 1), with Gunner directing work related to the MCCE code produced in her laboratory.
+PIs Gunner and Chodera will also work closely on developing hybrid Monte Carlo / molecular dynamics algorithms for molecular dynamics simulation and alchemical free energy calculations and applying them to kinase:inhibitor systems (Aim 2), with Chodera directing this work.
+PIs Chodera and Seeliger will work closely on the experimental aspects of this project (Aim 3), with Seeliger directing experimental work in his laboratory (kinase expression, NMR, crystallography) and Chodera directing experimental work in his laboratory (screening of mutants, fluorescence binding assays).
+Each PI will be responsible for his own fiscal and research administration.
+
+{\bf Communication.}
+The PIs will communicate weekly, either by phone, e-mail, or in person, to discuss simulation design, experimental progress, data analysis, and all administrative responsibilities. 
+All PIs will share their respective research results with other PIs, key personnel, and collaborators/consultants.  
+We will make use of shared public GitHub repositories [\url{http://github.org}] to coordinate the development of simulation and analysis code and store simulation and experimental data.
+Frequent in-person visits between CCNY and MSKCC---the sites at which most software development will take place---are expected for the students heading software development.
+All project participants will receive accounts on the MSKCC High Performance Computing (HPC) resource, which provides a central location to carry out the computation for this project and share large datasets.
+We will utilize messaging technologies like Slack [\url{http://slack.com}] to allow project participants and collaborators to rapidly communicate about the project.
+We will hold monthly virtual meetings for subgroups working on the different aims and quarterly virtual meeting of all PIs and personnel, and semiannual physical meetings at MSKCC to review progress and plans in depth. 
+
+The PIs will work together to discuss any changes in the direction of the research projects and the reprogramming of funds, if necessary. 
+A publication policy will be established based on the relative scientific contributions of the PIs and key personnel.  
+PI Chodera will serve as contact PI and be responsible for submission of progress reports to NIH and all communication.
+Public data sharing policies will be established in advance, and an overview is presented in the Resource Sharing plan.
+
+{\bf Intellectual Property.}
+The Technology Transfer Offices at MSKCC, CCNY, and Stony Brook University will be responsible for preparing and negotiating an agreement for the conduct of the research, including any intellectual property generated as part of the project. 
+
+{\bf Conflict Resolution.}
+While the PIs have been long-term collaborators for several years and do not anticipate any need for a conflict resolution plan, we include one for completeness.  
+If a potential conflict develops, the PIs shall meet and attempt to resolve the dispute. 
+If they fail to resolve the dispute, the disagreement shall be referred to an arbitration committee consisting of one impartial senior executive from each PIs' institution and a third impartial senior executive mutually agreed upon by all PIs. 
+No members of the arbitration committee will be directly involved in the research grant or disagreement. 
+We stress that the PIs and Co-I relationships have been cordial, scientifically stimulating, and productive, so we do not anticipate any conflict.
+
+
+  
+ %======================================
+
+\newpage
+%\setlength{\bibsep}{0.000in}
+
+%\bibliographystyle{gec_nih}
+%\bibliographystyle{ieeetr}
+\bibliographystyle{myrefstyle}
+\bibliography{chodera-research}
+
+
+\end{document}
+
+
+
+
+
+

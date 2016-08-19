@@ -1,0 +1,135 @@
+\documentclass[11pt]{article}
+\usepackage[top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{helvet}
+\usepackage{url} % hypderref?
+\usepackage{graphicx}
+\graphicspath{{figures/}} % The figures are in a figures/ subdirectory.
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+%\pagestyle{plain}
+
+\usepackage{setspace}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\usepackage{sidecap}
+\usepackage[abs]{overpic}
+\usepackage{wrapfig}
+
+%\usepackage[round,authoryear]{natbib}
+\usepackage{cite}
+%\setlength{\bibsep}{0.00in}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=black, citecolor=black, linkcolor=black}
+
+\newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{doi:#1}}
+
+\newcommand{\ac}[1]{{\sc \lowercase{#1}}}
+
+\renewcommand{\baselinestretch}{.93}
+%\renewcommand{\baselinestretch}{.90}
+\usepackage{wrapfig} 
+
+\usepackage{bibspacing}
+\setlength{\bibspacing}{\baselineskip}
+
+
+\graphicspath{{figs/}}
+
+\makeatletter
+
+\newcommand{\captionfonts}{\footnotesize}
+
+\makeatletter  % Allow the use of @ in command names
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{{\captionfonts #1: #2}}%
+  \ifdim \wd\@tempboxa >\hsize
+    {\captionfonts #1. #2\par}
+  \else
+    \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}      
+\makeatother
+
+\renewcommand{\figurename}{Fig.}
+
+% Page numbering.
+%\pagestyle{plain}
+%\pagenumbering{arabic}
+
+\setlength{\abovecaptionskip}{-5pt}
+
+\makeatother
+
+\renewcommand{\refname}{Bibliography and References Cited}
+
+\setlength{\parindent}{0pt} % Don't indent first line
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex} % Add some space between paragraphs
+
+\begin{document}
+
+%======================================
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AUTHENTICATION OF KEY RESOURCES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%Authentication of Key Biological and/or Chemical Resources: Briefly describe methods to ensure the
+%identity and validity of key biological and/or chemical resources used in the proposed studies.
+%? Key biological and/or chemical resources may or may not be generated with NIH funds and: ¥ May differ from laboratory to laboratory or over time;
+%¥ May have qualities and/or qualifications that could influence the research data; and
+%¥ Are integral to the proposed research.
+%These include, but are not limited to, cell lines, specialty chemicals, antibodies, and other biologics.
+%? Standard laboratory reagents that are not expected to vary do not need to be included in the plan. Examples are buffers and other common biologicals or chemicals.
+
+\begin{centering}
+{\bf AUTHENTICATION OF KEY RESOURCES PLAN}
+
+\end{centering}
+
+{\bf BIOLOGICAL RESOURCES}
+
+{\bf Human kinase domain plasmid constructs.}
+The sequence of engineered human kinase domain plasmid constructs received or generated will be authenticated by antibiotic resistance marker and DNA sequencing of inserts in the cloning sites against canonical sequences in UniProt.
+
+{\bf Bacterial and insect cell lines} for expression of recombinant proteins and for molecular biology will be authenticated by their antibiotics profile and their genotype. 
+All cell lines are compared to commercially available reference cell lines.
+
+{\bf CHEMICAL RESOURCES}
+
+{\bf Small molecule kinase inhibitors}.
+Small molecule kinase inhibitors will be obtained from commercial sources.
+These compounds will be characterized by HPLC-MS and $^1$H-NMR to verify their identity and purity.
+NMR spectra will be provided as supplementary material for reference.
+
+{\bf Recombinantly expressed human kinase domain proteins.}
+Recombinant proteins will be produced in-house.
+The molecular weight, concentration, and purity of purified His-tagged recombinantly expressed human kinase domain proteins will be verified using a Caliper GXII microfluidic gel electrophoresis instrument.
+Phosphorylation state of the purified kinase domains (which are coexpressed with phosphatase) will be confirmed by mass spectrometry.
+Biological activity of recombinant proteins is quantified upon purification of the protein and specific enzyme activity serves as reference for stored proteins.
+ThermoFluor melts (thermal denaturation scans in the presence of Cypro Orange, a dye that changes fluorescence upon binding to unfolded proteins) performed using a Roche LC480 qPCR machine will be used to verify protein stability in our buffer systems.
+
+{\bf Buffers.}
+Buffers used for ITC and fluroescence assays are produced in a reproducible fashion by a LabMinds Revo automated buffer maker, which automatically prepares buffers in a reproducible manner, adjusting pH and filtering automatically.
+Complete details of all buffers (such as final pH, exact composition of buffer components by mass, manufacturer and lot numbers of all compoennts) are stored online and will be made available as supplementary material.
+
+%======================================
+
+%\setlength{\bibsep}{0.000in}
+
+%\bibliographystyle{gec_nih}
+%\bibliographystyle{ieeetr}
+%\bibliographystyle{myrefstyle}
+%\bibliography{chodera-research}
+
+
+\end{document}
+
+
+
+
+
+

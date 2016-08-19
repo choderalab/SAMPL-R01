@@ -1,0 +1,141 @@
+\documentclass[11pt]{article}
+\usepackage[top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{helvet}
+\usepackage{url} % hypderref?
+\usepackage{graphicx}
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+%\pagestyle{plain}
+
+\usepackage{setspace}
+\usepackage{microtype}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\usepackage{sidecap}
+
+%\usepackage[round,authoryear]{natbib}
+\usepackage{cite}
+%\setlength{\bibsep}{0.00in}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=black, citecolor=black, linkcolor=black}
+
+\newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{doi:#1}}
+
+
+
+\newcommand{\ac}[1]{{\sc \lowercase{#1}}}
+
+%\renewcommand{\baselinestretch}{.9}
+\usepackage{wrapfig} 
+
+\graphicspath{{figs/}}
+
+\makeatletter
+
+\newcommand{\captionfonts}{\small}
+
+\makeatletter  % Allow the use of @ in command names
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{{\captionfonts #1: #2}}%
+  \ifdim \wd\@tempboxa >\hsize
+    {\captionfonts #1. #2\par}
+  \else
+    \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}      
+\makeatother
+
+\renewcommand{\figurename}{Fig.}
+
+\setlength{\abovecaptionskip}{-5pt}
+
+\makeatother
+
+
+\renewcommand{\refname}{Bibliography and References Cited}
+
+\setlength{\parindent}{0pt} % Don't indent first line
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex} % Add some space between paragraphs
+
+\newcommand{\kT}{k_{\mathrm B}T} 
+\newcommand{\kB}{k_\mathrm{B}}
+
+\newcommand{\mytitle}{Title}
+
+\begin{document}
+
+%======================================
+
+%\noindent {\bf John D. Chodera}\\
+%Assistant Faculty Member, Computational Biology Program\\
+%Memorial Sloan-Kettering Cancer Center
+
+\noindent {\bf{FACILITIES AND OTHER RESOURCES - CHODERA LABORATORY}}
+
+{\bf \underline{Computer:}}
+All lab members are equipped with laptop computers with integrated graphics processors (GPUs), and have access to high-performance development machines containing a range of modern GPU accelerators.
+The group has priority access to a high-performance computing cluster with 1920 total hyperthreads and 120 NVIDIA GTX-680, GTX-TITAN, or GTX-TITAN-X GPUs.
+Project storage is provided by a high-performance shared 1.5PB GPFS storage system.
+Dedicated servers provide access to Folding@Home, which currently provides $\sim$19 PFLOP/s aggregate computational power in over 350,000 actively computing cores---{\bf equivalent computing facilities would cost tens of millions of dollars}.
+Network connections are at least 1 Gbit/s throughout MSKCC, with HPC systems connected at 10 Gbit/s.
+
+\noindent {\bf \underline{Laboratory:}}
+The Chodera wetlab occupies $\sim$340 square feet of space. 
+The central feature of the wetlab is an integrated platform for fully automated biophysical experiments instrumented for remote monitoring and operation. 
+This system includes a Thermo BenchTrak Orbitor, a Tecan EVO200 with three dispensing technologies (including an HP D300), four Inheco incubators, a BioNex HiG4 centrifuge, Tecan Infinite M1000PRO plate reader (capable of absorbance, fluorescence and FP, luminescence, and AlphaScreen measurements, with injectors installed for kinetics measurements), Caliper GXII microfluidic electrophoresis platform, Roche LC480 qPCR machine, Agilent VCode barcode printer and PlateLoc plate sealer, Thermo MultiDrop Combi reagent dispenser, and Thermo automated Cytomat Hotel.
+{\bf This platform automates cloning, site-directed mutagenesis, recombinant bacterial protein expression and purification, cell-free transcription and translation, microfluidic gel electrophoresis, Thermofluor protein stability assays, and fluorescence measurements of binding affinities. It can also automate preparation of ITC and SPR experiments that can be conducted at the Rockefeller HTSRC across the street.}
+There is bench space for one group member to work manually using standard molecular biology tools. 
+A Mettler-Toledo Quantos automated gravimetric solution preparation system ensures compound concentrations are always accurately and traceably prepared. 
+%A LabMinds Revo will be installed in Feb 2016 to automatically prepare large quantities of buffers for biophysical assays reliably, reproducible, and traceably. 
+An electronic lab notebook tracks all materials and measurements in the laboratory using barcodes. 
+Shared equipment space, standard laboratory refrigerators and freezers, and common shared equipment (centrifuges, incubators, etc.) is also provided. 
+Both experimental and computational spaces are located in Memorial Sloan-Kettering’s new Zuckerman Research Center (ZRC).
+  
+{\bf \underline{Animal:}} N/A
+
+{\bf \underline{Office:}} 
+All lab members have desks in a modern open-plan computational biology working space where the Chodera lab currently occupies $\sim$400 ft$^2$.
+Group members are equipped with monitors, backup storage, and other standard workstation accessories.
+Additional office space includes Dr.~Chodera's office, office space for a shared administrative assistant, shared conference rooms, and meeting and library space.
+%A shared departmental Jura Impressa XS90 high-performance espresso machine provides ready access to coffee, which we have found to be essential to high productivity in computational science.
+
+{\bf \underline{Clinical:}} N/A
+
+{\bf \underline{Other Resources:}}
+
+{\bf The Rockefeller high-throughput screening resource center (HTSRC)} is located across the street at the Rockefeller University.  The HTSRC provides a number of high-throughput binding and biophysical measurement facilities at a minimal cost to us, most notably (1) a GE/MicroCal Auto-iTC200 automated isothermal titration calorimeter capable of processing up to 384 samples unattended, and (2) a Proteon XPR36 SPR instrument (capable of processing 96 samples), among others. \\
+% {\bf The MSKCC Organic Synthesis Core} under the direction of Dr.~Ouathek Ouerfelli is a fully-staffed 12-person facility providing organic synthesis and consultation services to MSKCC laboratories. \\
+{\bf The MSKCC Analytical NMR Core} under the direction of Dr.~George Sukenik allows for the unattended 1H-NMR characterization of compounds using an automated sample workflow. \\
+{\bf Numerous additional MSKCC core facilities} are available to MSKCC researchers, including proteomics and mass spectroscopy, NMR, X-ray crystallography, high-throughput screening, analytical chemistry, DNA sequencing, and bioinformatics consulting.  
+Many of these core facilities are highly automated.
+Over 30 core facilities are currently available, all directed by Ph.D.-level experts available for consultation. \\
+%{\bf The QB3 MacroLab core facility} is located at the University of California, Berkeley (Dr.~Chodera's previous institution), under the technical management of Dr.~Scott Gradia.
+%This fully-staffed core facility, which functions as a contract resource, is equipped with robotics capable of high-throughput automated cloning, mutagenesis, bacterial expression, purification, and hanging-drop crystallography.
+%The MacroLab also offers scale-up bacterial expression and purification services to produce mg quantities of protein.
+%A special discounted rate has been negotiated by Dr.~Chodera to continue to use MacroLab services at greatly reduced cost to provide additional capacity to the Chodera laboratory.
+
+%\noindent The {\bf Advanced Light Source} is located near UCB, and Berkeley maintains a dedicated beamline for macromolecular crystallography and SAXS.
+
+%\noindent The {\bf Stanford Synchotron Radiation Laboratory} is located near Stanford University and suitable for macromolecular crystallography, and is available at no cost to Stanford researchers.
+
+%======================================
+
+%\setlength{\bibsep}{0.000in}
+
+%\bibliographystyle{gec_nih}
+%\bibliographystyle{ieeetr}
+%\bibliographystyle{myrefstyle}
+%\bibliography{chodera-research}
+
+
+\end{document}
+
+
+
+
+
+

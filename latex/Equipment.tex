@@ -1,0 +1,131 @@
+\documentclass[11pt]{article}
+\usepackage[top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
+\usepackage{helvet}
+\usepackage{url} % hypderref?
+\usepackage{graphicx}
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+%\pagestyle{plain}
+
+\usepackage{setspace}
+\usepackage{microtype}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\usepackage{sidecap}
+
+%\usepackage[round,authoryear]{natbib}
+\usepackage{cite}
+%\setlength{\bibsep}{0.00in}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=black, citecolor=black, linkcolor=black}
+
+\newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{doi:#1}}
+
+
+
+\newcommand{\ac}[1]{{\sc \lowercase{#1}}}
+
+%\renewcommand{\baselinestretch}{.9}
+\usepackage{wrapfig} 
+
+\graphicspath{{figs/}}
+
+\makeatletter
+
+\newcommand{\captionfonts}{\small}
+
+\makeatletter  % Allow the use of @ in command names
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{{\captionfonts #1: #2}}%
+  \ifdim \wd\@tempboxa >\hsize
+    {\captionfonts #1. #2\par}
+  \else
+    \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}      
+\makeatother
+
+\renewcommand{\figurename}{Fig.}
+
+\setlength{\abovecaptionskip}{-5pt}
+
+\makeatother
+
+
+\renewcommand{\refname}{Bibliography and References Cited}
+
+\setlength{\parindent}{0pt} % Don't indent first line
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex} % Add some space between paragraphs
+
+\newcommand{\kT}{k_{\mathrm B}T} 
+\newcommand{\kB}{k_\mathrm{B}}
+
+\newcommand{\mytitle}{Title}
+
+\begin{document}
+
+%======================================
+
+{\bf EQUIPMENT - CHODERA LABORATORY}
+
+{\bf Experimental.}
+
+%\underline{\emph{Electronic laboratory notebook:}}
+%An electronic laboratory notebook (ELN) system manages all samples and data, and printed barcodes are used to track all materials received or generated.
+
+\underline{\emph{Gravimetric solution preparation:}}
+Biophysical measurements of protein-ligand binding affinities are fundamentally limited by the accuracy with which compound concentrations are known.  
+Accurate affinity measurements are absolutely essential to validating and improving computational methodologies for probing and predicting binding affinities, so it is essential that compound concentrations be known precisely and accurately.
+Methods to \emph{measure} concentrations are generally costly, inaccurate, time-consuming, and often not universally applicable.  Precise preparation of initial compound solutions remains the best way to ensure accuracy.  
+Our laboratory is therefore equipped with a high-precision Mettler-Toledo Quantos balance for automated gravimetric solution preparation.
+Powder dosing heads dose compound directly into solubilization vials on the analytical balance, while liquid dosing heads dispense solvent under argon, ensuring accurate concentrations of compound solutions.
+Provenance, masses, concentrations, and uncertainties are tracked via barcodes and electronically within our ELN.
+
+\underline{\emph{Integrated liquid handler and automation platform:}}
+By the start of this award, the experimental laboratory will be equipped with a high-throughput automation platform for 96- and 384-well biophysical assays.
+The automated system will integrate the following instruments: a high-precision li quid-handling platform equipped for vacuum filtration, density measurement, and thermal cooling/heating/shaking; a high-end multimode plate reader with injectors; heating/shaking deep well plate incubators for bacterial culture; a plate centrifuge; a qPCR machine used for PCR and ThermoFluor; a microplate sealer; barcode-based tracking capabilities; an automated plate carousel; and a microfluidic gel electrophoresis system.
+A LabMinds EasySolution automated buffer preparation system will ensure that all buffers required in large quantities are prepared accurately, reproducibly, and traceably.
+
+\underline{\emph{Additional automated biophysical characterization:}}
+Through the adjacent Rockefeller HTSRC facility, our laboratory also has access a GE/MicroCal Auto-iTC200 automated isothermal titration calorimeter (ITC) and a BioRad Proteon XPR36 surface plasmon resonance (SPR) instrument.  Both instruments accommodate 96-well plates for fully automated runs, and are available for our use at low cost.
+Our laboratory automation platform will allow these experiments to be set up automatically.
+
+\underline{\emph{Standard molecular biology equipment:}} The wet laboratory is also equipped for manual molecular biology.
+
+{\bf Computational.}
+
+\underline{\emph{Local GPU cluster:}} 
+The Chodera laboratory has priority access to a high-performance computing cluster with 1920 total hyperthreads and 120 NVIDIA GTX-680, GTX-TITAN, or GTX-TITAN-X GPUs.
+Project storage is provided by a high-performance shared 1.5PB GPFS storage system.
+Network connections are at least 1 Gbit/s throughout MSKCC facilities, and cluster, GPU, and storage systems are connected with 10 Gbit/s links.
+{\bf Accounts on this cluster will be made available for all of our collaborators on this project to facilitate data interchange and access to adequate fast computational resources.}
+
+\underline{\emph{GPU development resources:}} All Chodera laboratory members are equipped with laptop computers with GPUs capable of GPU-accelerated software development.
+All members also have access to five development GPU boxes contain an assortment of most available GPUs for development and automated software testing.
+
+\underline{\emph{Folding@home:}} The Chodera laboratory is a participating laboratory in the Folding@home Consortium [\url{http://folding.stanford.edu}].
+Folding@home is a distributed computing infrastructure run by Vijay Pande at Stanford University with over 350,000 actively computing cores, making it the most powerful distributed computing project in the world in terms of aggregate performance---19 PFLOP/s of aggregate computational power.  
+The free availability of large quantities of computer time through this network---{\bf which would otherwise cost tens of millions of dollars in hardware and power}---greatly leverages funding provided for this proposal.
+Access to the Folding@home network is provided via two dedicated servers at MSKCC connected to 180TB of usable storage in a high-availability datacenter.
+
+%======================================
+
+%\setlength{\bibsep}{0.000in}
+
+%\bibliographystyle{gec_nih}
+%\bibliographystyle{ieeetr}
+%\bibliographystyle{myrefstyle}
+%\bibliography{chodera-research}
+
+
+\end{document}
+
+
+
+
+
+

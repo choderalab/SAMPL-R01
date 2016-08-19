@@ -1,0 +1,91 @@
+\documentclass[11pt]{article}
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage{helvet}
+\usepackage{url} % hypderref?
+\usepackage{graphicx}
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+%\pagestyle{plain}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+
+\usepackage{sidecap}
+
+\usepackage[round,authoryear]{natbib}
+\bibliographystyle{gec_nih}
+%\bibliographystyle{apalike}
+%\setlength{\bibsep}{0.00in}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=black, citecolor=black, linkcolor=black}
+
+\newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{doi:#1}}
+
+
+
+\newcommand{\ac}[1]{{\sc \lowercase{#1}}}
+
+%\renewcommand{\baselinestretch}{.9}
+\usepackage{wrapfig} 
+
+\graphicspath{{figs/}}
+
+
+\makeatletter
+
+\newcommand{\captionfonts}{\small}
+
+\makeatletter  % Allow the use of @ in command names
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{{\captionfonts #1: #2}}%
+  \ifdim \wd\@tempboxa >\hsize
+    {\captionfonts #1. #2\par}
+  \else
+    \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}      
+\makeatother
+
+\renewcommand{\figurename}{Fig.}
+
+\setlength{\abovecaptionskip}{-5pt}
+
+\makeatother
+
+
+\renewcommand{\refname}{Bibliography and References Cited}
+
+
+\setlength{\parindent}{0pt} % Don't indent first line
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex} % Add some space between paragraphs
+
+\newcommand{\kT}{k_{\mathrm B}T} 
+\newcommand{\kB}{k_\mathrm{B}}
+
+\newcommand{\mytitle}{Understanding the nonequilibrium thermodynamics of molecular machines}
+
+\begin{document}
+
+%======================================
+
+{\bf \Large Current and Pending Support}
+
+{\bf CHODERA, J.D.}
+
+{\bf \underline{ACTIVE}}\\
+Gerstner Young Investigators Award	\hskip 1in Chodera (PI) \hskip 1in 02/01/13-01/31/16\\Grant number/title: N/A\\Source of support: Louis V. Gerstner Young Investigators Fund\\Current-year direct costs: \$75,000\\Role: PI
+
+{\bf \underline{OVERLAP}}\\
+None.
+
+If the application under consideration is funded, Dr.~Chodera will commit a minimum of 25\% research effort to the project supported by the New Innovator Award.
+
+\end{document}
+
+
+
+
+
+
