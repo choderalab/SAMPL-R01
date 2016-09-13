@@ -99,87 +99,43 @@
 {\bf SPECIFIC AIMS}
 \end{center}
 
-Cancer is the second leading cause of death in the United States, accounting for nearly 25\% of all deaths; in 2015, over 1.7 million new cases were diagnosed, with over 580,000 deaths.
-Many of these cancers involve the dysregulation of kinases, which play a central role in cellular signaling pathways.
-Mutations, translocations, or upregulation events can cause one or more kinases to become highly active and cease responding normally to regulatory signals.
-As a result, much of the effort in developing treatments for these diseases (and perhaps 30\% of current drug development) has focused on shutting down aberrant kinases with targeted inhibitors.
+While computational techniques are currently widely used in pharmaceutical drug discovery, current generation technologies (such as docking) are unsuitable for true molecular design. 
+Specifically, these techniques fail to to predict small molecule binding affinities to target and antitarget biomolecules with sufficient accuracy for the variety of targets currently of interest. 
+While these techniques achieve some success at predicting binding modes, this is not enough. 
+Computational screening techniques do better than random selection of compounds, but they lack the accuracy to guide molecular design or optimization. 
+A new generation of physical techniques, alchemical free energy calculations, are poised to fill this void by providing a quantitative, predictive tool that can be used in multiple stages of the drug discovery pipeline, including lead optimization to drive affinity and selectivity or the retention of potency as other physical properties are optimized. 
 
-Tyrosine kinase inhibitors (TKIs) in particular have proven themselves powerful therapeutics in the treatment of human cancers. %, such as non-small cell lung cancer (NSCLC) and chronic myelogenous leukemia (CML).
-The high selectivity of some TKIs such as imatinib---which potently inhibits just a small fraction of the human kinome to treat chronic myelogenous leukemia (CML)---is believed to be responsible for their effectiveness and low toxicity.
-Unfortunately, even when selective TKIs are available, the inexorable emergence of resistance mutations limits the duration over which the patient will derive therapeutic benefit, requiring a switch to second- and third-line selective TKIs---if they exist---as resistance develops.
-Ultimately, drug resistance is thought to be the reason for treatment failure in over 90\% of patients with metastatic cancer.
+While alchemical methods have recently seen some spectacular successes, the domain of applicability of these techniques is currently highly limited; to be broadly applicable in accelerating drug discovery, these techniques need further evaluation, refinement, and development before they are ready for routine, diverse applications. 
+There is a vast gulf between targets within the domain of applicability and those which are outside it. 
+To rapidly expand the domain of applicability and improve these techniques, we need carefully selected systems of intermediate complexity to bridge this gulf. 
+Without it, these techniques may encounter the same problems faced by docking and related techniques: routine failure without clear insights into why, and years to decades spent in making small methodological modifications without dramatic improvements in predictive power.
+We propose to identify and develop a set of model systems that span the gulf between pharmaceutical targets inside and outside the current domain of applicability, generating new high-quality experimental data and running blind challenges design to push the field forward rapidly.
+The generated data -- and the resulting challenges -- will result in a dramatically increased domain of applicability and will push these techniques into standard application in drug design.
+In addition to generating this experimental data, we will conduct reference calculations of the values measured, making these, and the associated input files and software tools, available to the community as a point of comparison to further facilitate advances.
 
-%The ability to rationally design potent, selective kinase inhibitors would radically transform drug discovery efforts for the treatment of diseases involving kinase dysregulation such as cancer, diabetes, and inflamation.
-%Current approaches require many rounds of screening, modeling, and synthesis in a trial-and-error approach that is costly, time-consuming, and ineffective.
-%Considering we routinely design aircraft, buildings, and bridges almost entirely on a computer before they are built, why are we unable to design a molecule of a few dozen atoms?
-%%Despite decades of work on the study of biomolecular interactions, there remains an enormous gulf between what we claim to understand about biomolecular association and our ability to put this knowledge into practice.
 
-%%This gulf is especially wide for the design of selective kinase inhibitors, which aim to target a specific kinase in order to effectively treat a disease---often cancer---and minimize unwanted toxic side effects.
-%%The complexity of designing inhibitors that selectively target one kinase out of hundreds to inhibit the progression of a particular cancer is daunting.
-%%despite perhaps 30\% of the current pharmaceutical industry effort being devoted to the development of protein kinase inhibitors, the number of novel new molecular entities approved by the FDA each year remains only 5--6.
-%Computer-guided virtual screening efforts have reached a ceiling in effectiveness due to limitations in their treatment of molecular energetics and interactions.
-%While numerous approximations are made, the dominant neglected contributions are poorly understood.
-%This problem is especially difficult for the design of highly specific kinase inhibitors, which are often targeted toward the ATP binding site shared by all kinases, but must bind with high affinity to only one (or a few) out of more than 500 human kinases to minimize unintended effects.
-%To accomplish this, highly specific kinase inhibitors often target inactive conformations, which represent minor populations of active kinases under physiological conditions.
-%To complicate things further, the rapid emergence of resistance can limit the duration over which any particular drug is effective, often requiring the use of several drugs in succession.
-%% JDC: Can we talk about the desire to selectively target dysregulated mutants and not wild-type, allowing the use of higher doses to be well-tolerated with less on-pathway toxicity?
+Here, we seek to rapidly drive development of computational methods for drug discovery by generating targeted data for a series of blind SAMPL (``Statistical Assessment of Modeling of Proteins and Ligands'') challenges. Specifically, we will advance these techniques via the following efforts:
 
-The development of \emph{new} selective kinase inhibitors remains incredibly challenging due to the fact that these inhibitors are almost universally targeted toward the ATP binding site shared by all kinases, but must bind with high affinity to only one (or a few) out of more than 500 human kinases to minimize unintended effects.
-While the discovery of imatinib was hailed as a breakthrough for its ability to selectively inhibit Abl over closely related kinases like Src, it came as a great surprise when the crystal structure of imatinib bound to Src was nearly identical to the Abl-bound structure.
-Recent evidence from  experiments and simulation has suggested that a previously underappreciated contribution---the energetic cost of populating the inhibitor-bound conformation---plays a critical role in imatinib's selectivity.
-While this effect has only been examined in the well-studied case of Abl/Src binding to imatinib, it has the potential to be much more general. 
-{\bf We hypothesize that exploiting differences in the energetic cost of confining the kinase to the binding-competent conformation is a route to selectivity in targeted kinase inhibition.}
-Here, we ask how much conformational reorganization energy contributes to the selectivity and affinity of current noncovalent clinical kinase inhibitors to determine whether existing inhibitors (perhaps inadvertently) exploit differences in these reorganization energies to achieve selectivity, and whether this difference can be exploited to engineer new selective molecules.
+{\bf \underline{Aim 1.} Extend SAMPL physical property challenges.}\\
+We will build on the enormous success of previous SAMPL hydration free energy and distribution coefficient challenges by developing new solution-phase datasets for druglike small molecules. 
+These challenges both test critical aspects of small molecule modeling (including accounting for interactions and treatment of protonation/tautomeric state) and improve the ability to predict physical properties relevant to drug discovery in regions of new chemical space. 
+We will initially focus on distribution between organic phases and on pKa's and their modulation by solvent environment, using this data to drive improvements in the modeling of ligand interactions.
 
-We use a combined experimental and computational approach to decompose inhibitor binding affinity and selectivity into contributions from kinase reorganization and binding to individual kinase conformations:
 
-{\bf \underline{Aim 1.} Create an energetic atlas of the conformations accessible to human kinase catalytic domains.}\\
-%Map the conformations accessible to human kinase domains and their corresponding energetics.
-Using the Folding@home worldwide distributed computing platform, we will use massively parallel molecular simulations to map the conformational dynamics of kinase domains, generating an atlas of thermally accessible conformations and associated energetics using the Markov state model approach we originally developed to study conformational states transiently populated during protein folding.
-We will validate this map through the use of acrylodan labeling at locations predicted to be sensitive to ligand-induced conformational changes.
+{\bf \underline{Aim 2.} Broaden introductory SAMPL ligand binding challenges.}\\
+We will cultivate new host-guest binding data to serve to span between physical property prediction and protein-ligand binding. 
+Host guest systems are some of the simplest cases of molecular recognition, and thus host-guest binding data will drive improvements in the modeling of simple binding systems with techniques of relevance to drug discovery.
 
-{\bf \underline{Aim 2.} Quantify the contribution of kinase reorganization energy to inhibitor selectivity and affinity.}\\
-%Quantify the contribution of reorganization energy to affinity and selectivity by measuring and computing inhibitor affinities to a panel of recombinantly expressed kinase domains.}
-%In order to quantify the relative contribution of reorganization energy to inhibitor affinity and selectivity, we require an accurate and direct measure of binding affinity to the same construct for which reorganization energies are assessed.
-We will use a novel automated platform to express a diverse panel of recombinant kinase domains and a newly developed fluorescence assay to directly measure the affinities of noncovalent FDA-approved kinase inhibitors to the entire panel.
-Combined with alchemical free energy calculations to individual kinase conformations, we will dissect the contribution of kinase reorganization energies and direct binding affinities using models that integrate experimental and computational data.
+{\bf \underline{Aim 3.} Generate advanced model systems for protein-ligand binding with biological relevance.}
+We will identify and cultivate and cultivating suitable protein targets (determined by being difficult but tractable for physical techniques in order to push their limits) as model ligand binding systems, collecting high quality binding data, running blind challenges on these datasets, and rapidly releasing the data to the community in an ongoing, rolling fashion.
 
-{\bf \underline{Aim 3.} Identify opportunities to exploit differences in reorganization energies to achieve selectivity.}
-%We will validate the model by introducing point mutations to modulate conformational reorganization energies, and identify opportunities for exploiting differences in reorganization energies to achieve selectivity.
-We will validate our model by engineering mutations computationally identified to modulate inhibitor selectivities via manipulating differences in reorganization energies rather than the affinity for the inhibitor-bound conformation.
-In parallel, we will identify new opportunities to exploit differences in reorganization free energies between closely related kinases and between wild-type kinases and variants with clinically-identified oncogenic activating mutations.
+%Essentially, this proposal will provide for the continuation and continued success of the SAMPL series of blind challenges, which are so far entirely unfunded. This effort is complementary to the NIH-funded Drug Design Data Resource (D3R, drugdesigndata.org) which focuses on obtaining existing protein-ligand binding data and making it available to run blind prediction challenges. Here, instead, we are generating new targeted data for blind prediction challenges which will be coordinated with D3R challenges.
 
-%To address these issues, we use a combined experimental and computational approach that tightly couples cycles of measurement and prediction
-%Our experimental approach makes use of high-throughput mutagenesis and expression of a set of catalytically inactivated kinase domains, together with quantitative affinity measurements to a fixed panel of readily available kinase inhibitors.
-%Our complementary computational approach employs rigorous free energy calculations to compute absolute ligand binding affinities using atomistically detailed molecular mechanics potentials, taking advantage of GPU-accelerated and distributed computing resources.
-%Methods for determining kinetically distinct conformations and corresponding populations that have proven successful in the study of protein folding will be applied to enumerate kinase conformational states and free energies.
-%Together with traditional structural biology approaches, this will allow rapid hypothesis testing and accumulation of quantitative affinity data for further improvement of computational models.
-%We address these issues in both an important disease model for chronic myelogenous leukemia (CML) and from a more global perspective across human kinases and many small-molecule inhibitors.
-%Attempts to obtain new co-crystal structures of inhibitors bound to mutants will further aid these cycles of affinity measurement and prediction.
-% JDC: State what this will tell us.
+This study will also involve an extensive computational component as part of each of these aims, as we will calculate reference values with a standard force field for the properties (partitioning, distribution, or binding) being measured. 
 
-%{\bf \underline{Specific Aim 1.} (Mentored phase) Develop a high-throughput approach to the quantitative assessment of kinase binding affinities, and identify key failings in the ability of free energy calculations to reproduce binding affinities.}
-%This aim will (1) develop a high-throughput bacterial expression system for a diverse panel of inactivated human kinase domains; (2) establish a quantitative fluorescence-based assay for kinase inhibitor binding affinities; (3) assess the current accuracy of free energy calculations in computing inhibitor binding affinities; and (4) identify principal contributions to the discrepancy between experimentally measured and computed binding affinities using a combination of structural biology and computational approaches.
-%
-%{\bf \underline{Specific Aim 2.} (Independent phase) Identify the physical driving forces behind kinase inhibitor selectivity and the emergence of drug resistance mutations.}
-%This aim will (1) computationally and experimentally map the affinity of a number of kinase inhibitors to determine what chemical, structural, and sequence features are responsible for the variable selectivity of kinase inhibitors for kinases and \emph{vice versa}; and (2) determine whether clinically-characterized resistance mutations can be explained (and predicted) by their ability to ablate inhibitor binding affinity while maintaining ATP binding affinity, a physical mechanism which could inform the rational design of new kinase inhibitor drugs that suppress the emergence of resistance to extend the therapeutic window.
+Overall, this work will drive a series of cycles of testing and innovation for physical methods for predicting binding and physical properties, providing a foundation for the next several generations of computational methods for pharmaceutical drug discovery. 
 
-%{\bf \underline{Specific Aim 1. (Mentored phase)} Assess the importance of accounting for the energetic cost of trapping kinases in their bound conformations to the quantitative reproduction of binding affinities.}
-%We will (1) develop a high-throughput bacterial expression system for a diverse panel of human kinase domains; (2) establish a quantitative fluorescence-based assay for inhibitor binding affinities; (3) assess the impact of accounting for the energetic cost of trapping kinases in their bound conformations on computed free energies of inhibitor binding, and assess alternative dominant contributions to the discrepancy between measured and computed affinities.
-%%; and (3) identify principal contributions to the discrepancy between experimentally measured and computed binding affinities using a combination of structural biology and computational approaches
-%
-%%{\bf \underline{Specific Aim 2. (Independent phase)} Identify the physical driving forces behind kinase inhibitor affinity and selectivity.}
-%%This aim will (1) computationally and experimentally map the affinity of a number of kinase inhibitors to identify chemical, structural, and sequence features responsible for the high selectivity (or nonselectivity) of kinase inhibitors for kinases and \emph{vice versa}; and (2) test the importance of these features through a combination of mutagenesis and computational perturbations.
-%
-%{\bf \underline{Specific Aim 2. (Independent phase)} Probe the physical driving forces behind the emergence of kinase drug resistance mutations.}
-%We will (1) determine whether clinically-characterized resistance mutations can be explained by their ability to reduce inhibitor binding affinity while maintaining affinity for ATP in catalytically inactive kinases, (2) test whether free energy calculations can predict mutations driven by this mechanism, and (3) identify whether different kinase inhibitors differ in their potential for eliciting resistance by this mechanism, and if so, what primary features (e.g.~scaffold, binding mode, ATP site overlap) are responsible for this difference.
 
-This project will have a number of important implications for human health and our understanding of the biophysical determinants of selectivity.
-Structure-based drug design efforts will immediately benefit from a detailed understanding of the importance of reorganization energy and conformational energetics in determining affinity and selectivity.
-The release of an atlas of kinase conformations and energetics will provide new opportunities for the rational design of both ATP-competitive and allosteric kinase inhibitors.
-%As the principal modes of failure for free energy calculations are identified and addressed, these methods are expected to find use in the rational design of inhibitors with desired affinity and specificity properties.
-%In the longer term, the development of effective treatments for various cancers will demand new strategies for the design of inhibitors that maintain their efficacy over long treatment courses---strategies that will be enabled by physical models of resistance mechanisms like the one explored here.
-In addition, opportunities to exploit differences in reorganization energies of closely related kinases or wild-type and oncogenic forms of the kinase can present new paths to achieving higher efficacy without incurring additional off- or on-pathway toxicity.
 
 \end{document}
 
