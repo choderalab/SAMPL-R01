@@ -101,28 +101,36 @@
 
 While computational techniques are currently widely used in pharmaceutical drug discovery, current generation technologies (such as docking) are unsuitable for true molecular design. 
 Specifically, these techniques fail to to predict small molecule binding affinities to target and antitarget biomolecules with sufficient accuracy for the variety of targets currently of interest. 
-While these techniques achieve some success at predicting binding modes, this is not enough. 
-Computational screening techniques do better than random selection of compounds, but they lack the accuracy to guide molecular design or optimization. 
+Computational screening techniques can do better than random selection of compounds, but they lack the accuracy to guide molecular design or optimization. 
 A new generation of physical techniques, alchemical free energy calculations, are poised to fill this void by providing a quantitative, predictive tool that can be used in multiple stages of the drug discovery pipeline, including lead optimization to drive affinity and selectivity or the retention of potency as other physical properties are optimized. 
 
-While alchemical methods have recently seen some spectacular successes, the domain of applicability of these techniques is currently highly limited; to be broadly applicable in accelerating drug discovery, they need further evaluation, refinement, and development before they are ready for routine, diverse applications. 
+Recent success of alchemical methods sparked considerable enthusiasm, but the domain of applicability of these techniques is currently highly limited; for broad application and routine use, they need further evaluation, refinement, and development. 
 There is a vast gulf between targets within the domain of applicability and those which are outside it. 
-To rapidly expand the domain of applicability and improve these techniques, we need carefully selected systems of intermediate complexity to bridge this gulf. 
+To rapidly advance, we need carefully selected systems of intermediate complexity to bridge this gulf. 
 Without such a bridge, these techniques may encounter the same problems faced by docking and related techniques: routine failure without clear insights into why, and years to decades spent in making small methodological modifications without dramatic improvements in predictive power.
-We propose to identify and develop a set of model systems that span the gulf between pharmaceutical targets inside and outside the current domain of applicability, generating new high-quality experimental data and running blind challenges design to push the field forward rapidly.
-The generated data -- and the resulting challenges -- will result in a dramatically increased domain of applicability and will push these techniques into standard application in drug design.
-In addition to generating these experimental data, we will conduct reference calculations of the values measured, making these, and the associated input files and software tools, available to the community as a point of comparison to further facilitate advances.
 
+Here, we will generate data and conduct blind prediction challenges to expand the domain of applicability and robustness of these techniques. 
+The data we generate will span the range between systems which are tractable with current methods to those only slightly less complex than pharmaceutical drug targets covered by the NIH-funded D3R effort, which runs blind challenges on protein-ligand datasets obtained from the pharmaceutical industry.
+This systematic set of blind prediction challenges will expand the domain applicability, pushing free energy techniques into standard application in drug design.
+At the same time, the data we collect will play a long lasting role in the community, going through a life cycle of collection, curation, blind challenges, and then public dissemination to serve as benchmark sets,
+%ref benchmark sets paper?
+standard reference data, and to drive construction of new and improved models. 
+While our work here focuses primarily on generating new targeted data for a series of blind SAMPL (``Statistical Assessment of Modeling of Proteins and Ligands'') challenges and running those challenges, we also plan for subsequent data dissemination. Here, we will: 
 
-Here, we seek to rapidly drive development of computational methods for drug discovery by generating targeted data for a series of blind SAMPL (``Statistical Assessment of Modeling of Proteins and Ligands'') challenges. Specifically, we will advance these techniques via the following efforts:
+%DLM: After thinking a lot about goals, I've decided what makes sense is this:
+% Aim 1: Goal is generating suitable physical property data (for SAMPL)
+% Aim 2: Goal is generating suitable host-guest binding data (for SAMPL)
+% Aim 3: Goal is generating suitable protein-ligand binding data (for SAMPL)
+% Aim 4: SAMPL -- Goal is learning from the above (a) where we are now, (b) why we fail/what we're missing, and (c) how to do better
+%I've tried to encapsulate that in these revised aims.
 
-{\bf \underline{Aim 1.} Extend SAMPL physical property challenges.}\\
-We will build on the enormous success of previous SAMPL hydration free energy and distribution coefficient challenges by developing new solution-phase datasets for druglike small molecules. 
-These challenges both test critical aspects of small molecule modeling (including accounting for interactions and treatment of protonation/tautomeric state) and improve the ability to predict physical properties relevant to drug discovery in regions of new chemical space. 
+{\bf \underline{Aim 1.} Generate new data for ``simple'' SAMPL blind challenges on physical property prediction}\\
+We will develop new solution-phase datasets for druglike small molecules. 
+These data can test critical aspects of small molecule modeling (including accounting for interactions and treatment of protonation/tautomeric state) and improve our ability to predict physical properties relevant to drug discovery in new regions of chemical space. 
 We will initially focus on distribution between organic phases and on pKa's and their modulation by solvent environment, using these data to drive improvements in the modeling of ligand interactions.
 
 
-{\bf \underline{Aim 2.} Broaden introductory SAMPL ligand binding challenges.}\\
+{\bf \underline{Aim 2.} Measure binding of novel host-guest complexes for introductory ligand binding challenges.}\\
 We will measure new host-guest binding free energies in cucurbituril and octa-acid based host binding systems, yielding further host-guest binding challenges which span between physical property prediction and protein-ligand binding. 
 Host guest systems are some of the simplest cases of molecular recognition, and thus these binding data will drive improvements in the modeling of simple binding systems with techniques of relevance to drug discovery.
 
@@ -130,17 +138,11 @@ Host guest systems are some of the simplest cases of molecular recognition, and 
 We will identify suitable protein targets and ligand series (difficult but tractable in order to push the limits of physical techniques) as model ligand binding systems, then measure binding and further advance these systems. 
 This will include binding studies on human serum albumin and bromodomains or aspartyl proteases; initial binding data will be expanded by the selection of additional ligands or the creation of mutations in the protein that modulate binding.
 
-%Essentially, this proposal will provide for the continuation and continued success of the SAMPL series of blind challenges, which are so far entirely unfunded. This effort is complementary to the NIH-funded Drug Design Data Resource (D3R, drugdesigndata.org) which focuses on obtaining existing protein-ligand binding data and making it available to run blind prediction challenges. Here, instead, we are generating new targeted data for blind prediction challenges which will be coordinated with D3R challenges.
-{\bf \underline{Aim 4.} Perform reference calculations of all of the measured physical properties and binding data.} \\
-We will calculate reference values with a standard force field for the measured properties, adding value to the experimental data obtained.
-This will also facilitate the selection of specific benchmark sets to advance physical techniques.
-%Ref Mobley/Gilson review?
-%MS Head suggests we also compare against null models
+{\bf \underline{Aim 4.} Coordinate, run, and analyze blind challenges to advance modeling of binding.} \\
+The data collected in Aims 1-3 will drive annual SAMPL blind challenges, allowing the field to test the latest methods and force fields to assess progress, compare them against one another head-to-head, and perform sensitivity analysis to learn how much different factors (protonation state, tautomer selection, solvent model, force field, sampling method, etc.) affect predictive power. 
+Results will then feed back into improved treatment of these factors for subsequent challenges, driving regular cycles of application, learning, and advancement.
 
-{\bf [Gilson suggested figuring out how we might archive and disseminate the data beyond just holding challenges and noting that here as it would strengthen the proposal in his view.]}
-%I also originally had this in Aim 2, but since it applied to the whole proposal, it belongs with this node. "... we will ... run blind challenges on these datasets, and rapidly release the data to the community in an ongoing, rolling fashion."
-
-Overall, this work will drive a series of cycles of testing and innovation for physical methods for predicting binding and physical properties, providing a foundation for the next several generations of computational methods for pharmaceutical drug discovery. 
+Overall, the data generated here and the cycles of tests in SAMPL challenges will guide new innovations in physical methods for predicting binding and physical properties, providing a foundation for the next several generations of computational methods for pharmaceutical drug discovery. 
 
 
 
