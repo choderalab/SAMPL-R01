@@ -9,7 +9,7 @@
 
 \documentclass[11pt]{article}
 
-\title{CCNY-MSKCC Collaborative Proposal 2015: Protonation state effects in kinase inhibitors}
+\title{ Advancing predictive physical modeling through focused development of model systems to drive new modeling innovations}
 
 \usepackage[top=0.5in, bottom=0.5in, left=0.5in, right=0.5in]{geometry}
 \usepackage{helvet}
@@ -101,743 +101,142 @@
 
 %======================================
 % CITE OUR REFS FIRST
-\phantom{
-\cite{mobley-chodera-dill:2006:jcp:orientation-restraints,mobley-chodera-dill:2007:jctc:confine-and-release,shirts-mobley-chodera-pande:2007:jpcb:dispersion-corrections,chodera:jcp:2007,shirts-mobley-chodera:2007:annu-rep-comput-chem:prime-time,shirts-chodera:jcp:2008:mbar,ncmc,chodera-shirts:jcp:2011:gibbs,chodera:curr-opin-struct-biol:2011:drug-discovery,chodera-shirts:jcamd:2013:yank}
-\cite{gunner:biophys-j:1997:mcce,gunner:bba:2000:proton-electron-transfer,gunner:biophys-j:2002:mcce,gunner:j-comput-chem:2009:mcce2,gunner:jmb:2009:mcce2-hsa,gunner:proteins:2010:reaction-center,dutton:biochem:1994:photosynthetic-reaction-center,gunner:proteins:2010:reaction-center,gunner:photosynth-res:2013:photosynthetic-reaction-center,gunner:bba:2000:proton-electron-transfer,gunner:j-comput-chem:2009:mcce2,nielsen-gunner-garciamoreno:proteins:2011:pka-cooperative,stanton-houk:jctc:2008:benchmarking-pka-prediction}
-}
+%\phantom{
+%\cite{mobley-chodera-dill:2006:jcp:orientation-restraints,mobley-chodera-dill:2007:jctc:confine-and-release,shirts-mobley-chodera-pande:2007:jpcb:dispersion-corrections,chodera:jcp:2007,shirts-mobley-chodera:2007:annu-rep-comput-chem:prime-time,shirts-chodera:jcp:2008:mbar,ncmc,chodera-shirts:jcp:2011:gibbs,chodera:curr-opin-struct-biol:2011:drug-discovery,chodera-shirts:jcamd:2013:yank}
+%\cite{gunner:biophys-j:1997:mcce,gunner:bba:2000:proton-electron-transfer,gunner:biophys-j:2002:mcce,gunner:j-comput-chem:2009:mcce2,gunner:jmb:2009:mcce2-hsa,gunner:proteins:2010:reaction-center,dutton:biochem:1994:photosynthetic-reaction-center,gunner:proteins:2010:reaction-center,gunner:photosynth-res:2013:photosynthetic-reaction-center,gunner:bba:2000:proton-electron-transfer,gunner:j-comput-chem:2009:mcce2,nielsen-gunner-garciamoreno:proteins:2011:pka-cooperative,stanton-houk:jctc:2008:benchmarking-pka-prediction}
+%}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SPECIFIC AIMS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-{\large \bf SPECIFIC AIMS}
+%{\large \bf SPECIFIC AIMS}
 
-Cancer is the second leading cause of death in the United States, accounting for nearly 25\% of all deaths (580,000/year); in 2015, 1.7 million new cases were diagnosed.
-Kinase dysregulation by oncogenic mutation, amplification, or translocation plays a critical role in many of these cancers, making targeted kinase inhibition with selective inhibitors an attractive therapeutic route.
-Numerous difficulties frustrate the development of kinase inhibitors with cancer-targeted selectivity profiles, and there is great need for methods that speed the development of new inhibitors for novel targets and second-line therapeutics for targets that have become therapy-resistant.
-
-Recently, the importance of protonation state effects in kinase inhibitor affinity, selectivity, and kinetics has been recognized for the most well-studied of kinase:inhibitor interactions---the binding of Abl by imatinib (Gleevec), a blockbuster drug used to treat chronic myelogenous leukemia and gastrointestinal stromal tumors.
-In Abl:imatinib binding, the inhibitor and kinase both populate a mixture of protonation states, and the dominant protonation states change upon binding.
-Changes in pH also significantly modulate binding kinetics.
-{\bf Failure to account for protonation state effects can lead to significant errors of several kcal/mol in quantitative modeling of kinase:inhibitor association, needlessly frustrating selective inhibitor design efforts or investigations of the physiological efficacy of inhibitors.}
-Given the prevalence of p$K_a$s near intracellular pH in kinase inhibitors and the proximity of titratable groups (especially the conserved DFG loop) in many kinases of pharmacological interest, protonation state effects may be a widespread but poorly appreciated phenomenon.
-
-We propose a combined computational and experimental approach to assess the prevalence of protonation state effects, dissect their origin, and overcome the limitations of current modeling techniques.
-Using existing tools to first identify candidate kinase:inhibitor systems for study, we use both novel computational techniques and experiments capable of observing protonation state effects to examine these systems in detail.
-Using new algorithms to treat protonation states dynamically, we will dissect the dominant contributions to protonation state effects and eliminate current limitations in the way protonation states are handled in computational drug discovery.
-
-{\bf AIM 1. Broadly survey kinase:inhibitor structures for evidence of significant protonation state effects.} 
-While there is reason to expect many kinase:inhibitor binding events will exhibit protonation state effects, this has only been concretely established for the well-studied Abl:imatinib system.  
-MCCE2 (MultiConformation Continuum Electrostatics) from the Gunner lab will be used to survey kinase:inhibitor complexes for likely protonation state effects by predicting protonation/tautomer populations for all ($>$1480) kinase:inhibitor complexes from the PDB.
-This approach---which is fast, but assumes a rigid backbone is maintained---will identify complexes for subsequent detailed investigation where protonation state effects have the potential to cause large (several kcal/mol) errors in quantitative predictions of binding affinity.
-
-{\bf AIM 2. Dissect the magnitude and nature of protonation state effects in kinase:inhibitor systems using rigorous alchemical binding free energy calculations with dynamic protonation states.}
-We will remove the assumption that protein and ligand remain fixed in a single protonation state by rigorously incorporating dynamic sampling of protonation states into quantitatively accurate explicit-solvent alchemical free energy calculations.
-Inspired by efficient protonation state sampling techniques from MCCE2, we will use nonequilibrium Monte Carlo techniques capable of astronomically boosting acceptance rates to incorporate dynamic protonation state sampling into our mixed MD/MC GPU-accelerated open source free energy code.
-We will then computationally probe the magnitude and nature of protonation state effects for candidate systems identified in Aim 1, examining the error in computed binding affinities incurred when fixed protonation states are used for protein and/or inhibitor, as well as which species (protein or ligand, which residues/functionalities) are primary contributors.  
-
-{\bf AIM 3. Experimentally assess computational findings on kinase:inhibitor systems expected to have significant protonation state effects.}
-We will experimentally investigate kinase:inhibitor systems predicted to have significant protonation state effects in Aim 2.
-We focus on bacterially-expressed human kinase domains as a well-controlled model system for assessing the accuracy of computational modeling and providing insight into the magnitude of protonation state effects on ATP-competitive inhibitor binding.
-We will conduct four types of experimental investigations: NMR to site-specifically identify protonation state changes in inhibitors; isothermal titration calorimetry to dissect the contribution of protonation state effects to binding affinity at physiological pH; fluorescence assays to investigate the pH-dependence of binding affinities relevant to acidified intracellular environments in cancer cells; and clinically observed mutations that may modulate binding affinities via p$K_a$ shifts. 
-
-%{\bf Outlook.} 
-%The failure to correctly treat protonation state effects in ligand binding is one of the major roadblocks hindering widespread applicability of computational approaches to inhibitor optimization for selectivity and affinity.
-{\bf Outlook.} This project will create the technology to directly address protonation state effects in the quantitative prediction of ligand affinities---a major roadblock to widespread application of these techniques---and provide a direct assessment of the magnitude and pervasiveness of protonation state effects in kinase-inhibitor systems.
-
-\eject
+%\eject
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SIGNIFICANCE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 {\large \bf SIGNIFICANCE}
+%2 pages
 
-%%%%%%%%%%%%%%%%%%%%%
-% EXPERIMENTALLY-DETERMINED KINASE INHIBITOR pKas
-\begin{figure}[b]
-\begin{centering}
-\resizebox{7.5in}{!}{\includegraphics{figures/kinase-inhibitor-experimental-pKas.pdf}}
-%\begin{overpic}[scale=0.30]{figures/imatinib.pdf}\put(-5,0){\bf A}\end{overpic}
-%\begin{overpic}[scale=0.40]{figures/src-abl-comparison-3}\put(0,0){\bf B}\end{overpic}
+%Promise of physical methods, how they could transform drug discovery and the design of new small molecules for chemical biology
+% (If space permits here we will allude also to how this could help with broader areas too such as engineering of biologics)
+Physical methods are poised to transform drug discovery and chemical biology via quantitative, predictive design of small molecules. %Single sentence placeholder for outline
 
-\end{centering}
-\vspace{-0.1in}
-\caption{\footnotesize {\bf Experimentally-determined p$K_a$s of selective kinase inhibitors imatinib and bosutinib show multiple protonation states are relevant under physiological conditions.}
-(A) The Abl-selective kinase inhibitor imatinib and its experimentally-determined macroscopic p$K_a$s shown next to their corresponding titratable sites, along with microspecies populations in solution~\cite{szakacks:j-med-chem:2005:acid-base-profiling-of-imatinib}.
-The red shaded region in the microspecies population plot shows the range of p$K_a$ that can be accessed with a penalty of  6 $k_B T$ (3.5 kcal/mol, sufficient to shift the affinity by 400 fold).
-(B) The second-generation tyrosine kinsase inhibitor bosutinib (nearly equipotent to Src and Abl) and its experimentally-determined macroscopic p$K_a$s and microscpecies populations in solution (Sirius Analytical).
-\vspace{-0.1in}
-\label{figure:kinase-inhibitor-experimental-pKas}}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%
+%Limitations of methods and of retrospective tests or application for methods improvements
+Unfortunately, these methods still have severe limitations and much work is needed to expand their domain of applicability, but retrospective tests are unsuitable for this. %Single sentence placeholder for outline
 
-{\bf Cancer is the second leading cause of death in the United States, accounting for nearly 25\% of all deaths; in 2015, 1.7 million new cases were diagnosed, and over 580,000 died~\cite{acs-cancer-facts-2014}.}
-In many of these cancers, kinase dysregulation is a driver and thus becomes a primary opportunity for therapeutic intervention~\cite{gray:nat-rev-cancer:2009:kinase-inhibitor-review}.
-Kinases play a critical role in the regulation of cellular signaling pathways. Perturbations of pathways due to kinase mutation, translocation, or upregulation  can cause constitutive activation that drive cancer progression.
-Much of the effort in developing new cancer treatments (and perhaps 30\% of \emph{all} current drug development effort) is focused on designing targeted inhibitors to shut down these aberrant kinases.
+%Explain need for blind challenges and how D3R only fills part of need
+To truly advance these methods, we need a series of blind challenges focused on pushing the limits of predictive techniques. %Single sentence placeholder for outline
 
-Selective kinase inhibitors exert their effects with the goal of minimizing off-target interactions.  
-These inhibitors, which specifically target one or more kinases or their mutants, have already proven their enormous potential as powerful therapeutics in the treatment of kinase dysregulation diseases.
-Imatinib ({\bf Figure~\ref{figure:kinase-inhibitor-experimental-pKas}A}) specifically targets the Abl kinase dysregulated in chronic myelogenous leukemia (CML) patients to abate disease progression. 
-Its discovery revealed the enormous therapeutic potential of selective kinase inhibitors, kindling hope that this remarkable success could be recapitulated for other cancers and diseases~\cite{deininger:blood:2005:imatinib-development,stegmeier:clpt:2010:imatinib-lessons}.
+%Discuss importance of SAMPL (including publication/citation count, previous successes in advancing the field, focus), need for funding to:
+%   a. Continue SAMPL
+%   b. Extend SAMPL to bridge to D3R rather than leaving a ?capability gap? (here?s where I explain why this is distinct from D3R -- this is crucial)
+SAMPL has been vital to fulfill this role; here we propose to continue and extend SAMPL via collection of a set of carefully selected experimental data in order to drive further improvements in modeling. %Single sentence placeholder for outline
 
-Unfortunately, the discovery of new therapeutically useful selective molecules targeted to the kinases dysregulated in other cancers has proven more challenging.
-Worse yet, even when selective kinase inhibitor therapeutics are available, the inexorable emergence of resistance often limits the duration over which the patient will  benefit.
-{\bf Ultimately, the emergence of drug resistance where no effective therapeutics are available is thought to be the reason for treatment failure in over 90\% of patients who succumb to metastatic cancer~\cite{longley-johnston:j-pathol:2005:drug-resistance}.}
-There is dire need for technologies to accelerate development of both first and second line selective kinase inhibitors.
+%Wrap up with how this will realistically help advance binding prediction in a realistic timeframe (a brief mention of CASP will likely be appropriate even though we don?t follow the same model)
+This work is necessary in order to advance modeling to the point where it can reliably guide drug discovery efforts, reducing time consuming and costly trial and error. %Single sentence placeholder for outline
 
-%%%%%%%%%%%%%%%%%%%%%
-% IMATINIB AND ITS TARGET
-%\begin{figure}[b]
-%\begin{centering}
-%\begin{overpic}[scale=0.30]{figures/imatinib.pdf}\put(-5,0){\bf A}\end{overpic}
-%\begin{overpic}[scale=0.40]{figures/src-abl-comparison-3}\put(0,0){\bf B}\end{overpic}
-%
-%\end{centering}
-%\vspace{0.1in}
-%\caption{\footnotesize {\bf Comparison of crystal structures of imatinib (Gleevec) bound to closely related Abl and Src kinases.}
-%(A) Imatinib mesylate (Gleevec). % http://www.theodora.com/drugs/gleevec_tablets_novartis.html
-%(B) Crystal structures of imatinib bound to Abl kinase~\cite{manley:acta-cryst-d:2007:imatinib-abl} and Src kinase~\cite{seeliger:2007:structure:imatinib-binding}.  Imatinib favors Abl over Src by 4.6 kcal/mol.
-%{\color{red}[JDC: This figure will be eliminated.]}
-%\label{figure:comparison-src-abl}}
-%\end{figure}
-%%%%%%%%%%%%%%%%%%%%%
-
-{\bf Computational techniques hold the potential to accelerate drug discovery, but are hindered by neglect of protonation state effects.}
-The development of imatinib ({\bf Figure~\ref{figure:kinase-inhibitor-experimental-pKas}A}) required two years and the synthesis of over 400 molecules to refine an initial lead compound into a potent, selective inhibitor~\cite{the-story-of-gleevec}.
-Quantitatively accurate predictive physical modeling could significantly speed the process of selective inhibitor development, especially at the lead optimization stage where potency must be improved or maintained; even a predictive accuracy of 2.0 kcal/mol could speed this process enormously, potentially cutting development time in industry from two years and \$150M by up to threefold~\cite{shirts-mobley-brown:2009:sbdd,paul:2010:nrdd:pharma-research-development} or permitting academic laboratories to inexpensively design selective chemical probes.
-Computational modeling already plays an active role in current kinase inhibitor discovery programs, but neglecting protonation state effects undoubtedly contributes to its limited effectiveness~\cite{schneider:2010:nrdd:virtual-screening}.
-While some reports demonstrate that accounting for populations of ligand protomers enhances the performance of docking and virtual screening (e.g.~\cite{exner:jcamd:2010:protonation-states-docking}), a detailed understanding of the prevalence, nature, and severity of these effects is lacking, and comprehensive modeling approaches to treat them do not yet exist~\cite{onufriev:quart-rev-biophys:2013:protonation-state-effects}.
-{\bf This proposal aims to both establish our ability to dynamically treat protonation states and to use this as a tool to probe the prevalence, nature, and magnitude of protonation state effects in kinase:inhibitor recognition.}
-
-%%%%%%%%%%%%%%%%%%%%%
-% ILLUSTRATIVE SCHEME FOR IMATINIB BINDING
-\thisfloatsetup{capposition=beside,capbesideposition={center,right},capbesidewidth=0.50\textwidth}
-\begin{figure}[tb]
-%\vspace{-0.1in}
-\resizebox{0.50\textwidth}{!}{\includegraphics{figures/imatinib-binding-scheme.pdf}}
-\caption{\footnotesize {\bf Scheme illustrating major protonation states of imatinib and Abl relevant to kinase:inhibitor binding at pH 7.4.}
-An illustrative scheme depicts the two dominant protonation states of imatinib ({\bf Figure~\ref{figure:kinase-inhibitor-experimental-pKas}A) } and protonation/conformation states of Abl, as suggested by a combination of biophysical experiments and computer simulations~\cite{szakacks:j-med-chem:2005:acid-base-profiling-of-imatinib,seeliger:2007:structure:imatinib-binding,roux:pnas:2013:gleevec-selectivity}.
-Dominant unbound and bound states are highlighted in red.
-Ignoring either population of a mixture of protonation states or population shifts on binding leads to errors of several $k_B T$ in computed binding free energies.
-\vspace{-0.2in}
-\label{figure:imatinib-binding-scheme}}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%
-
-{\bf Recent work has highlighted the importance of protonation state effects in imatinib:Abl binding.}
-Aggregated experimental and computational data for the well-studied Abl:imatinib system is summarized schematically in {\bf Figure~\ref{figure:imatinib-binding-scheme}}.
-At typical intracellular pH of 7.4, {\bf unbound imatinib populates a mixture of protonation states}, predominantly a neutral form (0 $k_B T$) and a higher free energy protonated form where the piperazine ring is protonated ($\sim$0.6 $k_B T$)~\cite{szakacks:j-med-chem:2005:acid-base-profiling-of-imatinib}, as determined by electrochemical titration ({\bf Figure~\ref{figure:kinase-inhibitor-experimental-pKas}A}).  
-However, the complex prefers the charged form of imatinib, which incurs an unfavorable energetic cost to populate the protonated form of imatinib.
-With a total binding affinity of 17 $k_B T$, there is ample free energy to pay the cost of shifting the balance of protonation states from the equilibrium distribution found in solution in this complex. 
-
-The Abl kinase also samples multiple protonation states.
-Asp381 in the conserved DFG (Asp-Phe-Gly) loop  must swing out to permit imatinib binding.  
-The protonation state of Asp381 is coupled to DFG loop conformation ~\cite{kuriyan-shaw:pnas:2009:abl-protonation-state}.
-Both the cocrystal structure (pdbid:2HYY) and free energy calculations suggest the dominant bound species is the protonated form of imatinib bound to the deprotonated Asp381, while in solution it is the deprotonated imatinib and mixture of Asp conformations and protonation states~\cite{simonson:j-comput-chem:2010:imatinib-protonation-state,roux:pnas:2013:gleevec-selectivity}, though the exact populations of the various protonation states of Asp are still in debate~\cite{kuriyan-shaw:pnas:2009:abl-protonation-state}.
-A large contribution to the selectivity of imatinib for Abl over Src is actually due to the different free energy costs of reorganization of the DFG loop to permit binding, so the coupling of protonation state to conformation contributes to inhibitor selectivity as well as affinity~\cite{seeliger:2007:structure:imatinib-binding,simonson:j-biol-chem:2010:imatinib-selectivity,roux:pnas:2013:gleevec-selectivity}.
-
-{\bf Most FDA-approved kinase inhibitors can access multiple protonation states at intracellular pH.}
-Kinase inhibitors can possess up to picomolar affinities for their targets (corresponding to a binding free energy of 28 $k_B T$, or 16.5 kcal/mol), allowing them to tolerate affinity losses of 500-fold (6 $k_B T$, equivalent to 2.6 log unit change in the equilibrium constant) while maintaining sub-nanomolar potency.
-As a result, kinase inhibitors can in principle access protonation states with p$K_a$s up to 2.6 log units away from intracellular pH, allowing groups with p$K_a$s in the range to 4.8--10 to modulate binding specificity and affinity (assuming pH$_i$ of 7.4).
-\emph{More than half} of all FDA-approved kinase inhibitors have at least one predicted p$K_a$ in this range ({\bf Figure~\ref{figure:kinase-inhibitor-pKas}}), meaning multiple protomeric inhibitor species are likely important in the binding of numerous kinase inhibitors of clinical interest.
-Coupled with the potential for multiple relevant protein protonation states---possibly beyond the DFG loop alone---protonation state effects could be widespread in kinase:inhibitor recognition.
-
-{\bf Current standard physical modeling approaches (and most drug discovery efforts) assume only a single protonation state dominates in solution and complex.}
-In standard molecular dynamics or Monte Carlo simulations, the simulation is locked in a fixed protonation state throughout the modeling process.
-Even if dominant protonation states remain fixed, even a single incorrect protonation state can result in errors of several kcal/mol in computed kinase inhibitor binding affinities~\cite{simonson:j-comput-chem:2010:imatinib-protonation-state,simonson:j-biol-chem:2010:imatinib-selectivity,roux:pnas:2013:gleevec-selectivity}.
-Beyond this, current techniques are incapable of treating the case where a mixture of protonation states are sampled in either solution or in in complex, and shifts in dominant protonation state upon binding (such as the case of imatinib binding) can only be correctly accounted for if the cost of populating these protonation states can be accurately assessed.
-As a result {\bf any departure from a single dominant protonation state for both kinase and inhibitor in both complex and solution---or a misassignment of protonation states---will make the neglect of protonation state effects a dominant contribution to the error in predictive physical modeling and design using current techniques.}
-
-While there have been some efforts to account for protonation state effects (such as the use of protonation state penalties in rescoring of docked poses~\cite{stern:proteins:2010:variable-protonation-state-docking}, the development of constant-pH molecular dynamics in implicit~\cite{mongan:2004:j-comput-chem:constant-pH,brooks:biophys-j:2005:constant-pH-lambda-dynamics} and explicit~\cite{stern:jcp:2007:constant-pH,grubmueller:biophys-j:2011:constant-pH-lambda-dynamics,brooks:proteins:2014:constant-ph-explicit,roux:jctc:2015:constant-pH-ncmc}, and even targeted enveloping distribution sampling of single protonation states in a free energy calculation~\cite{brooks:protein-sci:2016:constant-pH-free-energy}), {\bf no current approaches permit fully dynamic protonation states of all relevant titratable groups in the computation of ligand-binding affinities}.
-
-{\bf The objective of this proposal} is to overcome current limitations in physical modeling approaches by integrating a dynamic treatment of protonation states into quantitatively accurate alchemical binding free energy calculations, which are currently the gold standard approach to quantitatively accurate physical modeling~\cite{chodera:curr-opin-struct-biol:2011:drug-discovery,abel:jacs:2015:fep-plus}.
-We adopt a combined computational-experimental approach to validate this approach against quantitative experimental data.
-Next, we utilize this tool alongside experimental biophysical techniques to address the following questions:
-\begin{enumerate}
-  \vspace{-0.15in}
-  \item How pervasive are protonation state effects in kinase:inhibitor affinity and selectivity?
-  \vspace{-0.1in}
-  \item What is the biophysical nature of protonation state effects in kinase inhibitor recognition? Are mixtures of protonation states populated, or shifts in dominant protonation state upon binding? Does the protein or ligand predominantly experience protonation state effects, or are they coupled?
-  \vspace{-0.1in}
-  \item What is the magnitude of the error incurred if protonation state effects are neglected?
-  \vspace{-0.1in}
-\end{enumerate}
-
-{\bf Scientific premise:} Despite uncertainty over the magnitude of these effects in Abl:imatinib---the only kinase:inhibitor system studied in detail so far---the aggregate of multiple experimental and computational studies suggests the scientific premise for the existence of protonation state effects is strong.
-In this project, we aim to establish the prevalence, magnitude, and nature of these effects much more broadly.
-
-\eject
-
-%While the phenomenon is fundamentally simple, the presence of multiple acidic and basic titratable groups in close proximity complicates many essential inhibitor physicochemical properties, including their affinities, specificities, lipophilicities, and solubilities.
-%Imatinib, for example, has eight titratable groups with distinct p$K_a$/p$K_b$ values ({\bf Figure}~\ref{figure:imatinib-predicted-pKa}, left).
-%Many of these p$K_a$ values lie inside the physiologically relevant range (pH 1--9)\footnote{Stomach pH is approximately 1.2, blood pH is 7.4, and intracellular pH of tumor cells can variously range from 5.8---8~\cite{song-griffin-park}.}, resulting in a multitude of protomeric species being populated to varying degrees when the drug is dosed into humans ({\bf Figure}~\ref{figure:imatinib-predicted-pKa}, right).
-%This also means the total charge ({\bf Figure}~\ref{figure:imatinib-predicted-pKa}, right)---which has an enormous influence on its solubility and lipophilicity---changes considerably in this range.
-%Second-generation inhibitors such as bosutinib, which inhibits Src and Abl with nearly equal potency (3.5 nM and 1.4 nM, respectively~\cite{boschelli:euro-j-cancer:2010:bosutinib-review}), are similarly complex; electrochemical measurements of bosutinib acid-base titration ({\bf Figure~\ref{figure:bosutinib-measured-pKa}}) demonstrate that multiple protomers (here, four) are significantly populated over the pH range 5--8.
-%{\color{red}[JDC: We could potentially also emphasize how pH dysregulation in tumor cell microenvironments leads to a larger relevant pH range.]}
-%{\color{blue}[MG: keep the numbers and text in the figures a reasonable size (eg 8-9 pt); we may want to put a highligh bar on the graph to show the physiological range]}
-
-%%%%%%%%%%%%%%%%%%%%%
-% IMATINIB pKa
-%\begin{figure}[tb]
-%\begin{centering}
-%\resizebox{7.5in}{!}{\includegraphics{figures/imatinib-chemicalize-pKa.pdf}}
-
-%\end{centering}
-%\vspace{0.1in}
-%\caption{\footnotesize {\bf Predicted pKas and pH-dependent protomer populations and net charge for imatinib, a selective Abl kinase inhibitor.}
-%\emph{Left:} Imatinib with predicted pKas of titratable groups.
-%\emph{Center:} Predicted populations of each protomeric species as a function of pH.
-%\emph{Right:} Predicted net charge of imatinib as a function of pH.  The yellow species that is present at low pH has 6 more protons bound than the magenta species at high pH.
-%All predictions were made by \url{http://chemicalize.org} server from ChemAxon.
-%\label{figure:imatinib-predicted-pKa}} 
-%{\color{blue} [can you highlight acidic groups in red and basic groups in blue on the figure for imatinib?]}
-%\end{figure}
-%%%%%%%%%%%%%%%%%%%%%
-
-%{\bf Minor protomeric states of inhibitors in solution can becomine dominant when bound.}
-%Even if a single protomeric species is dominantly populated within a cellular compartment, the influence of other protomeric species on affinity and selectivity for on- and off-target kinases is not necessarily negligible.
-%A species whose proton affinity ensures it is only 10\% populated in solution would only need to bind to the receptor 1.3 kcal/mol more tightly than the dominant species in order to be equipopulated in the bound state.\footnote{Similarly, a 5\% minor species would need to bind 1.7 kcal/mol more tightly, while a 1\% species 2.7 kcal/mol more tightly.}
-%Considering the electrostatic environment of the binding site can have a profound effect on the strength of interactions with ligand protomeric species of differing charge, and small molecules can easily possess overall affinities of at least 15 kcal/mol~\cite{kuntz:1999:pnas:maximal-affinity-of-ligands}, this does not present an insurmountable barrier for minor protomeric species to be the species that exerts either dominant on-target effects or causes off-target effects by strong binding.
-%Thus, both the interactions of each protomeric state with the kinase \emph{and} an accurate estimate of the relative solution population of each protomeric state in the appropriate cellular compartments are critical to derive the effective compound affinity. 
-
-
-%{\bf Kinase protonation states can also play a significant role in selective inhibition by small molecules.}
-%Recent evidence has elucidated a protonation-dependent switch in Abl kinase that plays a critical role in imatinib binding~\cite{kuriyan-shaw:pnas:2009:abl-protonation-state}.
-%Imatinib stabilizes Abl kinase in an inactive state by trapping the Asp-Phe-Gly (DFG) loop motif in the DFG-out conformation~\cite{kuriyan:science:2000:imatinib-binding-to-abl}.
-%However, the DFG-in and -out conformations place the DFG Asp-381 in differing electrostatic environments, modulating its pKa (from an intrinsic pKa of 3.9 to $\sim$6.6 in the DFG-in conformation).  This couples the DFG loop conformation---and hence imatinib binding---to the Asp-381 protonation state~\cite{kuriyan-shaw:pnas:2009:abl-protonation-state}.
-%The near-universality of DFG motifs in human kinase catalytic domains ensures that the proper treatment of the dynamic protonation states of kinase and inhibitor will be essential for nearly all kinase inhibitor design projects.
-
-%{\color{red}[JDC: If there is time/space, add a paragraph/figure analyzing the number of titratable groups of all FDA-approved clinical kinase inhibitors.]}
-
-% BOSUTINIB
-%\begin{figure}[tb]
-%\begin{centering}
-%\resizebox{7.5in}{!}{\includegraphics{figures/bosutinib-SiriusT3-pKa.pdf}}
-%
-%\end{centering}
-%\vspace{0.1in}
-%\caption{\footnotesize {\bf Predicted and measured pKas, pH-dependent protomer populations, and net charge for bosutinib, a dual Src/Abl inhibitor.}
-%\emph{Left:} Bosutinib with predicted pKas of titratable groups.
-%\emph{Center:} Predicted populations of each protomeric species as a function of pH.
-%\emph{Right:} Measured net charge (symbols) of imatinib as a function of pH.
-%Predictions and measurements were carried out by the Sirius T3 instrument, generously provided by Sirius Analytical.
-%\label{figure:bosutinib-measured-pKa}}
-%\end{figure}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% INNOVATION
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\eject
 
 {\large \bf INNOVATION}
+% 1 page
 
-{\bf Our proposed survey of kinase:inhibitor interactions for protonation state effects will provide the first estimate of how prevalent  protonation state effects are in selective kinase inhibitor recognition.}
-While detailed biophysical and computational studies of protonation state effects have been undertaken for a few specific protein model systems by our collaborator Paul Czodrowski (see included Letter of Support) in his work with Klebe~\cite{klebe:2001:jmb:trypsin-thrombin,klebe:chembiochem:2002:ph-dependent-binding-modes,klebe:jmb:2007:protonation-state-changes,klebe:jmb:2007:factorizing-binding-affinity}, little is known about the prevalence of protonation state effects in inhibitor binding in general~\cite{onufriev:quart-rev-biophys:2013:protonation-state-effects}, and essentially nothing is known of the prevalence, nature, and magnitude of these effects in kinase inhibitor recognition outside of the well-studied Abl:imatinib system.
-The survey and subsequent detailed study we propose will greatly advance our understanding of the prevalence of protonation state effects.
+%SAMPL drives science in our groups and in the field
+   %a. Give examples from our groups from prior SAMPLs
+   %b. Examples from field in prior SAMPLs
+         %b.1 Figure showing progression in hydration free energy accuracy across a couple of SAMPLs or comparing two SAMPLs?
+    %c. Mention uniqueness of SAMPL -- there are other predictive challenges (D3R, pKa coop, CASP) but none focused on driving quantitatively predictive protein-ligand modeling
+We will discuss how SAMPL has previously driven innovation in the field.
 
-We aim to implement a dynamic, physically accurate treatment of both protein and small molecule protonation states within a rigorous statistical mechanical framework, removing a significant barrier to accurate affinity predictions.
-While a number of methodologies have been developed for constant-pH protein simulations~\cite{gunner:biophys-j:1997:mcce,gunner:biophys-j:2002:mcce,mongan:2004:j-comput-chem:constant-pH,gunner:j-comput-chem:2009:mcce2,stern:jcp:2007:constant-pH,dashi-meng-roitberg:jpcb:2012:ph-remd,brooks:proteins:2014:constant-ph-explicit,khandogin-brooks:biophys-j:2005:constant-ph,stern:jcp:2007:constant-pH,grubmueller:biophys-j:2011:constant-pH-lambda-dynamics,roux:jctc:2015:constant-pH-ncmc}, {\bf this project will be the first time a dynamic treatment of all protein and small molecule protonation states has been applied to rigorous calculations of kinase inhibitor binding affinity and selectivity.} 
 
-{\bf We will use the rigorous framework of modern alchemical free energy calculations.}
-Alchemical methods are a rigorous approach to computing protein-small molecule binding affinities at moderate computational cost~\cite{tembe-mccammon:comput-chem:1984:alchemical-free-energy-calculations,shirts-mobley-chodera:2007:annu-rep-comput-chem:prime-time,essex:j-med-chem:2008:estrogen-receptor,essex:jcamd:2010:free-energy-review,gallicchio-levy:curr-opin-struct-biol:2011:free-energy-review,chodera:curr-opin-struct-biol:2011:drug-discovery}.
-They employ molecular simulations---molecular dynamics (MD) or Monte Carlo (MC)---of unphysical, \emph{alchemically perturbed} intermediate states that attenuate the interactions of the small molecule with its environment.  
-These alchemically perturbed states include both the fully-interacting ligand-protein complex as well as replicas in which the ligand does not interact with its receptor, and allow the total free energy of binding---including entropic and enthalpic contributions---to be efficiently computed~\cite{essex:jcamd:2010:free-energy-review,gallicchio-levy:curr-opin-struct-biol:2011:free-energy-review,chodera:curr-opin-struct-biol:2011:drug-discovery}.  
-Currently, alchemical methods can achieve semi-quantitative, predictive accuracy ($\sim$1--2 kcal/mol) for well-behaved proteins in which there are no protonation state effects~\cite{shirts-mobley-chodera:2007:annu-rep-comput-chem:prime-time,chodera:curr-opin-struct-biol:2011:drug-discovery,abel:jacs:2015:fep-plus}, which is sufficient accuracy to greatly accelerate lead optimization~\cite{shirts-mobley-brown:2009:sbdd}.
-While alchemical methods are somewhat demanding, requiring several wall clock hours/ligand rather than seconds/ligand for docking, the results are both more accurate and provide more physical information.
+% Innovation in experimental pipelines (Aim 3)
+Innovation here will include developing new, high-throughput experiments for studying protein ligand binding (Aim 3).
 
-{\bf We are uniquely positioned to implement and validate dynamic protonation state free energy calculations.}
-This project combines the extensive expertise from the Gunner lab~\cite{gunner:biophys-j:1997:mcce,gunner:bba:2000:proton-electron-transfer,gunner:biophys-j:2002:mcce,gunner:j-comput-chem:2009:mcce2,gunner:jmb:2009:mcce2-hsa,gunner:proteins:2010:reaction-center} in treating protein protonation states and their coupling with conformation and ligand binding with the expertise of the Chodera lab~\cite{mobley-chodera-dill:2006:jcp:orientation-restraints,mobley-chodera-dill:2007:jctc:confine-and-release,shirts-mobley-chodera-pande:2007:jpcb:dispersion-corrections,chodera:jcp:2007,shirts-mobley-chodera:2007:annu-rep-comput-chem:prime-time,shirts-chodera:jcp:2008:mbar,ncmc,chodera-shirts:jcp:2011:gibbs,chodera:curr-opin-struct-biol:2011:drug-discovery,chodera-shirts:jcamd:2013:yank} in rigorous, physically accurate alchemical free energy methodologies.
-The Gunner lab has developed a highly efficient Monte Carlo code that samples protonation and tautomeric states subject to a rigid backbone approximation~\cite{gunner:biophys-j:1997:mcce,gunner:bba:2000:proton-electron-transfer,gunner:biophys-j:2002:mcce,gunner:j-comput-chem:2009:mcce2,gunner:jmb:2009:mcce2-hsa,gunner:proteins:2010:reaction-center}.
-The Chodera lab has developed a GPU-accelerated, Python-based, open source alchemical free energy calculation code {\bf {\sc Yank}}~\cite{yank-url}---the first GPU-accelerated alchemical free energy code~\cite{chodera-shirts:jcamd:2013:yank}---designed with flexibility in mind, allowing facile implementation of new algorithms.
-In addition to using the GPU-accelerated OpenMM library to achieve high speed on consumer-grade graphics processors (which can achieve over 200 ns/day on the JAC DHFR PME benchmark)~\cite{eastman:jctc:2012:openmm,openmm-url}, this code incorporates many modern methdologies, such as Hamiltonian replica exchange with Gibbs sampling to increase phase space mixing~\cite{chodera-shirts:jcp:2011:gibbs}, state-of-the-art reweighting techniques to extract all information from all thermodynamic states~\cite{shirts-chodera:jcp:2008:mbar}, the inclusion of anisotropic long-range dispersion corrections~\cite{shirts-mobley-chodera-pande:2007:jpcb:dispersion-corrections}, and mixes Monte Carlo and molecular dynamics for efficient sampling of ligand poses~\cite{chodera-shirts:jcamd:2013:yank}.
-In addition, the Chodera lab has developed highly efficient techniques based on nonequilibrium proposals to incorporate Monte Carlo moves into molecular dynamics simulations and increase acceptance rates astronomically~\cite{ncmc}---a technology required to enable protein protonation state sampling in explicit solvent~\cite{roux:jctc:2015:constant-pH-ncmc}.
-Acceptance rates can be further increased by optimizing alchemical nonequilibrium switching protocols using estimators we developed for this purpose~\cite{minh-chodera:2011:jcp:mis-estimator}, as well as efficient reweighting techniques capable of making use of all simulation data~\cite{shirts-chodera:jcp:2008:mbar,minh-chodera:2009:jcp:minh-chodera}.
+% Innovative reference calculations (Aim 4)
+In Aim 4, we will not only run SAMPL community challenges, but also perform our own reference calculations with the latest techniques, testing their accuracy and using these to assess the current state-of-the-art.
 
-%Our novel combination of dynamic protonation state sampling within an alchemical binding free energy calculation framework will first be validated by comparison to existing experimental data.  
-%It will then be applied to first- and second-generation tyrosine kinase inhibitors using Abl and Src to quantitatively probe the importance of protonation states in determining affinity and selectivity.  
-%The resulting information will inform future structure-guided kinase inhibitor design projects and should open new avenues for investigation of protonation state effects and pH-dependence (or pH-specific targeting) of selective kinase inhibition. 
-
-{\bf This proposal uses a robust combination of biophysical techniques to validate and complement computational approaches to assessing protonation state effects.}
-The Seeliger lab brings extensive expertise in kinase expression, biochemistry, and structural biology---especially the quantitative NMR techniques that will be utilized in this project.
-Seeliger developed a widely shared and cited bacterial expression system that allows rapid generation of large quantities of pure, active kinase for biophysical studies~\cite{seeliger:2005:protein-sci:kinase-expression}.
-The Seeliger lab was first to demonstrate a significant role for protonation state effects in Abl:imatinib association~\cite{kuriyan-shaw:pnas:2009:abl-protonation-state}. 
-The Chodera lab performs automated biophysical experiments using a robotic wetlab capable of engineering many point mutations and assessing binding affinities via automated fluorescence or ITC experiments.
-Collaborator Paul Czodrowski contributes his extensive experience in essentially all other combined experimental/computational studies of the role of protonation state effects in small molecule recognition~\cite{klebe:2001:jmb:trypsin-thrombin,klebe:chembiochem:2002:ph-dependent-binding-modes,klebe:jmb:2007:protonation-state-changes,klebe:jmb:2007:factorizing-binding-affinity}, as well as his expertise on current practices with regard to protonation states in active drug discovery projects.
-The Gunner lab also brings considerable knowledge of experimental ligand binding affinity measurements~\cite{dutton:biochem:1994:photosynthetic-reaction-center,gunner:proteins:2010:reaction-center,gunner:photosynth-res:2013:photosynthetic-reaction-center}.  
-
-\eject
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% APPROACH
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Innovation in analysis of method performance, comparison of methods, workflow science? (Aim 4)
+Innovation here will also involve careful assessment of how to compare methods and analyze their relative performance in a statistically sound way.
 
 {\large \bf APPROACH}
+% 9 pages
 
-To address the role of protonation state effects---defined as the presence of a mixture of protonation states or a shift in dominant protonation states upon binding---in kinase:inhibitor association, we have two primary goals:
-\begin{enumerate}
-  \vspace{-0.15in}
-  \item Develop and validate a rigorous computational framework to incorporate the effects of protein and small molecule dynamic protonation states within the context of alchemical free energy calculations to compute accurate protein:ligand binding affinities
-  \vspace{-0.1in}
-  \item Utilize computational and experimental biophysical approaches---including this new framework---to assess the pervasiveness, nature, and magnitude of protonation state effects in kinase inhibitor binding
-  \vspace{-0.15in}
-\end{enumerate}
-To achieve these goals, the work is organized into three main Aims that successively filter kinase:inhibitor complexes into successively refined subsets that permit their detailed study.
-For tractability, we focus on kinase domains---the therapeutic target of kinase inhibitors---in isolation, rather than full-length kinases.
 
-In {\bf Aim 1}, we first construct an automated pipeline for an existing tool---MCCE2~\cite{gunner:bba:2000:proton-electron-transfer,gunner:j-comput-chem:2009:mcce2} from the Gunner lab---in a manner that allows us to screen \emph{all} kinase:inhibitor complexes in the PDB to identify those where protonation state effects may play a large role in binding, identifying a subset of these ($\sim$100--200) for further study in {\bf Aim 2}.
-While this approach uses a fixed backbone and a finite library of rotamers, these approximations are required in order to identify kinase:inhibitor pairs beyond the well-studied Abl:imatinib system that might exhibit significant protonation state effects.
-This Aim requires an initial benchmark of the accuracy of p$K_a$ prediction methodologies, which will utilize experimental p$K_a$ data for all FDA-approved kinase inhibitors, informing future modeling studies that utilize predicted p$K_a$s of novel compounds.
-This work will also provide the first large-scale survey of how widespread protonation state effects might be in kinase:inhibitor association.
+%Aim 1 - Generate new data for simple SAMPL blind challenges on physical property prediction (1.5 pages)
+{\bf Aim 1: Generate new data for ``simple'' SAMPL blind challenges on physical property prediction.}We will develop new solution-phase datasets for druglike small molecules. These data can test critical aspects of small molecule modeling (including accounting for interactions and treatment of protonation/tautomeric state) and improve our ability to predict physical properties relevant to drug discovery in new regions of chemical space. We will initially focus on distribution between organic phases and on pKa?s and their modulation by solvent environment, using these data to drive improvements in the modeling of ligand interactions.
 
-In {\bf Aim 2}, we incorporate dynamic protein and ligand protonation states into GPU-accelerated alchemical free energy calculations.
-This approach will be applied to the kinase:inhibitor systems identified as having the potential for significant protonation state effects in {\bf Aim 1}---along with a number of controls which are believed to not display protonation state effects.
-Kinase:inhibitor systems that are predicted through this much more detailed atomistic approach to have experimentally measurable effects (significant ligand protonation state population shifts for NMR, significant net proton uptake/loss events for the kinase:inhibitor complex for ITC; and pH- or mutation-sensitive binding affinity changes for fluorescence assays) will be utilized in {\bf Aim 3} for validation.
-In parallel, dynamic protonation state free energy calculations will be used to validate the prevalence of protonation state effects (by confirming the number of kinase:inhibitor systems that exhibit them), the nature of these effects (by identifying whether protein, inhibitor, or both exhibit the effects), and magnitude of these effects (by addressing the magnitude of error made if protonation state effects are neglected for protein, inhibitor, or both).
+%Explain what science -- log D/logP, pKa primarily but mention possible other areas of interest
+    %Industry partnerships (and past precedent)
+%Compare log D accuracy vs hydration accuracy, highlight issues and explain relevance to drug discovery; note lessons learned in SAMPL5
 
-In {\bf Aim 3}, we use multiple experimental biophysical techniques to both validate the accuracy of the dynamic protonation state alchemical free energy methodology developed in {\bf Aim 2} as well as confirm its findings regarding the prevalence, nature, and magnitude of protonation state effects.
-We focus on experimentally tractable systems, favoring kinases that can be easily expressed and inhibitors that can be easily obtained.
-NMR techniques will be used to examine cases where the protonation state of the ligand is expected to undergo a detectable protonation state change upon binding.
-ITC techniques that utilize multiple buffers at the same pH will be used to dissect the contribution protonation state changes to binding in cases where net proton uptake/loss is expected and inhibitor is sufficiently soluble.
-Fluorescence assays to measure direct inhibitor binding affinities will be used in cases where the affinity is predicted to be sensitive to pH or engineered point mutations.
 
-{\bf Relevant biological variables} have been considered in the design of this study, including posttranslational modifications, choice of protein constructs, concentrations and buffer conditions, and the effects of pH.
 
-{\bf Scientific rigor} is ensured by use of established experimental protocols, well-characterized kinase inhibitors, and validation of computational, structural, and experimental data through appropriate statistical methods.
+%Aim 2 - Measure binding of novel host-guest complexes for introductory ligand binding challenges (2 pages)
+{\bf Aim 2: Measure binding of novel host-guest complexes for introductory ligand binding challenges.}We will measure new host-guest binding free energies for cucurbiturils and deep-cavity cavitands, yielding further host-guest binding challenges which span between physical property prediction and protein-ligand binding. Host guest systems are some of the simplest cases of molecular recognition, and thus these binding data will drive improvements in modeling of simple binding systems with techniques of relevance to drug discovery.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% FIGURE: AIMS OVERVIEW
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[b]
-\begin{centering}
-\resizebox{\textwidth}{!}{\includegraphics{figures/aims-overview.pdf}}
+%Intro lessons learned on HG systems, relevance to drug discovery
+%Isaacs science
+%Gibb science
 
-\end{centering}
-%\vspace{0.1in}
-%\caption{\footnotesize {\bf Overview of Aims.}
-%\label{figure:aims-overview}}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\eject
+%Aim 3 - Generate biologically relevant advanced model systems for protein-ligand binding challenges. (2 pages) 
+{\bf Aim 3. Generate biologically relevant advanced model systems for protein-ligand binding challenges.}We will identify suitable biological protein-ligand model systems (difficult but tractable in order to push the limits of physical techniques) then measure binding and develop these for blind challenges. This will include binding studies on human serum albumin and bromodomains or aspartyl proteases; initial binding data will be expanded by the selection of additional ligands or the creation of mutations in the protein that modulate binding.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% AIM 1 : SURVEY KINASE:INHIBITOR COMPLEXES FOR EVIDENCE OF PROTONATION STATE EFFECTS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{mdframed}[middlelinewidth=2pt]
-{\bf AIM 1. Broadly survey kinase:inhibitor structures for evidence of significant protonation state effects.} 
-While there is reason to expect many kinase:inhibitor binding events will exhibit protonation state effects, this has only been concretely established for the well-studied Abl:imatinib system.  
-MCCE2 (MultiConformation Continuum Electrostatics) from the Gunner lab will be used to survey kinase:inhibitor complexes for likely protonation state effects by predicting protonation/tautomer populations for all ($>$1480) kinase:inhibitor complexes from the PDB.
-This approach---which is fast, but assumes a rigid backbone is maintained---will identify complexes for subsequent detailed investigation where protonation state effects have the potential to cause large (several kcal/mol) errors in quantitative predictions of binding affinity.
-\end{mdframed}
+%Aim 4 - Coordinate, run, and analyze blind challenges to advance modeling of binding (1.5 pages)
+{\bf Aim 4. Coordinate, run, and analyze blind challenges to advance modeling of binding.}The data collected in Aims 1-3 will drive annual SAMPL blind challenges, allowing the field to test the latest methods and force fields to assess progress, compare them against one another head-to-head, and perform sensitivity analysis to learn how much different factors (protonation state, tautomer selection, solvent model, force field, sampling method, etc.) affect predictive power. Results will then feed back into improved treatment of these factors for subsequent challenges, driving regular cycles of application, learning, and advancement.
+%Coordinate and run SAMPL blind challenges
+	%Run reference calculations to:
+		%a. Test current standard methods/FF
+		%b. Facilitate others learning (swap method or FF)
+		%c. Do sensitivity analysis (learn what?s important)
+		%d. (Give examples of what we?ve learned from this)
+		%e. (We will make inputs, outputs, and methods available too)
+	%Select and announce null models, run them
+	%Do statistical analysis of results (& compare to nulls), report back
+	%Work with D3R on meeting coordination
+	%Coordinate follow-up experiments as needed (cite examples when this was desirable)
+	%Coordinate with JCAMD on special issues
+	%Data archival and dissemination
+	%D3R coordination:
+	%	a. Co-running workshops with D3R
+	%     b. Coordinating challenges with them, submission deadlines offset from D3R challenges
 
-%{\bf AIM 1. Broadly survey kinase:inhibitor structures for evidence of significant protonation state effects.}
-{\bf Rationale:}
-Aside from the well-studied Abl:imatinib system, little is known about the degree to which protonation state effects are relevant in kinase:inhibitor recognition.
-These effects could include both changes in the population mixtures of protomeric species and shifts in dominant protomeric species upon binding, either of which can cause large (several kcal/mol) errors in modeling.
-Using multiconformer continuum electrostatics methods in MCCE2~\cite{gunner:bba:2000:proton-electron-transfer,gunner:j-comput-chem:2009:mcce2} developed by the Gunner group for the study of protonation state effects, we will survey kinase:inhibitor complexes from the PDB for evidence of significant protonation state effects in ligand or protein.
-Systems with significant protonation state population changes will be targeted in subsequent Aims.
 
-\emph{Aim 1A. Benchmark small molecule p$K_a$ calculation methodologies against experimental kinase inhibitor data}
-
-{\bf Approach:} 
-To survey the $>$1480 kinase:inhibitor complexes in the PDB for potential protonation state effects, we need to predict potential inhibitor protonation states and their relative populations in solvent.
-To select an appropriate predictive scheme, we will first benchmark the accuracy of a number of p$K_a$ methodologies readily available to us as stand-alone software packages, such as Epik~\cite{uchiyama:jcamd:2007:epik}, Jaguar (Schr\"{o}dinger), MoKa~\cite{milletti:proteins:2009:moka}, ChemAxon Physico-chemical property predictors (ChemAxon), and ACD/pKa (ACD/Labs).
-For this benchmark, we will utilize 22 FDA-approved small molecule kinase inhibitors, which are heavily represented in kinase:inhibitor structures in the PDB.
-When experimental data is unavailable, we will collect new p$K_a$s data using electrochemical and UV-metric acid-base titrations using a Sirius T3 (via Sirius Analytical), with ambiguous site specificity reconciled by $^1$H-NMR titrations (using the same methodology in {\bf Aim 3A}).
-
-{\bf Preliminary results:}
-We used the Epik~\cite{uchiyama:jcamd:2007:epik} tool to predict p$K_a$s for 22 FDA-approved kinase inhibitors ({\bf Figure~\ref{figure:kinase-inhibitor-pKas}}), with p$K_a$s of imatinib and bosutinib reproduced to $<$1 log unit error.
-More than half of these inhibitors are predicted to possess p$K_a$s in a range that would require a free energy cost of 6 $k_B T$ or less to access an alternative protonation state at the typical intracellular pH of 7.4, suggesting protonation state effects may be prevalent among selective kinase inhibitors.
-%%%%%%%%%%%%%%%%%%%%%
-% COMPUTED pKas OF ALL FDA-APPROVED KINASE INHIBITORS
-\thisfloatsetup{capposition=beside,capbesideposition={center,right}}
-\begin{figure}[h]
-\vspace{-0.1in}
-\centering
-\resizebox{0.45\textwidth}{!}{\includegraphics{figures/inhibitor-pKas.pdf}}
-\caption{\footnotesize {\bf More than half of all FDA-approved small molecule kinase inhibitors have multiple relevant protonation states.}
-p$K_a$s predicted by Epik~\cite{uchiyama:jcamd:2007:epik} (Schr\"{o}dinger) are shown.
-The red region denotes the p$K_a$ range most likely to cause protonation state effects, with each progressively darker region costing an additional k$_B$T to populate at an intracellular pH of 7.4, up to maximum of 6 k$_B$T.
-Kinase inhibitors can possess up to picomolar affinities for their targets (corresponding to a binding free energy of 28 $k_B T$, or 16.5 kcal/mol), allowing them to tolerate affinity losses of 500-fold (6 $k_B T$, equivalent to 2.6 log unit change in the equilibrium constant) while maintaining sub-nanomolar potency.
-As a result, kinase inhibitors can in principle access protonation states with p$K_a$s up to 2.6 log units away from intracellular pH, allowing groups with p$K_a$s in the range to 4.8--10 to modulate binding specificity and affinity (assuming pH$_i$ of 7.4).
-\label{figure:kinase-inhibitor-pKas}} 
-\vspace{-0.2in}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%
-
-\eject
-
-\emph{Aim 1B. Survey noncovalent kinase:inhibitor complexes for significant protonation state effects using MCCE2.}
-
-{\bf Approach:} 
-We will extract all noncovalent kinase:inhibitor complexes in the PDB to perform a large-scale survey of potential protonation-state effects using MCCE2~\cite{gunner:bba:2000:proton-electron-transfer,gunner:j-comput-chem:2009:mcce2}.
-MCCE2 uses Monte Carlo (MC) sampling of sidechain rotamers and sidechain/inhibitor protonation states to efficiently sample the equilibrium distribution of protomeric states~\cite{gunner:bba:2000:proton-electron-transfer,gunner:j-comput-chem:2009:mcce2}.
-While MCCE2 makes the approximation that the protein backbone and ligand geometry is fixed for efficient sampling, protonation states, tautomers, and sidechain rotamers are sampled during the simulation.
-
-All kinase inhibitors will have solution protonation and tautomer populations predicted as in Aim 1A and charges assigned using the AM1-BCC method~\cite{am1bcc1,am1bcc2} to produce charges compatible with the MCCE2 titratable protein forcefield.
-For each complex, a complete model of the kinase catalytic domain (with missing heavy atoms added and internal loops modeled) will be generated using MODELLER~\cite{qian:nature:2007:modeller,wang:jmb:2007:modeller}, and an explicit-hydrogen form of the ligand constructed using the OpenEye toolkit.
-MCCE2 will be run on inhibitor alone, kinase alone, and complex to identify (1) whether mixtures of protonation states exist in significant populations in any of these states, and (2) if so, whether dominant protonation states of inhibitor or kinase are seen to shift upon binding.  
-MCCE requires $\sim$6-12 hr/complex on a single processor, allowing all $\sim$1400 complexes to be rapidly evaluated. 
-Kinase:inhibitor pairs that appear to have large protonation state effects despite these assumptions will be flagged as candidates for subsequent detailed study in {\bf Aim 2}.  
-
-{\bf Preliminary data:}
-We performed a cursory survey of 10 kinase:inhibitor complexes in the RCSB using MCCE2 in `quick' mode, where limited conformational sampling of sidechain rotamers is performed.
-Protonation state penalties and charges were obtained as described above.
-{\bf Table~\ref{table:mcce-results}} summarizes the results of this survey.
-Protonation state effects leading to large modeling errors can arise from either a shift in dominant protonation state upon binding or from the population of a mixture of protonation state in either complex or solution.
-Of the 10 complexes surveyed, only 1/10 kinase:inhibitor complexes did not show any predicted shift in average protein or inhibitor protonation state upon binding; in 1/10 cases, the kinase experienced a large (+0.9) shift, while in 4/10 cases, the inhibitor experienced a large ($>$0.5) shift in $\Delta n_H$.
-For the inhibitor, only 2/10 cases did not populate a mixture of protonation states or experience a large shift in dominant protonation state upon binding.
-%From this simple survey, we expect to find that protonation state effects may be widespread in kinase:inhibitor association at large.
-
-\begin{table}[H]
-\begin{tabularx}{\textwidth}{lllrrcc}
-\hline
-& & & \multicolumn{2}{c}{$\Delta n_H$ on binding}  & \multicolumn{2}{c}{inhibitor protonation state populations} \\
-  \textbf{kinase} & \textbf{inhibitor} & \textbf{PDBID} & \textbf{kinase} & \textbf{inhibitor} &  \textbf{in solution} & \textbf{in complex} \\
-\hline
-EGFR & afatinib & 4G5J & -0.35 & {\bf -0.83} & \bf 98.0\% / --- & \bf 19.0\% / 80.5\% \\
-ALK & alectinib & 3AOX & -0.14 & +0.09 & \bf 64.8\% / 35.2\% & \bf 56.1\% 43.9\% \\
-VEGFR2 & axitinib & 4AG8 & +0.00 & +0.00 & \bf 82.7\% / 17.4\% & \bf --- / 100\%\\
-ABL1 & bosutinib & 3UE4 & -0.04 & +0.00 & 88.7\% / --- / --- / --- & 97.5\% / --- / --- / ---\\
-ALK & ceritinib & 4MKC & {\bf +0.90} & +0.00 & 100\% & 100\% \\
-MEK1 & cobimetinib & 4AN2 & -0.30 & +0.00 & \bf --- / 95.8\% & \bf 88.8\% / --- \\
-MET & crizotinib & 2WGJ & -0.17 & {\bf -0.80} & \bf 62.0\% / 37.3\% / --- / --- & \bf --- / --- / 76.4\% / 23.6\% \\
-ALK & crizotinib & 4ANQ & -0.15 & {\bf -0.60} & \bf 62.0\% / 37.3\% / --- & \bf --- / --- / 99.5\% \\
-ABL1 & ponatinib & 3IK3 & -0.28 & {\bf +0.50} & \bf 57.6\% / 38.4\% & 100\% / --- \\
-DDR1 & ponatinib & 3ZOS & -0.35 & +0.00 & \bf 55.2\% / --- / 41.3\% & \bf --- / 97.4\% / ---\\
-\hline
-\end{tabularx}
-\caption{{\bf Preliminary MCCE2 calculations of net proton gain or loss ($\Delta n_{H}$) upon inhibitor binding at pH 7.4 for kinase and inhibitor for selected kinases.}
-Ten kinase:inhibitor complexes from the RCSB were surveyed using Epik~\cite{uchiyama:jcamd:2007:epik} protonation state energy penalties for the inhibitor at pH 7.4 and AM1-BCC charges~\cite{am1bcc1,am1bcc2} using the `quick' mode, where sampling of sidechain rotamers is not fully exhaustive.  
-Of these, only VEGFR2:axitinib did not show any predicted shift in average protein or inhibitor protonation state upon binding.
-Most other complexes exhibited mild ($|\Delta n_{H}| <0.5$) protonation state shifts in protein (8/10) or inhibitor (1/10), while a few showed large ($|\Delta n_H| \ge 0.5$) shifts in average protonation state of kinase (1/10) or inhibitor (4/10) as shown in {\bf bold}.
-Initibitor protonation states in solution and in complex are also shown, with the population of each protonation state listed; small ($<5\%$) populations are denoted with a dash ---.
-Significant protonation state effects for the inhibitor occur when the inhibitor populates a mixture of protonation state in either solution or complex (7/10), or if there is a shift in dominant protonation state (6/10); these cases are denoted in {\bf bold}.
-Statistical uncertainty in populations was $\sim$0.1\%, but the limited rotamer variety used in these pilot calculations introduces additional error.
-\label{table:mcce-results}
-\vspace{-0.2in}
-}
-\end{table}
-
-{\bf Expected outcomes:}
-The survey described in this Aim will provide the first estimate of the overall importance of protonation effects in kinase:inhibitor binding, and will provide numerous candidates for future in-depth study.
-It will also provide a critical benchmark of quantitative accuracy for p$K_a$ prediction methods for kinase inhibitors.
-
-{\bf Potential pitfalls and alternative approaches:}
-Crystal structures of Abl:imatinib will be used as a control, since protonation state effects have been characterized for this system.
-Should p$K_a$ predictions for kinase inhibitors prove too inaccurate, we will focus subsequent Aims on kinase inhibitors with available experimental p$K_a$ data.
-If too many potential kinase:inhibitor systems may have significant protonation state effects, we will prioritize kinases with facile bacterial expression and kinase inhibitors that can be easilyobtained to facilitate subsequent experimental Aims.
-Multiple simulation runs and statistical error analysis will ensure reproducibility of calculations.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% AIM 2: DISSECT PROTONATION STATE EFFECTS USING ALCHEMICAL FREE ENERGY CALCULATIONS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%
-% FIGURE: Alchemical illustration
-%\begin{figure}[tb]
-%\begin{centering}
-%\resizebox{7in}{!}{\includegraphics{figures/alchemical-illustration.pdf}}
-%
-%\end{centering}
-%\vspace{0.1in}
-%\caption{\footnotesize {\bf Illustration of the principle behind alchemical free energy calculations.}
-%\emph{Left:} Thermodynamic cycle illustrating the computed legs of the alchemical cycle (blue arrows) sum to the desired free energy of binding $\Delta G_\mathrm{bind}$ (black arrow).
-%\emph{Right:} Illustrative cartoon of the stages of a typical alchemical binding free energy calculation (here showing the binding of a CDK2 inhibitor), where attenuation of inhibitor-environment interactions is depicted as ligand transparency.  
-%The endpoints of the alchemical calculation include the physical states of protein with (PL) and without (P${\varnothing}$) ligand bound. 
-%\label{figure:alchemical-illustration}}
-%\end{figure}
-%%%%%%%%%%%%%
-
-\eject 
-
-\begin{mdframed}[middlelinewidth=2pt]
-{\bf AIM 2. Dissect the magnitude and nature of protonation state effects in kinase:inhibitor systems using rigorous alchemical binding free energy calculations with dynamic protonation states.}
-We will remove the assumption that protein and ligand remain fixed in a single protonation state by rigorously incorporating dynamic sampling of protonation states into quantitatively accurate explicit-solvent alchemical free energy calculations.
-Inspired by efficient protonation state sampling techniques from MCCE2, we will use nonequilibrium Monte Carlo techniques capable of astronomically boosting acceptance rates to incorporate dynamic protonation state sampling into our mixed MD/MC GPU-accelerated open source free energy code.
-We will then computationally probe the magnitude and nature of protonation state effects for candidate systems identified in Aim 1, examining the error in computed binding affinities incurred when fixed protonation states are used for protein and/or inhibitor, as well as which species (protein or ligand, which residues/functionalities) are primary contributors. 
-\end{mdframed}
-
-{\bf Rationale:}
-Current modeling techniques for protein-ligand interactions assume both protein and ligand retain a single, dominant protonation state---an assumption likely violated by many selective kinase inhibitors of clinical interest.  
-We will remove this limitation by extending alchemical free energy calculations---which allow the free energy of inhibitor binding to be rigorously computed---to permit dynamic sampling of protonation states.  
-Integrating efficient MC techniques for sampling protonation states (from the Gunner lab's MCCE2~\cite{gunner:bba:2000:proton-electron-transfer,gunner:j-comput-chem:2009:mcce2}) into the mixed MD/MC alchemical binding affinity computation code {\sc Yank}~\cite{chodera-shirts:jcamd:2013:yank} from the Chodera lab using nonequilibrium Monte Carlo techniques~\cite{ncmc,roux:jctc:2015:constant-pH-ncmc}, we can account for the thermodynamic effects of protein and small molecule dynamic protonation states in explicit solvent in a quantitative, rigorous manner.  
-We will then computationally probe the magnitude and nature of protonation state effects for candidate systems identified in {\bf Aim 1}.
-
-\emph{Aim 2A. Implement constant-pH sampling capabilities into the {\sc Yank} alchemical free energy calculation code.}
-
-{\bf Approach:} The Chodera laboratory has developed a free, open-source, GPU-accelerated code {\sc Yank}~\cite{yank-url} for computing protein-ligand binding affinities using rigorous alchemical free energy methods.
-{\sc Yank} combines numerous efficiency and accuracy improvements previously developed by Chodera and collaborators~\cite{mobley-chodera-dill:2006:jcp:orientation-restraints,mobley-chodera-dill:2007:jctc:confine-and-release,shirts-mobley-chodera-pande:2007:jpcb:dispersion-corrections,chodera:jcp:2007,shirts-chodera:jcp:2008:mbar,noe:jcp:2011:msm-review,ncmc,chodera-shirts:jcp:2011:gibbs} into a single code with an open architecture that allows new algorithms to be easily developed, implemented, and validated.
-{\sc Yank} has recently been shown to accurately recover both geometrical binding orientation and numerical ligand binding affinities for a protein system where there is only a single relevant protonation state~\cite{chodera-shirts:jcamd:2013:yank}.
-
-{\bf We will implement a dynamic, rigorous, consistent treatment of both protein and small molecule protonation states into our alchemical free energy code.}
-{\sc Yank} uses a Gibbs sampling replica exchange molecular dynamics (MD) framework, where many exchange attempts among alchemical intermediates are periodically attempted and accepted with a Metropolis-like criterion to give correct equilibrium statistics~\cite{chodera-shirts:jcp:2011:gibbs,chodera-shirts:jcamd:2013:yank}.  
-The MCCE2 program from the Gunner lab uses Monte Carlo (MC) sampling of sidechain rotamers and protonation states to efficiently sample the appropriate equilibrium distribution of protomeric states~\cite{gunner:bba:2000:proton-electron-transfer,gunner:j-comput-chem:2009:mcce2}.
-As {\sc Yank} already mixes MC with MD for enhanced sampling~\cite{chodera-shirts:jcamd:2013:yank}), it is straightforward to incorporate MCCE2-like protonation state sampling into {\sc Yank} to introduce stochastic discrete protonation (and proton tautomer) state changes.
-While there is precedent for hybrid MD/MC protonation state sampling in implicit~\cite{gunner:biophys-j:1997:mcce,gunner:biophys-j:2002:mcce,mongan:2004:j-comput-chem:constant-pH,gunner:j-comput-chem:2009:mcce2} and explicit~\cite{stern:jcp:2007:constant-pH,roux:jctc:2015:constant-pH-ncmc} solvent to account for electrostatic interactions that influence protomer populations, this would be the first instance of this technique utilized in alchemical binding free energy calculations.
-We will use our highly efficient NCMC approach~\cite{ncmc} to enable efficient sampling of protonation states of multiple titratable groups in both proteins and small molecules using either implicit solvent (which trades some accuracy for speed) and explicit solvent (the current gold standard), and use theromodynamic length techniques top optimize protonation state switching protocols~\cite{crooks:2007:prl:thermodynamic-length,minh-chodera:2011:jcp:mis-estimator,shenfeld-xu-eastwood-dror-shaw:2009:pre:optimizing-thermodynamic-length}.
-
-%The Chodera and Gunner labs will carry out the implementation together using the collaborative GitHub~\cite{yank-github} platform for source code revision control and developer coordination.
-%Implementation and preliminary testing will draw on the 17 years of experience on MC protonation state sampling from the Gunner lab and the extensive experience in molecular simulation algorithms in the Chodera lab.
-
-During the simulation, MC moves attempt to switch the current protonation (or proton tautomer) state of a residue or cluster of residues to another discrete, physical protonation state.
-Proposals can be biased by inexpensive MCCE2-like MC moves to increase acceptance rates.
-MC moves will utilize NCMC (nonequilibrium candidate Monte Carlo)~\cite{ncmc}, in which the initial configuration is stored, a short velocity Verlet~\cite{swope:jcp:1982:velocity-verlet} trajectory of $n$ steps is generated in which the protonation state incrementally changes to its new proposed discrete state through some (possibly alchemical) nonequilibrium protocol in which the rest of the system is also allowed to respond to the protonation state change.
-The final configuration and physical, discrete protonation state is either accepted according to a Metropolis-like criteria involving the current potential energy, the solvent pH, and the solution population of the protomeric state.
-If rejected, the entire switching trajectory is rejected, allowing rigorous sampling the correct constant-pH ensemble---the intermediate nonphysical protonation states are never recorded~\cite{ncmc}.
-In explicit solvent, a water is reversibly turned into a monovalent counterion to preserve charge neutrality.
-
-\eject
-
-The key to alchemical free energy calculations with dynamic protonation states is defining an appropriate \emph{reduced potential} $u(x,{\bf s};\lambda,\mathsf{pH})$, where the equilibrium distribution sampled is $\pi(x,{\bf s};\beta, p, \lambda,\mathsf{pH}) \propto e^{-u(x,{\bf s};\beta, p, \lambda,\mathsf{pH})}$, with $x$ the current instantaneous configuration,  ${\bf s} \in \mathbb{Z}^N$ an integer vector specifying the current protonation state of all $N$ titratable sites for inhibitor and protein, $\beta = 1/(k_B T)$ the inverse temperature, $p$ pressure, $\lambda \in [0,1]$ the alchemical parameter, and pH denoting the current pH.
-We use the reduced potential
-\begin{eqnarray}
-u(x,{\bf s};\beta, p, \lambda,\mathsf{pH}) &\equiv& \beta \left[ U(x;\lambda) + p V(x) + \sum_{n=1}^N g_{n,s_n}(\mathsf{pH}) \right]
-\end{eqnarray}
-where $U(x;\lambda)$ is the potential energy function, $V(x)$ the current volume, and $g_{n,s}(pH)$ are dimensionless log weights calibrated to ensure that the corresponding reference compound for the titratable site gives the appropriate equilibrium distribution of protonation states in solvent at the pH of interest.
-The equilibrium distribution can be sampled by hybrid Monte Carlo/molecular dynamics methods in an expanded ensemble context~\cite{lyubartsev:jcp:1992:expanded-ensembles,chodera-shirts:jcp:2011:gibbs,ncmc} within a Gibbs-sampling Hamiltonian replica exchange simulation for the alchemical $\lambda$~\cite{chodera-shirts:jcp:2011:gibbs}.
-For amino acids, the reference compound is the terminally-blocked form of the amino acid, and experimental p$K_a$s are used to calculate the target populations at the pH of interest.
-For small molecules, equilibrium solvent protonation state populations at the pH of interest are obtained from p$K_a$ prediction software assessed in {\bf Aim 1A}.
-Calibration of the log weights $g_{n,s}(\mathsf{pH})$ uses self-adjusted mixture sampling (SAMS)~\cite{tan:j-comp-graph-stat:2016:sams}, and must be repeated for each combination of pH, temperature, pressure, solvent/forcefield/charge model, and nonbonded electrostatics method.
-These log weights incorporate both a pH-dependent chemical potential difference between protons, waters, and counterions, as well as the molecular mechanics valence energy differences between protomer/tautomer species.
-Because small molecules may have multiple protonation sites coupled through quantum mechanical effects that cannot be captured in the purely electrostatic model of site-site coupling used here to shift protomer populations, the entire small molecule inhibitor is treated as a single titratable site with many possible protomers with different partial charges.
-
-The free energy contribution for each alchemical leg is optimally estimated using the multistate Bennett acceptance ratio (MBAR) method we developed to analyze equilibrium data sampled from arbitrary equilibrium thermodynamic states~\cite{shirts-chodera:jcp:2008:mbar}, by solving the self-consistent equations for the dimensionless free energies $\hat{f}_i$, $i = 1,\ldots,K$,
-\begin{eqnarray}
-\hat{f}_i &\equiv& - \ln \sum_{k=1}^K \sum_{n=1}^{N_k} \left[ \sum_{l=1}^K \exp\left\{\hat{f}_l - [u(x_{kn}, {\bf s}_{kn}; \beta_l, p_l, \lambda_l, \mathsf{pH}_l) - u(x_{kn}, {\bf s}_{kn}; \beta_i, p_i, \lambda_i, \mathsf{pH}_i)]\right\}  \right]^{-1} \label{equation:mbar}
-\end{eqnarray}
-where there are $N_k$ samples $x_{kn}$ from each of $K$ alchemical states.
-It is important to note that this approach differs substantially from both the enveloping distribution sampling approach to alchemical free energy calculations with post-simulation protonation state evaluation~\cite{brooks:protein-sci:2016:constant-pH-free-energy} which is unable to scale to treat many dynamic protonation states for both protein and ligand, and differs from existing approaches to constant-pH molecular dynamics in explicit solvent~\cite{stern:jcp:2007:constant-pH,grubmueller:biophys-j:2011:constant-pH-lambda-dynamics,brooks:proteins:2014:constant-ph-explicit,roux:jctc:2015:constant-pH-ncmc} which have not yet been rigorously incorporated into alchemical free energy calculations.
-
-%The NCMC acceptance criteria~\cite{ncmc,mongan:2004:j-comput-chem:constant-pH} is then given by,
-%\begin{equation}
-%P_\mathrm{accept} = \mathrm{min} \{1, e^{k_B T (pH - pK_{a,\mathrm{ref}}) \ln 10 + (w - \Delta G_{a,\mathrm{ref}})}\} \:\:,
-%\end{equation}
-%where the total \emph{work} performed during the protonation state switching trajectory $w = \Delta E$, p$K_{a,ref}$ is the p$K_a$ for an appropriate reference compound in water, and $\Delta G_{a,ref}$ is the molecular mechanics free energy difference between the protonation states of the reference compound---a quantity computed during a calibration phase~\cite{ncmc}.
-%The choice of reference compound and p$K_a$ for protein residues is straightforward, as these values have been experimentally measured for terminally-blocked residues with titratable sidechains.  Reference p$K_a$ for inhibitors will be established as described in Aim 1A.  
-
-{\bf Potential pitfalls and alternative approaches:} 
-No significant impediments are expected due to the straightforward nature of this Aim. 
-There is some uncertainty surrounding the NCMC efficiency; based on earlier work~\cite{stern:jcp:2007:constant-pH,roux:jctc:2015:constant-pH-ncmc}, we expect nonequilibrium switching times of 10--50 ps to be sufficient without optimization of the switching pathway.
-Given the efficiency of the the GPU-accelerated OpenMM library~\cite{eastman:jctc:2012:openmm} on which {\sc Yank} is based, simulations achieve 200--300 ns/day for DHFR in explicit solvent, which is expected to allow for $10^4$--$10^5$ protonation state trials/day in a standard 10-GPU alchemical free energy calculation.
-Should convergence of dynamic protonation states prove problematic, optimization of the switching pathway and incorporation of MCCE-like proposal biasing will further increase efficiency.
-Control experiments---such as the computation of equilibrium protomer populations and p$K_a$s for blocked amino acids and small molecules---will ensure the correctness of the implementation.
-
-\emph{Aim 2B. Assess the prevalence, magnitude, and nature of protonation state effects in kinase inhibitor binding}
-
-A central aim of this proposal is to determine the extent to which protonation state effects play a role in the recognition of selective kinase inhibitors.
-We will apply the dynamic protonation state free energy code developed in {\bf Aim 2A} to the kinase:inhibitor complexes identified in {\bf Aim 1B} expected to exhibit protonation state effects in order to assess the {\bf prevalence} (fraction of kinase:inhibitor complexes that display significant protonation state effects), {\bf nature} (which residues or chemical moieties are primarily responsible for these effects, and to what degree there is coupling between titratible groups in kinase and inhibitor), and {\bf magnitude} (error induced by neglect of dynamic protonation states in kinase, inhibitor, or both) of protonation state effects in these systems.
-
-\eject
-
-We will focus on complexes identified as likely candidates from {\bf Aim 1B}---along with controls (Abl:imatinib and several complexes identified to be absent protonation state effects)---with an estimated 100--200 total complexes considered.
-(100 complexes $\times$ 10 GPUs/complex $\times$ 10 days/complex $=$ 5000 GPU-days on the MSK 120-GPU cluster, or a total of 82 cluster-days [or fewer if GPUs are upgraded] over the course of this project.)
-We will primarily consider the dephosphorylated form of protein complexes, though we will examine the effects of phosphorylated forms of some complexes for which the experimental phosphorylation state is known.
-If suitable expression constructs are available (for {\bf Aim 3}), simulations will utilize the same protein construct available for expression.
-When multiple experimental constructs are available, sensitivity to construct choice will be assessed.
- 
-{\bf We will quantify the impact of protonation state effects on inhibitor binding affinities and selectivities.}
-Many kinase:inhibitor binding affinities have been reported in the literature (e.g.~\cite{bain:biochem-j:2007:kinase-inhibitor-selectivity,fabian:nature-biotech:2005:kinase-selectivity-map,karaman:nature-biotech:2008:kinase-selectivity-map}), measured in the Chodera or Seeliger laboratories, or will be measured as part of Aim 3.
-In addition, a number of kinase:inhibitor complexes available in the PDB represent the same inhibitor complexed with different kinases---for example, structures of imatinib with both Src and Abl are available, despite the high selectivity for Abl over Src.
-For cases where experimental affinity data is available, we will assess the degree to which the inclusion of protonation state effects increases the accuracy in reproducing experimental inhibitor binding affinities.
-We will ask whether small molecule protonation state effects are crucial in discriminating a selective binder from a non-selective binder.  
-We will assess whether neglect of accurate or dynamic protonation states in the protein and/or ligand leads to  significant shifts in affinity, and assess their magnitude.
-We expect better understanding of when and where protonation effects influence drug binding will  aid active drug discovery projects and inform the development of future accurate methodologies to guide both early-stage lead discovery and late-stage lead optimization efforts.
-
-{\bf Potential pitfalls and alternative approaches:}
-Slow conformational changes---especially those coupled to protonation state changes---can impede convergence in constant-pH simulations.
-To mitigate this risk, we can perform calculations starting with modeled active and inactive conformations for tyrosine kinases (following~\cite{roux:pnas:2013:gleevec-selectivity}) using our Ensembler automated modeling tool~\cite{chodera:plos-comp-bio:2016:ensembler} to assess dependence of calculated affinities and protonation states on conformation. 
-Notably, the accuracy of these calculations will depend on the protein and small molecule forcefields.
-We will benchmark multiple forcefields, starting with the AMBER family of forcefields~\cite{forcefields-note}.
-If forcefield inaccuracies prove problematic at replicating experimental affinities, our calculations should provide qualitative insight into the impact of protonation state effects.
-Even if few significant protonation state effects are identified, this knowledge will aid in identifying other dominant sources of limiting accuracy in modeling tools.
-
-%SMH: spacing here is strange for some reason (before I added this comment..)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% AIM 3
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{mdframed}[middlelinewidth=2pt]
-{\bf AIM 3. Experimentally assess computational findings on kinase:inhibitor systems expected to have significant protonation state effects.}
-We will experimentally investigate kinase:inhibitor systems predicted to have significant protonation state effects in Aim 2.
-We focus on bacterially-expressed human kinase domains as a well-controlled model system for assessing the accuracy of computational modeling and providing insight into the magnitude of protonation state effects on ATP-competitive inhibitor binding.
-We will conduct four types of experimental investigations: NMR to site-specifically identify protonation state changes in inhibitors; isothermal titration calorimetry (ITC) to dissect the contribution of protonation state effects to binding affinity at physiological pH; fluorescence assays to investigate the pH-dependence of binding affinities relevant to acidified intracellular environments in cancer cells; and clinically observed mutations that may modulate binding affinities via p$K_a$ shifts. 
-\end{mdframed}
-
-{\bf Rationale:}
-In this Aim, we will experimentally investigate those kinase:inhibitor systems predicted to have significant protonation state effects in {\bf Aim 2}, using our analysis of the results of {\bf Aim 2B} to identify systems in which different experimental measurements would be most appropriate for detecting observable protonation state effects.
-For experimental tractability, we restrict ourselves to kinases for which bacterial expression permits both large-scale production and the introduction of site-directed mutants, and inhibitors for which compounds can readily be obtained or purchased from vendors.
-The Chodera and Seeliger labs have applied the phosphatase coexpression strategy of pioneered by Seeliger~\cite{seeliger:2005:protein-sci:kinase-expression} and demonstrated good bacterial expression ($\ge$ 2 mg/L culture) for 52 human kinase catalytic domains with available crystal structures using an automated expression pipeline~\cite{chodera:biorxiv:2016:kinome-bacterial-expression}, providing ample opportunities for kinases to be carried forward for experimental investigation.
-We will primarily consider the dephosphorylated form of these kinases, though we will examine the effects of phosphorylation for some kinases for which the biochemically-accessible phosphorylation state is known.
-Notably, we need not wait to complete {\bf Aim 2B} before promoting promising complexes for study in this experimental stage---these experiments can be run in parallel once candidate kinase:inhibitor complexes are identified.
-
-\eject
-
-\emph{Aim 3A. Examine changes in inhibitor protonation state upon binding using NMR}
-
-$^1$H-NMR is a powerful technique for directly observing protons in small molecules.	
-Indeed, this technique has been used to identify site-specific p$K_a$s for imatinib and its chemical fragments to complement potentiometric titration~\cite{szakacks:j-med-chem:2005:acid-base-profiling-of-imatinib}.
-By titrating the inhibitor or inhibitor:kinase complex over a pH range, the pH-dependent peak integrals can be compared with computational predictions of average fractional protonation, or the effective microscopic p$K_a$s fit.
-The Seeliger lab will make use of a high-field NMR instrument with cryoprobe (3-5$\times$ more sensitive than the instrument used in~\cite{szakacks:j-med-chem:2005:acid-base-profiling-of-imatinib}).
-To suppress the $^1$H signal of the protein when measurements of the complex are made, we will use saturation transfer difference (STD) NMR~\cite{meyer-peters:angew-chem:2003:std-nmr}.
-Comparison of measured and computed pH titration curves and p$K_a$s will assess the accuracy of the alchemical free energy calculations, as well as provide direct experimental evidence for the presence or absence of inhibitor protonation state effects.
-
-{\bf Selection criteria:}
-Kinase:inhibitor complexes identified in {\bf Aim 2B} to experience significant shifts in inhibitor protonation state upon binding will first be subjected to a pH-dependent alchemical free energy calculation, in which a 2D grid of thermodynamic states in which alchemical $\lambda$ parameter and pH are both varied and analyzed collectively with MBAR to determine pH-dependent inhibitor protonation states (similar to~\cite{dashi-meng-roitberg:jpcb:2012:ph-remd}).
-Inhibitors predicted to show a measurable change in protonation state in complex over the accessible pH range (for which the kinase is stable) will be identified as candidates for these experiments.
-
-{\bf Potential pitfalls and alternative approaches:} 
-Kinases are often stable only over a limited pH range, with pH $<$ 6 becoming especially difficult.
-To ascertain the range of stability, will perform Thermofluor melts over a range of buffer pH using the Chodera lab automation system~\cite{magliery:jacs:2009:thermofluor}, as this technique consumes little protein but can give accurate readouts of stability via melting temperatures.
-Should STD-NMR pH titrations prove unworkable for suppressing protein $^1$H signal while still observing ligand protonation signals, we will fall back to complete kinase deuteration, though the expense of this will limit the number of kinases we can investigate via NMR.
-
-\emph{Aim 3B. Observe protonation uptake/loss using ITC, and dissect its contribution to affinity}
-
-Isothermal titration calorimetry (ITC) provides a direct route to studying proton shuttling between solvent and complex upon binding.
-ITC measurements in buffers with identical pH and ionic strength but distinct ionization enthalpies (e.g.~Tris, Hepes, and Tricine), allow the heat effects of proton shuttling between complex and solvent to be deconvoluted from heat effects of binding, permitting experimental observation of protonation state effects~\cite{baker-murphy:biophys-j:1996:protonation-events-itc}.
-While experiments of this kind have not yet been conducted on kinase inhibitor binding, co-I Seeliger has previously demonstrated standard ITC experiments are possible several kinase:inhibitor systems~\cite{seeliger:2007:structure:imatinib-binding}.
-These experiments will be conducted by the Chodera lab using the LabMinds EasySolution/Revo to reproducibly prepare dialysis and experiment buffers, automated liquid handling to set up the experiments, and the automated calorimeter (Auto iTC-200) at the Rockefeller HTSRC across the street to execute them.
-From these experiments, we can obtain direct evidence of protonation state effects; in simple cases of a single relevant protonation state, we can extract both effective p$K_a$ and affinity for each protonation state, but even in complex cases, experiment can be compared against simulated ITC data computed from the alchemical free energy calculation.
-
-{\bf Selection criteria:}
-For kinase:inhibitor complexes identified in {\bf Aim 2B} as having proton shuttling events between complex and solvent upon binding (a net uptake/loss of protons), for which the inhibitor is sufficiently soluble in buffer to permit useful ITC experiments to be performed ($\ge$250 $\mu$M), we will use this technique to experimentally determine whether proton shuttling events can be observed, and to experimentally validate the predicted difference in affinity between protonated and deprotonated species.
-
-{\bf Potential pitfalls and alternative approaches:} 
-Protein stability can be a challenge in ITC experiments.
-We will perform Thermofluor melts over a range of buffer systems at pH 7.4 using the Chodera lab automation system~\cite{magliery:jacs:2009:thermofluor} to determine buffers with differing ionization enthalpies in which the kinases are maximally stable.
-
-{\emph{Aim 3C. Use direct fluorescence binding affinity assays to examine binding events sensitive to pH}
-
-Tumor environments are often acidic due to increased aerobic and anaerobic glycolysis~\cite{song-griffin-park}.
-While intracellular pH is more tightly regulated than the extracellular pH, significant shifts in intracellular pH have been observed to range from 6.4--7.4~\cite{song-griffin-park}, which can manipulate the energetics of protonation states by up to 2.3 $k_B T$.
-For kinase:inhibitor complexes that show significant pH-dependence in computed binding affinity, we will measure pH-dependent binding affinities using a fluorescence-based affinity assay originally developed by collaborator Nicholas Levinson (University of Minnesota), who observed that inhibitors with certain scaffolds undergo a large increase in fluorescence upon binding to Src and Abl kinases~\cite{levinson-boxer:plos-one:2012:bosutinib}.
-The Chodera lab will use an automated plate-format fluorescence assay to measure the pH-dependent binding affinity of ATP-competitive inhibitors in the absence of ATP, using either their intrinsic fluorescence or competition with a fluorescent probe inhibitor ({\bf Figure~\ref{figure:fluorescence-assay}}).
-
-\eject
-
-{\bf Selection criteria:}
-To assess the potential for significant changes in inhibitor effectiveness between unperturbed ($\sim$7.4) and acidified ($\sim$6.4) intracellular environments---and hence differences in kinase inhibitor efficacy between normal and tumor cells---we will use the tools developed in {\bf Aim 2} to compute the effect of acidified intracellular pH on binding affinities.
-This will first be estimated from the binding free energy calculations performed in {\bf Aim 2B} without additional simulation by computing the derivative of the computed binding affinity with respect to pH using MBAR ({\bf Equation~\ref{equation:mbar}})~\cite{shirts-chodera:jcp:2008:mbar}.
-Systems that show significant pH-dependence will then be subjected to the same pH-dependent alchemical free energy calculation described in {\bf Aim 3A} to determine the pH-dependent affinity.
-If the affinity change is sufficiently large, the kinase:inhibitor complex will be eligible for this class of experiments.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% FIGURE: FLUORESCENCE BINDING ASSAY
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[t]
-\begin{centering}
-\resizebox{1.0\textwidth}{!}{\includegraphics{figures/SpectraAssay-v3.pdf}}
-
-\end{centering}
-\vspace{-0.3in}
-\caption{\footnotesize{\bf Automated high-accuracy fluorescence assay for measuring direct binding of fluorescent kinase inhibitor probes.}
-By using ATP-competitive kinase inhibitor probes that greatly increase fluorescence upon binding, we can rapidly and directly measure the affinity of the probes over a very large dynamic range (nM--mM) or measure other inhibitor affinities by competition assays.
-While this phenomenon was initially described using a cuvette-based assay~\cite{levinson-boxer:plos-one:2012:bosutinib}, we have developed it into an automated high-throughput assay.
-\emph{Left:} Gefitinib (quinazoline scaffold) and an isomer of bosutinib (quinoline scaffold), just two of a large number of fluorescent probes that can be used for affinity measurement in this assay.
-\emph{Right:} Fluorescence emission spectra (excitation at 280 nm) for different concentrations of probe compound shows large increase in fluorescence upon binding to kinase (1 $\mu$M in 100 $\mu$L volume in 96-well plates).
-The dashed vertical line (480 nm) indicates emission wavelength used for high-throughput form of this assay, which allows even weak (mM) binding to be quantified.
-Numerous FDA-approved quinazoline, quinoline, and pyrazolopyrimidine kinase inhibitors are usable as probes.
-\vspace{-0.2in}
-\label{figure:fluorescence-assay}}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-{\bf Potential pitfalls and alternative approaches:} 
-If the fluorescent scaffold of the inhibitor changes protonation state during the pH titration, an inhibitor that shows a strong fluorescence change upon binding may cease to do so above or below a critical pH, limiting the useful range of this assay.
-The pH-dependent solubility of kinase inhibitors may additionally limit range of affinities measurable by this assay.
-
-{\emph{Aim 3D. Evaluate whether clinically-characterized mutations might induce resistance by modulating p$K_a$s.}
-
-In systems where protonation state effects are significant, the introduction or elimination of charged residues in the vicinity of the binding site can cause electrostatically-induced shifts in p$K_a$ that indirectly modulate inhibitor binding affinities, potentially manifesting a new mechanism of resistance.
-Such mutations would  alter the electrostatic environments of key titratable groups directly or stabilize alternative conformations with shifted p$K_a$s (as has been observed for site-directed mutations~\cite{kuriyan-shaw:pnas:2009:abl-protonation-state}).
-Engineering such mutations into the kinase and utilizing the fluorescence inhibitor binding assay from {\bf Aim 3C} for both wild-type and mutant kinases will reveal whether these mutations are capable of causing measurable alternations to inhibitor binding free energies.
-
-{\bf Selection criteria:}
-We will again use the alchemical free energy calculation methodology developed in {\bf Aim 2A} to computationally evaluate whether clinically-observed mutations (identified in the MSKCC cBioPortal) may cause measurable changes to inhibitor binding affinity.
-We restrict ourselves to kinases identified in {\bf Aim 2B} to have significant protonation state effects and for which facile bacterial expression of the kinase permits site-directed mutagenesis, and for which direct changes in inhibitor fluorescence can be monitored due to the presence of a fluorescent scaffold ({\bf Figure~\ref{figure:fluorescence-assay}}).
-The Seeliger and Chodera labs will work together to engineer and express the mutants, and the Chodera lab will perform the fluorescence assays at pH 7.4 as in {\bf Aim 3C}.
-
-{\bf Potential pitfalls and alternative approaches:} 
-Should computational predictions differ wildly from the experimental measurements, this likely implicates other effects---such as multiple conformational states with slow conversion times---necessitating we turn to other computational techniques such as those developed by the Chodera laboratory and collaborators to study large-scale conformational changes in proteins~\cite{noe:jcp:2011:msm-review}.
-
-%%%%%%%%%%%%%
-% FIGURE: FLUORESCENCE ASSAY
-%\begin{figure}[tb]
-%\begin{centering}
-%\resizebox{7in}{!}{\includegraphics{figures/fluorescence-assay.pdf}}
-%
-%\end{centering}
-%\vspace{0.1in}
-%\caption{\footnotesize {\bf Fluorescence assay for kinase binding affinities.}
-%\emph{Left:} Kinase inhibitors with quinazoline or quinoline scaffolds that can be used as fluorescent probe compounds for measuring direct affinities or indirect affinities via competition assays.
-%\emph{Right:} Fluorescence titration curve for bosutinib binding to Src kinase domain with associated binding model fits from Bayesian analysis.
-%{\color{blue}[you can reduce the number of log units of concentration shown - and  make the numbers onthe figures bigger!]} {\color{red}[JDC: Will fix this figure soon, if there is time!]}
-%\label{figure:fluorescence-assay}}
-%\end{figure}
-%%%%%%%%%%%%%
-
-\eject
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% OUTLOOK
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-{\bf OUTLOOK}
-
-This proposal seeks to both significantly advance our understanding of protonation state effects in the selective recognition of kinases by targeted inhibitors and develop the technology necessary to accurately treat these effects, thereby removing an enormous barrier to the quantiative prediction of small molecule binding affinities for rational design.
-By first broadly cataloging kinase:inhibitor complexes where protonation state effects may be prominent and then subsequently studying these systems in detail with a powerful new computational tool for treating protonation states dynamically in rigorous binding free energy calculations, we will be able to computationally dissect the types and magnitudes of protonation state effects.
-Subsequent experimental work in which pH is modulated or site-directed mutants are introduced will serve to confirm computational predictions and further elucidate implications of these effects.
-An increased understanding of these complex---but likely critical---effects will provide useful starting points for improved methodologies for discovering new selective kinase inhibitors for a variety of other kinase targets implicated in cancer.
-While this proposal only lays the groundwork for treating dynamic protonation states for the quantitative modeling of selective kinase inhibitors, this research will open the door to numerous other disease-specific routes of investigation in which protonation state effects could play key a critical role in disease mechanisms and effective kinase inhibition.
-
-
-%%%%%%%%%%%%%%%%SMH: General comment%%%SMH
-%After briefly chatting about this earlier, I thought there would be more references to cases in the literature that point toward the importance of protonation states to ligand binding. This could be emphasized more, either by describing the Seeliger paper in more detail, or describing another non-kinase case in more detail. I think the tenuousness of the argument 
-%'Aside from the well-studied Abl:imatinib system, little is known about the degree to which protonation state effects are relevant in kinase:inhibitor recognition'
-% makes it sound like this proposal is grasping at straws, and I don't believe it is, and I don't believe that most biochemists would think it is, but I think the case that this IS important, and x,y,z anecdotes are firm indications that to know this for kinase inibitors would be significant EVEN if we have a negative result (protonation states are not in fact significant to kinase inhibitor affinity), could be made more clear.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % TIMELINE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-{\bf TIMELINE}
+{\bf \large TIMELINE} %1 page minus a paragraph
+%"The timeline is actually likely to be very important here, so I'd strongly suggest we include it, if not expand it to one full page. We have to "sell" the reviewers on how the concept would play out into actual challenges, advances, etc. so that they get a concrete idea of all the good things that will come of this. We should mention when we would hold blind challenges, when data would be released, when meetings would occur, when benchmarks would be published, and what datasets would be generated for the community."
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FIGURE: AIMS OVERVIEW
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[h]
-\begin{centering}
-\resizebox{\textwidth}{!}{\includegraphics{figures/timeline.pdf}}
+%\begin{figure}[h]
+%\begin{centering}
+%\resizebox{\textwidth}{!}{\includegraphics{figures/timeline.pdf}}
 
-\end{centering}
+%\end{centering}
 %\vspace{0.1in}
 %\caption{\footnotesize {\bf Timeline.}
 %\label{figure:aims-overview}}
-\end{figure}
+%\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % COLLABORATION MANAGEMENT PLAN
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-{\bf COLLABORATION MANAGEMENT PLAN}
-The Chodera, Gunner, and Seeliger groups are all located in close proximity, have worked together over the past three years, and already have an excellent collaborative relationship and rapport.
-In particular, Chodera and Gunner have worked together to develop new methodologies for constant-pH simulation, while Chodera and Seeliger have worked to develop new bacterially-expressing kinase constructs and a novel fluorescence assay for measuring kinase inhibitor binding affinities.
-To facilitate the close collaboration this project requires, we will utilize modern communication technologies such as Slack---a communication platform utilized by the JPL Mars Curiosity Rover and IceCube Neutrino Observatory teams---ensuring barrierless communication among members and PIs of all three groups.
-We will make use of shared public GitHub repositories to coordinate the development of simulation and analysis code and store simulation and experimental data.
-Frequent in-person visits between CCNY and MSKCC---the sites at which most software development will take place---are expected for the students heading software development.
-All project participants will receive accounts on the MSKCC High Performance Computing (HPC) resource, which provides a central location to carry out the computation for this project and share large datasets.
-We will hold monthly virtual meetings for subgroups working on the different aims and quarterly virtual meeting of all PIs and personnel, and semiannual physical meetings at MSKCC to review progress and plans in depth. 
+{\large \bf COLLABORATION MANAGEMENT PLAN} % 1 paragraph
 
-The PI (Chodera) will be responsible for the oversight and coordination of the overall project.
-The Gunner and Chodera labs will work closely on the identification of candidate kinase:inhibitor systems ({\bf Aim 1}), with Co-I Gunner directing work related to the MCCE code produced in her laboratory.
-The Gunner and Chodera labs will also work closely on developing hybrid Monte Carlo / molecular dynamics algorithms for molecular dynamics simulation and alchemical free energy calculations and applying them to kinase:inhibitor systems ({\bf Aim 2}), with Chodera directing this work.
-The Seeliger and Chodera labs will work closely on the experimental aspects of this project ({\bf Aim 3}), with Co-I Seeliger directing experimental work in his laboratory (kinase expression, NMR) and Chodera directing experimental work in his laboratory (automated ITC, screening of mutants, fluorescence binding assays).
+
+{\large \bf OUTLOOK} %or conclusions. 0.5 page
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -851,6 +250,6 @@ The Seeliger and Chodera labs will work closely on the experimental aspects of t
 %\bibliographystyle{acm}
 \bibliographystyle{nci}
 %\bibliographystyle{nar}
-\bibliography{chodera-research}
+\bibliography{sampl-r01}
 
 \end{document}
