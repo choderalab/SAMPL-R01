@@ -99,22 +99,23 @@
 
 \begin{centering}
 {\bf PROJECT SUMMARY /  ABSTRACT}
-
-% 29 lines so far
-\underline{\it The long-term goal} of the Chodera lab is to develop quantitatively accurate physical modeling techniques that enable the truly rational engineering of novel small molecules to manipulate cellular pathways in desired ways.
-\underline{\it This proposal addresses} the current inability of the physical modeling field to account for the dynamic nature of both protein and ligand protonation states, which currently hinders the quantitative accuracy of physical modeling approaches to help guide the synthesis of novel molecules for drug discovery and chemical biology.
-Neglect of protonation state effects---either the population of a mixture of protonation states or a shift in dominant states upon binding---can lead to errors of several kcal/mol, significant enough to frustrate the ability of physical modeling techniques to prioritize ligands for lead optimization in systems where these effects are present.
-While protonation state effects in ligand binding have only been studied in detail in a handful of systems, recent evidence suggests that these effects may play an important role in the binding of selective tyrosine kinase inhibitors like imatinib.
-\underline{\it The objective of this proposal} is to overcome current limitations in physical modeling approaches by integrating a dynamic treatment of protonation states into quantitatively accurate alchemical binding free energy calculations.
-We utilize a combined computational-experimental approach to both validate this approach and characterize the pervasiveness of protonation state effects (and the magnitude of errors stemming from their neglect) in the binding of selective kinase inhibitors to their targets of therapy.
-To accomplish this, we adopt a combined computational-experimental approach.
-In {\bf Aim 1}, we use fast constant-pH Monte Carlo simulation techniques to identify a set of candidate kinase:inhibitor complexes likely to exhibit significant protonation state effects.
-In {\bf Aim 2}, we use our unique expertise to develop GPU-accelerated constant-pH alchemical free energy techniques and apply them to characterize the nature and magnitude of protonation-state effects in selective kinase inhibitor recognition.
-In {\bf Aim 3}, we utilize a variety of experimental techniques---including isothermal titration calorimetry, fluorescence binding affinity measurements, and NMR---to validate the computational predictions of the nature and magnitude of protonation state effects in a set of kinase:inhibitor systems predicted to exhibit significant effects.
-This approach is \underline{\it innovative} because it incorporates a dynamic treatment of protonation states into state-of-the-art alchemical binding free energy calculations, using both recent results from nonequilibrium statistical mechanics to drastically boost acceptance rates and optimal multistate reweighting techniques to estimate binding affinities with minimal error.
-This research is \underline{\it significant} because it both eliminates a major barrier to the quantitative prediction of protein-ligand binding affinities and establishes the pervasiveness and magnitude of protonation state effects in the binding of selective kinase inhibitors.
-The research proposed here will ultimately lead to both significant improvements in the quantitative accuracy and domain of applicability of quantitative physical modeling techniques as well as a detailed understanding of the role of protonation state effects in selective kinase inhibitor recognition.
 \end{centering}
+
+% 27 lines so far
+This work seeks to advance quantitative methods for biomolecular design, especially for predicting biomolecular interactions, via a focused series of blind prediction challenges. 
+Physical methods for predicting binding free energies, or ``free energy methods'', are poised to dramatically reshape early stage drug discovery, and are already finding applications in pharmaceutical lead optimization. 
+However, performance is unreliable, the domain of applicability is limited, and failures in pharmaceutical applications are often hard to understand and fix.
+On the other hand, these methods can now typically predict a variety of simple physical properties such as solvation free energies or relative solubilities, though there is still clear room for improvement in accuracy.
+In recent years, blind prediction challenges have played a key role in driving innovations in prediction of physical properties and binding, especially in the form of the SAMPL series of challenges. 
+Here, we will continue and extend SAMPL prediction challenges to include new physical properties, more complicated host-guest binding data, and application to biomolecular systems.
+Carefully selected systems and novel experimental data will provide challenges of gradually increasing complexity spanning between systems which are now tractable to those which are marginally out of reach of today's methods but still slightly simpler than those covered by the Drug Design Data Resource (D3R) series of challenges on existing pharmaceutical data. 
+We will work with D3R to run blind challenges on the data we generate and to ensure it is designed to maximally benefit the field.
+
+In {\bf Aim 1}, we will collect new measurements on partitioning, distribution, and protonation of drug-like compounds, in collaboration with partners in the pharmaceutical industry. In {\bf Aim 2}, we leverage our expertise in host-guest binding to generate new data on host-guest binding in cucubiturils and deep cavity cavitands. And in {\bf Aim 3}, we use high-throughput robotic experiments to generate new protein-ligand binding data of biological relevance. {\bf Aim 4} focuses on using this data to run blind SAMPL challenges, as well as running reference calculations ourselves with the latest techniques for comparison with experiment.
+
+This work will ensure the continued success of SAMPL challenges which have already driven considerable innovation in the field and been the focus of more than 90 different publications (each typically cited 5-50 times) since their inception around 2007, and will play a key role in driving the next several generations of improvements in computational techniques for molecular design. 
+The research proposed here will lead to significant improvements in the predictive power of physical models for drug discovery, molecular design and the prediction of physical properties.
+
 
 
 
