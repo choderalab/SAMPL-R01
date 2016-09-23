@@ -161,8 +161,7 @@ Prospective application, while important, also does not provide the necessary im
 %Explain need for blind challenges and how D3R only fills part of need
 To rapidly advance these methods, we need a series of community blind prediction challenges focused specifically on pushing the limits of predictive techniques, beginning from problems which are just barely tractable with today's methods and advancing to problems just past the frontier.
 These challenges should be designed to have precisely the necessary high quality experimental data, but also be prospective, predictive tests.
-While the Drug Design Data Resource (D3R, discussed further below) provides an existing community blind challenge on protein-ligand binding, it focuses on using \emph{existing} pharmaceutical datasets for blind challenges, and not on introducing new data in a carefully controlled manner in order to maximize the learning value to the community. 
-%Insert ref to D3R
+While the Drug Design Data Resource (D3R~\cite{gathiaka_d3r_2016}, discussed further below) provides an existing community blind challenge on protein-ligand binding, it focuses on using \emph{existing} pharmaceutical datasets for blind challenges, and not on introducing new data in a carefully controlled manner in order to maximize the learning value to the community~\cite{gathiaka_d3r_2016}. 
 In other words, D3R serves well to assess where we are now -- but we need a carefully designed effort that will help the field achieve our goals.
 
 %Discuss importance of SAMPL (including publication/citation count, previous successes in advancing the field, focus), need for funding to:
@@ -179,7 +178,7 @@ SAMPL has already been a tremendous resource for the community, resulting in rou
 Here, we continue the legacy of SAMPL, but design a new series of SAMPL challenges specifically to maximize learning value to the community.
 Until now, this has been impossible, because SAMPL has been entirely unfunded, so its existence has required ``donation'' of data from various sources rather than data collected specifically to drive improvements to modeling. 
 Funding of SAMPL will also allow SAMPL to deliberately bridge the gap between calculations of simple physical properties like hydration -- which can be calculated fairly accurately with today's methods~\cite{mobley_blind_2014-1} -- 
-and the D3R Grand Challenges on protein-ligand binding, which are a major source of consternation for the community so far~\cite{ignjatovic_binding-affinity_2016, deng_large_2016, sunseri_d3r_2016}.
+and the D3R Grand Challenges on protein-ligand binding, which are a major source of consternation for the community so far~\cite{ignjatovic_binding-affinity_2016, deng_large_2016, sunseri_d3r_2016, gathiaka_d3r_2016}.
 Unless this gap is bridged, there is the very real possibility that modeling may simply continue to fall far short of expectations in pharmaceutical challenges like D3R for reasons which are unclear.
 The extension of SAMPL proposed here will allow us to form blind challenges designed to highlight major reasons for failure and drive progress towards resolving them.
 
@@ -264,14 +263,62 @@ Additionally, we try to draw attention to and promote analysis of model uncertai
 {\large \bf APPROACH}
 % 9 pages
 
+Our approach to systematically advancing modeling for biomolecular design involves collecting carefully tailored experimental data for challenges focusing on physical property prediction, host-guest binding, and biomolecular binding.
+Thus, we have four main aims, three of which focus on tailoring and generating this experimental data, and a fourth which focuses on running SAMPL challenges to advance modeling and maximize the learning value to the community.
+These SAMPL challenges will run yearly (though not necessarily every aspect of the proposal will feature in every SAMPL challenge), so each of the aims focused on generating experimental data has a series of stages which correspond to individual future SAMPL challenges.
 
 %Aim 1 - Generate new data for simple SAMPL blind challenges on physical property prediction (1.5 pages)
 {\bf Aim 1: Generate new data for ``simple'' SAMPL blind challenges on physical property prediction.}
-We will develop new solution-phase datasets for druglike small molecules. These data can test critical aspects of small molecule modeling (including accounting for interactions and treatment of protonation/tautomeric state) and improve our ability to predict physical properties relevant to drug discovery in new regions of chemical space. We will initially focus on distribution between organic phases and on pKa?s and their modulation by solvent environment, using these data to drive improvements in the modeling of ligand interactions.
+%We will develop new solution-phase datasets for druglike small molecules. These data can test critical aspects of small molecule modeling (including accounting for interactions and treatment of protonation/tautomeric state) and improve our ability to predict physical properties relevant to drug discovery in new regions of chemical space. We will initially focus on distribution between organic phases and on pKa's and their modulation by solvent environment, using these data to drive improvements in the modeling of ligand interactions.
+Our first aim focuses on generating solution-phase physical property data for small, drug-like molecules -- essentially continuing the tradition begun with hydration free energies in SAMPL0-4 and continued with water-cyclohexane distribution coefficients in SAMPL5. 
+Distribution coefficients proved tremendously valuable to the community in SAMPL5 for a number of reasons, highlighting a number of key issues where modeling needs to improve, so they will form the basis for the physical property component in SAMPL6 and return in several subsequent SAMPL challenges.
+
+%Compare log D accuracy vs hydration accuracy, highlight issues and explain relevance to drug discovery; note lessons learned in SAMPL5
+     %Maybe use a figure on log D accuracy?
+Distribution coefficients proved to be precisely the right level of difficulty for a SAMPL challenge focused on maximizing learning. 
+Specifically, they were challenging enough that many methods performed poorly, with even the best methods having accuracies less than would have been expected based on their ability to calculate hydration free energies in water~\cite{bannan_calculating_2016}. 
+At the same time, methods typically did well enough that it was possible to learn a great deal from examining failure, and the major sources of error were issues which will also plague prediction of ligand-receptor interactions.
+These included neglect of changes in protonation state on transfer between environments, uncertainty as to the relevant protonation state and/or tautomer in one or both environments~\cite{bannan_calculating_2016}, problems with sampling the conformation of some of the larger ligands~\cite{bannan_calculating_2016, luchko_sampl5:_2016}, and force field limitations~\cite{paranahewage_predicting_2016}. 
+Our partnership with Genentech for these measurements also meant that the compounds were from Genentech's library and thus very drug-like, unlike typical compounds seen in hydration free energy challenges of the past.
+In some respects, distribution coefficients posed the ideal SAMPL challenge, hitting the sweet spot in terms of difficulty -- difficult enough that clear failures were frequent and there is much room for improvement, but not so difficult that the reasons for failure were unclear in general. 
+Still, the challenge could have been improved by follow-up experiments to re-check some of the experimental results~\cite{paranahewage_predicting_2016, klamt_prediction_2016, bannan_blind_2016, rustenburg_measuring_2016} -- but without funding for someone to continue working in this space, this has so far been impossible.
 
 %Explain what science -- log D/logP, pKa primarily but mention possible other areas of interest
-    %Industry partnerships (and past precedent)
-%Compare log D accuracy vs hydration accuracy, highlight issues and explain relevance to drug discovery; note lessons learned in SAMPL5
+Because distribution coefficients were so valuable in SAMPL5 and are driving so much needed method development [refs],
+%Cite examples of people trying things from SAMPL5
+we will measure new cyclohexane-water distribution coefficients for our first data set here and this will form the basis for the physical property component of SAMPL6. 
+Because octanol-water distribution coefficients are also potentially tractable~\cite{bannan_calculating_2016}, and measured much more frequently experimentally, we plan to generate measurements for the same compound distributing between both cyclohexane-water and octanol-water for this challenge.
+
+However, distribution coefficients conflate several issues which are still complex, namely protonation state and tautomer prediction, as well as transfer into different environments. 
+Thus, we will likely need to turn to separating these issues to improve our handling of them one at a time. 
+For SAMPL7, then, our tentative plan is to measure pKa values for an extensive set of drug-like molecules in water and 
+%can we also do other solvent(s)?
+provide data specifically on pKa values, thereby separating the issues of predicting protonation state from those of transfer.
+
+In the next challenge, SAMPL8, we would re-combine the pKa and transfer issues in a way to maximize learning -- specifically, we will not only measure distribution coefficients but also measure pKa values for the same set of compounds, allowing participants to (a) predict distribution; (b) predict pKa; and (c) predict partitioning.
+
+Several other avenues are of interest for future datasets as well.
+New computational techniques are targeting membrane permeability~\cite{lee_permeability_2016, comer_permeability_2014}, and this is experimentally accessible (see support letters from Pfizer and Merck), leading to potential interest in new datasets and challenges focused there.
+Alternatively, partition/distribution into other environments aside from cyclohexane or octanol may provide significant value, especially given dielectric constant issues posed by current force fields [ref].
+%cite something by Fennell here
+%Also mention solubility -- Sirius T3 can measure (though expts aqueous) so that could be intresting.
+%Coupounds just need titratable group
+  
+ %Industry partnerships (and past precedent)
+Here, our experimental work will be performed with partners in the pharmaceutical industry, following roughly the model used for SAMPL5, where we partnered with Genentech, sending Bas Rustenburg, a graduate student in the Chodera lab, to conduct measurements of $\log D$ using existing equipment.
+We find that pharma often has substantial access to equipment -- such as the expensive Sirius T3 for measuring partition, distribution, and pKa -- which is very hard to find in academia, and it may not always see heavy use. 
+Thus, sending a person into pharma to generate data can be an extremely fruitful line of inquiry, as the relevant equipment and expertise is already present but manpower is lacking.
+Here, we are partnering with Genentech, Pfizer, and Merck (see support letters), who have agreed to give us access to the equipment and expertise we need for the necessary measurements.
+% add GSK if their letter comes in
+This work will provide funding for us to send a joint experiment and modeling student from the Mobley group to conduct the relevant measurements with our pharma partners. 
+As noted, we already know that this model will work given our experience in SAMPL5~\cite{rustenburg_measuring_2016}, and our pharma partners see the value of this data and the SAMPL challenge to the modeling community.
+
+%Talk about limitations of approach -- lack of ability to do follow up expeirments, get the dynamic range we wanted, test things again after SAMPL? 
+% Sustained funding will allow us to do that. 
+% (This will also help answer the argument that we don't need funding for this...)
+
+
+
 
 %Aim 2 - Measure binding of novel host-guest complexes for introductory ligand binding challenges (2 pages)
 {\bf Aim 2: Measure binding of novel host-guest complexes for introductory ligand binding challenges.}
