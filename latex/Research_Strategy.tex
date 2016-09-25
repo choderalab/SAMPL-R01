@@ -125,6 +125,7 @@
 {\large \bf SIGNIFICANCE}
 %2 pages
 
+{\color{red}[JDC: In general, can we break things up more with subsection headings or bold lead phrases? The first page is fine, but beyond this, it may be tiresome to just have a ``wall of text''.]}
 %Should I be adding boldface mini-summaries here to make it easier to skim?
 
 %Promise of physical methods, how they could transform drug discovery and the design of new small molecules for chemical biology
@@ -219,7 +220,7 @@ Together these advances led to a marked improvement in accuracy for calculations
 %b.1 Figure showing progression in hydration free energy accuracy across a couple of SAMPLs or comparing two SAMPLs?
 %
  %Fennell SEA, etc.
-Shifts in protonation state and tautomer proved particularly important in the recent SAMPL5 $\log D$ challenge [refs], which functions as a much more tractable venue for exploring the role these effects play in more complex protein-ligand binding.
+Shifts in protonation state and tautomer proved particularly important in the recent SAMPL5 logD challenge [refs], which functions as a much more tractable venue for exploring the role these effects play in more complex protein-ligand binding.
 Host-guest binding studies have also been particularly important [ref benchmark sets],
 %reference the benchmark sets paper
 highlighting the importance of salt effects [refs]
@@ -277,40 +278,54 @@ Aims 1--3 bring together multiple laboratories and both theorists and experiment
 The annual SAMPL challenges organized by the Mobley and Chodera labs (Aim 4) will evaluate best-practices reference calculations, will feature both annual physical meetings (coordinated with D3R) and virtual communication platforms to maximize community engagement, develop novel statistical analyses to identify and respond to problem areas, release benchmark datasets alongside primary experimental data, organize special journal issues to report progress, and encourage tool automation whenever possible.
 
 %Aim 1 - Generate new data for simple SAMPL blind challenges on physical property prediction (1.5 pages)
-{\bf Aim 1: Generate new data for ``simple'' SAMPL blind challenges on physical property prediction.}
+%{\bf Aim 1: Generate new data for ``simple'' SAMPL blind challenges on physical property prediction.}
+{\bf Aim 1: Isolate forcefield accuracy and chemical effects from sampling challenges by collecting new physical property measurement benchmark datasets.}
 %We will develop new solution-phase datasets for druglike small molecules. These data can test critical aspects of small molecule modeling (including accounting for interactions and treatment of protonation/tautomeric state) and improve our ability to predict physical properties relevant to drug discovery in new regions of chemical space. We will initially focus on distribution between organic phases and on pKa's and their modulation by solvent environment, using these data to drive improvements in the modeling of ligand interactions.
-Our first aim focuses on generating solution-phase physical property data for small, drug-like molecules -- essentially continuing the tradition begun with hydration free energies in SAMPL0-4 and continued with water-cyclohexane distribution coefficients in SAMPL5. 
+Our first aim focuses on generating solution-phase physical property data for small, drug-like molecules---essentially continuing the tradition begun with hydration free energies in SAMPL0-4 and continued with water-cyclohexane distribution coefficients in SAMPL5. 
 Distribution coefficients proved tremendously valuable to the community in SAMPL5 for a number of reasons, highlighting a number of key issues where modeling needs to improve, so they will form the basis for the physical property component in SAMPL6 and return in several subsequent SAMPL challenges.
+{\color{red}[JDC: This first paragraph serves no purpose. The fact that we are continuing a tradition is the \emph{least} most important point, so why lead with that? And instead of mentioning \emph{why} these methods are tremendously valuable, you say ``because reasons''. Most likely, our reviewers will not easily be able to make the connection on their own that physical property measurements allow us to isolate deficiencies in our current physical modeling approaches---forcefield accuracy and chemical effects like protonation and tautomer states---from the more complex challenges in protein-ligand binding, such as very slow conformational changes that hinder convergence of calculations. Let's try to make this connection as easy as possible for them by explaining that from the outset. We want to feed them the phrase to write in the Summary Statement that says why this Aim is important and well-designed.]}
 
+{\bf Rationale:}
 %Compare log D accuracy vs hydration accuracy, highlight issues and explain relevance to drug discovery; note lessons learned in SAMPL5
      %Maybe use a figure on log D accuracy?
 Distribution coefficients proved to be precisely the right level of difficulty for a SAMPL challenge focused on maximizing learning. 
+{\color{red}[JDC: I don't like the phase ``maximizing learning''. Who is learning? What are they learning and how? Can we say something more specific? Distribution coefficients measure the transfer free energies from aqueous high-dielectric to nonpolar low-dielectric environments, which mimics many of the physical characteristics of protein binding sites but is free of the sampling challenges of slow conformational change or engaging specific polar or charge interactions. Despite this, phenomena of protonation and tautomeric state changes upon transfer persist, and forcefield deficiencies are brought to the forefront, without concern that the calculations are poorly converged. Can we communciate this?]}
 Specifically, they were challenging enough that many methods performed poorly, with even the best methods having accuracies less than would have been expected based on their ability to calculate hydration free energies in water~\cite{bannan_calculating_2016}. 
 At the same time, methods typically did well enough that it was possible to learn a great deal from examining failure, and the major sources of error were issues which will also plague prediction of ligand-receptor interactions.
 These included neglect of changes in protonation state on transfer between environments, uncertainty as to the relevant protonation state and/or tautomer in one or both environments~\cite{bannan_calculating_2016}, problems with sampling the conformation of some of the larger ligands~\cite{bannan_calculating_2016, luchko_sampl5:_2016}, and force field limitations~\cite{paranahewage_predicting_2016}. 
 Our partnership with Genentech for these measurements also meant that the compounds were from Genentech's library and thus very drug-like, unlike typical compounds seen in hydration free energy challenges of the past.
-In some respects, distribution coefficients posed the ideal SAMPL challenge, hitting the sweet spot in terms of difficulty -- difficult enough that clear failures were frequent and there is much room for improvement, but not so difficult that the reasons for failure were unclear in general. 
-Still, the challenge could have been improved by follow-up experiments to re-check some of the experimental results~\cite{paranahewage_predicting_2016, klamt_prediction_2016, bannan_blind_2016, rustenburg_measuring_2016} -- but without funding for someone to continue working in this space, this has so far been impossible.
+{\color{red}[JDC: That's not quite accurate. The compounds are commercially available and were selected to be drug-like and span a large log D range. I think the partnership with Genentech should be mentioned at the beginning of this paragraph in a two-sentence summary of the challenge and its goals. We also need to explain why we chose cyclohexane and not octanol for this initial challenge.]}
+In some respects, distribution coefficients posed the ideal SAMPL challenge, hitting the sweet spot in terms of difficulty---difficult enough that clear failures were frequent and there is much room for improvement, but not so difficult that the reasons for failure were unclear in general. 
+Still, the challenge could have been improved by follow-up experiments to re-check some of the experimental results~\cite{paranahewage_predicting_2016, klamt_prediction_2016, bannan_blind_2016, rustenburg_measuring_2016}---but without funding for someone to continue working in this space, this has so far been impossible.
+{\color{red}[JDC: Turn this into a positive statement: This exercise the utility that funded, targeted follow-up experiments could have in addressing issues of experimental discrepancies shared by \emph{all} models.]}
+
+{\color{red}[JDC: Let's add a sentence that, while these are our plans, we also want to adapt to new experimental opportunities that come along, as well as respond to persistently difficult challenges by ensuring the challenge is repeated with new data as necessary.]}
 
 %Explain what science -- log D/logP, pKa primarily but mention possible other areas of interest
-Because distribution coefficients were so valuable in SAMPL5 and are driving so much needed method development [refs],
-%Cite examples of people trying things from SAMPL5
-we will measure new cyclohexane-water distribution coefficients for our first data set here and this will form the basis for the physical property component of SAMPL6. 
-Because octanol-water distribution coefficients are also potentially tractable~\cite{bannan_calculating_2016}, and measured much more frequently experimentally, we plan to generate measurements for the same compound distributing between both cyclohexane-water and octanol-water for this challenge.
+{\bf SAMPL6: Cyclohexane/water and octanol/water distribution coefficients.}
+Building on the success of distribution coefficient measurements in SAMPL5 and their surprising ability to motivate rapid advances in physical modeling methodologies [refs], we will measure cyclohexane-water distribution coefficients at pH 7.4 for a new batch of commercially-available drug-like molecules for for which no data is currently available.
+{\color{red}[JDC: What about some fragment molecules as well as drug-like molecules? Maybe the set can be broken into classes of varying chemical complexities? In general, I think clever experimental design ideas---indications we have really thought through how to maximize value---will be rewarded by the reviewers.]}
+Given the routine nature of octanol-water distribution coefficient measurements and indications that their prediction may not be computationally tractable~\cite{Bhatnagar:2013:PhysicalChemistryChemicalPhysics,bannan_calculating_2016} desite the heterogeneous structure of the wet octanol phase~\cite{Kollman:1996:AccountsofChemicalResearch}, we plan to also collect octanol-water distribution coefficient measurements for the same compounds.
+{\color{red}[JDC: p$K_a$ prediction proved to be difficult but critical for SAMPL5. What about either measuring p$K_a$s and \emph{providing} these for the compounds in SAMPL6, or picking compounds that we are essentially certain will be free of protonation state effects (for at least a subset of compounds) so we can focus on forcefield issues.The following year, we can ask them to predict both p$K_a$ \emph{and} distribution coefficients.]}
 
-However, distribution coefficients conflate several issues which are still complex, namely protonation state and tautomer prediction, as well as transfer into different environments. 
+{\bf SAMPL7: pKa measurements for drug-like molecules.} 
+While much less complex than protein-ligand affinities, distribution coefficient measurements still conflate several issues which are still complex, namely protonation state and tautomer prediction, as well as transfer into different environments which may contain small but important quantities of cosolvents. 
 Thus, we will likely need to turn to separating these issues to improve our handling of them one at a time. 
 For SAMPL7, then, our tentative plan is to measure pKa values for an extensive set of drug-like molecules in water and 
 %can we also do other solvent(s)?
 provide data specifically on pKa values, thereby separating the issues of predicting protonation state from those of transfer.
+{\color{red}[JDC: I don't believe the Sirius T3 is capable of p$K_a$ measurements for other solvents. I'm not even sure if that concept is meaningful since $K_a$ is defined with regard to free proton concentrations in water.}
 
+{\bf SAMPL8: pKa measurements and distribution coefficients.}
 In the next challenge, SAMPL8, we would re-combine the pKa and transfer issues in a way to maximize learning -- specifically, we will not only measure distribution coefficients but also measure pKa values for the same set of compounds, allowing participants to (a) predict distribution; (b) predict pKa; and (c) predict partitioning.
 
+{\bf SAMPL9 and SAMPL10.}
 Several other avenues are of interest for future datasets as well, especially for SAMPL9 and SAMPL10.
 New computational techniques are targeting membrane permeability~\cite{lee_permeability_2016, comer_permeability_2014}, and this is experimentally accessible (see support letters from Pfizer and Merck), leading to potential interest in new datasets and challenges focused there.
 Alternatively, partition/distribution into other environments aside from cyclohexane or octanol may provide significant value, especially given dielectric constant issues posed by current force fields [ref].
 Solubility measurements may also be suitable for a late-stage SAMPL challenge such as SAMPL10, since solubility predictions are now beginning to become tractable~\cite{schnieders_structure_2012, park_absolute_2014, liu_using_2016} (with Schr\"{o}dinger also working on amorphous solubility prediction).
 %cite something by Fennell here
+{\color{red}[JDC: Let's be concrete and suggest introducing solubility for SAMPL9 and PAMPA for SAMPL10.]}
   
  %Industry partnerships (and past precedent)
 Here, our experimental work will be performed with partners in the pharmaceutical industry, following roughly the model used for SAMPL5, where we partnered with Genentech, sending Bas Rustenburg, a graduate student in the Chodera lab, to conduct measurements of $\log D$ using existing equipment.
