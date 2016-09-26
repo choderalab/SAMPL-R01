@@ -286,7 +286,7 @@ The annual SAMPL challenges organized by the Mobley and Chodera labs (Aim 4) wil
 
 %Aim 1 - Generate new data for simple SAMPL blind challenges on physical property prediction (1.5 pages)
 %{\bf Aim 1: Generate new data for ``simple'' SAMPL blind challenges on physical property prediction.}
-{\bf Aim 1: Isolate forcefield accuracy and chemical effects from sampling challenges by collecting new physical property measurement benchmark datasets.}
+{\bf Aim 1: Isolate forcefield accuracy and chemical effects from sampling challenges by collecting new physical property measurement benchmark datasets.} %DLM to revisit titles of aims later -- not happy with this one (too wordy) but not ready to polish yet.
 %We will develop new solution-phase datasets for druglike small molecules. These data can test critical aspects of small molecule modeling (including accounting for interactions and treatment of protonation/tautomeric state) and improve our ability to predict physical properties relevant to drug discovery in new regions of chemical space. We will initially focus on distribution between organic phases and on pKa's and their modulation by solvent environment, using these data to drive improvements in the modeling of ligand interactions.
 Our first aim focuses on generating solution-phase physical property data for small, drug-like molecules---essentially continuing the tradition begun with hydration free energies in SAMPL0-4 and continued with water-cyclohexane distribution coefficients in SAMPL5. 
 Distribution coefficients proved tremendously valuable to the community in SAMPL5 for a number of reasons, highlighting a number of key issues where modeling needs to improve, so they will form the basis for the physical property component in SAMPL6 and return in several subsequent SAMPL challenges.
@@ -595,31 +595,90 @@ SAMPL7-10 will feature the introduction of new model protein:ligand systems desi
 
 %Aim 4 - Coordinate, run, and analyze blind challenges to advance modeling of binding (1.5 pages)
 {\bf Aim 4. Coordinate, run, and analyze blind challenges to advance modeling of binding.}
-The data collected in Aims 1-3 will drive annual SAMPL blind challenges, allowing the field to test the latest methods and force fields to assess progress, compare them against one another head-to-head, and perform sensitivity analysis to learn how much different factors (protonation state, tautomer selection, solvent model, force field, sampling method, etc.) affect predictive power. Results will then feed back into improved treatment of these factors for subsequent challenges, driving regular cycles of application, learning, and advancement.
-%Coordinate and run SAMPL blind challenges
-	%Run reference calculations to:
-		%a. Test current standard methods/FF
-		%b. Facilitate others learning (swap method or FF)
-		%c. Do sensitivity analysis (learn what?s important)
-		%d. (Give examples of what we?ve learned from this)
-		%e. (We will make inputs, outputs, and methods available too)
-	%Select and announce null models, run them
-	%Do statistical analysis of results (& compare to nulls), report back
-	%Work with D3R on meeting coordination
-	%Coordinate follow-up experiments as needed (cite examples when this was desirable)
-	%Coordinate with JCAMD on special issues
-	%Provide a way to connect up researchers to enable rapid progress, such as Slack
-	%Encourage prepublication sharing (bioRxiv) and sharing of slides/posters (F1000?)
-	%Coordinate follow-up re-measurement or re-examination of data if hard to explain why experiment differs from all predictions
-	%Data archival and dissemination
-	%   Datasets will be curated and released as standard community benchmark datasets: For example, FreeSolv
-	%   Probably also should comment on archiving/disseminating OLD SAMPL data, which we haven't been able to do (lack of resources)
-	%   Store and archive primary data and analysis
-	%   Methodology archival? Push for containerization of tools, maybe in conjunction with other known efforts.
-	%D3R coordination:
-	%	a. Co-running workshops with D3R
-	%     b. Coordinating challenges with them, submission deadlines offset from D3R challenges
+While the data generated in Aims 1-3 is valuable in its own right, the real impact of this work comes from using this data to conduct regular SAMPL blind challenges which test the state of the art, drive new methodological and force field innovations, allow comparative evaluation of methods, and result in downstream improvements.
+The new, progressive nature of the data generated for SAMPL6-10 means that these challenges will build on one another, and for success in later SAMPL challenges, participants must build on lessons learned from prior challenges.
+SAMPL challenges will thus serve to guide improvements to quantitative modeling of binding, facilitating regular cycles of application, learning, and improvement of models.
 
+% I didn't have this in the outline (bizarrely) but we need to briefly explain how we actually run a SAMPL challenge:
+SAMPL challenges will have submission deadlines once yearly, though not every data type or component of Aims 1-3 will be annual.
+The full timeline for SAMPL challenges (below) will be made available on the SAMPL website (https://drugdesigndata.org/about/sampl) when this project begins, allowing participants to plan their work and select what challenges to be involved in.
+As experimental data for each component becomes available and is curated, input files and challenge details will be made available online (and we will advertise via our e-mail list from prior SAMPLs and CCL), at least six months prior to the challenge deadline; data not yet available at that time will be held for a subsequent challenge.
+The exception will be in Year 1 of the project where, due to startup timescales, we expect to only be able to allow 3 months. 
+As in prior SAMPLs, submissions will be handled by an automated web upload service on the SAMPL website (which will be migrated to separate hosting if the D3R effort is not renewed after its current term) which pre-processes submissions to ensure that they meet format standards we specify along with the challenge details. 
+These format specifications ensure predictions can be automatically handled by our Python analysis framework.
+As in SAMPL4 and SAMPL5, analysis will also be conducted by our automated Python framework, as will e-mail return of plots and data analysis associated with each submission.
+As usual, participants will be allowed to submit multiple sets of predictions per SAMPL component to allow for comparative assessment of models.
+One new ingredient will be that each participant will be required to designate one submission as their ``primary'' submission which will be included in the formal ranking of performance; other submissions will still be analyzed and receive an assessment of performance, but only one will be formally ranked.
+We find that participants learn a great deal from being able to compare multiple methods or protocols, but providing some participants with more ``shots on goal'' than others in the formal ranking can be seen by some as unfair.
+%The above two sentences can probably be cut if we are tight on space.
+As previously, we will continue making all participant submissions and method descriptions available publicly on the website, along with author information except with authors specifically request to remain anonymous prior to submission.
+
+%Coordinate and run SAMPL blind challenges
+Our goal in this aim is not just to run blind challenges, but to advance modeling by helping participants understand where they went wrong, why, and how they might do better next time. 
+To achieve this, we provide guidance to participants as to what challenges we expect may be important when we provide details on each SAMPL component.
+For a host-guest system, for example, we might highlight known buffer/salt effects, protonation state challenges, and point out previous work on sampling challenges, with pointers to the relevant experimental work and to modeling work from past SAMPL challenges and elsewhere (i.e. as in \cite{mobley_predicting_2016}).
+This helps participants design their approach.
+%Run reference calculations to:
+Additionally, we find it important to run reference calculations of our own to explore various approaches. This serves several purposes:
+		%a. Test current standard methods/FF
+It provides a test of the current methods we select (usually those we view as current standard best practices) and current force fields; 
+		%b. Facilitate others learning (swap method or FF)
+it helps facilitate learning -- we announce what calculations we plan to perform, make input files available in a wide variety of formats [ref HG, DC overviews and Shirts], and others can repeat our calculations with a different method but same system and force field to compare methods, or swap force field but keep the method and system fixed to compare force fields, etc.; 
+		%c. Do sensitivity analysis (learn what?s important)
+and it allows us to conduct sensitivity analysis, as by varying the conditions of our simulations (protonation state, tautomer, etc.~\cite{bannan_blind_2016}) we can see how much this impacts calculated values and thereby how important it is, even if participants don't do these tests.
+		%d. (Give examples of what we've learned from this)
+Reference calculations have, for example, helped us highlight the importance of a small amount of water in cyclohexane for accurately calculating log D values, determine that an incorrect tautomer could affect calculated values by many log units~\cite{bannan_blind_2016}, and highlight how forcefield modifications could significantly improve results on hydration free energies~\cite{mobley_blind_2014-1}.
+		%e. (We will make inputs, outputs, and methods available too)
+To further aid follow up studies, we will make the input files, results, and even simulation methods used for our reference calculations along with the calculations themselves, with the methods being made available via our open software development efforts on GitHub.
+
+
+%Select and announce null models, run them
+Physical methods are only valuable if they can reliably outperform alternate methods, so a new focus of SAMPL6-10 will be selecting quality null models and running them to provide a point of comparison for participants.
+While SAMPL efforts in the past have used some null models, lack of manpower has required that these be particularly crude (such as ``guess zero'' models [refs]) which provide no predictive value. 
+In this work, we will announce our selected null models when we open each challenge component, so participants know what their results will be compared with.
+%Do statistical analysis of results (& compare to nulls), report back
+Statistical analysis of SAMPL performance, and comparison with nulls, will continue to be an important component of our work [refs].
+
+%D3R coordination/meetings:
+Following submission and analysis of each SAMPL challenge, challenge results will be released and discussed, with SAMPL workshops allowing more formal presentations on and discussion of results in years 1, 3, and 5. 
+	%	a. Co-running workshops with D3R
+Workshops will run every two years at the request of past participants, and will be co-run and co-hosted with D3R Grand Challenge workshops (see support letter).
+During the off years, SAMPL challenges will still run, but discussion of and dissemination of results will be via asynchronous means (as discussed below) and a ``virtual workshop'' consisting of talks and interaction over Google Hangouts or YouTube Live (formerly Hangouts On Air).
+	%     b. Coordinating challenges with them, submission deadlines offset from D3R challenges
+While coordination with D3R will mostly be at the level of workshops, we will also work with them ensure that SAMPL challenge submission deadlines are offset from deadlines for D3R to allow maximum community participation in both efforts.
+
+	%Coordinate with JCAMD on special issues
+Dissemination of results is particularly key so that new insights can be rapidly spread to the community.
+We will continue to work with JCAMD to publish regular SAMPL special issues (see support letter), but timescales for this can be slow.
+	%Encourage prepublication sharing (bioRxiv) and sharing of slides/posters (F1000?)
+Therefore, we will strongly encourage prepublication sharing of results and analysis, most immediately via sharing of slides and posters such as via F1000 Research and then paper preprints via bioRxiv or similar.
+	%Provide a way to connect up researchers to enable rapid progress, such as Slack
+We also want to ensure that participants are able to learn from one another via exchanging ideas outside of formal workshops and meetings.
+While this has happened in the past -- for example, when workers whose methods should yield identical results find differences, they often work together to identify the origin of these discrepancies [refs] -- it often occurs only between isolated individuals.
+To facilitate more open communication between the community, we will make a SAMPL group on the Slack collaboration software, with channels corresponding to each component of each challenge, allowing interested individuals to openly exchange ideas, tests, and work together to learn from their work.
+
+	%Data curation, archival and dissemination
+Each data set naturally should undergo a life cycle of collection, curation, blind challenges, and public dissemination.
+In the past, SAMPL has primarily emphasized the \emph{blind challenges} and pre-challenge \emph{curation} aspects, with isolated forays into collection [ref SAMPL5, ref Peat trypsin]. 
+This work considers the full life cycle for the first time, with Aims 1-3 dealing primarily with collection and pre-challenge curation.
+Post-challenge, 
+	%   Datasets will be curated and released as standard community benchmark datasets: For example, FreeSolv
+datasets will receive additional curation and then be released to the community as standard test or benchmark sets [ref benchmark set paper]. 
+One related example of such a set is the FreeSolv dataset, which includes a large number of calculated and experimental hydration free energies, including those from SAMPL0-SAMPL4 [ref].
+	%   Data curation also via follow-up experiments (new!; cite examples where it was desirable)
+Post-challenge curation will also receive new attention here; in the past, lack of resources has always prevented follow-up experimental work, even when the data clearly indicated it was warranted (such as puzzling issues with dynamic range for log D values in SAMPL5 [ref]).
+These experiments will now be conducted, allowing computation to drive collection of additional experimental data when warranted.
+	%   Store and archive primary data and analysis
+Dissemination is the final stage in the data life cycle; we discuss how exactly the data will be disseminated in more detail in our Resource Sharing plan, but essentially, we will make the data (including primary data, processed data, and our analysis of challenge submissions) available freely and publicly with permanent, cite-able DOIs, and with backup hosting on library facilities (such as UCI's DASH [link]) to ensure availability long after termination of the project.
+Binding data will also be deposited in BindingDB [ref].
+
+	%   Probably also should comment on archiving/disseminating OLD SAMPL data, which we haven't been able to do (lack of resources)
+Because prior SAMPL work focused mainly on challenges themselves, dissemination of the data has never been a major focus.
+As part of this project, we will retrieve old SAMPL experimental data, submissions, and analysis from where it is archived and make it available along with the new data generated here. 
+
+	%   Methodology archival? Push for containerization of tools, maybe in conjunction with other known efforts. [Currently short on space, but putting something very short on this here anyway.]
+We will also push for containerization of tools and methods in conjunction with other efforts such as AutoDesk's Molecular Design Toolkit and the NSF Molecular Sciences (MolSci) initiative.
+Our vision is that long-term, instead of participants submitting a set of predictions, they would also submit the entire workflow they applied via Docker containers in a way which would allow others to reproduce their work if needed, or to repurpose the workflow for new applications, ensuring not just that SAMPL \emph{results} get disseminated, but that the \emph{methods} and \emph{workflows} themselves spread.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -654,6 +713,8 @@ The data collected in Aims 1-3 will drive annual SAMPL blind challenges, allowin
 % How often will PI and co-Is talk/meet?
 % Publication management plan.
 % Conflict resolution plan.
+
+%JDC: I think it will be better if it's clear that both of our labs are available to engage west and east coast pharma, as long as there is a clear leadership plan.
 
 {\large \bf OUTLOOK} %or conclusions. 0.5 page
 % This part is probably less critical, and can be dropped if space reasons dictate.
