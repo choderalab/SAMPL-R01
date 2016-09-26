@@ -188,15 +188,8 @@ The incarnation of SAMPL proposed here will deliberately bridge the gap between 
 Unless this gap is bridged, there is the very real possibility that modeling may simply continue to fall far short of expectations in pharmaceutical challenges like D3R for reasons which are unclear.
 The extension of SAMPL proposed here will allow us to form blind challenges designed to highlight major reasons for failure and drive progress towards resolving them.
 
-%Wrap up with how this will realistically help advance binding prediction in a realistic timeframe (a brief mention of CASP will likely be appropriate even though we don't follow the same model)
-\textbf{Our major goal is to rapidly advance predictive modeling to where it can guide experimental work doing biomolecular design, and extension of the SAMPL challenges will do exactly that.}
-The Computer Aided Structure Prediction (CASP) series of competitions provide an example of how a focused effort can realistically have a dramatic impact on predictive modeling in a relatively short space of time.  {\bf [JDC to write text here]}
-%JDC to write some text on CASP
-While our model for the SAMPL challenges is slightly different than that for CASP (for example, we have less emphasis on competition) we see SAMPL playing the same key role in driving predictive modeling, but in our field of protein-ligand interactions. 
-In our view it will play a vital role in enhancing the work being done on \emph{existing} data by D3R. 
-%DLM: Maybe this whole paragraph could be cut for space?
 
-
+\textbf{Our major goal is to rapidly advance predictive modeling to where it can guide experimental work doing biomolecular design, and extension of the SAMPL challenges will do exactly that.} This work will play a vital role in enhancing the work being done on \emph{existing} data by D3R, helping prepare methods for application to the more challenging systems emerging from pharma in D3R's challenges. 
 
 {\large \bf INNOVATION}
 % 1 page
@@ -204,11 +197,12 @@ In our view it will play a vital role in enhancing the work being done on \emph{
 %SAMPL drives science in our groups and in the field
    %a. Give examples from our groups from prior SAMPLs
    %b. Examples from field in prior SAMPLs
-Blind predictive challenges---and SAMPL in particular---already play a key role in fostering innovation in the field, especially in the form of method development, evaluation, and hardening, as well as force field development. 
-By expanding SAMPL, will advance innovative new science. 
-%{\color{red}[JDC: How is it innovative if it has been going on for a while? Can we point to the number of new methodology publications it has motivated, for example?]}
-% JDC further remarked: "I think it does help if we stress that we're going beyond what was already done, and see if we can communicate WHY it the proposed expansion of SAMPL is innovative and necessary, lest they think we should just carry on as we have without funding."
-It is worth briefly highlighting several historical examples, though far more are available in the SAMPL literature [CITE]. 
+Blind predictive challenges---and SAMPL in particular---have already led to important new science in the form of method development, evaluation, robustness, and force field development. 
+But they have not yet resulted in a dramatic improvement in predictive molecular design, in part because the \textbf{lack of funding has left us unable to design a systematic and progressive series of challenges that drives such improvements}. 
+Previous SAMPL challenges have been valuable in isolation -- but they have not moved the frontier because they were driven by data availability rather than purposeful design.
+Here, we propose the innovative step of designing SAMPL to advance physical modeling.
+
+Several historical examples serve to highlight how SAMPL can foster innovation (though far more examples are available [CITE]). 
 The first several SAMPL challenges on hydration free energies had rather hit-and-miss performance, highlighting pitfalls of existing methods and force fields which led to marked improvements in PB models [refs],
 %cite OpenEye work
  recognition of some limitations of fixed-charge force fields [refs],
@@ -237,10 +231,10 @@ pointing the way forward for improving predictive models of molecular interactio
 
 %c. Mention uniqueness of SAMPL -- there are other predictive challenges (D3R, pKa coop, CASP) but none focused on driving quantitatively predictive protein-ligand modeling
 This work is also innovative because of the uniqueness of SAMPL.
-While there are other predictive challenges in the area of biomolecular modeling, such as D3R [ref], the pKa cooperative [ref], CAPRI [ref]and CASP [ref],
+While there are other predictive challenges in the area of biomolecular modeling, such as D3R [ref], the pKa cooperative [ref], CAPRI [ref] and CASP [ref],
 %CAPRI had 2016 event: http://www.ebi.ac.uk/msd-srv/capri/
 %insert references
-none are specifically focused on driving quantitatively predictive protein-ligand modeling.
+\textbf{no other effort focuses specifically on driving quantitatively predictive protein-ligand modeling}.
 The SAMPL expansion we propose here is unique because it will be \emph{specifically designed} to drive improvements in modeling accuracy for biomolecular design, rather than simply serving to evaluate accuracy on targets of pharmaceutical interest.
 It also plays an enabling role for a wide variety of other science, rather than functioning as a stand-alone entity. 
 SAMPL benefits the whole modeling community---for example, protein-ligand docking software has improved as a direct result of SAMPL hydration challenges [ref Coleman], and commercial software vendors have introduced new features or scientific improvements based on participation in SAMPL challenges [cite Klamt stuff].
@@ -254,13 +248,12 @@ This work also focuses on innovative experimental methods.
 Specifically, in Aim 3, we develop a new informatics platform to facilitate the rapid identification and development of useful protein-ligand model systems that are both experimentally tractable for high-throughput biophysical measurements and focus on specific challenges of interest.
 We employ a fully automated wetlab to screen potential model systems for expression, carry out high-accuracy biophysical measurements, and perform automated error analysis to carefully assess experimental uncertainty.
 The Chodera lab---responsible for Aim 3---has substantial expertise in the area of automation of biophysical measurements and uncertainty analysis~\cite{Hanson:2015:JournalofComputer-AidedMolecularDesign}, and releases data analysis tools and 3D printed parts developed to facilitate these experiments as open source. 
-This work is at the forefront of innovation in high-throughput, automated biophysical experiments to produce high quality data with well-characterized uncertainties. 
-Not only will the data itself be of prime importance to the community, but the techniques themselves will help future experimental work.
-%Add some cites here
+\textbf{This work is at the forefront of innovation in high-throughput, automated biophysical experiments to produce high quality data with well-characterized uncertainties.} 
+Not only will the data itself be of prime importance to the community, but the techniques themselves will help future experiments.
 
 % Innovative reference calculations (Aim 4)
 In Aim 4, we will not only run annual iterations of SAMPL community challenges, but also perform our own reference calculations with the latest techniques, testing their accuracy and using these to assess the current state-of-the-art.
-Both the Mobley and Chodera labs are experts in development of free energy methods for application to physical properties (e.g., [ a couple refs]) and binding (e.g., [a couple refs]), and the reference calculations we perform in Aim 4 are particularly important for innovation as well, serving several key roles: (1) Benchmarking our latest method developments against current ``best practices'' methods (by doing calculations via both approaches); (2) Facilitating learning, allowing others to experiment with how a change in method or force field impacts results; (3) Focusing the field on key issues by doing sensitivity analysis to whether conditions such as ionic strength, protonation state, tautomer choice, etc., impact computed values.
+Both the Mobley and Chodera labs are experts in development of free energy methods for application to physical properties (e.g., [ a couple refs]) and binding (e.g., [a couple refs]), and the \textbf{reference calculations we perform in Aim 4 are particularly important for innovation as well}, serving several key roles: (1) Benchmarking our latest method developments against current ``best practices'' methods (by doing calculations via both approaches); (2) Facilitating learning, allowing others to experiment with how a change in method or force field impacts results; (3) Focusing the field on key issues by doing sensitivity analysis to whether conditions such as ionic strength, protonation state, tautomer choice, etc., impact computed values.
 %Add references
 
 % Innovation in analysis of method performance, comparison of methods, workflow science? (Aim 4)
