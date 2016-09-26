@@ -376,8 +376,8 @@ sensipar & epitopes; folding \\
 vyvance & diamine; epitopes; folding \\
 minocycline & tetracyclin; amino aniline \\
 \end{tabular}
-\caption{\label{table:CB} {\bf Selected drugs as guests.} 
-{\color{red}[JDC: Need a stand-alone description here.}
+\caption{\label{table:CB} {\bf Selected drugs whose binding to CB[$n$] hosts will be assayed for SAMPL6, 8, and 10 challenges (SA 2.1).} 
+{\color{red}[JDC: Need a stand-alone description here. Why are they important? What is the basic idea behind the challenge? Imagine someone is just reading the figures and captions!]}
 }
 \end{wraptable}
 
@@ -386,19 +386,27 @@ minocycline & tetracyclin; amino aniline \\
 %Intro lessons learned on HG systems, relevance to drug discovery
 Physical property challenges focus on the behavior of small molecules and how this is modulated by environment, introducing a number of issues relevant to drug discovery---but binding in host-guest systems introduces a wider variety of challenges relevant to biomolecular interactions, but without the full array of challenges seen in protein-ligand interactions, as reviewed recently~\cite{mobley_predicting_2016}. 
 Thus, we believe that new data and SAMPL challenges on host-guest binding are a critical step towards accurately modeling biomolecular interactions.
+{\color{red}[JDC: This doesn't do a convincing job of communicating the distinct role host-guest challenges play. What relevant challenges are present in host-guest binding? What challenges are absent? Why is that important? How does this differ from the physical property challenges? Imagine selling someone in drug discovery on why they should care.]}
 Already, over the past several SAMPL challenges, host-guest systems have provided key tests for modeling of binding interactions, driving a great deal of learning about challenges such as how co-solvents and protonation modulate binding and the limitations or pitfalls of different methods for calculating binding free energies~\cite{muddana_sampl4_2014, mobley_predicting_2016, yin_sampl5_preprint, bhakat_resolving_2016}. 
+{\color{red}[JDC: When possible, can we avoid empty phrases like ``driving a great deal of learning'' and instead give the reader a coherent explanation, like ``highlighted the role that protonation state effects can play in binding phenomena, resulting in errors of up to X kcal/mol if these effects are neglected''?]}
 Host-guest binding proves remarkably difficult to model accurately~\cite{henriksen_computational_2015}, probably in part due to force field limitations---itself an important insight and one which is leading to new developments~\cite{yin_toward_2015}.
-Here, we design a series of SAMPL challenges focused on two general classes of host-guest systems---cucubiturils and derivatives (SA 2.1) and deep-cavity cavitands (SA 2.2)---both of which build on studies from prior SAMPL challenges.
+{\color{red}[JDC: Assuming convergence is achieved, that leaves only forcefield limitations and protonation/tautomer effects. How can these contributions be dissected or separated, and how can is failure or success specifically able to drive progress?]}
 
-{\bf Subaim 2.1: Cucubituril-based receptors as model binding systems}
+Here, we design a series of SAMPL challenges focused on two general classes of host-guest systems---cucurbiturils and derivatives (SA 2.1) and deep-cavity cavitands (SA 2.2)---both of which build on studies from prior SAMPL challenges.
+{\color{red}[JDC: It would help to set these two systems in perspective in a paragraph orienting the reader before diving into the subaims. Why field two host-guest systems? How are they different, from the ten-thousand-feet perspective? What do we hope to accomplish with these challenges? What kinds of phenomena will they drive progress in modeling?]}
+
+{\bf Subaim 2.1: Cucurbituril-based receptors as model binding systems}
 %Isaacs science
 
-\textbf{Cucubituril derivatives for host-guest binding.} 
+\textbf{Cucurbituril derivatives for host-guest binding.} 
 %DLM: A bit odd to have the OA section start with a history header and this one not. May need to address.
-Building on previous success with cucubit[n]uril experiments for SAMPL challenges~\cite{ma_acyclic_2012-2, cao_absolute_2014, she_glycoluril-derived_2016}, we will conduct a series of new experiments on these receptors for three new SAMPL challenges, with experimental work conducted by co-investigator Isaacs, an expert on these systems.
-Cucurbit[n]uril receptors are particularly well suited for the SAMPL challenges because they exhibit: 1) high binding constants toward suitable guests in water (routinely $\mu$M to nM; occasionally pM to fM)~\cite{cao_attomolar_2014, liu_cucurbituril_2005, mock_structure_1986, assaf_cucurbiturils:_2015, moghaddam_new_2011, shetty_can_2015, biedermann_release_2012}, 2) high selectivities between structurally related guests which translate into large $\Delta \Delta G$ values~\cite{isaacs_stimuli_2014}, 3) low molecular weights (1000-2000 amu) which allow high levels of theory to be used, and 4) limited conformational degrees of freedom.  
-Thus, for SAMPL, we will resynthesize a series of CB[n]-type receptors of increasing complexity, measure Ka values and determine host-guest stoichiometry and geometry toward biologically relevant guests in order to stringently test methods for predicting binding.  
-Figure~\ref{figure:CB} shows the chemical structures of three hosts -- Me4CB[8]~\cite{vinciguerra_synthesis_2015}, glycoluril hexamer~\cite{lucas_templated_2011}, and acyclic CB[n]-type receptors~\cite{ma_acyclic_2012, ma_acyclic_2012-1, zhang_acyclic_2014, gilberg_acyclic_2015, sigwalt_acyclic_2016, zhang_acyclic_2014-1} which span the range from preorganized macrocyclic host to uncharged acyclic but preorganized host to highly charged acyclic host.
+Building on previous success with cucurbit[$n$]uril (abbreviated CB[$n$]) experiments for previous SAMPL challenges~\cite{ma_acyclic_2012-2, cao_absolute_2014, she_glycoluril-derived_2016}, we will conduct a series of new experiments on these receptors for three new SAMPL challenges,
+{\color{red}[JDC: Just SAMPL6-8? Why only three?]}
+ with experimental work conducted by co-investigator Isaacs, an expert on these systems who has provided data for previous SAMPL challenges.
+CB[$n$] receptors are particularly well suited for the SAMPL challenges because they exhibit: (1) high binding affinities toward suitable guests in water comparable to protein-ligand affinities (routinely $\mu$M to nM; occasionally pM to fM)~\cite{cao_attomolar_2014, liu_cucurbituril_2005, mock_structure_1986, assaf_cucurbiturils:_2015, moghaddam_new_2011, shetty_can_2015, biedermann_release_2012}, (2) high selectivities between structurally related guests which translate into large $\Delta \Delta G$ values~\cite{isaacs_stimuli_2014}, (3) low molecular weights (1--2 kDa) permitting high levels of theory to be used, and (4) highly restricted conformational degrees of freedom, eliminating challenges associated with protein targets with many soft degrees of freedom and slow motions.  
+For SAMPL6, 8, and 10, we will resynthesize a series of CB[$n$]-type receptors of increasing complexity, measure $K_a$ values, and determine host-guest stoichiometry and geometry toward biologically relevant guests in order to stringently test methods for predicting binding.  
+{\color{red}[JDC: What is meant by ``biologically relevant guests''?]}
+Figure~\ref{figure:CB} shows the chemical structures of three hosts---Me$_4$CB[8]~\cite{vinciguerra_synthesis_2015}, glycoluril hexamer~\cite{lucas_templated_2011}, and acyclic CB[$n$]-type receptors~\cite{ma_acyclic_2012, ma_acyclic_2012-1, zhang_acyclic_2014, gilberg_acyclic_2015, sigwalt_acyclic_2016, zhang_acyclic_2014-1} which span the range from preorganized macrocyclic host to uncharged acyclic but preorganized host to highly charged acyclic host.
 
 \begin{figure}[h]
 \begin{centering}
@@ -408,23 +416,23 @@ Figure~\ref{figure:CB} shows the chemical structures of three hosts -- Me4CB[8]~
 
 \vspace{0.1in}
 \caption{\footnotesize {\bf Structures of Me$_4$CB[8], glycouril hexamer, and acyclic CB[n]-type receptors.}
-{\color{red}[JDC: Need a stand-alone description here so someone scanning the figures will know what is going on.}
+{\color{red}[JDC: Need a stand-alone description here so someone scanning the figures will know what is going on, which challenges they will be used for, why they are interesting. Think about someone who is only scanning the figures---the majority of the reviewers!---and make sure they get a complete story.}
 \label{figure:CB}}
 \end{figure}
 
-\textbf{SAMPL6, 8 and 10 cucubituril challenges.} 
-\emph{For SAMPL6}, we will measure $K_a$ and $\Delta H$ values, stoichiometry, and geometry for the interaction of Me4CB[8] (a soluble CB[8] derivative) with 15 guests (selected top drugs, Table CB1) by either direct or competition isothermal titration calorimetry (ITC), UV/Vis or fluorescence indicator displacement assay, or NMR competition experiments, as previously~\cite{cao_attomolar_2014, liu_cucurbituril_2005, ma_acyclic_2010, she_glycoluril-derived_2016}.  
-Our selection of Me$_4$CB[8] binding to top drugs allows us to modulate the computational complexity by: 1) changing host flexibility (e.g. Me$_4$CB[8] can exhibit ellipsoidal deformation)~\cite{vinciguerra_synthesis_2015}, 2) allowing the possibility of binary or ternary (e.g. 1:1 and/or 1:2 host:guest) complexes~\cite{ko_supramolecular_2007, barrow_cucurbituril-based_2015, urbach_molecular_2011}, 3) using drugs with several potential binding epitopes to induce sampling issues.  Host:guest stoichiometry and geometry (e.g. which binding epitope is complexed) will be addressed by ITC ``n'' values, Job plots monitored by UV/Vis or NMR~\cite{connors_binding_1987}, and by 1H NMR complexation induced changes in chemical shifts~\cite{masson_cucurbituril_2012}.  
-All three sets of studies will be conducted in phosphate buffered saline (pH 7.4 with physiological salt) which introduces its own complexities due to salt competition for binding~\cite{marquez_mechanism_2004, mobley_predicting_2016}. 
+\textbf{SAMPL6, 8, and 10 cucurbituril challenges.} 
+\emph{For SAMPL6}, we will measure $K_a$ and $\Delta H$ values, stoichiometry, and geometry for the interaction of Me$_4$CB[8] (a soluble CB[8] derivative) with 15 guests (selected top drugs, Table~\ref{table:CB}) by either direct or competition isothermal titration calorimetry (ITC), UV/Vis or fluorescence indicator displacement assay, or NMR competition experiments, as previously~\cite{cao_attomolar_2014, liu_cucurbituril_2005, ma_acyclic_2010, she_glycoluril-derived_2016}.  
+Our selection of Me$_4$CB[8] binding to top drugs allows us to modulate the computational complexity by: 1) changing host flexibility (e.g. Me$_4$CB[8] can exhibit ellipsoidal deformation)~\cite{vinciguerra_synthesis_2015}, 2) allowing the possibility of binary or ternary (e.g. 1:1 and/or 1:2 host:guest) complexes~\cite{ko_supramolecular_2007, barrow_cucurbituril-based_2015, urbach_molecular_2011}, 3) using drugs with several potential binding epitopes to induce sampling issues.  Host:guest stoichiometry and geometry (e.g., which binding epitope is complexed) will be addressed by ITC $n$ values, Job plots monitored by UV/Vis or NMR~\cite{connors_binding_1987}, and by $^1$H NMR complexation induced changes in chemical shifts~\cite{masson_cucurbituril_2012}.  
+All three sets of studies will be conducted in phosphate buffered saline (p$H$ 7.4 with physiological salt) which introduces its own complexities due to salt competition for binding~\cite{marquez_mechanism_2004, mobley_predicting_2016}. 
 %Isaacs old phrasing cut/simplified by DLM: "further complexity due to competitive interaction between the C=O portals of CB[n]-type receptors and metal ions via ion-dipole interactions which reduces the observed Ka values~\cite{marquez_mechanism_2004}."
 For \emph{SAMPL8}, we will focus on binding of the same 15 drugs (Table~\ref{table:CB}), but to glycoluril hexamer. 
-This is an ideal next step as this host exhibits increased conformational dynamics, and influences the number and energy of solvating (and unusually coordinated) water molecules implicated in the high binding constants for CB[n]-guest complexes~\cite{biedermann_release_2012, biedermann_hydrophobic_2014}.  
-The selected drugs include several with pKa values in the 3.8 to 7.4 range; given that CB[n]-type receptors (like biomolecular receptors) can induce pKa shifts in their guests of up to 4 pKa units~\cite{saleh_activation_2008, nau_deep_2011, ghosh_strategic_2012}, this will test how well models can predict these effects. 
-Additionally, it will couple nicely with the focus on pKa values in Aim 1.
-\emph{SAMPL10} will shift to acyclic CB[n]-type receptors (e.g. M1C$_3$, M1C$_0$, and M1PC$_0$ that contain anionic solubilizing groups attached via different linker lengths.  
-As in SAMPL2, these acyclic CB[n]-type receptors introduce conformational complexity, and water interactions play a key role.
+This is an ideal next step as this host exhibits increased conformational dynamics, and influences the number and energy of solvating (and unusually coordinated) water molecules implicated in the high binding constants for CB[$n$]-guest complexes~\cite{biedermann_release_2012, biedermann_hydrophobic_2014}.  
+The selected drugs include several with p$K_a$ values in the 3.8 to 7.4 range; given that CB[$n$]-type receptors (like biomolecular receptors) can induce pKa shifts in their guests of up to 4 pKa units~\cite{saleh_activation_2008, nau_deep_2011, ghosh_strategic_2012}, this will test how well models can predict these effects. 
+Additionally, it will couple nicely with the focus on p$K_a$ values in Aim 1.
+\emph{SAMPL10} will shift to acyclic CB[$n$]-type receptors (e.g. M1C$_3$, M1C$_0$, and M1PC$_0$ that contain anionic solubilizing groups attached via different linker lengths.  
+As in SAMPL2, these acyclic CB[$n$]-type receptors introduce conformational complexity, and water interactions play a key role.
 %Insert SAMPL2 ref  
-Moreover, the presence of 4 anionic groups in close proximity to the cavity are expected to have a significant influence on the balance between ion-dipole interactions and the solvation of the free host.
+Moreover, the presence of 4 anionic groups in close proximity to the cavity are expected to have a significant influence on the balance between ion-dipole interactions, and the solvation of the free host.
 
 {\bf Subaim 2.2. Gibb deep cavity cavitands for host-guest studies} 
 
@@ -438,9 +446,9 @@ Moreover, the presence of 4 anionic groups in close proximity to the cavity are 
 
 {\bf History of octa-acid SAMPL challenges.} During SAMPL4~\cite{gibb_binding_2013} and SAMPL5~\cite{sullivan_binding_2016} we focused on two hosts: the octa-acid 1 (R = H) and another octa-acid derivative with four methyl groups positioned at the portal of the binding pocket (1, R = Me). 
 % Chodera suggests commenting on what specific features of these hosts were remarkable for presenting isolated challenges to quantitative predictive modeling -- sterics? Charge? Protonation state effects? DLM to add discussion here or elsewhere as appropriate.
-These studies used Isothermal Titration Calorimetry (ITC) to measure the thermodynamics of (1) host 1 (R = H) complexing a range of carboxylate guests,
+These studies used isothermal titration calorimetry (ITC) to measure the thermodynamics of (1) host {\bf 1} (R = H) complexing a range of carboxylate guests,
 % Chodera asks "how many?"
-and (2) the binding of carboxylate and trimethylammonium guests to both hosts (1, H = H and Me).  
+and (2) the binding of carboxylate and trimethylammonium guests to both hosts ({\bf 1}, H = H and Me; Figure~\ref{figure:gdccs}).  
 In both cases $^1$H-NMR titration was also used in a confirmatory role for ITC-derived free energies of binding.  
 SAMPL5 emphasized how differences in the shape of the hydrophobic pocket of the host can have a profound affect on affinity for some guests.
 % Add SAMPL5 overview and experimental cites
@@ -448,24 +456,25 @@ SAMPL5 emphasized how differences in the shape of the hydrophobic pocket of the 
 
 
 {\bf Novel deep cavity hosts probe the effects of binding site charge constellations.} 
-For future SAMPL challenges, we will expand on the range of hosts by including 2 and 3 in our ITC studies.  
-Like cavitand 1, host 2 is an octa-acid derivative.  However, the four benzoate groups are relocated from the extreme exterior in the case of 1, to the rim of the binding pocket in 2.  
+For future SAMPL challenges, we will expand on the range of hosts by including {\bf 2} and {\bf 3} in our ITC studies (Figure~\ref{figure:gdccs}).  
+Like cavitand {\bf 1}, host {\bf 2} is an octa-acid derivative.  However, the four benzoate groups are relocated from the extreme exterior in the case of {\bf 1}, to the rim of the binding pocket in {\bf 2}.  
 We surmise that this will have a direct effect on the binding of charged guests, but more subtly, an indirect effect on guest complexation via changes to the solvation of the empty host.  
-Octa-trimethylammonuim cavitand (``positand'' 3) has the same overall architecture as host 1, but inverts the charges on the water solubilizing exterior coat.  While it is not yet clear if this switch in groups relatively remote from the pocket will directly affect guest complexation, results from related systems suggest it can (unpublished).
+Octa-trimethylammonuim cavitand (``positand'' {\bf 3}) has the same overall architecture as host {\bf 1}, but inverts the charges on the water solubilizing exterior coat.  
+While it is not yet clear if this switch in groups relatively remote from the pocket will directly affect guest complexation, results from related systems suggest it can (unpublished).
 
 Guests for the five proposed ITC studies will be obtained from commercial sources, focusing on molecules that probe the limitations of current force-fields as well as new data as it is gathered.   
 %JDC asks: "Is it worth noting the guests likely have to be highly soluble?"
 % JDC asks whether we should try to pre-calculate guest affinities to aid in selecting those with a large dynamic range or large differences between host variants. I think probably we should propose this -- if we have someone working on SAMPL full-time (Aim 4) this would be very much within what we can do. I'll add something along these lines in edits.
 
 {\bf SAMPL6-10 deep cavity cavitand challenges.} 
-The host-guest challenge for SAMPL6 will focus on how well the effect of host carboxylate substituent location can be predicted, and will involve hosts 1 and 2 with a set of five, previously uninvestigated guests.  
-SAMPL7 will provide a second iteration of this experiment to test algorithmic improvements in predictive modeling following SAMPL6 by comparing hosts 1 and 3 with a different set of guests.  
-We anticipate that because of the relative remoteness of the charged groups in these two hosts, the effects of switching charges will be subtler than the differences between 1 and 2.  
-SAMPL8 will consider the effect of common biologically-relevant counterions/salts salts on guest binding, comparing the effects of NaCl and NaI on the complexation of five guests to 1.  
-We have previously shown that iodide has a weak affinity for the binding pocket of 1, whilst sodium ions have an affinity for the outer carboxylates~\cite{carnegie_anion_2014}, requiring modeling to capture the differential affinities of these ions in addition to guest affinities to successfully model the observed affinities.  
-SAMPL9 will follow up on this by examining the effects of these same two salts on the complexation of five guests to 3, again giving the modeling community time to incorporate algorithmic improvements following SAMPL8. 
-While we have not yet quantified salt affinities to host 3, we expect the iodide to have affinity for both the pocket and the positively charged solubilizing groups.  
-For SAMPL10 we will consider the effects of co-solvents on the binding of five guests to 1 and 2 to probe the effect of co-solvent competition for the binding site, as well as effects cosolvents may have in weakening the hydrophobic effect. 
+The host-guest challenge for SAMPL6 will focus on how well the effect of host carboxylate substituent location can be predicted, and will involve hosts {\bf 1} and {\bf 2} with a set of five, previously uninvestigated guests.  
+SAMPL7 will provide a second iteration of this experiment to test algorithmic improvements in predictive modeling following SAMPL6 by comparing hosts {\bf 1} and {\bf 3} with a different set of guests.  
+We anticipate that because of the relative remoteness of the charged groups in these two hosts, the effects of switching charges will be subtler than the differences between {\bf 1} and {\bf 2}.  
+SAMPL8 will consider the effect of common biologically-relevant counterions/salts salts on guest binding, comparing the effects of NaCl and NaI on the complexation of five guests to {\bf 1}.  
+We have previously shown that iodide has a weak affinity for the binding pocket of {\bf 1}, whilst sodium ions have an affinity for the outer carboxylates~\cite{carnegie_anion_2014}, requiring modeling to capture the differential affinities of these ions in addition to guest affinities to successfully model the observed affinities.  
+SAMPL9 will follow up on this by examining the effects of these same two salts on the complexation of five guests to {\bf 3}, again giving the modeling community time to incorporate algorithmic improvements following SAMPL8. 
+While we have not yet quantified salt affinities to host {\bf 3}, we expect the iodide to have affinity for both the pocket and the positively charged solubilizing groups.  
+For SAMPL10 we will consider the effects of co-solvents on the binding of five guests to {\bf 1} and {\bf 2} to probe the effect of co-solvent competition for the binding site, as well as effects cosolvents may have in weakening the hydrophobic effect. 
 
 \begin{figure}[h]
 \begin{centering}
