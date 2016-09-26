@@ -154,9 +154,12 @@ For many pharmaceutically relevant systems, the most important sources of error 
 Progress on addressing these challenges has been frustratingly slow, hindered by a lack of high-quality data and community focus.
 {\bf Neither retrospective tests nor propsective application in active drug discovery projects provides the necessary impetus and data to rapidly advance physical modeling techniques to overcome existing major barriers to widespread utility.}
 While large-scale retrospective tests can be valuable for assessing how well we can currently do \emph{retrospectively}, they are of limited value for paving the way forward or for assessing actual utility for prospective molecular design.
-Partly, retrospective tests allow for unintentional statistical transgressions, where a well-meaning researcher might apply a protocol known to work in a particular situation to achieve good statistical performance, but this reported retrospective performance is unpredictive of general prospective performance.
+One issue with retrospective tests is that they can easily result in over-fit models, or researchers applying a variety of different protocols until they get good results, perhaps even by a statistical fluke [ref] .
+%Probably should have some reference on the above.
+In retrospective tests, performance may also not be indicative of expected performance in applications because even well-meaning researchers can take advantage of prior knowledge. 
 For example, if the binding mode of a ligand is already known crystallographically, a researcher may use that binding mode in retrospective tests, whereas prospective or design work would require first selecting among candidate binding modes, introducing substantial uncertainty unaccounted for in the retrospective statistics~\cite{mobley_predicting_2007, boyce_predicting_2009, mobley_perspective_2012}.
 This also means that in retrospective tests, researchers almost invariably try far fewer methods than in prospective tests, resulting in much less new insight.
+Prospective tests, in contrast, force researchers to worry about a multitude of potential situations rather than only those observed in a known benchmark dataset.
 %{\color{red}[JDC: Not sure I buy that---you can easily overfit in retrospective tests by trying many approaches to improve your score.]}
 %Needs discussion on the issue tracker. 
 Prospective application in actual discovery projects, while important, also does not provide the necessary impetus, partly because often, the predicted compounds are in fact never tested~\cite{christ_binding_2016} or the experimental data necessary to assess the quality of the predictions is absent---for example, because binding affinities are not measured or no crystallography is available. 
