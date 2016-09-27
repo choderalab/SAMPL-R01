@@ -441,6 +441,16 @@ As noted above, co-solvent effects and water rearrangements posed particular cha
 SAMPL5 emphasized how differences in the shape of the hydrophobic pocket of the host can have a profound affect on affinity for some guests~\cite{yin_overview_2016}.
 % Comment on value to community
 
+\begin{figure}[h]
+\begin{centering}
+\resizebox{\textwidth}{!}{\includegraphics{figures/gdccs.pdf}}
+
+\end{centering}
+
+\vspace{0.1in}
+\caption{\footnotesize {\bf Gibb deep cavity cavitands for SAMPL6-10.} These hosts bind a variety of carboxylate and trimethylammonium guests in a strongly salt-dependent manner, providing a stringent test of our ability to model binding and how it depends on these effects.
+\label{figure:gdccs}}
+\end{figure}
 
 {\bf Novel deep cavity hosts probe the effects of binding site charge constellations.} 
 For future SAMPL challenges, we will expand on the range of hosts by including {\bf 2} and {\bf 3} in our ITC studies (Figure~\ref{figure:gdccs}).  
@@ -462,25 +472,17 @@ For SAMPL10 we will consider the effects of co-solvents on the binding of five g
 %* I'm a bit concerned that proposing to measure only five ligands per compound is going to be perceived as lacking in statistical power required to assess accuracy, and that this specific aspect will be a liability. Is it possible to do more than that, or would this require a significantly larger chunk of money or access to automated ITC technology? Alternatively, we can be vague about how many compounds we will use or focus on the total number of compounds across all hosts. (DLM: I should probably recast a bit somewhere to explain how much we'll learn across hosts. Here:)
 While the number of guests considered in each challenge is relatively small, the total number of binding affinities measured is significant across the full family of hosts, meaning that the full data set will be of considerable value as a benchmark set~\cite{mobley_predicting_2016}. 
 
-\begin{figure}[h]
-\begin{centering}
-\resizebox{\textwidth}{!}{\includegraphics{figures/gdccs.pdf}}
-
-\end{centering}
-
-\vspace{0.1in}
-\caption{\footnotesize {\bf Gibb deep cavity cavitands for SAMPL6-10.} These hosts bind a variety of carboxylate and trimethylammonium guests in a strongly salt-dependent manner, providing a stringent test of our ability to model binding and how it depends on these effects.
-\label{figure:gdccs}}
-\end{figure}
-
 
 %Aim 3 - Generate biologically relevant advanced model systems for protein-ligand binding challenges. (2 pages) 
 %{\bf Aim 3. Generate biologically relevant advanced model systems for protein-ligand binding challenges.}
 \textbf{Aim 3: Develop model protein-ligand systems that isolate specific modeling challenges of drug targets.}
-A major goal of our effort is to drive advances in the quantitative modeling of protein:ligand interactions.
-While the Drug Design Data Resource (D3R~\cite{gathiaka_d3r_2016}) effort provides community blind challenges for biomolecular targets of pharmaceutical interest, these targets generally contain a daunting number of complexities that frustrate the ability for current methodologies to achieve quantitative accuracy, resulting in poor performance [CITE].
+A major goal of our effort is to drive advances in the quantitative modeling of protein-ligand interactions.
+While D3R~\cite{gathiaka_d3r_2016} provides community blind challenges for biomolecular targets of pharmaceutical interest, these targets generally exhibit a daunting number of complexities that frustrate the ability for current methodologies to achieve quantitative accuracy, resulting in poor performance~\cite{ignjatovic_binding-affinity_2016, deng_large_2016, sunseri_d3r_2016, gathiaka_d3r_2016}.
 For example, while kinases are targets of great interest to drug discovery, blind challenges involving kinase targets conflate issues of slow protein conformational dynamics~\cite{Lin:2013:Proc.Natl.Acad.Sci.}, protonation state effects of both protein~\cite{Shan:2009:PNAS} and ligand~\cite{Szakacs:2005:JournalofMedicinalChemistry,Grante:2014:SpectrochimicaActaPartA:MolecularandBiomolecularSpectroscopy}, charged ligands, and the modeling of complex divalent salt environments and phosphorylation state effects along with the standard computational challenges of conformational sampling and forcefield accuracy.
-While the value of these exercises as an accurate prospective benchmark of current-generation model accuracy is unquestionable, {\bf the ability of blind challenges on complex pharmaceutical targets to rapidly advance the field of quantitative predictive modeling is limited.}
+Thus D3R exercises serve the community well as a benchmark of current accuracy, but {\bf the ability of blind challenges on complex pharmaceutical targets to rapidly advance quantitative predictive modeling is limited.}
+
+{\color{blue}[DLM: The problem I think isn't just that we do badly on protein-ligand systems, but that we do badly and don't understand why. The paragraph above seems to indicate that the problem is just that these systems are complex and we do badly, but we do badly on host-guest systems too. The issue here is that the systems are so complex we don't know WHY we do badly. Can we highlight that?]}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FIGURE: HSA SAMPL6 CHALLENGE
@@ -491,10 +493,11 @@ While the value of these exercises as an accurate prospective benchmark of curre
 
 \end{centering}
 \vspace{0.1in}
-\caption{\footnotesize {\bf The SAMPL6/7 protein:ligand challenge focuses on soluble drug fragment binding to human serum albumin (HSA).}
+\caption{\footnotesize {\bf The SAMPL6/7 protein-ligand challenge focuses on soluble drug fragment binding to human serum albumin (HSA).}
 \emph{(A)}~SAMPL6 will introduce recombinant human serum albumin (HSA) as a target, against which a library of 96 small soluble drug fragments will be assayed.
 By introducing a mutation in one of the binding pockets, we will create a second challenge target for SAMPL7.
-\emph{(B)}~HSA, the most abundant plasma protein, has at least eight known binding sites, with major well-characterized sites (green, Sudlow's Site I; purple, Sudlow's Site II) observed to bind a variety of drugs, often modulating their pharmacokinetics~\cite{Fasano:2005:IUBMBLife(InternationalUnionofBiochemistryandMolecularBiology:Life)} (figure from~\cite{Hall:2013:JournalofChemicalInformationandModeling}).
+\emph{(B)}~HSA, the most abundant plasma protein, has at least eight known binding sites, with major well-characterized sites (green, Sudlow's Site I; purple, Sudlow's Site II) which bind a variety of drugs, often modulating their pharmacokinetics~\cite{Fasano:2005:IUBMBLife(InternationalUnionofBiochemistryandMolecularBiology:Life)} (figure from~\cite{Hall:2013:JournalofChemicalInformationandModeling}).
+%DLM: Is the pharmacokinetics aspect relevant/important here? 
 Two fluorescent probes---dansylamide and dansylglycine---have been shown to bind with $\sim$$\mu$M affinity and high selectivity to Site I and Site II, respectively; both exhibit binding-enhanced fluorescence at 480 nm, and can be used to site-specifically probe ligand affinities by competition.
 \emph{(C)}~Binding affinities of soluble molecules can easily be measured by isothermal titration calorimetry (ITC); here, the ITC titration of HSA by diclofenac (a Site II ligand~\cite{Rafols:2014:Talanta}) is shown~\cite{Bou-Abdallah:2016:TheJournalofChemicalThermodynamics}. 
 \emph{(D)}~HSA tryptophan fluorescence quenching can also be used to measure ligand binding affinity; here, HSA titration by diclofenac is shown, with the inset plot showing percent quenching at 346 nm~\cite{Bou-Abdallah:2016:TheJournalofChemicalThermodynamics}
@@ -502,31 +505,37 @@ Two fluorescent probes---dansylamide and dansylglycine---have been shown to bind
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Instead, {\bf our philosophy is to identify model protein:ligand systems with the goal of \emph{isolating} individual accuracy-limiting effects in iterative cycles of prospective blind community challenges.}
+Instead, {\bf we will identify model protein-ligand systems which \emph{isolate} individual accuracy-limiting effects in successive cycles of prospective blind community challenges.}
+{\color{blue}[DLM: See comment below about lysozyme -- I think we may need to give our working definition of ``model'' in the first sentence or two here. One thing I've gotten from people (including Marti and Peter Preusch) in discussing the idea is that people are not going to be that excited about developing more ``model'' systems in the sense that lysozyme is a model system -- that is to say, systems that are completely artificial. I think we may need to hit this objection early on by saying exactly what we mean by model -- here, I think it's that we're talking about biological systems (and simple variants thereof) that closely resemble pharmaceutical targets but which we understood better.]}
 This process focuses the field on identifying and evaluating multiple solutions to the accuracy-limiting effects (such as how to deal with ligand and protein protonation-state issues~\cite{Onufriev:2013:QuarterlyReviewsofBiophysics}, slow protein conformational dynamics, etc.) free from other complicating factors, allowing a direct evaluation of how well the phenomena of interest are modeled.
 Datasets collected for these blind challenges then become standard benchmark datasets for retrospectively examining the effectiveness of modeling approaches in treating these effects to facilitate comparisons of methodologies in publications, while future iterations or variations of the same SAMPL experiment allow iterative refinement and prospective blinded evaluations of methodologies.
 In this way, this cycle of blind challenges utilizing model systems can rapidly drive progress in rapidly overcoming scientific hurdles limiting quantitative accuracy.
 
-While model protein-ligand systems have a long and storied history of driving progress in individual research laboratories (such as the Shoichet T4 lysozyme mutants~\cite{shoichet}), their power in blind community challenge cycles is amplified by leveraging community participation.
-An excellent example of this was the collection of a challenge dataset featuring the binding of small, rigid charged molecules to bovine trypsin for SAMPL3~\cite{Newman:2011:JComputAidedMolDes}, which rapidly focused the field on the deficiencies of current alchemical free energy methodologies in treating the binding of charged ligands.
-Within two years, multiple laboratories had developed and disseminated convergent practical solutions to effectively handle charged ligand binding that are now adopted as best practices~\cite{Rocklin:2013:TheJournalofChemicalPhysicsb,Reif:2014:JournalofComputationalChemistrya}.
+{\color{blue}{[DLM: These last two sentences seem to be general to SAMPL. Aren't they covered by Aim 4? If not, propose an edit there to incorporate these ideas?]}}
 
-{\bf SAMPL6-10 model protein:ligand challenges.} For the SAMPL6-10 challenges, we propose to introduce a new model protein:ligand system each year, with challenges fielded for each system for at least two consecutive years to allow iterative methodology improvement and assessment.
-Immediately following the challenge, challenge data (including all primary data) will be published and released as a version-controlled benchmark dataset for retrospective evaluation.
+While model protein-ligand systems (such as the Shoichet T4 lysozyme mutants~\cite{merski_homologous_2015, mobley_predicting_2016}) have had ample success in driving progress in individual research laboratories, their power in blind community challenge cycles is amplified by leveraging community participation.
+{\color{blue}[DLM: A lot of pharma folks laugh when lysozyme is mentioned, in part because they see it as trivial/ridiculous. I worry that if you use lysozyme to motivate this, people are going to connect the word "model" with lysozyme and think we are proposing creating more systems like lysozyme -- not biologically relevant, far too easy, etc. See note above. The solution may be to just explain what we mean by "model" very early in this section and deal with the objection head-on.]}
+For example, SAMPL3 featured the binding of small, rigid charged molecules to bovine trypsin~\cite{Newman:2011:JComputAidedMolDes}, and rapidly focused the field on the deficiencies of current alchemical free energy methodologies in treating the binding of charged ligands.
+Within two years, multiple laboratories had developed and disseminated convergent practical solutions to effectively handle charged ligand binding~\cite{Rocklin:2013:TheJournalofChemicalPhysics, lin_overview_2014, Reif:2014:JournalofComputationalChemistry}.
+
+{\bf SAMPL6-10 model protein-ligand challenges.} For the SAMPL6-10 challenges, we propose to introduce a new model protein-ligand system each year, with challenges fielded for each system for at least two consecutive years to allow iterative methodology improvement and assessment.
+Immediately following the challenge, the data (including all primary data) will be published and released as a version-controlled benchmark dataset for retrospective evaluation.
 The first challenge (introduced in SAMPL6) will focus on modeling the binding of small soluble drug fragments to a relatively rigid protein with multiple weak binding sites, isolating the ability of current-generation modeling approaches to model weak and multiple binding effects.
 Because rapidly focusing the field on current challenges in predictive modeling requires the ability to adapt to deficiencies identified by D3R/SAMPL challenges of the previous year, subsequent model systems will be rapidly identified and developed using a new informatics platform we have developed to identify tractable model systems.
 
-{\bf SAMPL6: Assessing predictive modeling to multiple weak binding sites with the binding of small soluble fragments to human serum albumin (HSA).}
+{\bf SAMPL6: Assessing predictive modeling of binding to multiple weak sites via measuring fragment binding to human serum albumin (HSA).}
 Human serum albumin (HSA), the most abundant blood plasma protein, has the remarkable ability to bind a great variety of small molecule drugs in multiple binding sites (Figure~\ref{figure:hsa-challenge}B)~\cite{Fasano:2005:IUBMBLife(InternationalUnionofBiochemistryandMolecularBiology:Life)}.
 As a result, HSA is not only an excellent model system for isolating the challenge of binding multiple weak ligands to a stable rigid protein, it is also a pharmacologically relevant system due to its ability to drastically modulate drug pharmacokinetics~\cite{Hall:2013:JournalofChemicalInformationandModeling}.
 HSA has at least \emph{eight} known binding sites, with numerous crystal structures available for drugs binding to two predominant sites (Sudlow Site I and II)~\cite{Hall:2013:JournalofChemicalInformationandModeling}.
 Small soluble molecules resembling drug fragments have previously been shown to have a high likelihood of detectable binding to HSA ($\ge$90\% of small druglike fragments, as detected by SPR~\cite{Elinder:2011:JournalofBiomolecularScreening}), providing an experimentally-tractable diverse set of ligands spanning several orders of magnitude in affinity [CITE].
+{\color{blue}{[DLM: What citation here for "several orders of magnitude"?]}}
 As current advanced methodologies such as alchemical free energy calculations currently assume a single well-defined binding site with high affinity~\cite{Gilson:1997:BiophysicalJournal}, this dataset will allow the isolation of the effect of weak multiple binding from the majority of other counfounding factors in protein-ligand binding.
+However, HSA is relatively rigid, and computational methods show some promise in computing binding affinities to HSA~\cite{Evoli:2016:bioRxiv}, so this is not too difficult as a starting challenge.
+{\color{blue}[DLM: Did you have other references we should cite here? I think we need to make the point that while there are complexities, there aren't TOO MANY...]}
 
 Recombinant HSA will be expressed in \emph{E.~coli} and purified via refolding from inclusion bodies~\cite{Latta:1987:Bio/Technology}, and will be defatted at low pH to ensure the resulting protein is free of the complications of both glycosylation and bound fatty acids found in plasma-isolated HSA~\cite{Lang:2015:BiotechnologyProgress}.
 Recombinant expression will also allow a mutant form of HSA (engineered via quick-change single-primer mutagenesis) to be fielded for a SAMPL7 iteration of this challenge (Figure~\ref{figure:hsa-challenge}B).
-We will obtain a diverse library of 96 soluble drug-fragment-like molecules in pre-plated format for which HSA-ligand affinities are not available in the literature as dry compound, and assay them for HSA binding using automated isothermal titration calorimetry (ITC) (Figure~\ref{figure:hsa-challenge}C), with the goal of characterizing the overall binding affinity of the compound to HSA.
-%DLM: I'll have to edit the sentence above, as the adjective ("as dry compound") is very far separated from the noun (object) it modifies ("library"); also, the subject is singular ("library") but the second half of the sentence uses "them".
+We will obtain a diverse library of 96 novel soluble drug-fragment-like molecules in pre-plated format as dry compound, and assay it for HSA binding using automated isothermal titration calorimetry (ITC) (Figure~\ref{figure:hsa-challenge}C), with the goal of characterizing the overall binding affinity of the compound to HSA.
 %If multiple binding events can be resolved, a multi-site model will be used; otherwise, a single dominant site will be assumed.
 %Participants in the blind challenge will also have the option of predicting the ITC titration curve \emph{directly}, which includes all contributions to binding to multiple sites.
 The same ligands pre-plated in DMSO format will be used to conduct a separate set of fluorescence titration assays (monitoring tryptophan fluorescence quenching) and competition assays in which the site-specific fluorescent probes daynsylamide (Site I) and dansylglycine (Site II) will be used to measure site-specific affinities for Sites I and II (Figure~\ref{figure:hsa-challenge}D), allowing participants to validate whether they predicted the correct binding site and, if so, the site-specific affinity.
@@ -540,11 +549,12 @@ The same ligands pre-plated in DMSO format will be used to conduct a separate se
 
 \end{centering}
 \vspace{0.1in}
-\caption{\footnotesize {\bf Mining model protein:ligand systems to focus on individual modeling challenges via a structural and chemical informatics platform.}
-SAMPL7-10 will feature the introduction of new model protein:ligand systems designed to focus on individual challenges judged to be of critical immediate importance following current D3R/SAMPL blind competitions. 
-\emph{(A)} Since most protein targets of pharmaceutical interest feature a multitude of conflated challenges to quantitative accuracy, our goal is to identify model protein targets that isolate individual effects to focus community efforts by fielding new blind challenges. Some example protein:ligand pairs and the conceptual challenge categories they fall under are shown in the figure: 
+\caption{\footnotesize {\bf Mining model protein-ligand systems to focus on individual modeling challenges via a structural and chemical informatics platform.}
+SAMPL7-10 will feature the introduction of new model protein-ligand systems designed to focus on individual challenges judged to be of critical immediate importance following current D3R/SAMPL blind competitions. 
+\emph{(A)} Since most protein targets of pharmaceutical interest feature a multitude of simultaneous challenges, our goal is to identify model protein targets that isolate individual effects to focus community efforts by fielding new blind challenges. Some example protein-ligand pairs and the conceptual challenge categories they fall under are shown in the figure: 
 T4 Lysozyme L99A~\cite{mobley_predicting_2007}, HSA~\cite{Martin:2009:JournalofComputer-AidedMolecularDesign}, Carbonic anhydrase II (CAII)~\cite{Martin:2009:JournalofComputer-AidedMolecularDesign,Temperini:2009:Bioorganic&MedicinalChemistry}, Cytochrome C Peroxidase~\cite{Rocklin:2013:JournalofMolecularBiology}, Cytochrome P450 BM3 M11 (CYP450 BM3)~\cite{Venkataraman:2014:Bioorganic&MedicinalChemistry}, HIV-1 Reverse Transcriptase (HIV-1 RT)~\cite{Gunasekaran:2007:JournalofMolecularBiology,Khunnawutmanotham:2009:BeilsteinJournalofOrganicChemistry}, Streptavidin~\cite{Gunasekaran:2007:JournalofMolecularBiology}, Tet repressor protein (TetR)~\cite{Gunasekaran:2007:JournalofMolecularBiology,Aleksandrov:2007:ChemBioChem}.
-\emph{(B)} In order to rapidly develop new experimentally and computationally-tractable model protein:ligand systems, we have developed a structural and chemical informatics system that applies successive filters to the set of all potential protein:ligand systems for which structural data is available. Suitable model systems should meet all experimental tractability criteria (green box) and only possess a few of challenging properties, ideally only one (blue box).
+\emph{(B)} In order to rapidly develop new experimentally and computationally-tractable model protein-ligand systems, we have developed a structural and chemical informatics system that applies successive filters to all potential protein-ligand systems for which structural data is available. 
+Suitable model systems should meet all experimental tractability criteria (green box) and possess only a few challenging properties, ideally only one (blue box).
 \vspace{-0.1in}
 \label{figure:mining-for-model-systems}}
 \end{figure}
@@ -553,23 +563,25 @@ T4 Lysozyme L99A~\cite{mobley_predicting_2007}, HSA~\cite{Martin:2009:JournalofC
 {\bf SAMPL7-10: Rapid, responsive development of new model systems using a novel informatics platform.}
 We have developed a novel informatics platform called TargetExplorer 
 %[\url{https://github.com/choderalab/targetexplorer}] 
+%Should this reference the figure? 
 aimed at identifying new protein targets that can be rapidly developed into experimentally- and computationally-tractable model systems focusing on individual challenges.
-This tool---which will be made accessible to other laboratories via an easy-to-use web interface during the course of this project---successively filters all protein:ligand complexes identified in the PDB according to a list of criteria that allow facile development as a model protein:ligand binding system, as well as identification of systems that isolate individual challenges in modeling accuracy.
-Experimental tractability includes: (1) the availability of multiple protein:ligand crystal structures; (2) known bacterial expression (e.g.~from PDB {\tt EXPRESSION\_SYSTEM} records); (3) the capacity to bind a wide dynamic range of ligands (determined via data available in ChEMBL); (4) the availability of multiple known ligands that can be purchased (via ZINC); (5) tractability of experimental affinity measurements, such as known ligands with potentially fluorescent scaffolds (for fluorescence competition assays), highly soluble ligands (for ITC), or ligands above a minimal mass (for SPR or MST).
-A number of additional filters annotate potential experimentally tractable systems for suitability as a model system that isolates individual challenges, such as: charged ligands or potential ligand protonation state or tautomer~\cite{Martin:2009:JournalofComputer-AidedMolecularDesign} effects (deduced from predicted aqueous protonation/tautomer energies); potential protein protonation state effects (deduced from MCCE2 calculations~\cite{Song:2009:JournalofComputationalChemistry}); protein conformational changes (deduced from variation in protein conformation or the presence of unresolved loops in protein:ligand crystal structures); the presence of post-translational modifications that may affect affinity (deduced from Uniprot annotations); coordinated metals (identified in crystal structures); ordered waters (present in multiple crystal structures); etc.
+This tool---which will be made accessible to other laboratories via an easy-to-use web interface during the course of this project---successively filters all protein-ligand complexes identified in the PDB according to a list of criteria that allow facile development as a model protein-ligand binding system, as well as identification of systems that isolate individual challenges in modeling accuracy.
+{\color{blue}[DLM: Rephrase long, cumbersome prior sentence? I can't even figure out if it's grammatically correct -- I keep thinking "as a model protein-ligand binding system" should be "as model protein-ligand binding systems" but I can't figure out what it modifies; I think it's "complexes" in which case it should be plural, "systems"? Often, the easiest solution to this type of thing is just to make your sentence simpler. Seems like it's three ideas that maybe should be three sentences: (a) this tool will be made available via the web; (b) it filters all complexes; (c) the filtering is done to ensure they can be pursued as model systems and will be informative...}
+Experimental tractability includes: (1) the availability of multiple protein-ligand crystal structures; (2) known bacterial expression (e.g.~from PDB {\tt EXPRESSION\_SYSTEM} records); (3) the capacity to bind a wide dynamic range of ligands (determined via data available in ChEMBL); (4) the availability of multiple known ligands that can be purchased (via ZINC); (5) tractability of experimental affinity measurements, such as known ligands with potentially fluorescent scaffolds (for fluorescence competition assays), highly soluble ligands (for ITC), or ligands above a minimal mass (for SPR or MST).
+A number of additional filters annotate potential experimentally tractable systems for suitability as a model system that isolates individual challenges, such as: charged ligands or potential ligand protonation state or tautomer effects~\cite{Martin:2009:JournalofComputer-AidedMolecularDesign} (deduced from predicted aqueous protonation/tautomer energies); potential protein protonation state effects (deduced from MCCE2 calculations~\cite{Song:2009:JournalofComputationalChemistry}); protein conformational changes (deduced from variation in protein conformation or the presence of unresolved loops in protein-ligand crystal structures); the presence of post-translational modifications that may affect affinity (deduced from Uniprot annotations); coordinated metals (identified in crystal structures); ordered waters (present in multiple crystal structures); etc.
 
 The Chodera lab has developed an automated wetlab for the purpose of rapidly developing model protein systems using bacterial expression techniques (see Equipment and Facilities).
 Potential targets matching desired challenge criteria will be screened for bacterial expression using high-throughput cloning, transformation, and expression testing, with purity and yield assessed by capillary electrophoresis on a Caliper GXII.
 Targets will be screened for stability in various buffers using Thermofluor~\cite{Reinhard:2013:ActaCrystallographicaSectionFStructuralBiologyandCrystallizationCommunications}.
-Ligands identified via the informatics platform to span a wide dynamic range of binding affinities will be purchased as dry powder stocks and prepared for assay by highly accurate gravimetric solution preparation techniques using a Quantos automated balance.
-A wide variety of biophysical techniques are available to provide accurate, quantitative measurements of protein-ligand binding affinities, including fluorescence (if fluorescent probe ligands are available), absorption (e.g.~Soret band shifts), automated isothermal titration calorimetry (provided ligands are sufficiently soluble), surface plasmon resonance, microscale thermophoresis (MST), luminescence, and alphascreen; all except MST are fully automated.
+Ligands identified via the informatics platform as spaning a wide dynamic range of binding affinities will be purchased as dry powder stocks and prepared for assay by highly accurate gravimetric solution preparation techniques using a Quantos automated balance.
+A wide variety of biophysical techniques are available to provide accurate, quantitative measurements of protein-ligand binding affinities, including fluorescence (if fluorescent probe ligands are available), absorption (e.g.~Soret band shifts), automated isothermal titration calorimetry (provided ligands are sufficiently soluble), surface plasmon resonance, microscale thermophoresis (MST), luminescence, and alphascreen; all except MST are fully automated. 
+{\color{blue}[DLM: ``are available'' is a case where passive voice is hurting you -- I can't tell if you mean you have all of these techniques available in your lab, or if they just exist somewhere. I presume you mean in your lab, but you could just say ``we have a variety of techniques available to..."}
 
 Our approach to developing challenge datasets will be twofold:
 First, small molecules similar to known ligands will be purchased and assayed, with the presumption that these molecules are likely to have measurable affinities.
 Second, site-directed mutants will be introduced to modulate the binding affinities of known ligands using single-primer quick-change mutagenesis, which can be performed and screened for expression in 96-well format.
 Challenge datasets will therefore consist of a matrix of protein mutants and ligands, providing a rich dataset to deeply explore the effects of interest.
 
-%We will identify suitable biological protein-ligand model systems (difficult but tractable in order to push the limits of physical techniques) then measure binding and develop these for blind challenges. This will include binding studies on human serum albumin and bromodomains or aspartyl proteases; initial binding data will be expanded by the selection of additional ligands or the creation of mutations in the protein that modulate binding.
 
 %Aim 4 - Coordinate, run, and analyze blind challenges to advance modeling of binding (1.5 pages)
 %{\bf Aim 4. Coordinate, run, and analyze blind challenges to rapidly drive progress in quantitative physical modeling.}
@@ -689,47 +701,8 @@ Our vision is that long-term, instead of participants submitting a set of predic
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-{\color{red}[JDC: I think we need to cut this section and stick to a few sentences of commentary on the figure.]}
+We will add a few sentences here explaining the timeline figure.
 
-\textbf{Yearly challenges will drive progress.}
-{\color{red}[DLM: This has a lot of overlap with Aim 4 in terms of what timing details it gives, so I'll have to shrink one or the other to remove redundancy.]}
-Our series of SAMPL challenges is progressive in difficulty, with subsequent challenges building on those from previous years and driving progress towards biomolecular binding for pharmaceutical datasets as covered by D3R.
-%Will have to update language here to distinguish whether we're going with the "one deadline a year" model or the "rolling deadlines"/"staggered deadlines" model
-Each year's SAMPL challenge involves several components with staggered deadlines set to maximize scientific benefit. 
-Tentative deadlines and the full project Timeline (Figure X) will be made available as soon as the project kicks off in order to allow workers to plan.
-Inputs will be available on our website at least 6 months prior to the challenge deadline (except in the first year, when data collection will require a more limited window of 3 months).
-Automated analysis of submissions -- which are required to be in a standard format -- will already be online prior to the submission deadline, so immediately following the deadline, participants will receive automated reports giving the experimental results, a detailed summary of the statistics for each of their submissions and how they compare to other methods. 
-This will also include distribution of the method descriptions that participants submit along with their predictions, allowing challenge participants to see how top performing methods differed from their own approaches.
-Results from our reference calculations will also be distributed at the same time.
-At this time participants will also receive information directing them to Slack channels (see above) for discussion of the challenge and results, as well as publication information.
-
-\textbf{Follow-up information exchange facilitates improvements.}
-Immediately following return of challenge results, follow up communication on Slack channels focused on each challenge component will spur participants to share what they did, what they learned from it, and begin learning from one another and from us and our reference calculations.
-Normally, challenge participants have explored different aspects of the challenge, with some looking at details of convergence, others comparing force fields and water models, and so on. 
-Often, this information only comes out only in publication, long after the challenge deadline and any meetings which might result.
-Our vision is to use the more rapid conversation that comes via Slack to propagate this information earlier. 
-Individual messages in Slack have permanent links, meaning that participants who share here will have a permanent record of their contribution to the science -- reducing concerns that ideas shared pre-publication might not receive credit. 
-This will be the primary means of communication regarding SAMPL for eight weeks after the challenge deadline.
-After this eight week period, a virtual meeting will wrap up the particular challenge component and allow participants to begin refocusing their efforts on the next challenge, with ten months until the next deadline for that component and four months until the data becomes available. 
-This will provide enough time to incorporate lessons learned.
-Overall meetings -- virtual (years 2 and 4) or in-person (the end of years 1, 3, and 5) will wrap up the overall challenge; these will be timed to follow the last component challenge of each of the relevant years.
-%Writing this now that the budget is finalized, realizing that it would have been better to say overall meetings in year 2, early in year 4, and end of year 5, as end of year 1 is too early. But, can't change that now, so we can just deal with it when we re-budget after they cut the budget... 
-
-\textbf{Publication reaches a broader audience.}
-During the initial eight weeks after the submission deadline/return of results, participants will be encouraged to begin preparing their results for publication.
-We highly encourage the use of preprints to get material out to the broader audience as quickly as possible.
-However, as noted, we will continue to work with JCAMD to have regular special issues focused on SAMPL. 
-Deadlines for these will be yearly, and the review/revision process is normally expected to take around two months from submission until when papers begin appearing online. 
-Composition of the special issue itself has to take longer, as the issue can't be finalized until all papers are typeset. 
-Thus our priority, for rapid dissemination is on more rapid means of communication, though the permanent academic record of the work will continue to need to be traditional publishing.
-
-
-\textbf{Datasets generate lasting value as benchmarks.}
-As discussed in Aim 4, all SAMPL data will be made easily and publicly available to serve the community in the future as retrospective tests, and will be deposited in standard repositories such as BindingDB when applicable.
-In some cases, the cumulative value of data will be profound. 
-For example, some of the host-guest challenges do not incorporate a particularly large number of compounds, but over the lifespan of SAMPL6-10, the amount of data accumulated will be considerable.
-Selected SAMPL data sets are expected to become especially valuable as standard benchmark sets and will receive additional attention by being singled out by the community as such~\cite{mobley_predicting_2016}.
-In these ways, SAMPL will have a lasting effect on the modeling community.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FIGURE: AIMS OVERVIEW
