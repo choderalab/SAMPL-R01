@@ -280,6 +280,7 @@ The annual SAMPL challenges organized by the Mobley and Chodera labs (Aim 4) wil
 {\bf Aim 1: Collect new physical property datasets to assess accuracy and spur improvements in force fields and modeling of protonation states and tautomers.} 
 %\subsection{blah}
 %Note to self: It would really be nice to make the Aim headers be bigger. Can I do that?
+%Chodera suggests possibly {\bf \large}, or underlining Aim 1. 
 
 Simple physical properties such as solvation, partitioning, and protonation equilibria can be calculated quite precisely with physical methods, allowing quantitative comparison of calculated values with experimental measurements and revealing and isolating deficiencies in our current physical modeling approaches. 
 For example, these properties allow us to directly probe force field accuracy and chemical effects like protonation and tautomer handling in the absence of slow conformational changes and other affects which make this assessment so much more difficult in protein-ligand systems. 
@@ -299,8 +300,9 @@ Our choice of cyclohexane-water distribution coefficients rather than octanol-wa
 %Talk about limitations of approach -- lack of ability to do follow up expeirments, get the dynamic range we wanted, test things again after SAMPL? 
 % Sustained funding will allow us to do that. 
 % (This will also help answer the argument that we don't need funding for this...)
-\textbf{This new experimental data is critical to make SAMPL what it ought to be. }
-While the community has already benefitted considerably from SAMPL, as indicated by the tremendous number of publications, the citation count, and lessons learned, the benefits are not what they could have been if the effort had funding.
+\textbf{This new experimental data is critical to maximize impact on the modeling community. } %Removed phrasing "what it ought to be" JDC objected to.
+While the community has already benefitted considerably from SAMPL, as indicated by the tremendous number of publications noted above, the citation count, and lessons learned, the benefits are not what they could have been if the effort had funding.
+%JDC commented to give statistics here on number of publications and cite them, but that's up above (see "roughly 100" in the text) so I amended to say "noted above".
 With funding, we will be able to continue experiments work until the necessary data is collected rather than terminating it at a specific time point dictated by industry funding -- allowing us to do things like ensure the full dynamic range of $\log D$ values is covered, unlike in SAMPL5~\cite{rustenburg_measuring_2016, bannan_blind_2016}.
 This will improve our ability to learn from the data -- for example, the lack of dynamic range for SAMPL5 meant that, when calculated values often spanned a larger dynamic range than the experimental values, it was unclear if this is an artifact of the limited range in the data set, or because of issues with the calculations or with the experiments themselves~\cite{rustenburg_measuring_2016, bannan_blind_2016, paranahewage_predicting_2016, klamt_prediction_2016}. 
 With funding to extend the experimental set and the ability to do follow-up experiments (as we will have here) this would have been resolved, providing further impetus to improve models.
@@ -309,7 +311,7 @@ Below, we summarize tentative plans for SAMPL6-10, though we will adapt to new e
 
 %Explain what science -- log D/logP, pKa primarily but mention possible other areas of interest
 {\bf SAMPL6: Cyclohexane/water and octanol/water distribution coefficients.}
-Building on the success of distribution coefficient measurements in SAMPL5 and their surprising ability to motivate rapid advances in physical modeling methodologies [refs], we will measure cyclohexane-water distribution coefficients at pH 7.4 for a new batch of commercially-available drug- and fragment-like molecules for for which no data is currently available.
+Building on the success of distribution coefficient measurements in SAMPL5 and their surprising ability to motivate rapid advances in physical modeling methodologies [refs], we will measure cyclohexane-water distribution coefficients at pH 7.4 for a new batch of commercially-available drug- and fragment-like molecules for which no data is currently available.
 %{\color{red}[JDC: Maybe the set can be broken into classes of varying chemical complexities? In general, I think clever experimental design ideas---indications we have really thought through how to maximize value---will be rewarded by the reviewers.]}
 %DLM: Need to revisit this comment.
 Given the routine nature of octanol-water distribution coefficient measurements and indications that their prediction may be computationally tractable~\cite{Bhatnagar:2013:PhysicalChemistryChemicalPhysics, bannan_calculating_2016} despite the heterogeneous structure of the wet octanol phase~\cite{Kollman:1996:AccountsofChemicalResearch}, we plan to also collect octanol-water distribution coefficient measurements for the same compounds.
@@ -324,7 +326,7 @@ For SAMPL7, then, our tentative plan is to measure pKa values for an extensive s
 In the next challenge, we will re-combine the pKa and transfer issues in a way to maximize learning -- specifically, we will not only measure distribution coefficients but also measure pKa values for the same set of compounds, allowing participants to (a) predict distribution; (b) predict pKa; and (c) predict partitioning.
 
 {\bf SAMPL9 and SAMPL10.}
-We tentatively plan to focus on solubility prediction in SAMPL9, and membrane permeability in SAMPL10, because of new computational developments.
+We will focus on solubility prediction in SAMPL9, and membrane permeability in SAMPL10, because of new computational developments.
 With solubility predictions now becoming tractable~\cite{Schnieders:2012:J.Chem.TheoryComput., park_absolute_2014, liu_using_2016} (with Schr\"{o}dinger also working on amorphous solubility prediction), solubility measurements will be a valuable test for SAMPL9, combining the solvation aspects of SAMPL1-8 with a new solid phase component.
 New computational techniques are targeting membrane permeability~\cite{lee_permeability_2016, comer_permeability_2014}, and this is experimentally accessible (see support letters from Pfizer and Merck), leading to our interest in permeability for SAMPL10.
 %Alternatively, partition/distribution into other environments aside from cyclohexane or octanol may provide significant value, especially given dielectric constant issues posed by current force fields [ref].
