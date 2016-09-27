@@ -136,11 +136,11 @@ By morning, the compounds have all been prioritized based on reliable prediction
 The chemist then looks through the predicted properties for the top few compounds and selects the next ones for synthesis. 
 If synthesizing and testing each compound takes several days, this workflow compresses roughly a year's work into a few days.
 
-While this workflow is not yet a reality, huge strides have been made in this direction, with calculated binding affinity predictions now showing real promise~\cite{mobley_perspective_2012, christ_accuracy_2014, deng_distinguishing_2015, sherborne_preprint_2016, schrodinger_accurate_2015, christ_binding_2016, cui_affinity_2016, verras_free_2016}, rapid progress toward solubility predictions~\cite{schnieders_structure_2012, park_absolute_2014, liu_using_2016}, and selectivity and drug resistance also apparently tractable~\cite{leonis_contribution_2013}, with some headway apparent on membrane permeability~\cite{lee_permeability_2016, comer_permeability_2014}. 
+While this workflow is not yet a reality, huge strides have been made in this direction, with calculated binding affinity predictions now showing real promise~\cite{mobley_perspective_2012, christ_accuracy_2014, deng_distinguishing_2015, sherborne_preprint_2016, schrodinger_accurate_2015, christ_binding_2016, cui_affinity_2016, verras_free_2016}, rapid progress toward solubility predictions~\cite{Schnieders:2012:J.Chem.TheoryComput., park_absolute_2014, liu_using_2016}, and selectivity and drug resistance also apparently tractable~\cite{leonis_contribution_2013}, with some headway apparent on membrane permeability~\cite{lee_permeability_2016, comer_permeability_2014}. 
 A considerable amount of science and engineering still remains to make this vision a reality, but \textbf{given recent progress, the question now seems more one of \emph{when} rather than \emph{whether}.} 
 
 The widespread availability of inexpensive graphics processing units (GPUs), which provide a 100-fold increase in price/performance over CPUs, coupled with advances in automation~\cite{liu_lead_2013} and sampling protocols have helped simulation-based techniques reach the point where they now begin to be genuinely useful in guiding drug discovery for a limited \emph{domain of applicability}~\cite{mikulskis_large-scale_2014, homeyer_binding_2014, sherborne_preprint_2016,  schrodinger_accurate_2015, christ_binding_2016, cui_affinity_2016, verras_free_2016}.
-Specifically, in some situations, free energy calculations appear to be capable of achieving RMS errors of 1-2 kcal/mol with current force fields, even in prospective applications, sufficient to drastically reduce the number of molecules that must be synthesized and assayed~\cite{shirts-mobley-brown}.
+Specifically, in some situations, free energy calculations appear to be capable of achieving RMS errors of 1-2 kcal/mol with current force fields, even in prospective applications, sufficient to drastically reduce the number of molecules that must be synthesized and assayed~\cite{shirts_free-energy_2010}.
 As a consequence, pharmaceutical companies are beginning to use these methods in active discovery projects.
 
 %Limitations of methods and of retrospective tests or application for methods improvements
@@ -325,7 +325,7 @@ In the next challenge, we will re-combine the pKa and transfer issues in a way t
 
 {\bf SAMPL9 and SAMPL10.}
 We tentatively plan to focus on solubility prediction in SAMPL9, and membrane permeability in SAMPL10, because of new computational developments.
-With solubility predictions now becoming tractable~\cite{schnieders_structure_2012, park_absolute_2014, liu_using_2016} (with Schr\"{o}dinger also working on amorphous solubility prediction), solubility measurements will be a valuable test for SAMPL9, combining the solvation aspects of SAMPL1-8 with a new solid phase component.
+With solubility predictions now becoming tractable~\cite{Schnieders:2012:J.Chem.TheoryComput., park_absolute_2014, liu_using_2016} (with Schr\"{o}dinger also working on amorphous solubility prediction), solubility measurements will be a valuable test for SAMPL9, combining the solvation aspects of SAMPL1-8 with a new solid phase component.
 New computational techniques are targeting membrane permeability~\cite{lee_permeability_2016, comer_permeability_2014}, and this is experimentally accessible (see support letters from Pfizer and Merck), leading to our interest in permeability for SAMPL10.
 %Alternatively, partition/distribution into other environments aside from cyclohexane or octanol may provide significant value, especially given dielectric constant issues posed by current force fields [ref].
 %cite something by Fennell here
@@ -363,24 +363,28 @@ sensipar & epitopes; folding \\
 vyvance & diamine; epitopes; folding \\
 minocycline & tetracyclin; amino aniline \\
 \end{tabular}
-\caption{\label{table:CB} {\bf Selected drugs whose binding to CB[$n$] hosts will be assayed for SAMPL6, 8, and 10 challenges (SA 2.1).} 
-{\color{red}[JDC: Need a stand-alone description here. Why are they important? What is the basic idea behind the challenge? Imagine someone is just reading the figures and captions!]}
+\caption{\label{table:CB} {\bf Selected drugs whose binding to CB[$n$] hosts will be assayed for SAMPL6, 8, and 10 challenges (SA 2.1).} These drugs bind to the cucubituril-based host systems considered here, some at high affinity, so measuring their affinities provides a way to test methods for predicting binding interactions absent complexities present in protein-ligand systems.
 }
 \end{wraptable}
 
 
 
 %Intro lessons learned on HG systems, relevance to drug discovery
-Physical property challenges focus on the behavior of small molecules and how this is modulated by environment, introducing a number of issues relevant to drug discovery---but binding in host-guest systems introduces a wider variety of challenges relevant to biomolecular interactions, but without the full array of challenges seen in protein-ligand interactions, as reviewed recently~\cite{mobley_predicting_2016}. 
-Thus, we believe that new data and SAMPL challenges on host-guest binding are a critical step towards accurately modeling biomolecular interactions.
-{\color{red}[JDC: This doesn't do a convincing job of communicating the distinct role host-guest challenges play. What relevant challenges are present in host-guest binding? What challenges are absent? Why is that important? How does this differ from the physical property challenges? Imagine selling someone in drug discovery on why they should care.]}
-Already, over the past several SAMPL challenges, host-guest systems have provided key tests for modeling of binding interactions, driving a great deal of learning about challenges such as how co-solvents and protonation modulate binding and the limitations or pitfalls of different methods for calculating binding free energies~\cite{muddana_sampl4_2014, mobley_predicting_2016, yin_sampl5_preprint, bhakat_resolving_2016}. 
-{\color{red}[JDC: When possible, can we avoid empty phrases like ``driving a great deal of learning'' and instead give the reader a coherent explanation, like ``highlighted the role that protonation state effects can play in binding phenomena, resulting in errors of up to X kcal/mol if these effects are neglected''?]}
-Host-guest binding proves remarkably difficult to model accurately~\cite{henriksen_computational_2015}, probably in part due to force field limitations---itself an important insight and one which is leading to new developments~\cite{yin_toward_2015}.
-{\color{red}[JDC: Assuming convergence is achieved, that leaves only forcefield limitations and protonation/tautomer effects. How can these contributions be dissected or separated, and how can is failure or success specifically able to drive progress?]}
+The physical property challenges of Aim 1 focus on the behavior of small molecules and how this is modulated by changes in environment, in the absence of receptors and the associated potential for slow sampling, strong specific interactions, and other challenges such as salt effects.
+Binding in host-guest systems retains many of the same challenges seen in Aim 1 and introduces strong specific interactions and other challenges like salt effects~\cite{mobley_predicting_2016}, while still avoiding many of the issues with slow sampling (of protein conformational changes, ions, and ligand binding modes) seen in protein-ligand interactions.
+Thus, new data for SAMPL challenges on host-guest binding is critical to provide challenges of intermediate complexity between those of physical properties and those in bioolecular binding.
+---but binding in host-guest systems introduces a wider variety of challenges relevant to biomolecular interactions, but without the full array of challenges seen in protein-ligand interactions, as reviewed recently
+Thus, we believe that new data and SAMPL challenges on host-guest binding are a critical step towards accurately modeling biomolecular interactions, focusing the field on issues not commonly encountered in physical property challenges (such as the importance of accurately modeling ionic conditions) that are highly relevant for protein-ligand interactions but easily overlooked.
+Already, over the past several SAMPL challenges, host-guest systems have provided key tests for modeling of binding interactions, resulting in new attention paid to how co-solvents and ions modulate binding (resulting in errors of up to 5 kcal/mol when these effects are neglected) and the importance of adequately sampling water rearrangements~\cite{muddana_sampl4_2014, mobley_predicting_2016, yin_sampl5_preprint, bhakat_resolving_2016}. 
+Host-guest binding proves remarkably difficult to model accurately~\cite{henriksen_computational_2015}, in part due to force field limitations (resulting in new force field work~\cite{yin_toward_2015}).
+%{\color{red}[JDC: Assuming convergence is achieved, that leaves only forcefield limitations and protonation/tautomer effects. How can these contributions be dissected or separated, and how can is failure or success specifically able to drive progress?]}
+%Dissected -- by measuring protonation for example, I suppose (but I don't think we can expand on that here...?) 
+%How is failure or success able to drive progress -- it seems like I just said that; people start focusing on these issues and working to resolve them. DId you have something specific in mind?
 
-Here, we design a series of SAMPL challenges focused on two general classes of host-guest systems---cucurbiturils and derivatives (SA 2.1) and deep-cavity cavitands (SA 2.2)---both of which build on studies from prior SAMPL challenges.
-{\color{red}[JDC: It would help to set these two systems in perspective in a paragraph orienting the reader before diving into the subaims. Why field two host-guest systems? How are they different, from the ten-thousand-feet perspective? What do we hope to accomplish with these challenges? What kinds of phenomena will they drive progress in modeling?]}
+Here, we design a series of SAMPL challenges focused on two general classes of host-guest systems---cucurbiturils and derivatives (SA 2.1) and Gibb's deep-cavity cavitands (GDCCs, SA 2.2)---both of which build on studies from prior SAMPL challenges.
+These two sets of systems exhibit different challenges, with the hosts of 2.1 bringing relatively modest co-solvent and ion effects but some receptor sampling problems for the acyclic hosts, and the GDCCs of 2.2 bringing profound ion and co-solvent effects as well as water sampling challenges.
+Methods which perform well on one class may not perform well on the other~\cite{mobley_predicting_2016}, since the distinct sets of challenges highlight different limitations.
+This diversity will drive innovations in far more areas than if we focused on a single host class.
 
 {\bf Subaim 2.1: Cucurbituril-based receptors as model binding systems}
 %Isaacs science
@@ -388,11 +392,11 @@ Here, we design a series of SAMPL challenges focused on two general classes of h
 \textbf{Cucurbituril derivatives for host-guest binding.} 
 %DLM: A bit odd to have the OA section start with a history header and this one not. May need to address.
 Building on previous success with cucurbit[$n$]uril (abbreviated CB[$n$]) experiments for previous SAMPL challenges~\cite{ma_acyclic_2012-2, cao_absolute_2014, she_glycoluril-derived_2016}, we will conduct a series of new experiments on these receptors for three new SAMPL challenges,
-{\color{red}[JDC: Just SAMPL6-8? Why only three?]}
+%{\color{red}[JDC: Just SAMPL6-8? Why only three?]}
+%(a) originally that's what I asked for because of how we'd originally thought to time things coming out of the last D3R meeting (every two years) and (b) because I'm worried about overload of the participants (resulting in decreased participation) if we ask for too much every year. I think the other advantage of this -- which I wouldn't get into here -- is that it will give us more time to design these challenges very carefully, do follow ups, etc. 
  with experimental work conducted by co-investigator Isaacs, an expert on these systems who has provided data for previous SAMPL challenges.
 CB[$n$] receptors are particularly well suited for the SAMPL challenges because they exhibit: (1) high binding affinities toward suitable guests in water comparable to protein-ligand affinities (routinely $\mu$M to nM; occasionally pM to fM)~\cite{cao_attomolar_2014, liu_cucurbituril_2005, mock_structure_1986, assaf_cucurbiturils:_2015, moghaddam_new_2011, shetty_can_2015, biedermann_release_2012}, (2) high selectivities between structurally related guests which translate into large $\Delta \Delta G$ values~\cite{isaacs_stimuli_2014}, (3) low molecular weights (1--2 kDa) permitting high levels of theory to be used, and (4) highly restricted conformational degrees of freedom, eliminating challenges associated with protein targets with many soft degrees of freedom and slow motions.  
-For SAMPL6, 8, and 10, we will resynthesize a series of CB[$n$]-type receptors of increasing complexity, measure $K_a$ values, and determine host-guest stoichiometry and geometry toward biologically relevant guests in order to stringently test methods for predicting binding.  
-{\color{red}[JDC: What is meant by ``biologically relevant guests''?]}
+For SAMPL6, 8, and 10, we will resynthesize a series of CB[$n$]-type receptors of increasing complexity, measure $K_a$ values, and determine host-guest stoichiometry and geometry toward pharmaceutically relevant guests (selected drugs) in order to stringently test methods for predicting binding.  
 Figure~\ref{figure:CB} shows the chemical structures of three hosts---Me$_4$CB[8]~\cite{vinciguerra_synthesis_2015}, glycoluril hexamer~\cite{lucas_templated_2011}, and acyclic CB[$n$]-type receptors~\cite{ma_acyclic_2012, ma_acyclic_2012-1, zhang_acyclic_2014, gilberg_acyclic_2015, sigwalt_acyclic_2016, zhang_acyclic_2014-1} which span the range from preorganized macrocyclic host to uncharged acyclic but preorganized host to highly charged acyclic host.
 
 \begin{figure}[h]
@@ -402,9 +406,8 @@ Figure~\ref{figure:CB} shows the chemical structures of three hosts---Me$_4$CB[8
 \end{centering}
 
 \vspace{0.1in}
-\caption{\footnotesize {\bf Structures of Me$_4$CB[8], glycouril hexamer, and acyclic CB[n]-type receptors.}
-{\color{red}[JDC: Need a stand-alone description here so someone scanning the figures will know what is going on, which challenges they will be used for, why they are interesting. Think about someone who is only scanning the figures---the majority of the reviewers!---and make sure they get a complete story.}
-\label{figure:CB}}
+\caption{\label{figure:CB} \footnotesize {\bf Structures of Me$_4$CB[8], glycouril hexamer, and acyclic CB[n]-type receptors.} These receptors bind a variety of drug-like molecules, some with high affinity, and this binding will form the basis of a cucubituril-based series of SAMPL binding challenges.}
+
 \end{figure}
 
 \textbf{SAMPL6, 8, and 10 cucurbituril challenges.} 
@@ -481,7 +484,7 @@ For SAMPL10 we will consider the effects of co-solvents on the binding of five g
 \textbf{Aim 3: Develop model protein-ligand systems that isolate specific modeling challenges of drug targets.}
 A major goal of our effort is to drive advances in the quantitative modeling of protein:ligand interactions.
 While the Drug Design Data Resource (D3R~\cite{gathiaka_d3r_2016}) effort provides community blind challenges for biomolecular targets of pharmaceutical interest, these targets generally contain a daunting number of complexities that frustrate the ability for current methodologies to achieve quantitative accuracy, resulting in poor performance [CITE].
-For example, while kinases are targets of great interest to drug discovery, blind challenges involving kinase targets conflate issues of slow protein conformational dynamics~\cite{Lin:2013:Proc.Natl.Acad.Sci.a}, protonation state effects of both protein~\cite{Shan:2009:PNAS} and ligand~\cite{Szakacs:2005:JournalofMedicinalChemistrya,Grante:2014:SpectrochimicaActaPartA:MolecularandBiomolecularSpectroscopy}, charged ligands, and the modeling of complex divalent salt environments and phosphorylation state effects along with the standard computational challenges of conformational sampling and forcefield accuracy.
+For example, while kinases are targets of great interest to drug discovery, blind challenges involving kinase targets conflate issues of slow protein conformational dynamics~\cite{Lin:2013:Proc.Natl.Acad.Sci.}, protonation state effects of both protein~\cite{Shan:2009:PNAS} and ligand~\cite{Szakacs:2005:JournalofMedicinalChemistry,Grante:2014:SpectrochimicaActaPartA:MolecularandBiomolecularSpectroscopy}, charged ligands, and the modeling of complex divalent salt environments and phosphorylation state effects along with the standard computational challenges of conformational sampling and forcefield accuracy.
 While the value of these exercises as an accurate prospective benchmark of current-generation model accuracy is unquestionable, {\bf the ability of blind challenges on complex pharmaceutical targets to rapidly advance the field of quantitative predictive modeling is limited.}
 
 Instead, {\bf our philosophy is to identify model protein:ligand systems with the goal of \emph{isolating} individual accuracy-limiting effects in iterative cycles of prospective blind community challenges.}
@@ -489,9 +492,9 @@ This process focuses the field on identifying and evaluating multiple solutions 
 Datasets collected for these blind challenges then become standard benchmark datasets for retrospectively examining the effectiveness of modeling approaches in treating these effects to facilitate comparisons of methodologies in publications, while future iterations or variations of the same SAMPL experiment allow iterative refinement and prospective blinded evaluations of methodologies.
 In this way, this cycle of blind challenges utilizing model systems can rapidly drive progress in rapidly overcoming scientific hurdles limiting quantitative accuracy.
 
-While model protein-ligand systems have a long and storied history of driving progress in individual research laboratories (such as the Shoichet T4 lysozyme mutants~\cite{shoichet}), their power in blind community challenge cycles is amplified by leveraging community participation.
+While model protein-ligand systems have a long and storied history of driving progress in individual research laboratories (such as the Shoichet T4 lysozyme mutants~\cite{merski_homologous_2015, mobley_predicting_2016}), their power in blind community challenge cycles is amplified by leveraging community participation.
 An excellent example of this was the collection of a challenge dataset featuring the binding of small, rigid charged molecules to bovine trypsin for SAMPL3~\cite{Newman:2011:JComputAidedMolDes}, which rapidly focused the field on the deficiencies of current alchemical free energy methodologies in treating the binding of charged ligands.
-Within two years, multiple laboratories had developed and disseminated convergent practical solutions to effectively handle charged ligand binding that are now adopted as best practices~\cite{Rocklin:2013:TheJournalofChemicalPhysicsb,Reif:2014:JournalofComputationalChemistrya}.
+Within two years, multiple laboratories had developed and disseminated convergent practical solutions to effectively handle charged ligand binding that are now adopted as best practices~\cite{Rocklin:2013:TheJournalofChemicalPhysics,Reif:2014:JournalofComputationalChemistry}.
 
 {\bf SAMPL6-10 model protein:ligand challenges.} For the SAMPL6-10 challenges, we propose to introduce a new model protein:ligand system each year, with challenges fielded for each system for at least two consecutive years to allow iterative methodology improvement and assessment.
 Immediately following the challenge, challenge data (including all primary data) will be published and released as a version-controlled benchmark dataset for retrospective evaluation.
@@ -510,18 +513,18 @@ Because rapidly focusing the field on current challenges in predictive modeling 
 \caption{\footnotesize {\bf The SAMPL6/7 protein:ligand challenge focuses on soluble drug fragment binding to human serum albumin (HSA).}
 \emph{(A)}~SAMPL6 will introduce recombinant human serum albumin (HSA) as a target, against which a library of 96 small soluble drug fragments will be assayed.
 By introducing a mutation in one of the binding pockets, we will create a second challenge target for SAMPL7.
-\emph{(B)}~HSA, the most abundant plasma protein, has at least eight known binding sites, with major well-characterized sites (green, Sudlow's Site I; purple, Sudlow's Site II) observed to bind a variety of drugs, often modulating their pharmacokinetics~\cite{Fasano:2005:IUBMBLife(InternationalUnionofBiochemistryandMolecularBiology:Life)a} (figure from~\cite{Hall:2013:JournalofChemicalInformationandModelinga}).
+\emph{(B)}~HSA, the most abundant plasma protein, has at least eight known binding sites, with major well-characterized sites (green, Sudlow's Site I; purple, Sudlow's Site II) observed to bind a variety of drugs, often modulating their pharmacokinetics~\cite{Fasano:2005:IUBMBLife(InternationalUnionofBiochemistryandMolecularBiology:Life)} (figure from~\cite{Hall:2013:JournalofChemicalInformationandModeling}).
 Two fluorescent probes---dansylamide and dansylglycine---have been shown to bind with $\sim$$\mu$M affinity and high selectivity to Site I and Site II, respectively; both exhibit binding-enhanced fluorescence at 480 nm, and can be used to site-specifically probe ligand affinities by competition.
-\emph{(C)}~Binding affinities of soluble molecules can easily be measured by isothermal titration calorimetry (ITC); here, the ITC titration of HSA by diclofenac (a Site II ligand~\cite{Rafols:2014:Talantaa}) is shown~\cite{Bou-Abdallah:2016:TheJournalofChemicalThermodynamics}. 
+\emph{(C)}~Binding affinities of soluble molecules can easily be measured by isothermal titration calorimetry (ITC); here, the ITC titration of HSA by diclofenac (a Site II ligand~\cite{Rafols:2014:Talanta}) is shown~\cite{Bou-Abdallah:2016:TheJournalofChemicalThermodynamics}. 
 \emph{(D)}~HSA tryptophan fluorescence quenching can also be used to measure ligand binding affinity; here, HSA titration by diclofenac is shown, with the inset plot showing percent quenching at 346 nm~\cite{Bou-Abdallah:2016:TheJournalofChemicalThermodynamics}
 \label{figure:hsa-challenge}}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 {\bf SAMPL6: Assessing predictive modeling to multiple weak binding sites with the binding of small soluble fragments to human serum albumin (HSA).}
-Human serum albumin (HSA), the most abundant blood plasma protein, has the remarkable ability to bind a great variety of small molecule drugs in multiple binding sites (Figure~\ref{figure:hsa-challenge}B)~\cite{Fasano:2005:IUBMBLife(InternationalUnionofBiochemistryandMolecularBiology:Life)a}.
-As a result, HSA is not only an excellent model system for isolating the challenge of binding multiple weak ligands to a stable rigid protein, it is also a pharmacologically relevant system due to its ability to drastically modulate drug pharmacokinetics~\cite{Hall:2013:JournalofChemicalInformationandModelinga}.
-HSA has at least \emph{eight} known binding sites, with numerous crystal structures available for drugs binding to two predominant sites (Sudlow Site I and II)~\cite{Hall:2013:JournalofChemicalInformationandModelinga}.
+Human serum albumin (HSA), the most abundant blood plasma protein, has the remarkable ability to bind a great variety of small molecule drugs in multiple binding sites (Figure~\ref{figure:hsa-challenge}B)~\cite{Fasano:2005:IUBMBLife(InternationalUnionofBiochemistryandMolecularBiology:Life)}.
+As a result, HSA is not only an excellent model system for isolating the challenge of binding multiple weak ligands to a stable rigid protein, it is also a pharmacologically relevant system due to its ability to drastically modulate drug pharmacokinetics~\cite{Hall:2013:JournalofChemicalInformationandModeling}.
+HSA has at least \emph{eight} known binding sites, with numerous crystal structures available for drugs binding to two predominant sites (Sudlow Site I and II)~\cite{Hall:2013:JournalofChemicalInformationandModeling}.
 Small soluble molecules resembling drug fragments have previously been shown to have a high likelihood of detectable binding to HSA ($\ge$90\% of small druglike fragments, as detected by SPR~\cite{Elinder:2011:JournalofBiomolecularScreening}), providing an experimentally-tractable diverse set of ligands spanning several orders of magnitude in affinity [CITE].
 As current advanced methodologies such as alchemical free energy calculations currently assume a single well-defined binding site with high affinity~\cite{Gilson:1997:BiophysicalJournal}, this dataset will allow the isolation of the effect of weak multiple binding from the majority of other counfounding factors in protein-ligand binding.
 
