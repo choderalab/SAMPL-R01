@@ -195,48 +195,36 @@ Here, we design challenges to highlight major reasons for failure and drive prog
 %SAMPL drives science in our groups and in the field
    %a. Give examples from our groups from prior SAMPLs
    %b. Examples from field in prior SAMPLs
-Blind predictive challenges---and SAMPL in particular---have already led to important new science in the form of method development, evaluation, robustness, and force field improvements. 
-But they have not yet produced dramatic improvements in predictive molecular design, in part because \textbf{lack of funding has left us unable to design a systematic and progressive series of challenges motivating such improvements}. 
+Blind predictive challenges---and SAMPL in particular---have already led to important new science on method development, evaluation, robustness, and force field improvements. 
+But they have not yet produced dramatic improvements in predictive molecular design, in part because \textbf{funding is necessary to design a systematic and progressive series of challenges motivating such improvements}. 
 Previous SAMPL challenges have been valuable in isolation -- but failed to move the frontier because they were driven by data availability rather than purposeful design.
 Here, we take the innovative step of designing SAMPL to advance physical modeling.
 
 Several historical examples serve to highlight how SAMPL can foster innovation (though far more examples are available in our SAMPL bibliography below). 
-The first several SAMPL challenges on hydration free energies had rather hit-and-miss performance, highlighting pitfalls of existing methods and force fields which led to marked improvements in PB models [refs],
-%cite OpenEye work
- recognition of some limitations of fixed-charge force fields [refs],
-% Hydroxyl stuff we did, also Cerutti
-repair of some of these force field deficiencies via additional polarization or introduction of off-site charges [refs],
-%Hydroxyl/cerutti/Fennell
-and helped motivate alternate implicit or hybrid solvent models [ref].
-Together these advances led to a marked improvement in accuracy for calculations of hydration free energies between SAMPLX and SAMPLY (Figure []).
+The first several SAMPL challenges on hydration free energies had rather hit-and-miss performance, highlighting pitfalls of existing methods and force fields which led to marked improvements in PB models~\cite{nicholls_samp1_2009, ellingson_analysis_2010,ellingson_efficient_2014}, recognition of some limitations of fixed-charge force fields ~\cite{mobley_alchemical_2012, Fennell:2014:J.Phys.Chem.B},
+repair of some of these force field deficiencies via additional polarization or introduction of off-site charges~\cite{mobley_alchemical_2012, Fennell:2014:J.Phys.Chem.B, paranahewage_predicting_2016},
+and helped motivate alternate implicit or hybrid solvent models~\cite{sulea_predicting_2011, li_testing_2014, brini_adapting_2016}.
+{\color{red}{Together these advances led to a marked improvement in accuracy for calculations of hydration free energies between SAMPLX and SAMPLY (Figure []).}}
 %FILL IN DETAILS ON LINE ABOVE
 %
 %Add some sort of a figure on how SAMPL has helped community -- maybe compare accuracy in hydration free energies (simple?!?) in an early SAMPL with accuracy on log D in this SAMPL or something similar? Show something that demonstrates progress.
 %b.1 Figure showing progression in hydration free energy accuracy across a couple of SAMPLs or comparing two SAMPLs?
 %
  %Fennell SEA, etc.
-Shifts in protonation state and tautomer proved particularly important in the recent SAMPL5 logD challenge [refs].
+Shifts in protonation state and tautomer proved particularly important in the recent SAMPL5 logD challenge~\cite{bannan_blind_2016, klamt_prediction_2016}.
 This challenge provided a tractable opportunity to isolate and explore these specific physical effects, which are so important in protein-ligand binding, while avoiding the full complexity of pharmaceutical binding studies.
-Host-guest binding studies have also been particularly important [ref benchmark sets],
-%reference the benchmark sets paper
-highlighting the importance of salt effects [refs]
-%Gilson work, other (see cites in benchmark sets)
-and in some cases revealing more severe force field limitations than observed in hydration and distribution challenges [ref Gilson group stuff],
-%Add ref.
-pointing the way forward for improving predictive models of molecular interactions [ref].
-%Add something from Gilson group on using this data to improve FFs; also ref benchmark sets paper
+Host-guest binding studies have also been particularly important~\cite{mobley_predicting_2016},
+highlighting the importance of salt effects~\cite{yin_overview_2016, muddana_blind_2014, mobley_predicting_2016}
+and in some cases revealing more severe force field limitations than observed in hydration and distribution challenges~\cite{yin_sampl5_2016, muddana_sampl4_2014-1}, pointing the way forward for improving predictive models of molecular interactions~\cite{yin_toward_2015, mobley_predicting_2016}.
+
 
 
 %c. Mention uniqueness of SAMPL -- there are other predictive challenges (D3R, pKa coop, CASP) but none focused on driving quantitatively predictive protein-ligand modeling
 This work is also innovative because of the uniqueness of SAMPL.
-While there are other predictive challenges in the area of biomolecular modeling, such as D3R [ref], the pKa cooperative [ref], CAPRI [ref] and CASP [ref],
-%CAPRI had 2016 event: http://www.ebi.ac.uk/msd-srv/capri/
-%insert references
-\textbf{no other effort focuses specifically on driving quantitatively predictive protein-ligand modeling}.
-The SAMPL expansion we propose here is unique because it will be \emph{specifically designed} to drive improvements in modeling accuracy for biomolecular design, rather than simply serving to evaluate accuracy on targets of pharmaceutical interest.
-It also plays an enabling role for a wide variety of other science, rather than functioning as a stand-alone entity. 
-SAMPL benefits the whole modeling community---for example, protein-ligand docking software has improved as a direct result of SAMPL hydration challenges [ref Coleman], and commercial software vendors have introduced new features or scientific improvements based on participation in SAMPL challenges [cite Klamt stuff].
-%Add refs. 
+While there are other predictive challenges in the area of biomolecular modeling, such as D3R~\cite{gathiaka_d3r_2016}, the pKa cooperative~\cite{Nielsen:2011:Proteins}, CAPRI~\cite{Janin:2005:ProteinScience} and CASP~\cite{Moult:2014:Proteins},
+\textbf{no other effort focuses specifically on driving predictive quantitative protein-ligand modeling}.
+The SAMPL expansion we propose here is unique of its \emph{specific design} to drive improvements in modeling accuracy rather than simply serving an evaluative role.
+SAMPL benefits the whole modeling community---for example, protein-ligand docking software has improved as a direct result of SAMPL hydration challenges~\cite{coleman_sampl4_2014}, and commercial software vendors have introduced new features or scientific improvements based on participation in SAMPL challenges~\cite{reinisch_prediction_2012, klamt_prediction_2016}.
 In effect, {\bf SAMPL serves as an engine to spur innovation by new soliciting novel approaches to complex problems from the community and evaluating their success on blinded data.}
 The proposed project will ensure that SAMPL not only continues but becomes even more valuable to the community.
  
@@ -251,19 +239,16 @@ Not only will the data itself be of prime importance, but the techniques themsel
 
 % Innovative reference calculations (Aim 4)
 In Aim 4, we will not only run annual iterations of SAMPL community challenges, but also perform our own reference calculations with the latest techniques, testing their accuracy and using these to assess the current state-of-the-art.
-Both the Mobley and Chodera labs are experts in development of free energy methods for application to physical properties (e.g., [ a couple refs]) and binding (e.g., [a couple refs]), and the \textbf{reference calculations we perform in Aim 4 are particularly important for innovation as well}, serving several key roles: (1) Benchmarking our latest method developments against current ``best practices'' methods (by doing calculations via both approaches); (2) Facilitating learning, allowing others to experiment with how a change in method or force field impacts results; (3) Focusing the field on key issues by doing sensitivity analysis to whether conditions such as ionic strength, protonation state, tautomer choice, etc., impact computed values.
-%Add references
+Both the Mobley and Chodera labs are experts in development of free energy methods for application to physical properties (e.g., ~\cite{mobley_blind_2014-1, Beauchamp:2015:JournalofPhysicalChemistryB, bannan_calculating_2016} and binding (e.g.,~\cite{rocklin_blind_2013, lim_sensitivity_2016, wang_identifying_2013}), and the \textbf{reference calculations we perform in Aim 4 are particularly important for innovation as well}, serving several key roles: (1) Benchmarking our latest method developments against current ``best practices'' methods (by doing calculations via both approaches); (2) Facilitating learning, allowing others to experiment with how a change in method or force field impacts results; (3) Focusing the field on key issues by doing sensitivity analysis to whether conditions such as ionic strength, protonation state, tautomer choice, etc., impact computed values.
 
 % Innovation in analysis of method performance, comparison of methods, workflow science? (Aim 4)
 Innovation in Aim 4 extends beyond reference calculations to analysis of the challenge itself.
 When methods differ in performance, it is critical to understand whether the differences are statistically significant and important, and to provide an accurate accounting of the uncertainty in performance measures. 
-Thus, careful and innovative analysis of challenge outcomes is particularly important in SAMPL [refs], in some cases driving experimentation with new performance metrics [refs].
+Thus, careful and innovative analysis of challenge outcomes is particularly important in SAMPL~\cite{mobley_blind_2014-1, bannan_blind_2016, yin_overview_2016}, in some cases driving experimentation with new performance metrics~\cite{mobley_blind_2014-1}.
 Tracking down \emph{why} models are failing and what particular problems still need attention is an in important and powerful aspect of SAMPL.
 Much of this is left to the participants, but as organizers we do a great deal of work spotting patterns and providing a venue for participants to explore these issues.
 In Aim 4, here, we also extend the scope of our reference calculations, providing further opportunity to drive innovation in this way.
-%References
-Additionally, we try to draw attention to and promote analysis of model uncertainty (as distinct from statistical uncertainty) in calculated values [refs], as understanding the confidence levels of predictions is particularly important for guiding molecular design.
-%Cite model uncertainty stuff.
+Additionally, we try to draw attention to and promote analysis of model uncertainty (as distinct from statistical uncertainty) in calculated values~\cite{mobley_blind_2014-1, bannan_blind_2016}, as understanding the confidence levels of predictions is particularly important for guiding molecular design.
 
 
 {\large \bf APPROACH}
@@ -311,7 +296,7 @@ Below, we summarize tentative plans for SAMPL6-10, though we will adapt to new e
 
 %Explain what science -- log D/logP, pKa primarily but mention possible other areas of interest
 {\bf SAMPL6: Cyclohexane/water and octanol/water distribution coefficients.}
-Building on the success of distribution coefficient measurements in SAMPL5 and their surprising ability to motivate rapid advances in physical modeling methodologies [refs], we will measure cyclohexane-water distribution coefficients at pH 7.4 for a new batch of commercially-available drug- and fragment-like molecules for which no data is currently available.
+Building on the success of distribution coefficient measurements in SAMPL5 and their surprising ability to motivate rapid advances in physical modeling methodologies~\cite{bannan_blind_2016}, we will measure cyclohexane-water distribution coefficients at pH 7.4 for a new batch of commercially-available drug- and fragment-like molecules for which no data is currently available.
 %{\color{red}[JDC: Maybe the set can be broken into classes of varying chemical complexities? In general, I think clever experimental design ideas---indications we have really thought through how to maximize value---will be rewarded by the reviewers.]}
 %DLM: Need to revisit this comment.
 Given the routine nature of octanol-water distribution coefficient measurements and indications that their prediction may be computationally tractable~\cite{Bhatnagar:2013:PhysicalChemistryChemicalPhysics, bannan_calculating_2016} despite the heterogeneous structure of the wet octanol phase~\cite{Kollman:1996:AccountsofChemicalResearch}, we plan to also collect octanol-water distribution coefficient measurements for the same compounds.
@@ -622,10 +607,10 @@ To further aid follow-up studies, we will make the input files, results, and sim
 
 %Select and announce null models, run them
 Physical methods are only valuable if they can reliably outperform alternate methods, so \textbf{a new focus of SAMPL6-10 will be selecting quality null models and running them to provide a point of comparison for participants}.
-While SAMPL efforts in the past have used some null models, lack of manpower has required that these be particularly crude (such as ``guess zero'' models [refs]) which provide no predictive value. 
+While SAMPL efforts in the past have used some null models, lack of manpower has required that these be particularly crude (such as ``guess zero'' models~\cite{bannan_blind_2016, paranahewage_predicting_2016, muddana_sampl4_2014}) which provide no predictive value. 
 Null models will be announced when each challenge component is opened.
 %Do statistical analysis of results (& compare to nulls), report back
-Statistical analysis of SAMPL performance, and comparison with nulls, will continue to be an important component of our work [refs].
+Statistical analysis of SAMPL performance, and comparison with nulls, will continue to be an important component of our work.
 
 %D3R coordination/meetings:
 Following submission and analysis of each SAMPL challenge, challenge results will be released and discussed, with SAMPL workshops allowing more formal presentations on and discussion of results in years 1, 3, and 5. 
@@ -643,9 +628,8 @@ We will continue to publish special issues of the \emph{Journal of Computer Aide
 To ensure immediate availability of reports, we will strongly encourage prepublication sharing of results and analysis, including both slides and posters from SAMPL meetings (via F1000 Research) and paper preprints (via bioRxiv).
 	%Provide a way to connect up researchers to enable rapid progress, such as Slack
 We also want to ensure that participants are able to learn from one another by exchanging ideas outside of formal workshops and meetings.
-While this has happened in the past---for example, when participants using similar methods work together after the SAMPL meeting to identify the origin of these discrepancies [refs]---we hope to accelerate this kind of collaboration.
+While this has happened in the past---for example, when participants using similar methods work together after the SAMPL meeting to identify the origin of these discrepancies~\cite{monroe_converging_2014, yin_overview_2016, bhakat_resolving_2016, bosisio_blinded_2016, mobley_predicting_2016}---we hope to accelerate this kind of collaboration.
 To facilitate more open communication between the community, we will use collaboration software---such as Slack, which facilitates scientific communication for the NASA/JPL Mars Rover teams and NSF antarctic scientific research teams---to build a community discussion platform, 
-%using channels corresponding to each component of each challenge,
 allowing interested individuals to openly exchange ideas, tests, and work together to learn from their work.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
