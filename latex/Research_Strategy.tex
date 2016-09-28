@@ -128,12 +128,12 @@
 %Promise of physical methods, how they could transform drug discovery and the design of new small molecules for chemical biology
 % (If space permits here we will allude also to how this could help with broader areas too such as engineering of biologics)
 \textbf{Physical methods are poised to transform drug discovery and chemical biology by enabling true molecular design.}
-While modeling work is used extensively in drug discovery, its main role at present is to aid with idea generation or to filter large libraries of compounds for screening. 
+While modeling work is used extensively in drug discovery, its main role at present is to aid with idea generation or filter large libraries of compounds for screening. 
 Instead, we imagine using computational techniques extensively to guide the design process. 
 Consider a medicinal chemist in the not-too-distant future who has just finished synthesizing several new derivatives of an existing inhibitor as potential drug leads targeting a particular biomolecule, and has obtained binding affinity or potency data against the desired biomolecular target. 
-Before leaving work, he or she generates ideas for perhaps 100 new compounds which could be synthesized next, then sets a computer to work overnight prioritizing them. 
+Before leaving work, he or she generates ideas for perhaps 100 new compounds which could be synthesized next, then sets a computer to work overnight. 
 By morning, the compounds have all been prioritized based on reliable predictions of their affinity for the desired target, selectivity against alternative targets which should be avoided, solubility, and membrane permeability.  
-The chemist then looks through the predicted properties for the top few compounds and selects the next ones for synthesis. 
+The chemist then looks through the predicted properties for the top few compounds and selects some for synthesis. 
 If synthesizing and testing each compound takes several days, this workflow compresses roughly a year's work into a few days.
 
 While this workflow is not yet a reality, huge strides have been made in this direction, with calculated binding affinity predictions now showing real promise~\cite{mobley_perspective_2012, christ_accuracy_2014, deng_distinguishing_2015, sherborne_preprint_2016, schrodinger_accurate_2015, christ_binding_2016, cui_affinity_2016, verras_free_2016}, rapid progress toward solubility predictions~\cite{Schnieders:2012:J.Chem.TheoryComput., park_absolute_2014, liu_using_2016}, and selectivity and drug resistance also apparently tractable~\cite{leonis_contribution_2013}, with some headway apparent on membrane permeability~\cite{lee_permeability_2016, comer_permeability_2014}. 
@@ -144,14 +144,14 @@ Specifically, in some situations, free energy calculations appear to be capable 
 As a consequence, pharmaceutical companies are beginning to use these methods in active discovery projects.
 
 %Limitations of methods and of retrospective tests or application for methods improvements
-\textbf{Despite this progress, these methods currently have severe limitations}, and a great deal of science and engineering is still needed before these techniques can achieve their full potential in transforming molecular design.
+\textbf{Despite this progress, these methods currently have severe limitations} which prevent their widespread use in molecular design.
 For example, even ``small'' protein conformational conformational changes not gracefully handled by current methodologies can yield errors up to 5 kcal/mol in calculated binding free energies~\cite{lim_sensitivity_2016}, force field limitations still pose major challenges~\cite{rocklin_blind_2013}, and the inability to treat important chemical effects like protonation and tautomer equilibria drastically limits the domain of applicability.
 For many pharmaceutically relevant systems, the most important sources of error are not yet clear.
 
 Progress on addressing these challenges has been frustratingly slow, hindered by a lack of high-quality data and community focus.
 {\bf Neither retrospective tests nor prospective application in active drug discovery projects provides the necessary impetus and data to rapidly overcome the remaining major barriers to widespread utility.}
 Large-scale retrospective tests certainly assess our \emph{retrospective} performance, but they do not provide accurate guidance on utility for prospective design, nor do they effectively pave the way forward.
-One issue with retrospective tests is that they can easily result in over-fit models, or researchers applying a variety of different protocols until they get good results, perhaps even by a statistical fluke [ref] .
+One issue with retrospective tests is that they can easily result in over-fit models, or researchers applying a variety of different protocols until they get good results, perhaps even by a statistical fluke. %[ref] .
 %Probably should have some reference on the above.
 In retrospective tests, performance may also not be indicative of expected performance in applications because even well-meaning researchers can take advantage of prior knowledge. 
 For example, if the binding mode of a ligand is already known crystallographically, a researcher may use that binding mode in retrospective tests, whereas prospective or design work would require first selecting among candidate binding modes, introducing substantial uncertainty unaccounted for in the retrospective statistics~\cite{mobley_predicting_2007, boyce_predicting_2009, mobley_perspective_2012}.
@@ -161,32 +161,30 @@ Prospective application in actual discovery projects, while important, also does
 
 %Explain need for blind challenges and how D3R only fills part of need
 {\bf To accelerate progress in quantitative predictive physical modeling, we need a series of community blind prediction challenges focused on pushing the limits of predictive techniques, beginning from problems which are just barely tractable with today's methods and advancing to problems just past the frontier.}
-These challenges should be designed to have precisely the necessary high quality experimental data, but also be prospective, predictive tests.
-While the Drug Design Data Resource (D3R~\cite{gathiaka_d3r_2016}, discussed further below) provides an existing community blind challenge on protein-ligand binding, it focuses on using \emph{existing} pharmaceutical datasets for blind challenges, and not on introducing new data in a carefully controlled manner in order to maximize the learning value to the community~\cite{gathiaka_d3r_2016}. 
-In other words, D3R serves well to assess where we are now -- but we need a carefully designed effort that will help the field achieve our goals.
+These challenges should be designed to have the necessary high quality experimental data, but also be prospective, predictive tests.
+While the Drug Design Data Resource (D3R~\cite{gathiaka_d3r_2016}, discussed further below) provides an existing community blind challenge on protein-ligand binding, it focuses on using \emph{existing} pharmaceutical datasets, not on introducing new data in a carefully controlled manner in order to maximize community learning~\cite{gathiaka_d3r_2016}. 
+D3R serves well to assess where we are now -- but we need a carefully designed effort focused on improving modeling.
 
 %Discuss importance of SAMPL (including publication/citation count, previous successes in advancing the field, focus), need for funding to:
 %   a. Continue SAMPL
 %   b. Allow for "design" of SAMPL (rather than having it be driven by data availability)
 %   b. Extend SAMPL to bridge to D3R rather than leaving a "capability gap" (here's where I explain why this is distinct from D3R -- this is crucial)
 \textbf{In our experience, physical modeling advances most rapidly when confronted by specific problems which must be modeled accurately, as revealed by carefully collected and curated data.}
-Thus, we need an effort which focuses on specific \emph{component} problems of the overall problem of interest, collects and curates data that highlights these problems, and then brings this data to the community to drive progress via prospective challenges.
+Thus, we need an effort which focuses on specific \emph{component} problems of the overall problem of interest, collects and curates data that highlights these problems, and then drives progress via prospective challenges on the data.
 This process allows the entire community to learn from what succeeds and fails in these challenges. 
 The model we propose here has \emph{already} worked to drive dramatic improvements in modeling, as evidenced by our {\bf Statistical Assessment of Modeling of Proteins and Ligands (SAMPL)} series of challenges. 
 SAMPL was born out of frustration with the lack of venues for comparing predictive accuracy on a level playing field and was initiated by Anthony Nicholls of OpenEye software in 2007/2008~\cite{nicholls_predicting_2008}, and has run approximately every two years since then~\cite{nicholls_samp1_2009, mobley_predictions_2009, geballe_sampl2_2010, geballe_sampl3_2012, mobley_blind_2014-1, muddana_sampl4_2014, bannan_blind_2016, yin_sampl5_preprint}.
 Governance transitioned to an unfunded academic collaboration during SAMPL3 in 2012; this collaboration ran subsequent challenges as SAMPL4 (2014) and SAMPL5 (2016).
-The PI of this proposal (Mobley) played a key organizational role in SAMPL3--SAMPL5.
-SAMPL geared around the idea that learning collectively from failures and successes, rather than competition, will provide the greatest long-term rewards in terms of progress in the field.
-%The history here could perhaps be shrunk for space.
-SAMPL has always involved a component focused on calculation of relatively straightforward physical properties such as hydration free energies, but also introduced host-guest systems as model binding systems for SAMPL3-5, supplementing protein-ligand challenges (on trypsin and HIV integrase) which appeared in SAMPL3-4. 
-SAMPL has already been a tremendous resource for the community, resulting in roughly 100 publications (some are coming out as of this writing) which are typically cited 5-50 times or more each [refs].
+The PI of this proposal (Mobley) was a primary organizer of SAMPL4--SAMPL5.
+SAMPL has always involved a component focused on calculation of solvation properties such as hydration free energies, but also introduced host-guest systems as model binding systems for SAMPL3-5, supplementing protein-ligand challenges (on trypsin and HIV integrase) which appeared in SAMPL3-4. 
+SAMPL has already been a tremendous resource for the community, resulting in roughly 100 publications (some are coming out as of this writing) which are typically cited 5-50 times or more each [full list of refs].
 %Add full list of references here.
 
-Here, we expand SAMPL by \textbf{designing a new series of SAMPL challenges specifically to maximize learning value to the community}.
-Until now, this has been impossible, because SAMPL has been entirely unfunded; its very existence has required ``donation'' of data and time from various sources, hindering the ability to collect datasets tailored to our purpose. 
-The incarnation of SAMPL proposed here will deliberately bridge the gap between calculations of simple physical properties that isolate forcefield inaccuracies from sampling challenges, like hydration---which can be calculated fairly accurately with today's methods~\cite{mobley_blind_2014-1}---and the D3R Grand Challenges on protein-ligand binding, which are a major source of consternation for the community so far~\cite{ignjatovic_binding-affinity_2016, deng_large_2016, sunseri_d3r_2016, gathiaka_d3r_2016}.
+Here, we \textbf{design a new series of SAMPL challenges specifically to maximize learning value to the community}.
+Until now, this has been impossible, because SAMPL has been entirely unfunded; its very existence has required ``donation'' of data and time, giving us no ability to gather datasets tailored to our purpose. 
+Our proposed new challenges bridge the gap between calculations of simple physical properties that isolate forcefield inaccuracies from sampling challenges, like hydration---which can already be calculated fairly accurately~\cite{mobley_blind_2014-1}---and the D3R Grand Challenges on protein-ligand binding, which are a major source of consternation for the community so far~\cite{ignjatovic_binding-affinity_2016, deng_large_2016, sunseri_d3r_2016, gathiaka_d3r_2016}.
 Unless this gap is bridged, there is the very real possibility that modeling may simply continue to fall far short of expectations in pharmaceutical challenges like D3R for reasons which are unclear.
-The extension of SAMPL proposed here will allow us to form blind challenges designed to highlight major reasons for failure and drive progress towards resolving them.
+Here, we design challenges to highlight major reasons for failure and drive progress towards resolving them.
 
 
 \textbf{Our major goal is to rapidly advance predictive modeling to where it can guide experimental work doing biomolecular design, and extension of the SAMPL challenges will do exactly that.} This work will play a vital role in enhancing the work being done on \emph{existing} data by D3R, helping prepare methods for application to the more challenging systems emerging from pharma in D3R's challenges. 
@@ -197,12 +195,12 @@ The extension of SAMPL proposed here will allow us to form blind challenges desi
 %SAMPL drives science in our groups and in the field
    %a. Give examples from our groups from prior SAMPLs
    %b. Examples from field in prior SAMPLs
-Blind predictive challenges---and SAMPL in particular---have already led to important new science in the form of method development, evaluation, robustness, and force field development. 
-But they have not yet resulted in a dramatic improvement in predictive molecular design, in part because the \textbf{lack of funding has left us unable to design a systematic and progressive series of challenges that drives such improvements}. 
-Previous SAMPL challenges have been valuable in isolation -- but they have not moved the frontier because they were driven by data availability rather than purposeful design.
-Here, we propose the innovative step of designing SAMPL to advance physical modeling.
+Blind predictive challenges---and SAMPL in particular---have already led to important new science in the form of method development, evaluation, robustness, and force field improvements. 
+But they have not yet produced dramatic improvements in predictive molecular design, in part because \textbf{lack of funding has left us unable to design a systematic and progressive series of challenges motivating such improvements}. 
+Previous SAMPL challenges have been valuable in isolation -- but failed to move the frontier because they were driven by data availability rather than purposeful design.
+Here, we take the innovative step of designing SAMPL to advance physical modeling.
 
-Several historical examples serve to highlight how SAMPL can foster innovation (though far more examples are available [CITE]). 
+Several historical examples serve to highlight how SAMPL can foster innovation (though far more examples are available in our SAMPL bibliography below). 
 The first several SAMPL challenges on hydration free energies had rather hit-and-miss performance, highlighting pitfalls of existing methods and force fields which led to marked improvements in PB models [refs],
 %cite OpenEye work
  recognition of some limitations of fixed-charge force fields [refs],
@@ -249,7 +247,7 @@ Specifically, in Aim 3, we develop a new informatics platform to facilitate the 
 We employ a fully automated wetlab to screen potential model systems for expression, carry out high-accuracy biophysical measurements, and perform automated error analysis to carefully assess experimental uncertainty.
 The Chodera lab---responsible for Aim 3---has substantial expertise in the area of automation of biophysical measurements and uncertainty analysis~\cite{Hanson:2015:JournalofComputer-AidedMolecularDesign}, and releases data analysis tools and 3D printed parts developed to facilitate these experiments as open source. 
 \textbf{This work is at the forefront of innovation in high-throughput, automated biophysical experiments to produce high quality data with well-characterized uncertainties.} 
-Not only will the data itself be of prime importance to the community, but the techniques themselves will help future experiments.
+Not only will the data itself be of prime importance, but the techniques themselves will help future experiments.
 
 % Innovative reference calculations (Aim 4)
 In Aim 4, we will not only run annual iterations of SAMPL community challenges, but also perform our own reference calculations with the latest techniques, testing their accuracy and using these to assess the current state-of-the-art.
@@ -625,7 +623,7 @@ To further aid follow-up studies, we will make the input files, results, and sim
 %Select and announce null models, run them
 Physical methods are only valuable if they can reliably outperform alternate methods, so \textbf{a new focus of SAMPL6-10 will be selecting quality null models and running them to provide a point of comparison for participants}.
 While SAMPL efforts in the past have used some null models, lack of manpower has required that these be particularly crude (such as ``guess zero'' models [refs]) which provide no predictive value. 
-In this work, we will announce our selected null models when we open each challenge component, so participants know what their results will be compared with.
+Null models will be announced when each challenge component is opened.
 %Do statistical analysis of results (& compare to nulls), report back
 Statistical analysis of SAMPL performance, and comparison with nulls, will continue to be an important component of our work [refs].
 
@@ -633,7 +631,7 @@ Statistical analysis of SAMPL performance, and comparison with nulls, will conti
 Following submission and analysis of each SAMPL challenge, challenge results will be released and discussed, with SAMPL workshops allowing more formal presentations on and discussion of results in years 1, 3, and 5. 
 	%	a. Co-running workshops with D3R
 Workshops will run every two years at the request of past participants, and will be co-run and co-hosted with D3R Grand Challenge workshops (see support letter).
-During the off years, SAMPL challenges will still run, but discussion of and dissemination of results will be via asynchronous means (as discussed below) and a ``virtual workshop'' consisting of talks and interaction over Google Hangouts or YouTube Live (formerly Hangouts On Air).
+During the off years, SAMPL challenges will still run, but discussion of and dissemination of results will be via asynchronous means (as discussed below) and a ``virtual workshop'' consisting of talks and interaction over Google Hangouts or YouTube Live.
 	%     b. Coordinating challenges with them, submission deadlines offset from D3R challenges
 While coordination with D3R will mostly be at the level of workshops, we will also work with them ensure that SAMPL challenge submission deadlines are offset from deadlines for D3R to allow maximum community participation in both efforts.
 
@@ -656,7 +654,7 @@ allowing interested individuals to openly exchange ideas, tests, and work togeth
 \begin{figure}[h]
 \begin{centering}
 %\resizebox{!}{3.2in}{\includegraphics{figures/Timeline.pdf}}
-\includegraphics[width=\textwidth]{figures/Timeline.pdf}
+\includegraphics[width=\textwidth]{figures/Timeline2_cropped.pdf}
 \end{centering}
 \vspace{0.1in}
 \caption{\footnotesize {\bf Timeline for our activities.} Activities covered by this grant include data collection and SAMPL challenges on our three major components (physical properties, host-guest binding, and protein-ligand binding), with each challenge cycle color-coded separately.  
@@ -687,12 +685,12 @@ The requested budget will ensure that these experiments will now be conducted, a
 Dissemination is the final stage in the data life cycle (see Resource Sharing Plan for details); our driving philosophy is to make the data (including primary data, processed data, and our analysis of challenge submissions) available freely and publicly with permanent, citeable DOIs; ensure relevant data is also deposited in standard community repositories (e.g.~BindingDB~\cite{Liu:2007:Nucl.AcidsRes.}); and guarantee data longevity via backup hosting on library archival facilities (such as UCI's DASH [link]).
 
 	%   Probably also should comment on archiving/disseminating OLD SAMPL data, which we haven't been able to do (lack of resources)
-Because prior SAMPL work focused mainly on challenges themselves, dissemination of the data has never been a major focus.
-As part of this project, we will retrieve old SAMPL experimental data, submissions, and analysis from where it is archived and make it available along with the new data generated here. 
+%Because prior SAMPL work focused mainly on challenges themselves, dissemination of the data has never been a major focus. As part of this project, we will retrieve old SAMPL experimental data, submissions, and analysis from where it is archived and make it available along with the new data generated here. 
+%Cut the above for space. Won't excite anyone. We should do it -- but it's not going to make a difference in getting this funded.
 
 	%   Methodology archival? Push for containerization of tools, maybe in conjunction with other known efforts. [Currently short on space, but putting something very short on this here anyway.]
 We will also push for containerization of tools and methods in conjunction with other efforts such as AutoDesk's Molecular Design Toolkit and the NSF Molecular Sciences (MolSci) initiative.
-Our vision is that long-term, instead of participants submitting a set of predictions, they would also submit the entire workflow they applied via Docker containers in a way which would allow others to reproduce their work if needed, or to repurpose the workflow for new applications, ensuring not just that SAMPL \emph{results} get disseminated, but that the \emph{methods} and \emph{workflows} themselves spread.
+Our vision is that long-term, instead of participants submitting a set of predictions, they would also submit the entire workflow they applied via Docker containers allowing reproducibility and repurposing, ensuring dissemination of not just results but workflows.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
