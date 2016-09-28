@@ -140,24 +140,24 @@ If synthesizing and testing each compound takes several days, this workflow comp
 While this workflow is not yet a reality, significant strides have been made in this direction on multiple fronts toward accurate, predictive physical models, binding affinities~\cite{mobley_perspective_2012, christ_accuracy_2014, deng_distinguishing_2015, sherborne_preprint_2016, schrodinger_accurate_2015, christ_binding_2016, cui_affinity_2016, verras_free_2016}, solubilities~\cite{Schnieders:2012:J.Chem.TheoryComput., park_absolute_2014, liu_using_2016}, selectivity and drug resistance~\cite{leonis_contribution_2013}, and membrane permeability~\cite{lee_permeability_2016, comer_permeability_2014}. 
 A considerable amount of science and engineering still remains to make this vision a reality, but \textbf{given recent progress, the question now seems more one of \emph{when} rather than \emph{whether}.} 
 
-The widespread availability of inexpensive graphics processing units (GPUs), which provide a 100-fold increase in price/performance over CPUs, coupled with advances in automation~\cite{liu_lead_2013} and sampling protocols have helped simulation-based techniques reach the point where they now begin to be genuinely useful in guiding drug discovery for a limited \emph{domain of applicability}~\cite{mikulskis_large-scale_2014, homeyer_binding_2014, sherborne_preprint_2016,  schrodinger_accurate_2015, christ_binding_2016, cui_affinity_2016, verras_free_2016}.
+Widespread availability of inexpensive graphics processing units (GPUs) have provided a 100-fold increase in price/performance over CPUs, while advances in automation~\cite{liu_lead_2013} and sampling protocols have helped simulation-based techniques reach the point where they now begin to be genuinely useful in guiding drug discovery for a limited \emph{domain of applicability}~\cite{mikulskis_large-scale_2014, homeyer_binding_2014, sherborne_preprint_2016,  schrodinger_accurate_2015, christ_binding_2016, cui_affinity_2016, verras_free_2016}.
 Specifically, in some situations, free energy calculations appear to be capable of achieving RMS errors of 1-2 kcal/mol with current force fields, even in prospective applications, sufficient to drastically reduce the number of molecules that must be synthesized and assayed~\cite{shirts_free-energy_2010}.
 As a consequence, pharmaceutical companies are beginning to use these methods in active discovery projects.
 
 %Limitations of methods and of retrospective tests or application for methods improvements
-\textbf{Despite this progress, these methods currently have severe limitations} which prevent their widespread use in molecular design.
+\textbf{Despite progress, current physical modeling methodologies suffer from severe limitations hindering their widespread use in molecular design.}
 For example, even ``small'' protein conformational conformational changes not gracefully handled by current methodologies can yield errors up to 5 kcal/mol in calculated binding free energies~\cite{lim_sensitivity_2016}, force field limitations still pose major challenges~\cite{rocklin_blind_2013}, and the inability to treat important chemical effects like protonation and tautomer equilibria drastically limits the domain of applicability.
-For many pharmaceutically relevant systems, the most important sources of error are not yet clear.
+{\bf For many pharmaceutically relevant systems, the most important sources of error---and modeling challenges---are not yet clear.}
 
 Progress on addressing these challenges has been frustratingly slow, hindered by a lack of high-quality data and community focus.
-{\bf Neither retrospective tests nor prospective application in active drug discovery projects provides the necessary impetus and data to rapidly overcome the remaining major barriers to widespread utility.}
-Large-scale retrospective tests certainly assess our \emph{retrospective} performance, but they do not provide accurate guidance on utility for prospective design, nor do they effectively pave the way forward.
-One issue with retrospective tests is that they can easily result in over-fit models, or researchers applying a variety of different protocols until they get good results, perhaps even by a statistical fluke. %[ref] .
-%Probably should have some reference on the above.
+{\bf Neither retrospective tests nor prospective application in active discovery projects provides the necessary impetus and data to rapidly overcome remaining barriers to widespread utility.}
+Large-scale retrospective tests can assess \emph{retrospective} performance, but they do not provide accurate guidance on utility for prospective design, nor do they effectively pave the way forward.
+{\color{red}[JDC: Can we say something more concrete than ``effectively pave the way forward''?]}
+One issue with retrospective tests is that they can easily result in over-fitting, where researchers apply a variety of protocols until one achieves significant results by statistical chance~\cite{Nuzzo:2015:Nature}.
 In retrospective tests, performance may also not be indicative of expected performance in applications because even well-meaning researchers can take advantage of prior knowledge. 
 For example, if the binding mode of a ligand is already known crystallographically, a researcher may use that binding mode in retrospective tests, whereas prospective or design work would require first selecting among candidate binding modes, introducing substantial uncertainty unaccounted for in the retrospective statistics~\cite{mobley_predicting_2007, boyce_predicting_2009, mobley_perspective_2012}.
 This also means that in retrospective tests, researchers almost invariably try far fewer methods than in prospective tests, resulting in much less new insight.
-Prospective tests, in contrast, force researchers to worry about a multitude of potential situations rather than only those observed in a known benchmark dataset.
+Prospective tests, in contrast, force researchers to anticipate a multitude of potential situations rather than only those observed in a known benchmark dataset.
 Prospective application in actual discovery projects, while important, also does not provide the necessary impetus, partly because often, the predicted compounds are in fact never tested~\cite{christ_binding_2016} or the experimental data necessary to assess the quality of the predictions is absent---for example, because binding affinities are not measured or no crystallography is available. 
 
 %Explain need for blind challenges and how D3R only fills part of need
