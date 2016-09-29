@@ -150,7 +150,7 @@ If synthesizing and testing each compound takes several days, this workflow comp
 While this workflow is not yet a reality, significant strides have been made in this direction on multiple fronts toward accurate, predictive physical models, binding affinities~\cite{mobley_perspective_2012, christ_accuracy_2014, deng_distinguishing_2015, sherborne_preprint_2016, schrodinger_accurate_2015, christ_binding_2016, cui_affinity_2016, verras_free_2016}, solubilities~\cite{Schnieders:2012:J.Chem.TheoryComput., park_absolute_2014, liu_using_2016}, selectivity and drug resistance~\cite{leonis_contribution_2013}, and membrane permeability~\cite{lee_permeability_2016, comer_permeability_2014}. 
 A considerable amount of science and engineering still remains to make this vision a reality, but \textbf{given recent progress, the question now seems more one of \emph{when} rather than \emph{whether}.} 
 
-Widespread availability of inexpensive graphics processing units (GPUs) provides a 100-fold increase in price/performance over CPUs, while advances in automation~\cite{liu_lead_2013} and sampling protocols have helped simulation-based techniques reach the point where they now begin to be genuinely useful in guiding drug discovery for a limited \emph{domain of applicability}~\cite{mikulskis_large-scale_2014, homeyer_binding_2014, sherborne_preprint_2016,  schrodinger_accurate_2015, christ_binding_2016, cui_affinity_2016, verras_free_2016}.
+Widespread availability of inexpensive graphics processing units (GPUs) provides a 100-fold increase in price-to-performance ratio over CPUs, while advances in automation~\cite{liu_lead_2013} and sampling protocols have helped simulation-based techniques reach the point where they now begin to be genuinely useful in guiding drug discovery for a limited \emph{domain of applicability}~\cite{mikulskis_large-scale_2014, homeyer_binding_2014, sherborne_preprint_2016,  schrodinger_accurate_2015, christ_binding_2016, cui_affinity_2016, verras_free_2016}.
 Specifically, in some situations, free energy calculations appear to be capable of achieving RMS errors of 1-2 kcal/mol with current force fields, even in prospective applications, sufficient to drastically reduce the number of molecules that must be synthesized and assayed~\cite{shirts_free-energy_2010}.
 As a consequence, pharmaceutical companies are beginning to use these methods in active discovery projects.
 
@@ -530,35 +530,50 @@ The same ligands pre-plated in DMSO format will be used to conduct a separate se
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FIGURE: MODEL SYSTEM MINING
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[h]
-\begin{centering}
-\resizebox{!}{3in}{\includegraphics{figures/model-systems-figure-draft3.pdf}}
-
-\end{centering}
-\vspace{0.1in}
-\caption{\footnotesize {\bf Mining model protein-ligand systems to focus on individual modeling challenges via a structural and chemical informatics platform.}
-SAMPL7-10 will introduce protein-ligand systems selected to focus on individual challenges judged to be of critical immediate importance following current D3R/SAMPL blind competitions. 
-\emph{(A)} Since most protein targets of pharmaceutical interest feature a multitude of simultaneous challenges, our goal is to identify model protein targets that isolate individual effects to guide modeling improvements. 
-Some example protein-ligand pairs and the conceptual challenge categories they fall under are shown in the figure: 
-T4 Lysozyme L99A~\cite{mobley_predicting_2007}, HSA~\cite{Martin:2009:JournalofComputer-AidedMolecularDesign}, Carbonic anhydrase II (CAII)~\cite{Martin:2009:JournalofComputer-AidedMolecularDesign,Temperini:2009:Bioorganic&MedicinalChemistry}, Cytochrome C Peroxidase~\cite{Rocklin:2013:JournalofMolecularBiology}, Cytochrome P450 BM3 M11 (CYP450 BM3)~\cite{Venkataraman:2014:Bioorganic&MedicinalChemistry}, HIV-1 Reverse Transcriptase (HIV-1 RT)~\cite{Gunasekaran:2007:JournalofMolecularBiology,Khunnawutmanotham:2009:BeilsteinJournalofOrganicChemistry}, Streptavidin~\cite{Gunasekaran:2007:JournalofMolecularBiology}, Tet repressor protein (TetR)~\cite{Gunasekaran:2007:JournalofMolecularBiology,Aleksandrov:2007:ChemBioChem}.
-\emph{(B)} In order to rapidly identify and develop these tractable new model protein-ligand systems, we are developing a structural and chemical informatics system called TargetExplorer [\url{https://github.com/choderalab/targetexplorer}] that applies successive filters to all potential protein-ligand systems for which structural data is available. 
-Suitable model systems should meet all experimental tractability criteria (green box) and possess only a few challenging properties, ideally only one (blue box).
-\vspace{-0.1in}
-\label{figure:mining-for-model-systems}}
-\end{figure}
+%\begin{figure}[h]
+%\begin{centering}
+%\resizebox{!}{3in}{\includegraphics{figures/model-systems-figure-draft3.pdf}}
+%
+%\end{centering}
+%\vspace{0.1in}
+%\caption{\footnotesize {\bf Mining model protein-ligand systems to focus on individual modeling challenges via a structural and chemical informatics platform.}
+%SAMPL7-10 will introduce protein-ligand systems selected to focus on individual challenges judged to be of critical immediate importance following current D3R/SAMPL blind competitions. 
+%\emph{(A)} Since most protein targets of pharmaceutical interest feature a multitude of simultaneous challenges, our goal is to identify model protein targets that isolate individual effects to guide modeling improvements. 
+%Some example protein-ligand pairs and the conceptual challenge categories they fall under are shown in the figure: 
+%T4 Lysozyme L99A~\cite{mobley_predicting_2007}, HSA~\cite{Martin:2009:JournalofComputer-AidedMolecularDesign}, Carbonic anhydrase II (CAII)~\cite{Martin:2009:JournalofComputer-AidedMolecularDesign,Temperini:2009:Bioorganic&MedicinalChemistry}, Cytochrome C Peroxidase~\cite{Rocklin:2013:JournalofMolecularBiology}, Cytochrome P450 BM3 M11 (CYP450 BM3)~\cite{Venkataraman:2014:Bioorganic&MedicinalChemistry}, HIV-1 Reverse Transcriptase (HIV-1 RT)~\cite{Gunasekaran:2007:JournalofMolecularBiology,Khunnawutmanotham:2009:BeilsteinJournalofOrganicChemistry}, Streptavidin~\cite{Gunasekaran:2007:JournalofMolecularBiology}, Tet repressor protein (TetR)~\cite{Gunasekaran:2007:JournalofMolecularBiology,Aleksandrov:2007:ChemBioChem}.
+%\emph{(B)} In order to rapidly identify and develop these tractable new model protein-ligand systems, we are developing a structural and chemical informatics system called TargetExplorer [\url{https://github.com/choderalab/targetexplorer}] that applies successive filters to all potential protein-ligand systems for which structural data is available. 
+%Suitable model systems should meet all experimental tractability criteria (green box) and possess only a few challenging properties, ideally only one (blue box).
+%\vspace{-0.1in}
+%\label{figure:mining-for-model-systems}}
+%\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 {\bf SAMPL7-10: Rapid, responsive development of new model systems using a novel informatics platform.}
-We are developing a novel informatics platform (TargetExplorer) aimed at identifying protein targets that can be rapidly developed into experimentally- and computationally-tractable model systems focusing on individual challenges (Figure~\ref{figure:mining-for-model-systems}).
-This tool filters all known protein targets with structural data available in the PDB, first selecting for experimental tractability, then annotating experimentally tractable targets to determine which targets possess (or are likely to be free of) specific challenges for physical modeling (Figure~\ref{figure:mining-for-model-systems}B).
-This will allow us to select systems which introduce only specific modeling challeges.
-%We will make this tool accessible to other laboratories via a web interface during the course of this project.
-%DLM: Cutting because we say below our tools will be available open source, and I don't think the web interface aspect is going to be a major selling point
 
-Experimental tractability includes: (1) the availability of multiple protein crystal structures with at least one ligand-bound structure; (2) known bacterial expression (e.g.~from PDB {\tt EXPRESSION\_SYSTEM} records); (3) binding to a wide dynamic range of ligands (determined via data available in ChEMBL); (4) the availability of multiple known purchasable ligands (via ZINC); (5) tractability of experimental affinity measurements, such as known ligands with potentially fluorescent scaffolds (for fluorescence competition assays), highly soluble ligands (for ITC), or ligands above a minimal mass (for SPR or MST).
-A number of additional filters annotate experimentally tractable systems with their potential computational challenges, such as: charged ligands or potential ligand protonation state or tautomer effects~\cite{Martin:2009:JournalofComputer-AidedMolecularDesign} (deduced from predicted aqueous protonation/tautomer energies); potential protein protonation state effects (deduced from MCCE2 calculations~\cite{Song:2009:JournalofComputationalChemistry}); protein conformational changes (deduced from variation in protein conformation or the presence of unresolved loops in protein-ligand crystal structures); the presence of post-translational modifications that may affect affinity (deduced from Uniprot annotations); coordinated metals (identified in crystal structures); ordered waters (present in multiple crystal structures); etc.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{wraptable}{r}{9.5cm}
+\begin{wrapfigure}[37]{r}[0pt]{9.5cm}
+\vspace{-0.5in}
+\begin{centering}
+\resizebox{9.0cm}{!}{\includegraphics{figures/model-systems-figure-draft4.pdf}}
 
-The Chodera lab has developed an automated wetlab specifically to develop such model protein-ligand systems using bacterial expression techniques (see Equipment and Facilities).
+\end{centering}
+\footnotesize
+\caption{\label{figure:mining-for-model-systems}  
+\textbf{Mining model protein-ligand systems to focus on individual modeling challenges via a structural and chemical informatics platform.}
+We are developing a structural and chemical informatics system called TargetExplorer [\url{https://github.com/choderalab/targetexplorer}] that applies successive filters to all potential protein-ligand systems for which structural data is available. 
+Suitable model systems should meet all experimental tractability criteria (green box) and possess only a few challenging properties, ideally only one (blue box).
+Tractability of experimental affinity measurements includes properties like known ligands with potentially fluorescent scaffolds (for fluorescence competition assays), highly soluble ligands (for ITC), or ligands above a minimal mass (for SPR or MST).
+Additional filters annotate experimentally tractable systems with their potential computational challenges, including charged ligands or potential ligand protonation state or tautomer effects~\cite{Martin:2009:JournalofComputer-AidedMolecularDesign} (deduced from predicted aqueous protonation/tautomer energies); potential protein protonation state effects (deduced from MCCE2 calculations~\cite{Song:2009:JournalofComputationalChemistry}); protein conformational changes (deduced from variation in protein conformation or the presence of unresolved loops in protein-ligand crystal structures); the presence of post-translational modifications that may affect affinity (deduced from Uniprot annotations); coordinated metals (identified in crystal structures); and ordered waters (present in multiple crystal structures).
+}
+%\end{wrapfig}
+\end{wrapfigure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We are developing a novel informatics platform aimed at identifying protein targets that can be rapidly developed into experimentally- and computationally-tractable model systems focusing on individual challenges (Figure~\ref{figure:mining-for-model-systems}).
+This tool filters all known protein targets with structural data available in the PDB, first selecting for experimental tractability, then annotating experimentally tractable targets to determine which targets possess (or are likely to be free of) specific challenges for physical modeling.
+This will allow us to select systems which introduce only specific modeling challenges.
+
+The Chodera lab has developed an automated wetlab to facilitate the development of such model protein-ligand systems using bacterial expression (see Equipment and Facilities).
 Potential targets matching desired challenge criteria will be screened for bacterial expression using high-throughput cloning, transformation, and expression testing, with purity and yield assessed by capillary electrophoresis on a Caliper GXII.
 Targets will be screened for stability in various buffers using Thermofluor thermal shift assays~\cite{Reinhard:2013:ActaCrystallographicaSectionFStructuralBiologyandCrystallizationCommunications}.
 Ligands identified via TargetExplorer as spanning a wide dynamic range of binding affinities will be purchased as dry powder stocks and prepared for assay by highly accurate gravimetric solution preparation techniques using a Quantos automated balance.
@@ -729,6 +744,7 @@ The proposed series of carefully tailored challenges will focus our community on
 %\bibliography{sampl}{sampl-r01}{REFERENCES FROM PRIOR SAMPL CHALLENGES}
 
 \bibliographysampl{sampl-r01}
+\eject
 \bibliography{sampl-r01}
 
 \end{document}
