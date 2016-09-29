@@ -128,19 +128,20 @@
 %Promise of physical methods, how they could transform drug discovery and the design of new small molecules for chemical biology
 % (If space permits here we will allude also to how this could help with broader areas too such as engineering of biologics)
 \textbf{Physical modeling is poised to transform drug discovery and chemical biology by enabling true molecular design.}
-While modeling  is used extensively in drug discovery, its main role at present is to aid with idea generation or filter large libraries of compounds for screening. 
+While modeling is used extensively in drug discovery, its main role at present is to aid with idea generation or filter large libraries of compounds for screening. 
 Instead, we imagine using computational techniques extensively to guide the design process. 
 Consider a medicinal chemist in the not-too-distant future who has just finished synthesizing several new derivatives of an existing inhibitor, and has obtained binding affinity or potency data against the desired biomolecular target. 
 Before leaving work, she generates ideas for perhaps 100 new compounds which could be synthesized next, setting her computer to work overnight. 
 By morning, the idea compounds have been prioritized based on reliable predictions of their affinity for the desired target, selectivity against antitargets, solubility, and membrane permeability.  
-{\color{red}[JDC: Should we say something about pharmacodynamics/kinetic and toxicity liabilities? We \emph{are} starting with HSA, after all.]}
+%{\color{red}[JDC: Should we say something about pharmacodynamics/kinetic and toxicity liabilities? We \emph{are} starting with HSA, after all.]}
+%I don't think so, for space reasons and because I think those are farther down the line than the thigns cited here -- i.e. we make the case below that methods for affinity, selectivity, solubility are already well on their way; I don't have cites showing that ADME/Tox is.
 The chemist looks through the predicted properties for the top few compounds, selecting some for synthesis. 
 If synthesizing and testing each compound takes several days, this workflow compresses roughly a year's work into a few days.
 
 While this workflow is not yet a reality, significant strides have been made in this direction on multiple fronts toward accurate, predictive physical models, binding affinities~\cite{mobley_perspective_2012, christ_accuracy_2014, deng_distinguishing_2015, sherborne_preprint_2016, schrodinger_accurate_2015, christ_binding_2016, cui_affinity_2016, verras_free_2016}, solubilities~\cite{Schnieders:2012:J.Chem.TheoryComput., park_absolute_2014, liu_using_2016}, selectivity and drug resistance~\cite{leonis_contribution_2013}, and membrane permeability~\cite{lee_permeability_2016, comer_permeability_2014}. 
 A considerable amount of science and engineering still remains to make this vision a reality, but \textbf{given recent progress, the question now seems more one of \emph{when} rather than \emph{whether}.} 
 
-Widespread availability of inexpensive graphics processing units (GPUs) have provided a 100-fold increase in price/performance over CPUs, while advances in automation~\cite{liu_lead_2013} and sampling protocols have helped simulation-based techniques reach the point where they now begin to be genuinely useful in guiding drug discovery for a limited \emph{domain of applicability}~\cite{mikulskis_large-scale_2014, homeyer_binding_2014, sherborne_preprint_2016,  schrodinger_accurate_2015, christ_binding_2016, cui_affinity_2016, verras_free_2016}.
+Widespread availability of inexpensive graphics processing units (GPUs) provides a 100-fold increase in price/performance over CPUs, while advances in automation~\cite{liu_lead_2013} and sampling protocols have helped simulation-based techniques reach the point where they now begin to be genuinely useful in guiding drug discovery for a limited \emph{domain of applicability}~\cite{mikulskis_large-scale_2014, homeyer_binding_2014, sherborne_preprint_2016,  schrodinger_accurate_2015, christ_binding_2016, cui_affinity_2016, verras_free_2016}.
 Specifically, in some situations, free energy calculations appear to be capable of achieving RMS errors of 1-2 kcal/mol with current force fields, even in prospective applications, sufficient to drastically reduce the number of molecules that must be synthesized and assayed~\cite{shirts_free-energy_2010}.
 As a consequence, pharmaceutical companies are beginning to use these methods in active discovery projects.
 
@@ -150,9 +151,9 @@ For example, even ``small'' protein conformational conformational changes not gr
 {\bf For many pharmaceutically relevant systems, the most important sources of error---and modeling challenges---are not yet clear.}
 
 Progress on addressing these challenges has been frustratingly slow, hindered by a lack of high-quality data and community focus.
-{\bf Neither retrospective tests nor prospective application in active discovery projects provides the necessary impetus and data to rapidly overcome remaining barriers to widespread utility.}
+{\bf Neither retrospective tests nor prospective application in discovery projects provides the necessary impetus and data to rapidly overcome remaining barriers to widespread utility.}
 Large-scale retrospective tests can assess \emph{retrospective} performance, but they do not provide accurate guidance on utility for prospective design, nor do they effectively identify the most important sources of error.
-One issue with retrospective tests is that they can easily result in over-fitting, where researchers apply a variety of protocols until one achieves significant results by statistical chance~\cite{Nuzzo:2015:Nature}.
+Retrospective tests can also easily result in over-fitting, where researchers apply a variety of protocols until apparently significant results are obtained by chance~\cite{Nuzzo:2015:Nature}.
 In retrospective tests, performance may also not be indicative of expected performance in applications because even well-meaning researchers can take advantage of prior knowledge. 
 For example, if the binding mode of a ligand is already known crystallographically, a researcher may use that binding mode in retrospective tests, whereas prospective or design work would require first selecting among candidate binding modes, introducing substantial uncertainty unaccounted for in the retrospective statistics~\cite{mobley_predicting_2007, boyce_predicting_2009, mobley_perspective_2012}.
 This also means that in retrospective tests, researchers almost invariably try far fewer methods than in prospective tests, resulting in much less new insight.
@@ -169,7 +170,7 @@ D3R serves well to assess where we are now---but we need a carefully-designed ef
 %   a. Continue SAMPL
 %   b. Allow for "design" of SAMPL (rather than having it be driven by data availability)
 %   b. Extend SAMPL to bridge to D3R rather than leaving a "capability gap" (here's where I explain why this is distinct from D3R -- this is crucial)
-\textbf{Physical modeling accuracy advances most rapidly when progress toward a complex goal can be decomposed into separate tractable steps, as revealed by carefully collected and curated data.}
+\textbf{Physical modeling accuracy advances most rapidly when progress toward a complex goal can be decomposed into resolving a series of tractable problems, as revealed by carefully collected and curated data.}
 To make rapid progress, our field needs an effort which focuses on specific \emph{component} problems of the overall problem of interest, collects and curates data that highlights these problems, and drives progress via prospective challenges.
 This process allows the entire community to learn from both methodological success and failure. 
 The model we propose here has been proven to drive dramatic improvements in modeling, as evidenced by our {\bf Statistical Assessment of Modeling of Proteins and Ligands (SAMPL)} series of challenges. 
@@ -360,7 +361,7 @@ minocycline & tetracyclin; amino aniline \\
 %Intro lessons learned on HG systems, relevance to drug discovery
 Aim 1 focuses on the behavior of small molecules and its environment-dependence, in the absence of receptors and the associated potential for slow sampling, strong specific interactions, and other challenges such as salt effects.
 Binding in host-guest systems retains many of the same challenges seen in Aim 1 and introduces strong specific interactions and other challenges like salt effects~\cite{mobley_predicting_2016}, while still avoiding many of the issues with slow sampling (of protein conformational changes, ions, and ligand binding modes) seen in protein-ligand interactions.
-Thus, new data for SAMPL challenges on host-guest binding is critical to provide challenges of intermediate complexity between those of physical properties and those in bioolecular binding---but binding in host-guest systems introdyin_overview_2016uces a wider variety of challenges relevant to biomolecular interactions, but without the full array of challenges seen in protein-ligand interactions, as reviewed recently
+Thus, new data for SAMPL challenges on host-guest binding is critical to provide challenges of intermediate complexity between those of physical properties and those in bioolecular binding---but binding in host-guest systems introduces a wider variety of challenges relevant to biomolecular interactions, but without the full array of challenges seen in protein-ligand interactions, as reviewed recently~\cite{mobley_predicting_2016}.
 Thus, we believe that host-guest binding provides a critical step towards accurately modeling biomolecular interactions, focusing the field on issues not commonly encountered in physical property challenges (such as the importance of accurately modeling ionic conditions) that are highly relevant for protein-ligand interactions.
 Already, over the past several SAMPL challenges, host-guest systems have provided key tests for modeling of binding interactions, resulting in new attention paid to how co-solvents and ions modulate binding (resulting in errors of up to 5 kcal/mol when these effects are neglected) and the importance of adequately sampling water rearrangements~\cite{muddana_sampl4_2014, mobley_predicting_2016, yin_overview_2016, bhakat_resolving_2016}. 
 Host-guest binding proves remarkably difficult to model accurately~\cite{henriksen_computational_2015}, in part due to force field limitations (resulting in new force field work~\cite{yin_toward_2015}).
