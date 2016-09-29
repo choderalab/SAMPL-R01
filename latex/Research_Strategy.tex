@@ -151,8 +151,7 @@ For example, even ``small'' protein conformational conformational changes not gr
 
 Progress on addressing these challenges has been frustratingly slow, hindered by a lack of high-quality data and community focus.
 {\bf Neither retrospective tests nor prospective application in active discovery projects provides the necessary impetus and data to rapidly overcome remaining barriers to widespread utility.}
-Large-scale retrospective tests can assess \emph{retrospective} performance, but they do not provide accurate guidance on utility for prospective design, nor do they effectively pave the way forward.
-{\color{red}[JDC: Can we say something more concrete than ``effectively pave the way forward''?]}
+Large-scale retrospective tests can assess \emph{retrospective} performance, but they do not provide accurate guidance on utility for prospective design, nor do they effectively identify the most important sources of error.
 One issue with retrospective tests is that they can easily result in over-fitting, where researchers apply a variety of protocols until one achieves significant results by statistical chance~\cite{Nuzzo:2015:Nature}.
 In retrospective tests, performance may also not be indicative of expected performance in applications because even well-meaning researchers can take advantage of prior knowledge. 
 For example, if the binding mode of a ligand is already known crystallographically, a researcher may use that binding mode in retrospective tests, whereas prospective or design work would require first selecting among candidate binding modes, introducing substantial uncertainty unaccounted for in the retrospective statistics~\cite{mobley_predicting_2007, boyce_predicting_2009, mobley_perspective_2012}.
@@ -170,15 +169,16 @@ D3R serves well to assess where we are now---but we need a carefully-designed ef
 %   a. Continue SAMPL
 %   b. Allow for "design" of SAMPL (rather than having it be driven by data availability)
 %   b. Extend SAMPL to bridge to D3R rather than leaving a "capability gap" (here's where I explain why this is distinct from D3R -- this is crucial)
-\textbf{Physical modeling accuracy advances most rapidly when confronted by specific problems which must be modeled accurately, as revealed by carefully collected and curated data.}
+\textbf{Physical modeling accuracy advances most rapidly when progress toward a complex goal can be decomposed into separate tractable steps, as revealed by carefully collected and curated data.}
 To make rapid progress, our field needs an effort which focuses on specific \emph{component} problems of the overall problem of interest, collects and curates data that highlights these problems, and drives progress via prospective challenges.
 This process allows the entire community to learn from both methodological success and failure. 
 The model we propose here has been proven to drive dramatic improvements in modeling, as evidenced by our {\bf Statistical Assessment of Modeling of Proteins and Ligands (SAMPL)} series of challenges. 
-SAMPL was born out of frustration with the lack of venues for comparing predictive accuracy on a level playing field, initiated by Anthony Nicholls of OpenEye software in 2007/2008~\cite{nicholls_predicting_2008}.
-Holding blind challenges and intensive workshops every two years since~\cite{nicholls_samp1_2009, mobley_predictions_2009, geballe_sampl2_2010, geballe_sampl3_2012, mobley_blind_2014-1, muddana_sampl4_2014, bannan_blind_2016, yin_sampl5_preprint}, governance transitioned to an unfunded academic collaboration during SAMPL3 (2012); this collaboration ran subsequent challenges as SAMPL4 (2014) and SAMPL5 (2016).
+SAMPL, born out of frustration with the lack of venues for comparing predictive accuracy on a level playing field, was initiated by Anthony Nicholls of OpenEye software in 2007/2008~\cite{nicholls_predicting_2008}, and has run challenges approximately every two years since then~\cite{nicholls_samp1_2009, mobley_predictions_2009, geballe_sampl2_2010, geballe_sampl3_2012, mobley_blind_2014-1, muddana_sampl4_2014, bannan_blind_2016, yin_sampl5_preprint}.
+Governance transitioned to an unfunded academic collaboration during SAMPL3 in 2012; this collaboration ran subsequent challenges as SAMPL4 (2014) and SAMPL5 (2016).
 The PI of this proposal (Mobley) was a primary organizer of SAMPL4/5 (2014--2016).
-SAMPL has always involved a component focused on calculation of solvation properties such as hydration free energies, but also introduced host-guest systems as model binding systems for SAMPL3--5 (2012--2016), supplementing protein-ligand challenges (on trypsin and HIV integrase) which appeared in SAMPL3-4 (2012--2014). 
-{\color{red}[JDC: This last sentence is weak, and doesn't reflect the early SAMPLs that had protein-ligand competitions where Marti Head individually bested computer docking programs. Can we replace this with a sentence that will pull its weight?]}
+%SAMPL has always involved a component focused on calculation of solvation properties such as hydration free energies, but also introduced host-guest systems as model binding systems for SAMPL3--5 (2012--2016), supplementing protein-ligand challenges (on trypsin and HIV integrase) which appeared in SAMPL3-4 (2012--2014). 
+Much as unit testing is an indispensible tool for discovering where bugs in a program are hiding when complex integration tests fail, exercises like SAMPL are valuable in pinpointing and correcting modeling errors when the overall performance fails to live up to expectations for complex pharmacological targets.
+To accomplish this, SAMPL has historically focused on both simple challenges that attempt to isolate likely sources of modeling errors, such as physical properties of small molecules (hydration free energies, aqueous tautomer ratios, partition or distribution coefficients between aqueous and nonpolar phases) as well as small molecule binding to targets of reduced complexity (such as host-guest binding, trypsin-fragment binding, and small molecule screens against HIV integrase).
 {\bf SAMPL has already been a tremendous resource for the community, resulting in roughly 100 publications (some are coming out as of this writing) which are typically cited 5--50 times or more each {\color{red} [full list of refs]}.}
 %Add full list of references here.
 
