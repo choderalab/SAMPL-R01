@@ -155,7 +155,7 @@ As a consequence, pharmaceutical companies are beginning to use these methods in
 
 %Limitations of methods and of retrospective tests or application for methods improvements
 \textbf{Despite progress, current physical modeling methodologies suffer from severe limitations hindering their widespread use in molecular design.}
-For example, even ``small'' protein conformational conformational changes not gracefully handled by current methodologies can yield errors up to 5 kcal/mol in calculated binding free energies~\cite{lim_sensitivity_2016}, force field limitations still pose major challenges~\cite{rocklin_blind_2013}, and the inability to treat important chemical effects like protonation and tautomer equilibria drastically limits the domain of applicability.
+For example, even ``small'' protein conformational changes not gracefully handled by current methodologies can yield errors up to 5 kcal/mol in calculated binding free energies~\cite{lim_sensitivity_2016}, force field limitations still pose major challenges~\cite{rocklin_blind_2013}, and the inability to treat important chemical effects like protonation and tautomer equilibria drastically limits the domain of applicability.
 {\bf For many pharmaceutically relevant systems, the most important sources of error---and modeling challenges---are not yet clear.}
 
 Progress on addressing these challenges has been frustratingly slow, hindered by a lack of high-quality data and community focus.
@@ -235,7 +235,7 @@ While there are other predictive challenges in the area of biomolecular modeling
 \textbf{no other blind challenge focuses specifically on data tailored and collected to drive quantitative protein-ligand modeling}.
 The SAMPL expansion we propose here is unique in its \emph{specific design} to drive improvements in modeling accuracy rather than simply serving an evaluative role.
 SAMPL benefits the whole modeling community---for example, protein-ligand docking software has improved as a direct result of SAMPL hydration challenges~\cite{coleman_sampl4_2014}, and commercial software vendors have introduced new features or scientific improvements based on participation in SAMPL challenges~\cite{reinisch_prediction_2012, klamt_prediction_2016}.
-In effect, {\bf SAMPL serves as an engine to spur innovation by new soliciting novel approaches to complex problems from the community and evaluating their success at predictions.}
+In effect, {\bf SAMPL serves as an engine to spur innovation by soliciting novel approaches to complex problems from the community and evaluating their success at predictions.}
  
 
 % Innovation in experimental pipelines (Aim 3)
@@ -396,7 +396,7 @@ minocycline & tetracyclin; amino aniline \\
 %Intro lessons learned on HG systems, relevance to drug discovery
 Aim 1 focuses on the behavior of small molecules and its environment-dependence, in the absence of receptors and the associated potential for slow sampling, strong specific interactions, and other challenges such as salt effects.
 Binding in host-guest systems retains many of the same challenges seen in Aim 1 and introduces strong specific interactions and other challenges like salt effects~\cite{mobley_predicting_2016}, while still avoiding many of the issues with slow sampling (of protein conformational changes, ions, and ligand binding modes) seen in protein-ligand interactions.
-Thus, new data for SAMPL challenges on host-guest binding is critical to provide challenges of intermediate complexity between those of physical properties and those in bioolecular binding---but binding in host-guest systems introduces a wider variety of challenges relevant to biomolecular interactions, but without the full array of challenges seen in protein-ligand interactions, as reviewed recently~\cite{mobley_predicting_2016}.
+Thus, new data for SAMPL challenges on host-guest binding is critical to provide challenges of intermediate complexity between those of physical properties and those in biomolecular binding---but binding in host-guest systems introduces a wider variety of challenges relevant to biomolecular interactions, but without the full array of challenges seen in protein-ligand interactions, as reviewed recently~\cite{mobley_predicting_2016}.
 Thus, we believe that host-guest binding provides a critical step towards accurately modeling biomolecular interactions, focusing the field on issues not commonly encountered in physical property challenges (such as the importance of accurately modeling ionic conditions) that are highly relevant for protein-ligand interactions.
 Already, over the past several SAMPL challenges, host-guest systems have provided key tests for modeling of binding interactions, resulting in new attention paid to how co-solvents and ions modulate binding (resulting in errors of up to 5 kcal/mol when these effects are neglected) and the importance of adequately sampling water rearrangements~\cite{muddana_sampl4_2014, mobley_predicting_2016, yin_overview_2016, bhakat_resolving_2016}. 
 Host-guest binding proves remarkably difficult to model accurately~\cite{henriksen_computational_2015}, in part due to force field limitations (resulting in new force field work~\cite{yin_toward_2015}).
@@ -404,7 +404,7 @@ Host-guest binding proves remarkably difficult to model accurately~\cite{henriks
 %Dissected -- by measuring protonation for example, I suppose (but I don't think we can expand on that here...?) 
 %How is failure or success able to drive progress -- it seems like I just said that; people start focusing on these issues and working to resolve them. DId you have something specific in mind?
 
-Here, we design a series of SAMPL challenges focused on two classes of host-guest systems---cucurbiturils and derivatives (SA 2.1) and Gibb's deep-cavity cavitands (GDCCs, SA 2.2)---both of which build on prior SAMPL challenges.
+Here, we design a series of SAMPL challenges focused on two classes of host-guest systems---cucurbiturils and analogs (SA 2.1) and Gibb's deep-cavity cavitands (GDCCs, SA 2.2)---both of which build on prior SAMPL challenges.
 These two sets of systems exhibit different challenges as recently reviewed~\cite{mobley_predicting_2016}, with the hosts of 2.1 bringing relatively modest co-solvent and ion effects but some receptor sampling problems for the acyclic hosts, and the GDCCs of 2.2 bringing profound ion and co-solvent effects as well as water sampling challenges.
 Methods which perform well on one class may not perform well on the other~\cite{mobley_predicting_2016}, since the distinct sets of challenges highlight different limitations.
 This diversity drive more innovation than would a focus on a single host class.
@@ -456,7 +456,7 @@ Moreover, the presence of 4 anionic groups near the cavity will likely impact th
 
 {\bf History of GDCC SAMPL challenges.} During SAMPL4~\cite{gibb_binding_2013} and SAMPL5~\cite{sullivan_binding_2016} we focused on two specific GDCC hosts: the octa-acid 1 (R = H) and another octa-acid variant with four methyl groups at the portal of the binding pocket (1, R = Me). 
 These studies used isothermal titration calorimetry (ITC) to measure the thermodynamics of (1) host {\bf 1} (R = H) binding a range of 9 carboxylate guests,
-and (2) the binding of 6 carboxylate and trimethylammonium guests to both hosts ({\bf 1}, H = H and Me; Figure~\ref{figure:gdccs}).  
+and (2) the binding of 6 carboxylate and trimethylammonium guests to both hosts ({\bf 1}, R = H and Me; Figure~\ref{figure:gdccs}).  
 In both cases $^1$H-NMR titration was also used to confirm ITC-derived free energies of binding.  
 As noted above, co-solvent effects and water rearrangements posed particular challenges for predicting binding in these hosts. 
 SAMPL5 emphasized how differences in the shape of the hydrophobic pocket of the host can have a profound affect on affinity for some guests~\cite{yin_overview_2016}.
@@ -697,7 +697,7 @@ Dissemination is the final stage in the data life cycle (see Resource Sharing Pl
 	%   Methodology archival? Push for containerization of tools, maybe in conjunction with other known efforts. [Currently short on space, but putting something very short on this here anyway.]
 We will also push for containerization of tools and methods in conjunction with other efforts such as AutoDesk's Molecular Design Toolkit and the NSF Molecular Sciences (MolSci) initiative.
 Our vision is that long-term, instead of participants submitting a set of predictions, they would also submit the entire workflow they applied via Docker containers allowing reproducibility and repurposing, ensuring dissemination workflows, not just results.
-
+% Above could be cut for space I think -- important but probably not going to be a major selling factor, especially because of lack of concreteness.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % COLLABORATION MANAGEMENT PLAN
@@ -716,7 +716,7 @@ PI Mobley will oversee the entire project, with Mobley and Chodera working toget
 Meetings will consist of a Google Hangout monthly and a yearly in-person planning meeting.
 Chodera and Mobley will communicate more frequently due to the interlinked nature of their work.
 Publications are expected to be largely dictated by the overall Timeline, with an experimental publication associated with each challenge component being prepared for distribution to participants along with their results.
-Conflict resolution is expected to be straightforward, but if any serious difficulties arise, Michael Gilson (UCSD) will be consulted as an arbiter, given the need this initiative has for close connections with D3R.
+Conflict resolution is expected to be straightforward, but if any serious difficulties arise, Michael Gilson (UCSD) will arbitrate given our close connections with D3R.
 
 {\large \bf OUTLOOK} %or conclusions. 0.5 page
 % This part is probably less critical, and can be dropped if space reasons dictate.
