@@ -1,0 +1,644 @@
+\begin{thebibliography}{10}
+
+\bibitem{monroe_converging_2014}
+Monroe, J.~I. and Shirts, M.~R.: Converging free energies of binding in
+  cucurbit[7]uril and octa-acid host\textendash{}guest systems from {{SAMPL4}}
+  using expanded ensemble simulations.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(4): 401--415, March 2014.
+
+\bibitem{muddana_blind_2014}
+Muddana, H.~S., Yin, J., Sapra, N.~V., Fenley, A.~T., and Gilson, M.~K.: Blind
+  prediction of {{SAMPL4}} cucurbit[7]uril binding affinities with the mining
+  minima method.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(4): 463--474, February 2014.
+
+\bibitem{gallicchio_bedam_2015-1}
+Gallicchio, E., Chen, H., Chen, H., Fitzgerald, M., Gao, Y., He, P.,
+  Kalyanikar, M., Kao, C., Lu, B., Niu, Y., Pethe, M., Zhu, J., and Levy,
+  R.~M.: {{BEDAM}} binding free energy predictions for the {{SAMPL4}} octa-acid
+  host challenge.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 29(4): 315--325, March 2015.
+
+\bibitem{mikulskis_free-energy_2014}
+Mikulskis, P., Cioloboc, D., Andreji{\'c}, M., Khare, S., Brorsson, J.,
+  Genheden, S., Mata, R.~A., S{\"o}derhjelm, P., and Ryde, U.: Free-energy
+  perturbation and quantum mechanical study of {{SAMPL4}} octa-acid
+  host\textendash{}guest binding energies.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(4): 375--400, April 2014.
+
+\bibitem{hsiao_prediction_2014}
+Hsiao, Y.-W. and S{\"o}derhjelm, P.: Prediction of {{SAMPL4}}
+  host\textendash{}guest binding affinities using funnel metadynamics.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(4): 443--454, February 2014.
+
+\bibitem{bhakat_resolving_2016}
+Bhakat, S. and S{\"o}derhjelm, P.: Resolving the problem of trapped water in
+  binding cavities: {{Prediction}} of host-guest binding free energies in the
+  {{SAMPL5}} challenge by funnel metadynamics.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 2016.
+
+\bibitem{pal_combined_2016}
+Pal, R.~K., Haider, K., Kaur, D., Flynn, W., Xia, J., Levy, R.~M., Taran, T.,
+  Wickstrom, L., Kurtzman, T., and Gallicchio, E.: A combined treatment of
+  hydration and dynamical effects for the modeling of host-guest binding
+  thermodynamics: {{The SAMPL5}} blinded challenge.
+\newblock \uline{Journal of Computer-Aided Molecular Design}.
+\newblock 2016.
+
+\bibitem{yin_sampl5_2016}
+Yin, J., Henriksen, N.~M., Slochower, D.~R., and Gilson, M.~K.: The {{SAMPL5
+  Host}}-{{Guest Challenge}}: {{Binding Free Energies}} and {{Enthalpies}} from
+  {{Explicit Solvent Simulations}}.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 2016.
+
+\bibitem{bosisio_blinded_2016}
+Bosisio, S., Mey, A.~S. J.~S., and Michel, J.: Blinded predictions of
+  host-guest standard free energies of binding in the {{SAMPL5}} challenge.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 2016.
+
+\bibitem{tofoleanu_absolute_2016}
+Tofoleanu, F., Lee, J., {Pickard IV.}, F.~C., K{\"o}nig, G., Huang, J., Baek,
+  M., Seok, C., and Brooks, B.~R.: Absolute binding free energy calculations
+  for octa-acids and guests.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 2016.
+
+\bibitem{mobley_blind_2014-1}
+Mobley, D.~L., Wymer, K.~L., Lim, N.~M., and Guthrie, J.~P.: Blind prediction
+  of solvation free energies from the {{SAMPL4}} challenge.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(3): 135--150, March 2014.
+
+\bibitem{muddana_sampl4_2014}
+Muddana, H.~S., Fenley, A.~T., Mobley, D.~L., and Gilson, M.~K.: The {{SAMPL4}}
+  host\textendash{}guest blind prediction challenge: An overview.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(4): 305--317, March 2014.
+
+\bibitem{sullivan_binding_2016}
+Sullivan, M.~R., Sokkalingam, P., Nguyen, T., Donahue, J.~P., and Gibb, B.~C.:
+  Binding of carboxylate and trimethylammonium salts to octa-acid and {{TEMOA}}
+  deep-cavity cavitands.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock pp 1--8, July 2016.
+
+\bibitem{deng_distinguishing_2015}
+Deng, N., Forli, S., He, P., Perryman, A., Wickstrom, L., Vijayan, R.~S.~K.,
+  Tiefenbrunn, T., Stout, D., Gallicchio, E., Olson, A.~J., and Levy, R.~M.:
+  Distinguishing {{Binders}} from {{False Positives}} by {{Free Energy
+  Calculations}}: {{Fragment Screening Against}} the {{Flap Site}} of {{HIV
+  Protease}}.
+\newblock \uline{J. Phys. Chem. B}.
+\newblock 119(3): 976--988, January 2015.
+
+\bibitem{li_testing_2014}
+Li, L., Dill, K.~A., and Fennell, C.~J.: Testing the semi-explicit assembly
+  model of aqueous solvation in the {{SAMPL4}} challenge.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(3): 259--264, January 2014.
+
+\bibitem{paranahewage_predicting_2016}
+Paranahewage, S.~S., Gierhart, C.~S., and Fennell, C.~J.: Predicting
+  water-to-cyclohexane partitioning of the {{SAMPL5}} molecules using
+  dielectric balancing of force fields.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock pp 1--7, August 2016.
+
+\bibitem{klamt_prediction_2016}
+Klamt, A., Eckert, F., Reinisch, J., and Wichmann, K.: Prediction of
+  cyclohexane-water distribution coefficients with {{COSMO}}-{{RS}} on the
+  {{SAMPL5}} data set.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock pp 1--9, July 2016.
+
+\bibitem{tielker_sampl5_2016}
+Tielker, N., Tomazic, D., Heil, J., Kloss, T., Ehrhart, S., G{\"u}ssregen, S.,
+  Schmidt, K.~F., and Kast, S.~M.: The {{SAMPL5}} challenge for
+  embedded-cluster integral equation theory: Solvation free energies, aqueous
+  {{pKa}}, and cyclohexane\textendash{}water log {{D}}.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock pp 1--10, August 2016.
+
+\bibitem{konig_calculating_2016}
+K{\"o}nig, G., Pickard, F.~C., Huang, J., Simmonett, A.~C., Tofoleanu, F., Lee,
+  J., Dral, P.~O., Prasad, S., Jones, M., Shao, Y., Thiel, W., and Brooks,
+  B.~R.: Calculating distribution coefficients based on multi-scale free energy
+  simulations: An evaluation of {{MM}} and {{QM}}/{{MM}} explicit solvent
+  simulations of water-cyclohexane transfer in the {{SAMPL5}} challenge.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock pp 1--18, August 2016.
+
+\bibitem{luchko_sampl5:_2016}
+Luchko, T., Blinov, N., Limon, G.~C., Joyce, K.~P., and Kovalenko, A.:
+  {{SAMPL5}}: {{3D}}-{{RISM}} partition coefficient calculations with partial
+  molar volume corrections and solute conformational sampling.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock pp 1--13, September 2016.
+
+\bibitem{santos-martins_calculation_2016}
+Santos-Martins, D., Fernandes, P.~A., and Ramos, M.~J.: Calculation of
+  distribution coefficients in the {{SAMPL5}} challenge from atomic solvation
+  parameters and surface areas.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock pp 1--8, September 2016.
+
+\bibitem{perryman_virtual_2014}
+Perryman, A.~L., Santiago, D.~N., Forli, S., Santos-Martins, D., and Olson,
+  A.~J.: Virtual screening with {{AutoDock Vina}} and the common pharmacophore
+  engine of a low diversity library of fragments and hits against the three
+  allosteric sites of {{HIV}} integrase: Participation in the {{SAMPL4}}
+  protein\textendash{}ligand binding challenge.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(4): 429--441, February 2014.
+
+\bibitem{konig_predicting_2014}
+K{\"o}nig, G., Pickard, F.~C., Mei, Y., and Brooks, B.~R.: Predicting hydration
+  free energies with a hybrid {{QM}}/{{MM}} approach: An evaluation of implicit
+  and explicit solvation models in {{SAMPL4}}.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(3): 245--257, February 2014.
+
+\bibitem{voet_combining_2014}
+Voet, A.~R.~D., Kumar, A., Berenger, F., and Zhang, K.~Y.~J.: Combining in
+  silico and in cerebro approaches for virtual screening and pose prediction in
+  {{SAMPL4}}.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(4): 363--373, January 2014.
+
+\bibitem{park_extended_2014}
+Park, H.: Extended solvent-contact model approach to {{SAMPL4}} blind
+  prediction challenge for hydration free energies.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(3): 175--186, February 2014.
+
+\bibitem{rustenburg_measuring_2016}
+Rustenburg, A.~S., Dancer, J., Lin, B., Feng, J.~A., Ortwine, D.~F., Mobley,
+  D.~L., and Chodera, J.~D.: Measuring experimental cyclohexane-water
+  distribution coefficients for the {{SAMPL5}} challenge.
+\newblock \uline{bioRxiv}.
+\newblock 063081~pp, July 2016.
+
+\bibitem{reinisch_prediction_2014}
+Reinisch, J. and Klamt, A.: Prediction of free energies of hydration with
+  {{COSMO}}-{{RS}} on the {{SAMPL4}} data set.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(3): 169--173, January 2014.
+
+\bibitem{muddana_sampl4_2014-1}
+Muddana, H.~S., Sapra, N.~V., Fenley, A.~T., and Gilson, M.~K.: The {{SAMPL4}}
+  hydration challenge: Evaluation of partial charge sets with explicit-water
+  molecular dynamics simulations.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(3): 277--287, January 2014.
+
+\bibitem{manzoni_prediction_2014}
+Manzoni, F. and S{\"o}derhjelm, P.: Prediction of hydration free energies for
+  the {{SAMPL4}} data set with the {{AMOEBA}} polarizable force field.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(3): 235--244, March 2014.
+
+\bibitem{sandberg_predicting_2014}
+Sandberg, L.: Predicting hydration free energies with chemical accuracy: The
+  {{SAMPL4}} challenge.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(3): 211--219, February 2014.
+
+\bibitem{brini_adapting_2016}
+Brini, E., Paranahewage, S.~S., Fennell, C.~J., and Dill, K.~A.: Adapting the
+  semi-explicit assembly solvation model for estimating water-cyclohexane
+  partitioning with the {{SAMPL5}} molecules.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock pp 1--11, September 2016.
+
+\bibitem{kamath_prediction_2016}
+Kamath, G., Kurnikov, I., Fain, B., Leontyev, I., Illarionov, A., Butin, O.,
+  Olevanov, M., and Pereyaslavets, L.: Prediction of cyclohexane-water
+  distribution coefficient for {{SAMPL5}} drug-like compounds with the
+  {{QMPFF3}} and {{ARROW}} polarizable force fields.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock pp 1--12, September 2016.
+
+\bibitem{diaz-rodriguez_predicting_2016}
+Diaz-Rodriguez, S., Bozada, S.~M., Phifer, J.~R., and Paluch, A.~S.: Predicting
+  cyclohexane/water distribution coefficients for the {{SAMPL5}} challenge
+  using {{MOSCED}} and the {{SMD}} solvation model.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock pp 1--11, August 2016.
+
+\bibitem{kenney_prediction_2016}
+Kenney, I.~M., Beckstein, O., and Iorga, B.~I.: Prediction of cyclohexane-water
+  distribution coefficients for the {{SAMPL5}} data set using molecular
+  dynamics simulations with the {{OPLS}}-{{AA}} force field.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock pp 1--14, August 2016.
+
+\bibitem{caldararu_binding_2016}
+Caldararu, O., Olsson, M.~A., Riplinger, C., Neese, F., and Ryde, U.: Binding
+  free energies in the {{SAMPL5}} octa-acid host\textendash{}guest challenge
+  calculated with {{DFT}}-{{D3}} and {{CCSD}}({{T}}).
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock pp 1--20, September 2016.
+
+\bibitem{genheden_all-atom/coarse-grained_2016}
+Genheden, S. and Essex, J.~W.: All-atom/coarse-grained hybrid predictions of
+  distribution coefficients in {{SAMPL5}}.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock pp 1--8, July 2016.
+
+\bibitem{chung_extended_2016}
+Chung, K.-C. and Park, H.: Extended solvent-contact model approach to blind
+  {{SAMPL5}} prediction challenge for the distribution coefficients of
+  drug-like molecules.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock pp 1--15, July 2016.
+
+\bibitem{koziara_testing_2014}
+Koziara, K.~B., Stroet, M., Malde, A.~K., and Mark, A.~E.: Testing and
+  validation of the {{Automated Topology Builder}} ({{ATB}}) version 2.0:
+  Prediction of hydration free enthalpies.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(3): 221--233, January 2014.
+
+\bibitem{yin_overview_2016}
+Yin, J., Henriksen, N.~M., Slochower, D.~R., Shirts, M.~R., Chiu, M.~W.,
+  Mobley, D.~L., and Gilson, M.~K.: Overview of the {{SAMPL5}}
+  host\textendash{}guest challenge: {{Are}} we doing better?
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock pp 1--19, September 2016.
+
+\bibitem{bannan_blind_2016}
+Bannan, C.~C., Burley, K.~H., Chiu, M., Shirts, M.~R., Gilson, M.~K., and
+  Mobley, D.~L.: Blind prediction of cyclohexane\textendash{}water distribution
+  coefficients from the {{SAMPL5}} challenge.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock pp 1--18, September 2016.
+
+\bibitem{Lee:2016:JComputAidedMolDes}
+Lee, J., Tofoleanu, F., Pickard, F.~C., K{\"o}nig, G., Huang, J.,
+  Damjanovi{\'c}, A., Baek, M., Seok, C., and Brooks, B.~R.: Absolute binding
+  free energy calculations of {{CBClip}} host\textendash{}guest systems in the
+  {{SAMPL5}} blind challenge.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock pp 1--15, September 2016.
+
+\bibitem{Jones:2016:JComputAidedMolDes}
+Jones, M.~R., Brooks, B.~R., and Wilson, A.~K.: Partition coefficients for the
+  {{SAMPL5}} challenge using transfer free energies.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock pp 1--10, September 2016.
+
+\bibitem{Pickard:2016:JComputAidedMolDes}
+Pickard, F.~C., K{\"o}nig, G., Tofoleanu, F., Lee, J., Simmonett, A.~C., Shao,
+  Y., Ponder, J.~W., and Brooks, B.~R.: Blind prediction of distribution in the
+  {{SAMPL5}} challenge with {{QM}} based protomer and {{pKa}} corrections.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock pp 1--14, September 2016.
+
+\bibitem{cao_absolute_2014}
+Cao, L. and Isaacs, L.: Absolute and relative binding affinity of
+  cucurbit[7]uril towards a series of cationic guests.
+\newblock \uline{Supramolecular Chemistry}.
+\newblock 26(3-4): 251--258, March 2014.
+
+\bibitem{muddana_prediction_2012}
+Muddana, H.~S. and Gilson, M.~K.: Prediction of {{SAMPL3}}
+  host\textendash{}guest binding affinities: Evaluating the accuracy of
+  generalized force-fields.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 26(5): 517--525, January 2012.
+
+\bibitem{gibb_binding_2013}
+Gibb, C.~L.~D. and Gibb, B.~C.: Binding of cyclic carboxylates to octa-acid
+  deep-cavity cavitand.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(4): 319--325, November 2013.
+
+\bibitem{klimovich_predicting_2010}
+Klimovich, P.~V. and Mobley, D.~L.: Predicting hydration free energies using
+  all-atom molecular dynamics simulations and multiple starting conformations.
+\newblock \uline{Journal of Computer-Aided Molecular Design}.
+\newblock 24(4): 307--316, April 2010.
+
+\bibitem{mobley_alchemical_2012}
+Mobley, D.~L., Liu, S., Cerutti, D.~S., Swope, W.~C., and Rice, J.~E.:
+  Alchemical prediction of hydration free energies for {{SAMPL}}.
+\newblock \uline{Journal of Computer-Aided Molecular Design}.
+\newblock 26(5): 551--562, PMC3583515, May 2012.
+
+\bibitem{muddana_sampl3_2012}
+Muddana, H.~S., Varnado, C.~D., Bielawski, C.~W., Urbach, A.~R., Isaacs, L.,
+  Geballe, M.~T., and Gilson, M.~K.: Blind prediction of host\textendash{}guest
+  binding affinities: A new {{SAMPL3}} challenge.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 26(5): 475--487, February 2012.
+
+\bibitem{skillman_sampl3_2012}
+Skillman, A.~G.: {{SAMPL3}}: Blinded prediction of host\textendash{}guest
+  binding affinities, hydration free energies, and trypsin inhibitors.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 26(5): 473--474, May 2012.
+
+\bibitem{Newman:2011:JComputAidedMolDes}
+Newman, J., Dolezal, O., Fazio, V., Caradoc-Davies, T., and Peat, T.~S.: The
+  {{DINGO}} dataset: A comprehensive set of data for the {{SAMPL}} challenge.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 26(5): 497--503, December 2011.
+
+\bibitem{gallicchio_virtual_2014}
+Gallicchio, E., Deng, N., He, P., Wickstrom, L., Perryman, A.~L., Santiago,
+  D.~N., Forli, S., Olson, A.~J., and Levy, R.~M.: Virtual screening of
+  integrase inhibitors by large scale binding free energy calculations: The
+  {{SAMPL4}} challenge.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(4): 475--490, February 2014.
+
+\bibitem{klamt_blind_2010}
+Klamt, A. and Diedenhofen, M.: Blind prediction test of free energies of
+  hydration with {{COSMO}}-{{RS}}.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 24(4): 357--360, April 2010.
+
+\bibitem{fennell_modeling_2011}
+Fennell, C.~J., Kehoe, C.~W., and Dill, K.~A.: Modeling aqueous solvation with
+  semi-explicit assembly.
+\newblock \uline{PNAS}.
+\newblock 108(8): 3234--3239, February 2011.
+
+\bibitem{ellingson_analysis_2010}
+Ellingson, B.~A., Skillman, A.~G., and Nicholls, A.: Analysis of {{SM8}} and
+  {{Zap TK}} calculations and their geometric sensitivity.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 24(4): 335--342, April 2010.
+
+\bibitem{surpateanu_evaluation_2011}
+Surpateanu, G. and Iorga, B.~I.: Evaluation of docking performance in a blinded
+  virtual screening of fragment-like trypsin inhibitors.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 26(5): 595--601, December 2011.
+
+\bibitem{purisima_rapid_2010}
+Purisima, E.~O., Corbeil, C.~R., and Sulea, T.: Rapid prediction of solvation
+  free energy. 3. {{Application}} to the {{SAMPL2}} challenge.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 24(4): 373--383, April 2010.
+
+\bibitem{konig_predicting_2011}
+K{\"o}nig, G. and Brooks, B.~R.: Predicting binding affinities of host-guest
+  systems in the {{SAMPL3}} blind challenge: The performance of relative free
+  energy calculations.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 26(5): 543--550, December 2011.
+
+\bibitem{kehoe_testing_2011}
+Kehoe, C.~W., Fennell, C.~J., and Dill, K.~A.: Testing the semi-explicit
+  assembly solvation model in the {{SAMPL3}} community blind test.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 26(5): 563--568, December 2011.
+
+\bibitem{kumar_computational_2012}
+Kumar, A. and Zhang, K.~Y.~J.: Computational fragment-based screening using
+  {{RosettaLigand}}: The {{SAMPL3}} challenge.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 26(5): 603--616, January 2012.
+
+\bibitem{meunier_predictions_2010}
+Meunier, A. and Truchon, J.-F.: Predictions of hydration free energies from
+  continuum solvent with solute polarizable models: The {{SAMPL2}} blind
+  challenge.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 24(4): 361--372, March 2010.
+
+\bibitem{genheden_extensive_2014}
+Genheden, S., Martinez, A.~I.~C., Criddle, M.~P., and Essex, J.~W.: Extensive
+  all-atom {{Monte Carlo}} sampling and {{QM}}/{{MM}} corrections in the
+  {{SAMPL4}} hydration free energy challenge.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(3): 187--200, February 2014.
+
+\bibitem{beckstein_prediction_2014}
+Beckstein, O., Fourrier, A., and Iorga, B.~I.: Prediction of hydration free
+  energies for the {{SAMPL4}} diverse set of compounds using molecular dynamics
+  simulations with the {{OPLS}}-{{AA}} force field.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(3): 265--276, February 2014.
+
+\bibitem{coleman_sampl4_2014}
+Coleman, R.~G., Sterling, T., and Weiss, D.~R.: {{SAMPL4}} \& {{DOCK3}}.7:
+  Lessons for automated docking procedures.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(3): 201--209, February 2014.
+
+\bibitem{hogues_exhaustive_2014}
+Hogues, H., Sulea, T., and Purisima, E.~O.: Exhaustive docking and solvated
+  interaction energy scoring: Lessons learned from the {{SAMPL4}} challenge.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(4): 417--427, January 2014.
+
+\bibitem{reinisch_prediction_2012}
+Reinisch, J., Klamt, A., and Diedenhofen, M.: Prediction of free energies of
+  hydration with {{COSMO}}-{{RS}} on the {{SAMPL3}} data set.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 26(5): 669--673, May 2012.
+
+\bibitem{kulp_fragment-based_2012}
+Kulp, J.~L., Blumenthal, S.~N., Wang, Q., Bryan, R.~L., and Guarnieri, F.: A
+  fragment-based approach to the {{SAMPL3 Challenge}}.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 26(5): 583--594, January 2012.
+
+\bibitem{klamt_conclusions_2010}
+Klamt, A. and Diedenhofen, M.: Some conclusions regarding the predictions of
+  tautomeric equilibria in solution based on the {{SAMPL2}} challenge.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 24(6-7): 621--625, April 2010.
+
+\bibitem{fu_fast_2014}
+Fu, J., Liu, Y., and Wu, J.: Fast prediction of hydration free energies for
+  {{SAMPL4}} blind test from a classical density functional theory.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(3): 299--304, March 2014.
+
+\bibitem{hamaguchi_force-field_2012}
+Hamaguchi, N., Fusti-Molnar, L., and Wlodek, S.: Force-field and
+  quantum-mechanical binding study of selected {{SAMPL3}} host-guest complexes.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 26(5): 577--582, February 2012.
+
+\bibitem{colas_virtual_2014}
+Colas, C. and Iorga, B.~I.: Virtual screening of the {{SAMPL4}} blinded {{HIV}}
+  integrase inhibitors dataset.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(4): 455--462, January 2014.
+
+\bibitem{ellingson_efficient_2014}
+Ellingson, B.~A., Geballe, M.~T., Wlodek, S., Bayly, C.~I., Skillman, A.~G.,
+  and Nicholls, A.: Efficient calculation of {{SAMPL4}} hydration free energies
+  using {{OMEGA}}, {{SZYBKI}}, {{QUACPAC}}, and {{Zap TK}}.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(3): 289--298, March 2014.
+
+\bibitem{sulea_predicting_2011}
+Sulea, T. and Purisima, E.~O.: Predicting hydration free energies of
+  polychlorinated aromatic compounds from the {{SAMPL}}-3 data set with
+  {{FiSH}} and {{LIE}} models.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 26(5): 661--667, December 2011.
+
+\bibitem{geballe_sampl2_2010}
+Geballe, M.~T., Skillman, A.~G., Nicholls, A., Guthrie, J.~P., and Taylor,
+  P.~J.: The {{SAMPL2}} blind prediction challenge: Introduction and overview.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 24(4): 259--279, May 2010.
+
+\bibitem{ribeiro_prediction_2010}
+Ribeiro, R.~F., Marenich, A.~V., Cramer, C.~J., and Truhlar, D.~G.: Prediction
+  of {{SAMPL2}} aqueous solvation free energies and tautomeric ratios using the
+  {{SM8}}, {{SM8AD}}, and {{SMD}} solvation models.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 24(4): 317--333, April 2010.
+
+\bibitem{skillman_sampl2_2010}
+Skillman, A.~G., Geballe, M.~T., and Nicholls, A.: {{SAMPL2}} challenge:
+  Prediction of solvation energies and tautomer ratios.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 24(4): 257--258, April 2010.
+
+\bibitem{gallicchio_prediction_2012}
+Gallicchio, E. and Levy, R.~M.: Prediction of {{SAMPL3}} host-guest affinities
+  with the binding energy distribution analysis method ({{BEDAM}}).
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 26(5): 505--516, February 2012.
+
+\bibitem{mikulskis_binding_2011}
+Mikulskis, P., Genheden, S., Rydberg, P., Sandberg, L., Olsen, L., and Ryde,
+  U.: Binding affinities in the {{SAMPL3}} trypsin and host\textendash{}guest
+  blind tests estimated with the {{MM}}/{{PBSA}} and {{LIE}} methods.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 26(5): 527--541, December 2011.
+
+\bibitem{geballe_sampl3_2012}
+Geballe, M.~T. and Guthrie, J.~P.: The {{SAMPL3}} blind prediction challenge:
+  Transfer energy overview.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 26(5): 489--496, April 2012.
+
+\bibitem{guthrie_sampl4_2014}
+Guthrie, J.~P.: {{SAMPL4}}, a blind challenge for computational solvation free
+  energies: The compounds considered.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 28(3): 151--168, April 2014.
+
+\bibitem{nicholls_sampl2_2010}
+Nicholls, A., Wlodek, S., and Grant, J.~A.: {{SAMPL2}} and continuum modeling.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 24(4): 293--306, April 2010.
+
+\bibitem{soteras_performance_2010}
+Soteras, I., Orozco, M., and Luque, F.~J.: Performance of the {{IEF}}-{{MST}}
+  solvation continuum model in the {{SAMPL2}} blind test prediction of
+  hydration and tautomerization free energies.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 24(4): 281--291, March 2010.
+
+\bibitem{lawrenz_thermodynamic_2012}
+Lawrenz, M., Wereszczynski, J., Ortiz-S{\'a}nchez, J.~M., Nichols, S.~E., and
+  McCammon, J.~A.: Thermodynamic integration to predict host-guest binding
+  affinities.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 26(5): 569--576, February 2012.
+
+\bibitem{sulea_exhaustive_2011}
+Sulea, T., Hogues, H., and Purisima, E.~O.: Exhaustive search and solvated
+  interaction energy ({{SIE}}) for virtual screening and affinity prediction.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 26(5): 617--633, December 2011.
+
+\bibitem{beckstein_prediction_2011}
+Beckstein, O. and Iorga, B.~I.: Prediction of hydration free energies for
+  aliphatic and aromatic chloro derivatives using molecular dynamics
+  simulations with the {{OPLS}}-{{AA}} force field.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 26(5): 635--645, December 2011.
+
+\bibitem{benson_prediction_2012}
+Benson, M.~L., Faver, J.~C., Ucisik, M.~N., Dashti, D.~S., Zheng, Z., and Merz,
+  K.~M.: Prediction of trypsin/molecular fragment binding affinities by free
+  energy decomposition and empirical scores.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 26(5): 647--659, April 2012.
+
+\bibitem{kast_prediction_2010}
+Kast, S.~M., Heil, J., G{\"u}ssregen, S., and Schmidt, K.~F.: Prediction of
+  tautomer ratios by embedded-cluster integral equation theory.
+\newblock \uline{J Comput Aided Mol Des}.
+\newblock 24(4): 343--353, March 2010.
+
+\bibitem{mobley_predictions_2009}
+Mobley, D.~L., Bayly, C.~I., Cooper, M.~D., and Dill, K.~A.: Predictions of
+  {{Hydration Free Energies}} from {{All}}-{{Atom Molecular Dynamics
+  Simulations}}.
+\newblock \uline{J Phys Chem B}.
+\newblock 113: 4533--4537, January 2009.
+
+\bibitem{newman_practical_2009}
+Newman, J., Fazio, V., Caradoc-Davies, T., Branson, K., and Peat, T.~S.:
+  Practical {{Aspects}} of the {{SAMPL Challenge}}: {{Providing}} an
+  {{Extensive Experimental Data Set}} for the {{Modeling Community}}.
+\newblock \uline{Journal of Biomolecular Screening}.
+\newblock 14(10): 1245, January 2009.
+
+\bibitem{klamt_prediction_2009}
+Klamt, A., Eckert, F., and Diedenhofen, M.: Prediction of the {{Free Energy}}
+  of {{Hydration}} of a {{Challenging Set}} of {{Pesticide}}-{{Like
+  Compounds}}\textdagger{}.
+\newblock \uline{J Phys Chem B}.
+\newblock January 2009.
+
+\bibitem{guthrie_blind_2009}
+Guthrie, J.~P.: A {{Blind Challenge}} for {{Computational Solvation Free
+  Energies}}: {{Introduction}} and {{Overview}}.
+\newblock \uline{J Phys Chem B}.
+\newblock 113(14): 4501--4507, January 2009.
+
+\bibitem{marenich_performance_2009}
+Marenich, A.~V., Cramer, C.~J., and Truhlar, D.~G.: Performance of {{SM6}},
+  {{SM8}}, and {{SMD}} on the {{SAMPL1 Test Set}} for the {{Prediction}} of
+  {{Small}}-{{Molecule Solvation Free Energies}}.
+\newblock \uline{J. Phys. Chem. B}.
+\newblock 113(14): 4538--4543, April 2009.
+
+\bibitem{sulea_prediction_2009}
+Sulea, T., Wanapun, D., Dennis, S., and Purisima, E.~O.: Prediction of
+  {{SAMPL}}-1 {{Hydration Free Energies Using}} a {{Continuum
+  Electrostatics}}-{{Dispersion Model}}.
+\newblock \uline{J. Phys. Chem. B}.
+\newblock 113(14): 4511--4520, April 2009.
+
+\bibitem{nicholls_samp1_2009}
+Nicholls, A., Wlodek, S., and Grant, J.~A.: The {{SAMP1 Solvation Challenge}}:
+  {{Further Lessons Regarding}} the {{Pitfalls}} of {{Parametrization}}.
+\newblock \uline{J. Phys. Chem. B}.
+\newblock 113(14): 4521--4532, April 2009.
+
+\bibitem{nicholls_predicting_2008}
+Nicholls, A., Mobley, D.~L., Guthrie, J.~P., Chodera, J.~D., Bayly, C.~I.,
+  Cooper, M.~D., and Pande, V.~S.: Predicting {{Small}}-{{Molecule Solvation
+  Free Energies}}: {{An Informal Blind Test}} for {{Computational Chemistry}}.
+\newblock \uline{J. Med. Chem.}
+\newblock 51(4): 769--779, February 2008.
+
+\bibitem{chamberlin_performance_2008}
+Chamberlin, A.~C., Cramer, C.~J., and Truhlar, D.~G.: Performance of {{SM8}} on
+  a {{Test To Predict Small}}-{{Molecule Solvation Free Energies}}.
+\newblock \uline{J. Phys. Chem. B}.
+\newblock 112(29): 8651--8655, July 2008.
+
+\end{thebibliography}
