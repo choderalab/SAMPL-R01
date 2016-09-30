@@ -299,12 +299,13 @@ These properties allow us to directly probe force field accuracy and chemical ef
 %Compare log D accuracy vs hydration accuracy, highlight issues and explain relevance to drug discovery; note lessons learned in SAMPL5
      %Maybe use a figure on log D accuracy?
 We will generate new solution-phase physical property measurements for drug-like molecules to motivate improvements in force fields and handling of protonation states and tautomers.
-This builds on our work on water-cyclohexane distribution coefficients for SAMPL5 (in partnership with Genentech), which revealed major problems with handling of protonation states and tautomers~\cite{bannan_blind_2016}  as well as serious forcefield limitations~\cite{paranahewage_predicting_2016}.
+This builds on our work on water-cyclohexane distribution coefficients for SAMPL5 (in partnership with Genentech), which revealed major problems with handling of protonation states and tautomers~\cite{bannan_blind_2016}  as well as serious forcefield limitations~\cite{paranahewage_predicting_2016} (Figure~\ref{figure:sampl5_logD}).
 Distribution coefficients give the ratio of concentrations of a solute between two different phases at equilibrium, and thus relate to transfer free energies from aqueous high-dielectric to low-dielectric environments.
 Thus, they capture many of the characteristics of transfer of drugs from water into binding sites but absent challenges with receptor conformational sampling and specific ligand-receptor interactions.
 In SAMPL5, distribution coefficients were challenging enough that many methods performed poorly, with even the best methods having accuracies less than would be expected based on hydration free energies in water~\cite{bannan_blind_2016}, yet failures were informative and the major sources of error were issues which will also plague prediction of ligand-receptor interactions.
 In some respects, distribution coefficients posed the ideal SAMPL challenge, hitting the sweet spot in terms of difficulty---difficult enough that clear failures were frequent, with ample room for improvement, but not so difficult that the reasons for failure were unclear in general. 
 Still, many models consistently disagreed with experiment for some compounds~\cite{paranahewage_predicting_2016, klamt_prediction_2016, bannan_blind_2016, rustenburg_measuring_2016}, revealing the impact that targeted follow-up experiments (such as those we will conduct here) could have on improving models.
+
 
 %Talk about limitations of approach -- lack of ability to do follow up expeirments, get the dynamic range we wanted, test things again after SAMPL? 
 % Sustained funding will allow us to do that. 
@@ -317,6 +318,22 @@ Additionally, we will be able to continue experimental work until the necessary 
 This will improve our ability to learn from the data -- for example, the lack of dynamic range for SAMPL5 meant that, when calculated values often spanned a larger dynamic range than the experimental values, it was unclear if this was an artifact of the data set itself, experimental limitations, or force field problems~\cite{rustenburg_measuring_2016, bannan_blind_2016, paranahewage_predicting_2016, klamt_prediction_2016}. 
 With funding to extend the experimental set via follow-up experiments, we will be able to resolve similar issues, providing further impetus to improve models.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%SAMPL HG FIGURE
+\begin{wrapfigure}{l}[0pt]{9cm}
+%\vspace{-0.25in}
+\begin{centering}
+\includegraphics[width=\textwidth]{figures/sampl5_logD_v1.pdf}
+
+\end{centering}
+\footnotesize
+\caption{\label{figure:sampl5_logD}  
+\textbf{Lessons learned from SAMPL5 log D predictions.} 
+Predictions of log D values for SAMPL5 provided a number of key lessons. (A) Methods which treated multiple protonation and tautomeric states in their predictions performed dramatically better than those which did not; here, red dots move to x symbols when these effects are treated, improving accuracy in every case~\cite{Pickard:2016:JComputAidedMolDes}. (B) Re-parameterization of a force field to more accurately reproduce pure solvent dielectric constants resulted in dramatically better predictions (top) than the original force field (bottom)~\cite{paranahewage_predicting_2016}. 
+}
+\end{wrapfigure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 Below, we summarize plans for data collection for the SAMPL6-10 challenges of Aim 4 (Figure~\ref{figure:timeline}).
 %, though we will adapt to new opportunities as they arise and respond to persistent difficulties by ensuring the challenge is repeated with new data until clear improvement is seen.
 %I think reviewers normally assume adaptation. Let's cut that for space.
@@ -324,23 +341,23 @@ These specific data sets were selected based on a desire to help the field resol
 Data sets will typically consist of at least 96 compounds for good statistics, though when possible, a much larger amount of data will be collected.
 
 %Explain what science -- log D/logP, pKa primarily but mention possible other areas of interest
-{\bf SAMPL6: Cyclohexane/water and octanol/water distribution coefficients.}
+\textbf{SAMPL6: Cyclohexane/water and octanol/water distribution coefficients.}
 Building on the success of distribution coefficient measurements in SAMPL5 and their surprising ability to motivate rapid advances in physical modeling methodologies~\cite{bannan_blind_2016}, we will measure cyclohexane-water distribution coefficients at pH 7.4 for a new batch of commercially-available drug- and fragment-like molecules.
 %{\color{red}[JDC: Maybe the set can be broken into classes of varying chemical complexities? In general, I think clever experimental design ideas---indications we have really thought through how to maximize value---will be rewarded by the reviewers.]}
 %DLM: Need to revisit this comment.
 Given the routine nature of octanol-water distribution coefficient measurements and indications that their prediction may be computationally tractable~\cite{Bhatnagar:2013:PhysicalChemistryChemicalPhysics, bannan_calculating_2016} despite the heterogeneous structure of the wet octanol phase~\cite{Kollman:1996:AccountsofChemicalResearch}, we will also measure octanol-water distribution coefficients for the same compounds.
 Because pKa prediction was difficult but critical for SAMPL5, we will focus SAMPL6 on forcefields and tautomers by measuring pKa values, revisiting pKa prediction in SAMPL7 and 8.
 
-{\bf SAMPL7: pKa measurements for drug-like molecules.} 
+\textbf{SAMPL7: pKa measurements for drug-like molecules.} 
 While much less complex than protein-ligand affinities, distribution coefficient measurements still conflate the challenging issues of protonation state and tautomer prediction, as well as transfer into different environments which may contain small but important quantities of cosolvents. 
 Thus, we will separate these issues and improve our handling of them one at a time. 
 For SAMPL7, then, we will measure pKa values for an extensive set of drug-like molecules in water which will serve as the focus of the challenge, paving the way for SAMPL8.
 
-{\bf SAMPL8: pKa measurements and distribution coefficients.}
+\textbf{SAMPL8: pKa measurements and distribution coefficients.}
 In the next challenge, we will re-combine the pKa and transfer issues, measuring distribution coefficients \emph{and} pKa values for the same set of compounds, with participants predicting (a) distribution; (b) pKa; and (c) partition. 
 Unlike SAMPL6, pKa values will not be provided.
 
-{\bf SAMPL9-10.}
+\textbf{SAMPL9-10.}
 We will focus on solubility prediction in SAMPL9, and membrane permeability in SAMPL10, because of new computational developments.
 With solubility predictions now becoming tractable~\cite{Schnieders:2012:J.Chem.TheoryComput., park_absolute_2014, liu_using_2016} (with Schr\"{o}dinger also working on amorphous solubility prediction), solubility measurements will be a valuable test for SAMPL9, combining the solvation aspects of SAMPL1-8 with a new solid phase component.
 New computational techniques are targeting membrane permeability~\cite{lee_permeability_2016, comer_permeability_2014}, and this is experimentally accessible (see support letters from Pfizer and Merck), leading to our interest in permeability for SAMPL10.
