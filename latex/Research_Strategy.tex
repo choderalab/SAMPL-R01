@@ -45,9 +45,13 @@
 \usepackage[abs]{overpic}
 \usepackage{wrapfig}
 
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=black, citecolor=black, linkcolor=black}
+
 \usepackage[numbers,sort&compress]{natbib} %comment on first run?
 
-\usepackage[resetlabels]{multibib}
+\usepackage{multibib}
 %\newcites{full,sampl}{A,B}
 \newcites{sampl}{Full List of SAMPL References}
 %\newbibliography{full}
@@ -56,8 +60,6 @@
 %\usepackage{cite}
 %\setlength{\bibsep}{0.00in}
 
-\usepackage{hyperref}
-\hypersetup{colorlinks=true, urlcolor=black, citecolor=black, linkcolor=black}
 
 \newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{doi:#1}}
 
@@ -188,7 +190,8 @@ The PI of this proposal (Mobley) was a primary organizer of SAMPL4/5 (2014--2016
 %SAMPL has always involved a component focused on calculation of solvation properties such as hydration free energies, but also introduced host-guest systems as model binding systems for SAMPL3--5 (2012--2016), supplementing protein-ligand challenges (on trypsin and HIV integrase) which appeared in SAMPL3-4 (2012--2014). 
 Much as unit testing is an indispensible tool for discovering where bugs in a program are hiding when complex integration tests fail, exercises like SAMPL are valuable in pinpointing and correcting modeling errors when the overall performance fails to live up to expectations for complex pharmacological targets.
 To accomplish this, SAMPL has historically focused on both simple challenges that attempt to isolate likely sources of modeling errors, such as physical properties of small molecules (hydration free energies, aqueous tautomer ratios, partition or distribution coefficients between aqueous and nonpolar phases) as well as small molecule binding to targets of reduced complexity (such as host-guest binding, trypsin-fragment binding, and small molecule screens against HIV integrase).
-{\bf SAMPL has already been a tremendous resource for the community, resulting in roughly 100 publications which are typically cited 5--50 times or more each}~\citesampl{monroe_converging_2014,muddana_blind_2014,gallicchio_bedam_2015-1,mikulskis_free-energy_2014,hsiao_prediction_2014,bhakat_resolving_2016,pal_combined_2016,yin_sampl5_2016,bosisio_blinded_2016,tofoleanu_absolute_2016,mobley_blind_2014-1,muddana_sampl4_2014,sullivan_binding_2016,deng_distinguishing_2015,li_testing_2014,paranahewage_predicting_2016,klamt_prediction_2016,tielker_sampl5_2016,konig_calculating_2016,luchko_sampl5:_2016,santos-martins_calculation_2016,perryman_virtual_2014,konig_predicting_2014,voet_combining_2014,park_extended_2014,rustenburg_measuring_2016,reinisch_prediction_2014,muddana_sampl4_2014-1,manzoni_prediction_2014,sandberg_predicting_2014,brini_adapting_2016,kamath_prediction_2016,diaz-rodriguez_predicting_2016,kenney_prediction_2016,caldararu_binding_2016,genheden_all-atom/coarse-grained_2016,chung_extended_2016,koziara_testing_2014,yin_overview_2016,bannan_blind_2016,Lee:2016:JComputAidedMolDes,Jones:2016:JComputAidedMolDes,Pickard:2016:JComputAidedMolDes, cao_absolute_2014,muddana_prediction_2012,gibb_binding_2013,klimovich_predicting_2010,mobley_alchemical_2012,muddana_sampl3_2012,skillman_sampl3_2012,Newman:2011:JComputAidedMolDes,gallicchio_virtual_2014,klamt_blind_2010,fennell_modeling_2011,ellingson_analysis_2010,surpateanu_evaluation_2011,purisima_rapid_2010,konig_predicting_2011,kehoe_testing_2011,kumar_computational_2012,meunier_predictions_2010,genheden_extensive_2014,beckstein_prediction_2014,coleman_sampl4_2014,hogues_exhaustive_2014,reinisch_prediction_2012,kulp_fragment-based_2012,klamt_conclusions_2010,fu_fast_2014,hamaguchi_force-field_2012,colas_virtual_2014,ellingson_efficient_2014,sulea_predicting_2011,geballe_sampl2_2010,ribeiro_prediction_2010,skillman_sampl2_2010,gallicchio_prediction_2012,mikulskis_binding_2011,geballe_sampl3_2012,guthrie_sampl4_2014,nicholls_sampl2_2010,soteras_performance_2010,lawrenz_thermodynamic_2012,sulea_exhaustive_2011,beckstein_prediction_2011,benson_prediction_2012,kast_prediction_2010, mobley_predictions_2009,newman_practical_2009,klamt_prediction_2009,guthrie_blind_2009,marenich_performance_2009,sulea_prediction_2009,nicholls_samp1_2009,nicholls_predicting_2008,chamberlin_performance_2008}.
+{\bf SAMPL has already been a tremendous resource for the community, resulting in roughly 100 publications which are typically cited 5--50 times or more each}~%\citesampl{monroe_converging_2014,muddana_blind_2014,gallicchio_bedam_2015-1,mikulskis_free-energy_2014,hsiao_prediction_2014,bhakat_resolving_2016,pal_combined_2016,yin_sampl5_2016,bosisio_blinded_2016,tofoleanu_absolute_2016,mobley_blind_2014-1,muddana_sampl4_2014,sullivan_binding_2016,deng_distinguishing_2015,li_testing_2014,paranahewage_predicting_2016,klamt_prediction_2016,tielker_sampl5_2016,konig_calculating_2016,luchko_sampl5:_2016,santos-martins_calculation_2016,perryman_virtual_2014,konig_predicting_2014,voet_combining_2014,park_extended_2014,rustenburg_measuring_2016,reinisch_prediction_2014,muddana_sampl4_2014-1,manzoni_prediction_2014,sandberg_predicting_2014,brini_adapting_2016,kamath_prediction_2016,diaz-rodriguez_predicting_2016,kenney_prediction_2016,caldararu_binding_2016,genheden_all-atom/coarse-grained_2016,chung_extended_2016,koziara_testing_2014,yin_overview_2016,bannan_blind_2016,Lee:2016:JComputAidedMolDes,Jones:2016:JComputAidedMolDes,Pickard:2016:JComputAidedMolDes, cao_absolute_2014,muddana_prediction_2012,gibb_binding_2013,klimovich_predicting_2010,mobley_alchemical_2012,muddana_sampl3_2012,skillman_sampl3_2012,Newman:2011:JComputAidedMolDes,gallicchio_virtual_2014,klamt_blind_2010,fennell_modeling_2011,ellingson_analysis_2010,surpateanu_evaluation_2011,purisima_rapid_2010,konig_predicting_2011,kehoe_testing_2011,kumar_computational_2012,meunier_predictions_2010,genheden_extensive_2014,beckstein_prediction_2014,coleman_sampl4_2014,hogues_exhaustive_2014,reinisch_prediction_2012,kulp_fragment-based_2012,klamt_conclusions_2010,fu_fast_2014,hamaguchi_force-field_2012,colas_virtual_2014,ellingson_efficient_2014,sulea_predicting_2011,geballe_sampl2_2010,ribeiro_prediction_2010,skillman_sampl2_2010,gallicchio_prediction_2012,mikulskis_binding_2011,geballe_sampl3_2012,guthrie_sampl4_2014,nicholls_sampl2_2010,soteras_performance_2010,lawrenz_thermodynamic_2012,sulea_exhaustive_2011,beckstein_prediction_2011,benson_prediction_2012,kast_prediction_2010, mobley_predictions_2009,newman_practical_2009,klamt_prediction_2009,guthrie_blind_2009,marenich_performance_2009,sulea_prediction_2009,nicholls_samp1_2009,nicholls_predicting_2008,chamberlin_performance_2008}.
+(see list of SAMPL references, below).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -207,7 +210,7 @@ Historical participation in SAMPL host-guest + solvation/distribution challenges
 \end{wrapfigure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Here, we \textbf{design a new series of SAMPL challenges specifically to maximize learning value to the community}.
+Here, we \textbf{design a new series of SAMPL challenges specifically to guide the improvement of models}.
 Until now, this has been impossible, because SAMPL has been entirely unfunded; its very existence has required ``donation'' of data and time, giving us no ability to gather datasets tailored to our purpose. 
 Our proposed new challenges bridge the gap between calculations of simple physical properties that isolate forcefield inaccuracies from sampling challenges, like hydration---which can already be calculated fairly accurately~\cite{mobley_blind_2014-1}---and the D3R Grand Challenges on protein-ligand binding, which are a major source of consternation for the community so far~\cite{ignjatovic_binding-affinity_2016, deng_large_2016, sunseri_d3r_2016, gathiaka_d3r_2016}.
 Unless this gap is bridged, there is the very real possibility that modeling may simply continue to fall far short of expectations in pharmaceutical challenges like D3R for reasons which are unclear.
@@ -750,8 +753,8 @@ The proposed series of carefully tailored challenges will focus our community on
 %\bibliography{full}{sampl-r01}{BIBLIOGRAPHY AND REFERENCES CITED}
 %\bibliography{sampl}{sampl-r01}{REFERENCES FROM PRIOR SAMPL CHALLENGES}
 
-\bibliographysampl{sampl}
-\eject
+\bibliographysampl{sampl-r01}
+%\eject
 \bibliography{sampl-r01}
 
 \end{document}
