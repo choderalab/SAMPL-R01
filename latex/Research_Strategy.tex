@@ -45,6 +45,10 @@
 \usepackage[abs]{overpic}
 \usepackage{wrapfig}
 
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, urlcolor=black, citecolor=black, linkcolor=black}
+
 \usepackage[numbers,sort&compress]{natbib} %comment on first run?
 
 \usepackage{multibib}
@@ -56,8 +60,6 @@
 %\usepackage{cite}
 %\setlength{\bibsep}{0.00in}
 
-\usepackage{hyperref}
-\hypersetup{colorlinks=true, urlcolor=black, citecolor=black, linkcolor=black}
 
 \newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{doi:#1}}
 
@@ -112,7 +114,7 @@
 %======================================
 % CITE SAMPL REFS FIRST FOR BETTER COMPRESSION
 \phantom{
-\cite{monroe_converging_2014,muddana_blind_2014,gallicchio_bedam_2015-1,mikulskis_free-energy_2014,hsiao_prediction_2014,bhakat_resolving_2016,pal_combined_2016,yin_sampl5_2016,bosisio_blinded_2016,tofoleanu_absolute_2016,mobley_blind_2014-1,muddana_sampl4_2014,sullivan_binding_2016,deng_distinguishing_2015,li_testing_2014,paranahewage_predicting_2016,klamt_prediction_2016,tielker_sampl5_2016,konig_calculating_2016,luchko_sampl5:_2016,santos-martins_calculation_2016,perryman_virtual_2014,konig_predicting_2014,voet_combining_2014,park_extended_2014,rustenburg_measuring_2016,reinisch_prediction_2014,muddana_sampl4_2014-1,manzoni_prediction_2014,sandberg_predicting_2014,brini_adapting_2016,kamath_prediction_2016,diaz-rodriguez_predicting_2016,kenney_prediction_2016,caldararu_binding_2016,genheden_all-atom/coarse-grained_2016,chung_extended_2016,koziara_testing_2014,yin_overview_2016,bannan_blind_2016,Lee:2016:JComputAidedMolDes,Jones:2016:JComputAidedMolDes,Pickard:2016:JComputAidedMolDes, cao_absolute_2014,muddana_prediction_2012,gibb_binding_2013,klimovich_predicting_2010,mobley_alchemical_2012,muddana_sampl3_2012,skillman_sampl3_2012,Newman:2011:JComputAidedMolDes,gallicchio_virtual_2014,klamt_blind_2010,fennell_modeling_2011,ellingson_analysis_2010,surpateanu_evaluation_2011,purisima_rapid_2010,konig_predicting_2011,kehoe_testing_2011,kumar_computational_2012,meunier_predictions_2010,genheden_extensive_2014,beckstein_prediction_2014,coleman_sampl4_2014,hogues_exhaustive_2014,reinisch_prediction_2012,kulp_fragment-based_2012,klamt_conclusions_2010,fu_fast_2014,hamaguchi_force-field_2012,colas_virtual_2014,ellingson_efficient_2014,sulea_predicting_2011,geballe_sampl2_2010,ribeiro_prediction_2010,skillman_sampl2_2010,gallicchio_prediction_2012,mikulskis_binding_2011,geballe_sampl3_2012,guthrie_sampl4_2014,nicholls_sampl2_2010,soteras_performance_2010,lawrenz_thermodynamic_2012,sulea_exhaustive_2011,beckstein_prediction_2011,benson_prediction_2012,kast_prediction_2010, mobley_predictions_2009,newman_practical_2009,klamt_prediction_2009,guthrie_blind_2009,marenich_performance_2009,sulea_prediction_2009,nicholls_samp1_2009,nicholls_predicting_2008,chamberlin_performance_2008}
+\citesampl{monroe_converging_2014_sampl,muddana_blind_2014_sampl,gallicchio_bedam_2015-1_sampl,mikulskis_free-energy_2014_sampl,hsiao_prediction_2014_sampl,bhakat_resolving_2016_sampl,pal_combined_2016_sampl,yin_sampl5_2016_sampl,bosisio_blinded_2016_sampl,tofoleanu_absolute_2016_sampl,mobley_blind_2014-1_sampl,muddana_sampl4_2014_sampl,sullivan_binding_2016_sampl,deng_distinguishing_2015_sampl,li_testing_2014_sampl,paranahewage_predicting_2016_sampl,klamt_prediction_2016_sampl,tielker_sampl5_2016_sampl,konig_calculating_2016_sampl,luchko_sampl5:_2016_sampl,santos-martins_calculation_2016_sampl,perryman_virtual_2014_sampl,konig_predicting_2014_sampl,voet_combining_2014_sampl,park_extended_2014_sampl,rustenburg_measuring_2016_sampl,reinisch_prediction_2014_sampl,muddana_sampl4_2014-1_sampl,manzoni_prediction_2014_sampl,sandberg_predicting_2014_sampl,brini_adapting_2016_sampl,kamath_prediction_2016_sampl,diaz-rodriguez_predicting_2016_sampl,kenney_prediction_2016_sampl,caldararu_binding_2016_sampl,genheden_all-atom/coarse-grained_2016_sampl,chung_extended_2016_sampl,koziara_testing_2014_sampl,yin_overview_2016_sampl,bannan_blind_2016_sampl,Lee:2016:JComputAidedMolDes_sampl,Jones:2016:JComputAidedMolDes_sampl,Pickard:2016:JComputAidedMolDes_sampl, cao_absolute_2014_sampl,muddana_prediction_2012_sampl,gibb_binding_2013_sampl,klimovich_predicting_2010_sampl,mobley_alchemical_2012_sampl,muddana_sampl3_2012_sampl,skillman_sampl3_2012_sampl,Newman:2011:JComputAidedMolDes_sampl,gallicchio_virtual_2014_sampl,klamt_blind_2010_sampl,fennell_modeling_2011_sampl,ellingson_analysis_2010_sampl,surpateanu_evaluation_2011_sampl,purisima_rapid_2010_sampl,konig_predicting_2011_sampl,kehoe_testing_2011_sampl,kumar_computational_2012_sampl,meunier_predictions_2010_sampl,genheden_extensive_2014_sampl,beckstein_prediction_2014_sampl,coleman_sampl4_2014_sampl,hogues_exhaustive_2014_sampl,reinisch_prediction_2012_sampl,kulp_fragment-based_2012_sampl,klamt_conclusions_2010_sampl,fu_fast_2014_sampl,hamaguchi_force-field_2012_sampl,colas_virtual_2014_sampl,ellingson_efficient_2014_sampl,sulea_predicting_2011_sampl,geballe_sampl2_2010_sampl,ribeiro_prediction_2010_sampl,skillman_sampl2_2010_sampl,gallicchio_prediction_2012_sampl,mikulskis_binding_2011_sampl,geballe_sampl3_2012_sampl,guthrie_sampl4_2014_sampl,nicholls_sampl2_2010_sampl,soteras_performance_2010_sampl,lawrenz_thermodynamic_2012_sampl,sulea_exhaustive_2011_sampl,beckstein_prediction_2011_sampl,benson_prediction_2012_sampl,kast_prediction_2010_sampl, mobley_predictions_2009_sampl,newman_practical_2009_sampl,klamt_prediction_2009_sampl,guthrie_blind_2009_sampl,marenich_performance_2009_sampl,sulea_prediction_2009_sampl,nicholls_samp1_2009_sampl,nicholls_predicting_2008_sampl,chamberlin_performance_2008_sampl}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -187,10 +189,27 @@ Governance transitioned to an unfunded academic collaboration during SAMPL3 in 2
 The PI of this proposal (Mobley) was a primary organizer of SAMPL4/5 (2014--2016).
 %SAMPL has always involved a component focused on calculation of solvation properties such as hydration free energies, but also introduced host-guest systems as model binding systems for SAMPL3--5 (2012--2016), supplementing protein-ligand challenges (on trypsin and HIV integrase) which appeared in SAMPL3-4 (2012--2014). 
 Much as unit testing is an indispensible tool for discovering where bugs in a program are hiding when complex integration tests fail, exercises like SAMPL are valuable in pinpointing and correcting modeling errors when the overall performance fails to live up to expectations for complex pharmacological targets.
-To accomplish this, SAMPL has historically focused on both simple challenges that attempt to isolate likely sources of modeling errors, such as physical properties of small molecules (hydration free energies, aqueous tautomer ratios, partition or distribution coefficients between aqueous and nonpolar phases) as well as small molecule binding to targets of reduced complexity (such as host-guest binding, trypsin-fragment binding, and small molecule screens against HIV integrase).
-{\bf SAMPL has already been a tremendous resource for the community, resulting in roughly 100 publications which are typically cited 5--50 times or more each}~\citesampl{monroe_converging_2014,muddana_blind_2014,gallicchio_bedam_2015-1,mikulskis_free-energy_2014,hsiao_prediction_2014,bhakat_resolving_2016,pal_combined_2016,yin_sampl5_2016,bosisio_blinded_2016,tofoleanu_absolute_2016,mobley_blind_2014-1,muddana_sampl4_2014,sullivan_binding_2016,deng_distinguishing_2015,li_testing_2014,paranahewage_predicting_2016,klamt_prediction_2016,tielker_sampl5_2016,konig_calculating_2016,luchko_sampl5:_2016,santos-martins_calculation_2016,perryman_virtual_2014,konig_predicting_2014,voet_combining_2014,park_extended_2014,rustenburg_measuring_2016,reinisch_prediction_2014,muddana_sampl4_2014-1,manzoni_prediction_2014,sandberg_predicting_2014,brini_adapting_2016,kamath_prediction_2016,diaz-rodriguez_predicting_2016,kenney_prediction_2016,caldararu_binding_2016,genheden_all-atom/coarse-grained_2016,chung_extended_2016,koziara_testing_2014,yin_overview_2016,bannan_blind_2016,Lee:2016:JComputAidedMolDes,Jones:2016:JComputAidedMolDes,Pickard:2016:JComputAidedMolDes, cao_absolute_2014,muddana_prediction_2012,gibb_binding_2013,klimovich_predicting_2010,mobley_alchemical_2012,muddana_sampl3_2012,skillman_sampl3_2012,Newman:2011:JComputAidedMolDes,gallicchio_virtual_2014,klamt_blind_2010,fennell_modeling_2011,ellingson_analysis_2010,surpateanu_evaluation_2011,purisima_rapid_2010,konig_predicting_2011,kehoe_testing_2011,kumar_computational_2012,meunier_predictions_2010,genheden_extensive_2014,beckstein_prediction_2014,coleman_sampl4_2014,hogues_exhaustive_2014,reinisch_prediction_2012,kulp_fragment-based_2012,klamt_conclusions_2010,fu_fast_2014,hamaguchi_force-field_2012,colas_virtual_2014,ellingson_efficient_2014,sulea_predicting_2011,geballe_sampl2_2010,ribeiro_prediction_2010,skillman_sampl2_2010,gallicchio_prediction_2012,mikulskis_binding_2011,geballe_sampl3_2012,guthrie_sampl4_2014,nicholls_sampl2_2010,soteras_performance_2010,lawrenz_thermodynamic_2012,sulea_exhaustive_2011,beckstein_prediction_2011,benson_prediction_2012,kast_prediction_2010, mobley_predictions_2009,newman_practical_2009,klamt_prediction_2009,guthrie_blind_2009,marenich_performance_2009,sulea_prediction_2009,nicholls_samp1_2009,nicholls_predicting_2008,chamberlin_performance_2008}.
+To accomplish this, SAMPL has historically focused on both simple challenges that attempt to isolate likely sources of modeling errors, such as physical properties of small molecules (hydration free energies, aqueous tautomer ratios, partition or distribution coefficients between aqueous and nonpolar phases) as well as small molecule binding to targets of reduced complexity (such as host-guest binding, and binding of fragments to trypsin and HIV integrase).
+{\bf SAMPL has already been a tremendous community resource, resulting in nearly 100 publications which are typically cited 5--50 times or more each}~\citesampl{monroe_converging_2014_sampl,muddana_blind_2014_sampl,gallicchio_bedam_2015-1_sampl,mikulskis_free-energy_2014_sampl,hsiao_prediction_2014_sampl,bhakat_resolving_2016_sampl,pal_combined_2016_sampl,yin_sampl5_2016_sampl,bosisio_blinded_2016_sampl,tofoleanu_absolute_2016_sampl,mobley_blind_2014-1_sampl,muddana_sampl4_2014_sampl,sullivan_binding_2016_sampl,deng_distinguishing_2015_sampl,li_testing_2014_sampl,paranahewage_predicting_2016_sampl,klamt_prediction_2016_sampl,tielker_sampl5_2016_sampl,konig_calculating_2016_sampl,luchko_sampl5:_2016_sampl,santos-martins_calculation_2016_sampl,perryman_virtual_2014_sampl,konig_predicting_2014_sampl,voet_combining_2014_sampl,park_extended_2014_sampl,rustenburg_measuring_2016_sampl,reinisch_prediction_2014_sampl,muddana_sampl4_2014-1_sampl,manzoni_prediction_2014_sampl,sandberg_predicting_2014_sampl,brini_adapting_2016_sampl,kamath_prediction_2016_sampl,diaz-rodriguez_predicting_2016_sampl,kenney_prediction_2016_sampl,caldararu_binding_2016_sampl,genheden_all-atom/coarse-grained_2016_sampl,chung_extended_2016_sampl,koziara_testing_2014_sampl,yin_overview_2016_sampl,bannan_blind_2016_sampl,Lee:2016:JComputAidedMolDes_sampl,Jones:2016:JComputAidedMolDes_sampl,Pickard:2016:JComputAidedMolDes_sampl, cao_absolute_2014_sampl,muddana_prediction_2012_sampl,gibb_binding_2013_sampl,klimovich_predicting_2010_sampl,mobley_alchemical_2012_sampl,muddana_sampl3_2012_sampl,skillman_sampl3_2012_sampl,Newman:2011:JComputAidedMolDes_sampl,gallicchio_virtual_2014_sampl,klamt_blind_2010_sampl,fennell_modeling_2011_sampl,ellingson_analysis_2010_sampl,surpateanu_evaluation_2011_sampl,purisima_rapid_2010_sampl,konig_predicting_2011_sampl,kehoe_testing_2011_sampl,kumar_computational_2012_sampl,meunier_predictions_2010_sampl,genheden_extensive_2014_sampl,beckstein_prediction_2014_sampl,coleman_sampl4_2014_sampl,hogues_exhaustive_2014_sampl,reinisch_prediction_2012_sampl,kulp_fragment-based_2012_sampl,klamt_conclusions_2010_sampl,fu_fast_2014_sampl,hamaguchi_force-field_2012_sampl,colas_virtual_2014_sampl,ellingson_efficient_2014_sampl,sulea_predicting_2011_sampl,geballe_sampl2_2010_sampl,ribeiro_prediction_2010_sampl,skillman_sampl2_2010_sampl,gallicchio_prediction_2012_sampl,mikulskis_binding_2011_sampl,geballe_sampl3_2012_sampl,guthrie_sampl4_2014_sampl,nicholls_sampl2_2010_sampl,soteras_performance_2010_sampl,lawrenz_thermodynamic_2012_sampl,sulea_exhaustive_2011_sampl,beckstein_prediction_2011_sampl,benson_prediction_2012_sampl,kast_prediction_2010_sampl, mobley_predictions_2009_sampl,newman_practical_2009_sampl,klamt_prediction_2009_sampl,guthrie_blind_2009_sampl,marenich_performance_2009_sampl,sulea_prediction_2009_sampl,nicholls_samp1_2009_sampl,nicholls_predicting_2008_sampl,chamberlin_performance_2008_sampl}.
 
-Here, we \textbf{design a new series of SAMPL challenges specifically to maximize learning value to the community}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%SAMPL HISTORY
+\begin{wrapfigure}[20]{r}{7cm}
+\vspace{-0.25in}
+\begin{centering}
+\includegraphics[width=\textwidth]{figures/history_v1.pdf}
+
+\end{centering}
+\footnotesize
+\caption{\label{figure:sampl5_logD}  
+\textbf{SAMPL historical participation~\cite{mobley_blind_2014-1}.} 
+Historical participation in SAMPL host-guest + solvation/distribution challenges has climbed rapidly, and we expect this trend to continue. The number of participating groups is shown in blue, and the number of submissions in green. The inset shows the diversity of methods employed for the SAMPL4 hydration challenge, which is typical for SAMPL. 
+}
+\end{wrapfigure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Here, we \textbf{design a new series of SAMPL challenges specifically to guide the improvement of models}.
 Until now, this has been impossible, because SAMPL has been entirely unfunded; its very existence has required ``donation'' of data and time, giving us no ability to gather datasets tailored to our purpose. 
 Our proposed new challenges bridge the gap between calculations of simple physical properties that isolate forcefield inaccuracies from sampling challenges, like hydration---which can already be calculated fairly accurately~\cite{mobley_blind_2014-1}---and the D3R Grand Challenges on protein-ligand binding, which are a major source of consternation for the community so far~\cite{ignjatovic_binding-affinity_2016, deng_large_2016, sunseri_d3r_2016, gathiaka_d3r_2016}.
 Unless this gap is bridged, there is the very real possibility that modeling may simply continue to fall far short of expectations in pharmaceutical challenges like D3R for reasons which are unclear.
@@ -214,18 +233,33 @@ Several historical examples serve to highlight how SAMPL can foster innovation (
 The first several SAMPL challenges on hydration free energies had rather hit-and-miss performance, highlighting pitfalls of existing methods and force fields which led to marked improvements in PB models~\cite{nicholls_samp1_2009, ellingson_analysis_2010,ellingson_efficient_2014}, recognition of some limitations of fixed-charge force fields ~\cite{mobley_alchemical_2012, Fennell:2014:J.Phys.Chem.B},
 repair of some of these force field deficiencies via additional polarization or introduction of off-site charges~\cite{mobley_alchemical_2012, Fennell:2014:J.Phys.Chem.B, paranahewage_predicting_2016},
 and helped motivate alternate implicit or hybrid solvent models~\cite{sulea_predicting_2011, li_testing_2014, brini_adapting_2016}.
-{\color{red}{Together these advances led to a marked improvement in accuracy for calculations of hydration free energies between SAMPLX and SAMPLY (Figure []).}}
-%FILL IN DETAILS ON LINE ABOVE
-%
-%Add some sort of a figure on how SAMPL has helped community -- maybe compare accuracy in hydration free energies (simple?!?) in an early SAMPL with accuracy on log D in this SAMPL or something similar? Show something that demonstrates progress.
-%b.1 Figure showing progression in hydration free energy accuracy across a couple of SAMPLs or comparing two SAMPLs?
-%
- %Fennell SEA, etc.
 Shifts in protonation state and tautomer proved particularly important in the recent SAMPL5 logD challenge~\cite{bannan_blind_2016, klamt_prediction_2016}.
 This challenge provided a tractable opportunity to isolate and explore these specific physical effects, which are so important in protein-ligand binding, while avoiding the full complexity of pharmaceutical binding studies.
 Host-guest binding studies have also been particularly important~\cite{mobley_predicting_2016},
 highlighting the importance of salt effects~\cite{yin_overview_2016, muddana_blind_2014, mobley_predicting_2016}
 and in some cases revealing more severe force field limitations than observed in hydration and distribution challenges~\cite{yin_sampl5_2016, muddana_sampl4_2014-1}, pointing the way forward for improving predictive models of molecular interactions~\cite{yin_toward_2015, mobley_predicting_2016}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FIGURE: TIMELINE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[h]
+\begin{centering}
+%\resizebox{!}{3.2in}{\includegraphics{figures/Timeline.pdf}}
+\includegraphics[width=\textwidth]{figures/Timeline2_cropped.pdf}
+\end{centering}
+\vspace{0.1in}
+\caption{\footnotesize {\bf Timeline for our activities.} Activities covered by this grant include data collection and SAMPL challenges on our three major components (physical properties, host-guest binding, and protein-ligand binding), with each challenge cycle color-coded separately.  
+Data collection within each Aim is shown by a colored bar indicating what is measured and curated.
+Data collection/curation is followed by a submission window for that challenge component, then all results and analysis are returned to participants and posted on the SAMPL website; this also will nucleate more detailed discussion on the relevant Slack channel (which is expected to already be underway as participants prepare during the data collection phase). 
+Each component will then wrap up with a focused virtual meeting where participants focus on lessons learned and areas which need further exploration; these will be recorded and posted on our website to assist in rapid dissemination of new insights. 
+Virtual meetings precede the submission window for the next SAMPL challenge, giving the opportunity to incorporate lessons learned for the next challenge.
+Submission windows and virtual meetings are staggered across categories so that participants can be involved in all three major areas without multiple simultaneous deadlines.
+In-person meetings are co-hosted with D3R and will occur every two years, supplemented by effort-wide virtual meetings in between.
+Special issues of JCAMD will have deadlines shortly after the virtual meeting on the protein-ligand challenge for that year, and a 4-5 month timeline (based on historical experience) from the submission deadline until the special issue appears (with the first papers appearing online substantially sooner).
+Rapid dissemination of insights is critical for rapid progress, so we highly encourage the use of preprints and informal reports to supplement the special issue.
+\label{figure:timeline}}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
@@ -256,43 +290,33 @@ Much of this is left to the participants, but as organizers we do a great deal o
 When methods differ in performance, it is critical to understand whether the differences are statistically significant and important, and to provide an accurate accounting of the uncertainty in performance measures. 
 Thus, careful and innovative analysis of challenge outcomes is particularly important in SAMPL~\cite{mobley_blind_2014-1, bannan_blind_2016, yin_overview_2016}, in some cases driving experimentation with new performance metrics~\cite{mobley_blind_2014-1}.
 
-
-
-
-{\large \bf APPROACH}
+{\large\textbf{ APPROACH}}
 % 9 pages
 
-Our approach to systematically advancing modeling for biomolecular design involves collecting carefully targeted experimental datasets for challenges focusing on physical property prediction, host-guest binding, and protein-ligand binding.
-These isolate individual limitations in quantitative physical modeling to solicit and evaluate multiple solutions from the community.
-Aims 1--3 focus on tailoring and generating this experimental data, while Aim 4 focuses on fielding annual SAMPL challenges.
-Aims 1--3 bring together multiple laboratories and both theorists and experimentalists: graduate students from the Mobley and Chodera laboratories are paired with well-equipped experimental groups in industry to collect physical property data (Aim 1); Gibb and Isaacs, leading experimentalists in supramolecular chemistry, work with theorist Mobley to perform host-guest affinity measurements (Aim 2); and the Chodera lab applies new automated approaches to identify suitable protein-ligand systems and measure binding (Aim 3).
-The annual SAMPL challenges organized by the Mobley and Chodera labs (Aim 4) will evaluate best-practices reference calculations, feature both biennial physical meetings (coordinated with D3R) and virtual communication platforms to maximize community engagement, develop novel statistical analyses to identify and respond to problem areas, release benchmark datasets alongside primary experimental data, organize special journal issues to report progress, and encourage tool automation whenever possible.
-%For space reasons, could reduce the summary above dramatically?
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% FIGURE: TIMELINE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[h]
+%SAMPL DC FIGURE
+\begin{wrapfigure}[22]{r}[0pt]{9cm}
+%\vspace{-0.25in}
 \begin{centering}
-%\resizebox{!}{3.2in}{\includegraphics{figures/Timeline.pdf}}
-\includegraphics[width=\textwidth]{figures/Timeline2_cropped.pdf}
+\includegraphics[width=\textwidth]{figures/sampl5_logD_v1.pdf}
+
 \end{centering}
-\vspace{0.1in}
-\caption{\footnotesize {\bf Timeline for our activities.} Activities covered by this grant include data collection and SAMPL challenges on our three major components (physical properties, host-guest binding, and protein-ligand binding), with each challenge cycle color-coded separately.  
-Data collection within each Aim is shown by a colored bar indicating what is measured and curated.
-Data collection/curation is followed by a submission window for that challenge component, then all results and analysis are returned to participants and posted on the SAMPL website; this also will nucleate more detailed discussion on the relevant Slack channel (which is expected to already be underway as participants prepare during the data collection phase). 
-Each component will then wrap up with a focused virtual meeting where participants focus on lessons learned and areas which need further exploration; these will be recorded and posted on our website to assist in rapid dissemination of new insights. 
-Virtual meetings precede the submission window for the next SAMPL challenge, giving participants the opportunity to incorporate lessons learned for the next challenge.
-Submission windows and virtual meetings are staggered across categories so that participants can be involved in all three major areas without multiple simultaneous deadlines.
-In-person meetings are co-hosted with D3R and will occur every two years.
-Yearly special issues of JCAMD will have submission deadline shortly after the virtual meeting on the protein-ligand challenge for that year, and an approximate 4-5 month timeline (based on historical experience) from the submission deadline until the special issue appears (with the first papers appearing online substantially sooner).
-Rapid dissemination of insights is critical for rapid progress, so we highly encourage the use of preprints and informal reports to supplement the special issue.
-\label{figure:timeline}}
-\end{figure}
+\footnotesize
+\caption{\label{figure:sampl5_logD}  
+\textbf{Lessons learned from SAMPL5 log D predictions.} 
+Predictions of log D values for SAMPL5 provided a number of key lessons. (A) Methods which treated multiple protonation and tautomeric states in their predictions performed dramatically better than those which did not; here, red dots move to x symbols when these effects are treated, improving accuracy in every case~\cite{Pickard:2016:JComputAidedMolDes}. (B) Re-parameterization of a force field to more accurately reproduce pure solvent dielectric constants resulted in dramatically better predictions (top) than the original force field (bottom)~\cite{paranahewage_predicting_2016}. 
+}
+\end{wrapfigure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+Our approach to systematically advancing modeling for biomolecular design involves collecting carefully targeted experimental datasets for challenges focusing on physical property prediction, host-guest binding, and protein-ligand binding.
+These datasets, spanning a spectrum of complexity, help isolate individual limitations in quantitative physical modeling to encourage and evaluate multiple solutions from the community.
+Aims 1--3 focus on tailoring and generating this experimental data, while Aim 4 focuses on fielding annual SAMPL challenges. 
+Each annual challenge includes one or more components from each of the Aims.
+Aims 1--3 bring together multiple laboratories and both theorists and experimentalists: graduate students from the Mobley and Chodera laboratories are paired with well-equipped experimental groups in industry to collect physical property data (Aim 1); Gibb and Isaacs, leading experimentalists in supramolecular chemistry, work with theorist Mobley to perform host-guest affinity measurements (Aim 2); and the Chodera lab applies new automated approaches to identify suitable protein-ligand systems and measure binding (Aim 3).
+The annual SAMPL challenges organized by the Mobley and Chodera labs (Aim 4) will leverage the data of Aims 1-3 (Figure~\ref{figure:timeline}) and best practices reference calculations to drive progress.
 
-{\bf \underline{Aim 1}: Collect new physical property datasets to assess accuracy and spur improvements in force fields and modeling of protonation states and tautomers.} 
+\textbf{\underline{Aim 1}: Collect new physical property datasets to assess accuracy and spur improvements in force fields and modeling of protonation states and tautomers.} 
 %Gilson suggests maybe replacing "physical property" with something else as he thinks of binding as a physical property. I can't think of a good phrase right now so I'm just leaving a note. At first I thought "solution property" could work then I realized it's not a good phrase.
 
 %\subsection{blah}
@@ -306,12 +330,13 @@ These properties allow us to directly probe force field accuracy and chemical ef
 %Compare log D accuracy vs hydration accuracy, highlight issues and explain relevance to drug discovery; note lessons learned in SAMPL5
      %Maybe use a figure on log D accuracy?
 We will generate new solution-phase physical property measurements for drug-like molecules to motivate improvements in force fields and handling of protonation states and tautomers.
-This builds on our work on water-cyclohexane distribution coefficients for SAMPL5 (in partnership with Genentech), which revealed major problems with handling of protonation states and tautomers~\cite{bannan_blind_2016}  as well as serious forcefield limitations~\cite{paranahewage_predicting_2016}.
+This builds on our work on water-cyclohexane distribution coefficients for SAMPL5 (in partnership with Genentech), which revealed major problems with handling of protonation states and tautomers~\cite{bannan_blind_2016}  as well as serious forcefield limitations~\cite{paranahewage_predicting_2016} (Figure~\ref{figure:sampl5_logD}).
 Distribution coefficients give the ratio of concentrations of a solute between two different phases at equilibrium, and thus relate to transfer free energies from aqueous high-dielectric to low-dielectric environments.
 Thus, they capture many of the characteristics of transfer of drugs from water into binding sites but absent challenges with receptor conformational sampling and specific ligand-receptor interactions.
 In SAMPL5, distribution coefficients were challenging enough that many methods performed poorly, with even the best methods having accuracies less than would be expected based on hydration free energies in water~\cite{bannan_blind_2016}, yet failures were informative and the major sources of error were issues which will also plague prediction of ligand-receptor interactions.
 In some respects, distribution coefficients posed the ideal SAMPL challenge, hitting the sweet spot in terms of difficulty---difficult enough that clear failures were frequent, with ample room for improvement, but not so difficult that the reasons for failure were unclear in general. 
 Still, many models consistently disagreed with experiment for some compounds~\cite{paranahewage_predicting_2016, klamt_prediction_2016, bannan_blind_2016, rustenburg_measuring_2016}, revealing the impact that targeted follow-up experiments (such as those we will conduct here) could have on improving models.
+
 
 %Talk about limitations of approach -- lack of ability to do follow up expeirments, get the dynamic range we wanted, test things again after SAMPL? 
 % Sustained funding will allow us to do that. 
@@ -324,30 +349,55 @@ Additionally, we will be able to continue experimental work until the necessary 
 This will improve our ability to learn from the data -- for example, the lack of dynamic range for SAMPL5 meant that, when calculated values often spanned a larger dynamic range than the experimental values, it was unclear if this was an artifact of the data set itself, experimental limitations, or force field problems~\cite{rustenburg_measuring_2016, bannan_blind_2016, paranahewage_predicting_2016, klamt_prediction_2016}. 
 With funding to extend the experimental set via follow-up experiments, we will be able to resolve similar issues, providing further impetus to improve models.
 
+
 Below, we summarize plans for data collection for the SAMPL6-10 challenges of Aim 4 (Figure~\ref{figure:timeline}).
 %, though we will adapt to new opportunities as they arise and respond to persistent difficulties by ensuring the challenge is repeated with new data until clear improvement is seen.
 %I think reviewers normally assume adaptation. Let's cut that for space.
 These specific data sets were selected based on a desire to help the field resolve the problems encountered in SAMPL5 then progress to accurate estimation of new properties.
 Data sets will typically consist of at least 96 compounds for good statistics, though when possible, a much larger amount of data will be collected.
 
+\begin{wraptable}[20]{r}{6.5cm}
+\footnotesize
+\begin{tabular}{l | l}
+{\bf drug} & {\bf features} \\
+\hline
+memantine & adamantane; 1:1 \\
+saxagliptin & adamantane; 1:1 \\
+premarin & steroid \\
+pancuronium & steroid\\
+varenicline & 1:1 vs 1:2 \\
+valsartan & pKa 4.37 \\ 
+omeprazole & pKa 4.77 \\
+ranolazine & pKa 7.17; epitopes \\
+pradaxa & pKa 3.87; epitopes \\
+nilotinib & epitopes; pKa 6.3 \\
+sensipar & epitopes; folding \\
+vyvance & diamine; epitopes; folding \\
+minocycline & tetracyclin; amino aniline \\
+\end{tabular}
+\caption{\label{table:CB} \textbf{Selected drugs whose binding to CB[$n$] hosts will be assayed for SAMPL6, 8, and 10 challenges (SA 2.1).} These drugs bind to the cucubituril-based host systems considered here, some at high affinity, so measuring their affinities provides a way to test methods for predicting binding interactions absent complexities present in protein-ligand systems.
+}
+\end{wraptable}
+
 %Explain what science -- log D/logP, pKa primarily but mention possible other areas of interest
-{\bf SAMPL6: Cyclohexane/water and octanol/water distribution coefficients.}
+\textbf{SAMPL6: Cyclohexane/water and octanol/water distribution coefficients.}
 Building on the success of distribution coefficient measurements in SAMPL5 and their surprising ability to motivate rapid advances in physical modeling methodologies~\cite{bannan_blind_2016}, we will measure cyclohexane-water distribution coefficients at pH 7.4 for a new batch of commercially-available drug- and fragment-like molecules.
 %{\color{red}[JDC: Maybe the set can be broken into classes of varying chemical complexities? In general, I think clever experimental design ideas---indications we have really thought through how to maximize value---will be rewarded by the reviewers.]}
 %DLM: Need to revisit this comment.
 Given the routine nature of octanol-water distribution coefficient measurements and indications that their prediction may be computationally tractable~\cite{Bhatnagar:2013:PhysicalChemistryChemicalPhysics, bannan_calculating_2016} despite the heterogeneous structure of the wet octanol phase~\cite{Kollman:1996:AccountsofChemicalResearch}, we will also measure octanol-water distribution coefficients for the same compounds.
 Because pKa prediction was difficult but critical for SAMPL5, we will focus SAMPL6 on forcefields and tautomers by measuring pKa values, revisiting pKa prediction in SAMPL7 and 8.
 
-{\bf SAMPL7: pKa measurements for drug-like molecules.} 
+
+\textbf{SAMPL7: pKa measurements for drug-like molecules.} 
 While much less complex than protein-ligand affinities, distribution coefficient measurements still conflate the challenging issues of protonation state and tautomer prediction, as well as transfer into different environments which may contain small but important quantities of cosolvents. 
 Thus, we will separate these issues and improve our handling of them one at a time. 
 For SAMPL7, then, we will measure pKa values for an extensive set of drug-like molecules in water which will serve as the focus of the challenge, paving the way for SAMPL8.
 
-{\bf SAMPL8: pKa measurements and distribution coefficients.}
+\textbf{SAMPL8: pKa measurements and distribution coefficients.}
 In the next challenge, we will re-combine the pKa and transfer issues, measuring distribution coefficients \emph{and} pKa values for the same set of compounds, with participants predicting (a) distribution; (b) pKa; and (c) partition. 
 Unlike SAMPL6, pKa values will not be provided.
 
-{\bf SAMPL9-10.}
+\textbf{SAMPL9-10.}
 We will focus on solubility prediction in SAMPL9, and membrane permeability in SAMPL10, because of new computational developments.
 With solubility predictions now becoming tractable~\cite{Schnieders:2012:J.Chem.TheoryComput., park_absolute_2014, liu_using_2016} (with Schr\"{o}dinger also working on amorphous solubility prediction), solubility measurements will be a valuable test for SAMPL9, combining the solvation aspects of SAMPL1-8 with a new solid phase component.
 New computational techniques are targeting membrane permeability~\cite{lee_permeability_2016, comer_permeability_2014}, and this is experimentally accessible (see support letters from Pfizer and Merck), leading to our interest in permeability for SAMPL10.
@@ -368,30 +418,23 @@ Overall, Aim 1 extends prior SAMPL challenges via data focused on quantitative p
 %Aim 2 (2 pages)
 \textbf{\underline{Aim 2}: Measure affinities of drug-like compounds in supramolecular hosts to challenge quantitative models of binding in systems lacking major receptor sampling issues.}
 
-\begin{wraptable}{r}{6.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%SAMPL HG FIGURE
+\begin{wrapfigure}[23]{l}[0pt]{7cm}
+\vspace{-0.25in}
+\begin{centering}
+%\resizebox{9.0cm}{!}{\includegraphics{figures/sampl3_and_sampl5.pdf}}
+\includegraphics[width=\textwidth]{figures/sampl3_and_sampl5.pdf}
+
+\end{centering}
 \footnotesize
-\begin{tabular}{l | l}
-{\bf drug} & {\bf features} \\
-\hline
-memantine & adamantane; 1:1 \\
-saxagliptin & adamantane; 1:1 \\
-premarin & steroid \\
-pancuronium & steroid\\
-varenicline & 1:1 vs 1:2 \\
-valsartan & pKa 4.37 \\ 
-omeprazole & pKa 4.77 \\
-ranolazine & pKa 7.17; epitopes \\
-pradaxa & pKa 3.87; epitopes \\
-nilotinib & epitopes; pKa 6.3 \\
-sensipar & epitopes; folding \\
-vyvance & diamine; epitopes; folding \\
-minocycline & tetracyclin; amino aniline \\
-\end{tabular}
-\caption{\label{table:CB} {\bf Selected drugs whose binding to CB[$n$] hosts will be assayed for SAMPL6, 8, and 10 challenges (SA 2.1).} These drugs bind to the cucubituril-based host systems considered here, some at high affinity, so measuring their affinities provides a way to test methods for predicting binding interactions absent complexities present in protein-ligand systems.
+\caption{\label{figure:hg_sampl}  
+\textbf{The best host-guest binding predictions of SAMPL3~\cite{muddana_sampl3_2012} and SAMPL5~\cite{yin_sampl5_2016}.} 
+Binding free energy predictions have shown clear improvements from SAMPL3 to SAMPL5 as the major challenges become understood and are treated better by models, though a systematic offset remains in the best SAMPL5 predictions (yellow). Dashed lines denote errors of $\pm1.5$ kcal/mol.
 }
-\end{wraptable}
-
-
+\end{wrapfigure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %Intro lessons learned on HG systems, relevance to drug discovery
 Aim 1 focuses on the behavior of small molecules and its environment-dependence, in the absence of receptors and the associated potential for slow sampling, strong specific interactions, and other challenges such as salt effects.
@@ -399,23 +442,40 @@ Binding in host-guest systems retains many of the same challenges seen in Aim 1 
 Thus, new data for SAMPL challenges on host-guest binding is critical to provide challenges of intermediate complexity between those of physical properties and those in biomolecular binding---but binding in host-guest systems introduces a wider variety of challenges relevant to biomolecular interactions, but without the full array of challenges seen in protein-ligand interactions, as reviewed recently~\cite{mobley_predicting_2016}.
 Thus, we believe that host-guest binding provides a critical step towards accurately modeling biomolecular interactions, focusing the field on issues not commonly encountered in physical property challenges (such as the importance of accurately modeling ionic conditions) that are highly relevant for protein-ligand interactions.
 Already, over the past several SAMPL challenges, host-guest systems have provided key tests for modeling of binding interactions, resulting in new attention paid to how co-solvents and ions modulate binding (resulting in errors of up to 5 kcal/mol when these effects are neglected) and the importance of adequately sampling water rearrangements~\cite{muddana_sampl4_2014, mobley_predicting_2016, yin_overview_2016, bhakat_resolving_2016}. 
+
+This new attention has resulted in clear improvements as participants begin to treat the relevant effects more accurately (Figure~\ref{figure:hg_sampl}).
 Host-guest binding proves remarkably difficult to model accurately~\cite{henriksen_computational_2015}, in part due to force field limitations (resulting in new force field work~\cite{yin_toward_2015}).
 %{\color{red}[JDC: Assuming convergence is achieved, that leaves only forcefield limitations and protonation/tautomer effects. How can these contributions be dissected or separated, and how can is failure or success specifically able to drive progress?]}
 %Dissected -- by measuring protonation for example, I suppose (but I don't think we can expand on that here...?) 
 %How is failure or success able to drive progress -- it seems like I just said that; people start focusing on these issues and working to resolve them. DId you have something specific in mind?
 
+
+
 Here, we design a series of SAMPL challenges focused on two classes of host-guest systems---cucurbiturils and analogs (SA 2.1) and Gibb's deep-cavity cavitands (GDCCs, SA 2.2)---both of which build on prior SAMPL challenges.
 These two sets of systems exhibit different challenges as recently reviewed~\cite{mobley_predicting_2016}, with the hosts of 2.1 bringing relatively modest co-solvent and ion effects but some receptor sampling problems for the acyclic hosts, and the GDCCs of 2.2 bringing profound ion and co-solvent effects as well as water sampling challenges.
 Methods which perform well on one class may not perform well on the other~\cite{mobley_predicting_2016}, since the distinct sets of challenges highlight different limitations.
-This diversity drive more innovation than would a focus on a single host class.
+This diversity drives more innovation than would a focus on a single host class.
+
 
 %Chodera suggested this on the octa-acid section:
 %* We need to emphasize why the octa-acid system has proven to be so valuable for modelers in the introduction: What specific physical challenges does the system probe, and what have we learned? We also need to add citations to the meta-analysis and maybe even all of the papers that addressed this system. David can likely address this.
 %DLM: It's tempting to add material along these lines to the beginning of both the octa-acid and CB sections (i.e. making each start with a "history" section), and I certainly have material on that, but given that we're a bit over a page too long before I even add figures, I'll leave this as a placeholder in case we somehow find ourselves with space to add it. We can't afford the space at present unless we find something to shrink dramatically.
 
 
-{\bf Subaim 2.1: Cucurbituril-based receptors as model binding systems}
+\textbf{Subaim 2.1: Cucurbituril-based receptors as model binding systems}
 %Isaacs science
+
+\begin{figure}[h]
+\begin{centering}
+\resizebox{\textwidth}{!}{\includegraphics{figures/CB.pdf}}
+
+\end{centering}
+
+\caption{
+\label{figure:CB} \footnotesize {\bf SAMPL6-10 host-guest challenges will feature cucubituril hosts and analogs, including Me$_4$CB[8], glycoluril hexamer, and acyclic CB[n]-type receptors.} These receptors bind a variety of drug-like molecules, some with high affinity.
+\vspace{-0.2in}
+}
+\end{figure}
 
 \textbf{Cucurbituril derivatives for host-guest binding.} 
 %DLM: A bit odd to have the OA section start with a history header and this one not. May need to address.
@@ -425,16 +485,6 @@ CB[$n$] receptors are particularly well suited to our goals because they exhibit
 For SAMPL6-10, we will resynthesize a series of CB[$n$]-type receptors of increasing complexity, measure $K_a$ values, and determine host-guest stoichiometry and geometry toward pharmaceutically relevant guests (selected drugs) in order to stringently test methods for predicting binding.  
 Figure~\ref{figure:CB} shows the chemical structures of three hosts---Me$_4$CB[8]~\cite{vinciguerra_synthesis_2015}, glycoluril hexamer~\cite{lucas_templated_2011}, and acyclic CB[$n$]-type receptors~\cite{ma_acyclic_2012, ma_acyclic_2012-1, zhang_acyclic_2014, gilberg_acyclic_2015, sigwalt_acyclic_2016, zhang_acyclic_2014-1} which span a range in terms of level of preorganization and formal charge.
 
-\begin{figure}[h]
-\begin{centering}
-\resizebox{\textwidth}{!}{\includegraphics{figures/CB.pdf}}
-
-\end{centering}
-
-\vspace{0.1in}
-\caption{\label{figure:CB} \footnotesize {\bf Structures of Me$_4$CB[8], glycouril hexamer, and acyclic CB[n]-type receptors.} These receptors bind a variety of drug-like molecules, some with high affinity, and this binding will form the basis of a cucubituril-based series of SAMPL binding challenges.}
-
-\end{figure}
 
 \textbf{SAMPL6-10 cucurbituril challenges.} 
 \emph{For SAMPL6}, we will measure $K_a$ and $\Delta H$ values, stoichiometry, and geometry for the interaction of Me$_4$CB[8] (a soluble CB[8] derivative) with 15 guests (selected top drugs, Table~\ref{table:CB}) by either direct or competition isothermal titration calorimetry (ITC), UV/Vis or fluorescence indicator displacement assay, or NMR competition experiments, as previously~\cite{cao_attomolar_2014, liu_cucurbituril_2005, ma_acyclic_2010, she_glycoluril-derived_2016}.  
@@ -450,9 +500,22 @@ Additionally, it will couple nicely with the focus on p$K_a$ values in Aim 1.
 As in SAMPL3~\cite{muddana_sampl3_2012}, these acyclic CB[$n$]-type receptors introduce conformational complexity, and water interactions play a key role.
 Moreover, the presence of 4 anionic groups near the cavity will likely impact the balance between ion-dipole interactions and solvation of the free host.
 
-{\bf Subaim 2.2. Gibb deep cavity cavitands for host-guest studies} 
+\textbf{Subaim 2.2. Gibb deep cavity cavitands for host-guest studies} 
 
 %Gibb science
+
+\begin{figure}[h]
+\begin{centering}
+\resizebox{\textwidth}{!}{\includegraphics{figures/gdccs.pdf}}
+
+\end{centering}
+
+\vspace{-0.1in}
+\caption{\footnotesize {\bf Gibb deep cavity cavitands for the SAMPL6-10 datasets.} These hosts bind a variety of carboxylate and trimethylammonium guests in a strongly salt-dependent manner, providing a stringent test of our ability to model binding and how it depends on these effects.
+\label{figure:gdccs}
+\vspace{-0.2in}
+}
+\end{figure}
 
 {\bf History of GDCC SAMPL challenges.} During SAMPL4~\cite{gibb_binding_2013} and SAMPL5~\cite{sullivan_binding_2016} we focused on two specific GDCC hosts: the octa-acid 1 (R = H) and another octa-acid variant with four methyl groups at the portal of the binding pocket (1, R = Me). 
 These studies used isothermal titration calorimetry (ITC) to measure the thermodynamics of (1) host {\bf 1} (R = H) binding a range of 9 carboxylate guests,
@@ -461,17 +524,6 @@ In both cases $^1$H-NMR titration was also used to confirm ITC-derived free ener
 As noted above, co-solvent effects and water rearrangements posed particular challenges for predicting binding in these hosts. 
 SAMPL5 emphasized how differences in the shape of the hydrophobic pocket of the host can have a profound affect on affinity for some guests~\cite{yin_overview_2016}.
 % Comment on value to community
-
-\begin{figure}[h]
-\begin{centering}
-\resizebox{\textwidth}{!}{\includegraphics{figures/gdccs.pdf}}
-
-\end{centering}
-
-\vspace{0.1in}
-\caption{\footnotesize {\bf Gibb deep cavity cavitands for the SAMPL6-10 datasets.} These hosts bind a variety of carboxylate and trimethylammonium guests in a strongly salt-dependent manner, providing a stringent test of our ability to model binding and how it depends on these effects.
-\label{figure:gdccs}}
-\end{figure}
 
 {\bf Novel deep cavity hosts probe the effects of binding site charge constellations.} 
 For future GDCC datasets, we will expand on the range of hosts by including {\bf 2} and {\bf 3} in our ITC studies (Figure~\ref{figure:gdccs}).  
@@ -518,7 +570,7 @@ Two fluorescent probes---dansylamide and dansylglycine---bind with $\sim$$\mu$M 
 \emph{(E)}~HSA tryptophan fluorescence quenching can also be used to measure ligand binding affinity; here, HSA titration by diclofenac is shown, with the inset plot showing percent quenching at 346 nm~\cite{Epps:1999:JournalofPharmacyandPharmacology,Bou-Abdallah:2016:TheJournalofChemicalThermodynamics}.
 \emph{(F)}~Direct fluorescence binding assay of Dansylamide (fluorescent ligand) and HSA collected on the Chodera lab automation system. 
 The binding curve can be constructed based on binding-induced fluorescence emission at 480 nm.
-\vspace{-0.2in}
+\vspace{-0.1in}
 \label{figure:hsa-challenge}}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -531,13 +583,13 @@ While model systems have had ample success in driving progress in individual res
 For example, SAMPL3 featured the binding of small, rigid charged molecules to bovine trypsin~\cite{Newman:2011:JComputAidedMolDes}, and rapidly focused the field on the deficiencies of current alchemical free energy methodologies in treating the binding of charged ligands.
 Within two years, multiple laboratories had developed practical solutions to effectively handle charged ligand binding~\cite{Rocklin:2013:TheJournalofChemicalPhysics, lin_overview_2014, Reif:2014:JournalofComputationalChemistry}.
 
-{\bf SAMPL6-10 model protein-ligand challenges.} 
+\textbf{SAMPL6-10 model protein-ligand challenges.} 
 We will introduce a new model protein-ligand system each year (revisiting the prior year's system if this becomes too difficult), with multiple challenges on each system (Figure~\ref{figure:timeline}) to allow iterative improvement and assessment.
 Our SAMPL6 data will focus on binding of small soluble drug fragments to one particular protein (below). 
 However, maximizing gains in this area requires adapting subsequent challenges based on deficiencies identified by previous D3R/SAMPL challenges.
 Therefore, subsequent model systems will be rapidly identified and developed using our new informatics platform (below).
 
-{\bf SAMPL6: Assessing predictive modeling of binding to multiple weak sites via measuring fragment binding to human serum albumin (HSA).}
+\textbf{SAMPL6: Assessing predictive modeling of binding to multiple weak sites via measuring fragment binding to human serum albumin (HSA).}
 HSA, the most abundant blood plasma protein, has a remarkable ability to bind a great variety of small molecule drugs in multiple binding sites (Figure~\ref{figure:hsa-challenge}B)~\cite{Fasano:2005:IUBMBLife(InternationalUnionofBiochemistryandMolecularBiology:Life)}.
 As a result, HSA not only helps isolate the challenge of multiple weak ligands binding to a stable rigid protein, but it is also a pharmacologically relevant because of how it drastically modulates drug pharmacokinetics~\cite{Hall:2013:JournalofChemicalInformationandModeling}.
 HSA has at least \emph{eight} known binding sites, with numerous crystal structures available for drugs binding to two predominant sites (Sudlow Site I and II)~\cite{Hall:2013:JournalofChemicalInformationandModeling}.
@@ -545,42 +597,7 @@ Small soluble molecules resembling drug fragments are highly likely to bind to H
 As current advanced methodologies such as alchemical free energy calculations currently assume a single well-defined binding site with high affinity~\cite{Gilson:1997:BiophysicalJournal}, this dataset will allow the isolation of the effect of weak multiple binding from the majority of other confounding factors in protein-ligand binding.
 As HSA is relatively rigid, and computational methods already show some promise in computing binding affinities to HSA~\cite{Hall:2013:JournalofChemicalInformationandModeling,Lexa:2014:PLoSONE,Evoli:2016:bioRxiv}, this is an optimal model system for SAMPL6.
 
-Recombinant HSA will be expressed in \emph{E.~coli} and purified via refolding from inclusion bodies~\cite{Latta:1987:Bio/Technology}, then defatted at low pH~\cite{Lang:2015:BiotechnologyProgress} to ensure the resulting protein is free of the glycosylation and bound fatty acids found in plasma-isolated HSA~\cite{Lang:2015:BiotechnologyProgress}.
-Recombinant expression will also allow a mutant form of HSA (engineered via single-primer mutagenesis) to be fielded for SAMPL7 (Figure~\ref{figure:hsa-challenge}).
-We will obtain a diverse library of 96 soluble drug-fragment-like molecules in pre-plated format as dry compound, and use our automated isothermal titration calorimetry (ITC) pipeline (Figure~\ref{figure:hsa-challenge}C,D) to characterize overall binding affinities to HSA.
-The same ligands pre-plated in DMSO format will be used to conduct a separate set of fluorescence titration assays (monitoring tryptophan fluorescence quenching, Figure~\ref{figure:hsa-challenge}D) and competition assays with site-specific fluorescent probes (Figure~\ref{figure:hsa-challenge}B) to resolve site-specific affinities to Sudlow Sites I and II.
-We will field several levels of challenges, including challenges focused on affinities to Sites I and II, as well as challenges focused on predicting overall affinity and stoichiometry.
-%Remove redundancy between this paragraph and the caption to save space? (i.e. refer to there for some of this content?)
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% FIGURE: MODEL SYSTEM MINING
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{figure}[h]
-%\begin{centering}
-%\resizebox{!}{3in}{\includegraphics{figures/model-systems-figure-draft3.pdf}}
-%
-%\end{centering}
-%\vspace{0.1in}
-%\caption{\footnotesize {\bf Mining model protein-ligand systems to focus on individual modeling challenges via a structural and chemical informatics platform.}
-%SAMPL7-10 will introduce protein-ligand systems selected to focus on individual challenges judged to be of critical immediate importance following current D3R/SAMPL blind competitions. 
-%\emph{(A)} Since most protein targets of pharmaceutical interest feature a multitude of simultaneous challenges, our goal is to identify model protein targets that isolate individual effects to guide modeling improvements. 
-%Some example protein-ligand pairs and the conceptual challenge categories they fall under are shown in the figure: 
-%T4 Lysozyme L99A~\cite{mobley_predicting_2007}, HSA~\cite{Martin:2009:JournalofComputer-AidedMolecularDesign}, Carbonic anhydrase II (CAII)~\cite{Martin:2009:JournalofComputer-AidedMolecularDesign,Temperini:2009:Bioorganic&MedicinalChemistry}, Cytochrome C Peroxidase~\cite{Rocklin:2013:JournalofMolecularBiology}, Cytochrome P450 BM3 M11 (CYP450 BM3)~\cite{Venkataraman:2014:Bioorganic&MedicinalChemistry}, HIV-1 Reverse Transcriptase (HIV-1 RT)~\cite{Gunasekaran:2007:JournalofMolecularBiology,Khunnawutmanotham:2009:BeilsteinJournalofOrganicChemistry}, Streptavidin~\cite{Gunasekaran:2007:JournalofMolecularBiology}, Tet repressor protein (TetR)~\cite{Gunasekaran:2007:JournalofMolecularBiology,Aleksandrov:2007:ChemBioChem}.
-%\emph{(B)} In order to rapidly identify and develop these tractable new model protein-ligand systems, we are developing a structural and chemical informatics system called TargetExplorer [\url{https://github.com/choderalab/targetexplorer}] that applies successive filters to all potential protein-ligand systems for which structural data is available. 
-%Suitable model systems should meet all experimental tractability criteria (green box) and possess only a few challenging properties, ideally only one (blue box).
-%\vspace{-0.1in}
-%\label{figure:mining-for-model-systems}}
-%\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\textbf{SAMPL7-10: Rapid, responsive development of new model systems using a novel informatics platform.}
-
-We are developing a novel informatics platform aimed at identifying protein targets that can be rapidly developed into experimentally- and computationally-tractable model systems focusing on individual challenges (Figure~\ref{figure:mining-for-model-systems}).
-This tool filters all known protein targets with structural data available in the PDB, first selecting for experimental tractability, then annotating experimentally tractable targets to determine which targets possess (or are likely to be free of) specific challenges for physical modeling.
-This will allow us to select systems which introduce only specific modeling challenges.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{wraptable}{r}{9.5cm}
 \begin{wrapfigure}[38]{r}[0pt]{9.5cm}
 \vspace{-0.25in}
 \begin{centering}
@@ -595,9 +612,21 @@ Suitable model systems should meet all experimental tractability criteria (green
 Tractability of experimental affinity measurements includes properties like known ligands with potentially fluorescent scaffolds (for fluorescence competition assays), highly soluble ligands (for ITC), or ligands above a minimal mass (for SPR or MST).
 Additional filters annotate experimentally tractable systems with their potential computational challenges, including charged ligands or potential ligand protonation state or tautomer effects~\cite{Martin:2009:JournalofComputer-AidedMolecularDesign} (deduced from predicted aqueous protonation/tautomer energies); potential protein protonation state effects (deduced from MCCE2 calculations~\cite{Song:2009:JournalofComputationalChemistry}); protein conformational changes (deduced from variation in protein conformation or the presence of unresolved loops in protein-ligand crystal structures); the presence of post-translational modifications that may affect affinity (deduced from Uniprot annotations); coordinated metals (identified in crystal structures); and ordered waters (present in multiple crystal structures).
 }
-%\end{wrapfig}
 \end{wrapfigure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Recombinant HSA will be expressed in \emph{E.~coli} and purified via refolding from inclusion bodies~\cite{Latta:1987:Bio/Technology}, then defatted at low pH~\cite{Lang:2015:BiotechnologyProgress} to ensure the resulting protein is free of the glycosylation and bound fatty acids found in plasma-isolated HSA~\cite{Lang:2015:BiotechnologyProgress}.
+Recombinant expression will also allow a mutant form of HSA (engineered via single-primer mutagenesis) to be fielded for SAMPL7 (Figure~\ref{figure:hsa-challenge}).
+We will obtain a diverse library of 96 soluble drug-fragment-like molecules in pre-plated format as dry compound, and use our automated isothermal titration calorimetry (ITC) pipeline (Figure~\ref{figure:hsa-challenge}C,D) to characterize overall binding affinities to HSA.
+The same ligands pre-plated in DMSO format will be used to conduct a separate set of fluorescence titration assays (monitoring tryptophan fluorescence quenching, Figure~\ref{figure:hsa-challenge}D) and competition assays with site-specific fluorescent probes (Figure~\ref{figure:hsa-challenge}B) to resolve site-specific affinities to Sudlow Sites I and II.
+We will field several levels of challenges, including challenges focused on affinities to Sites I and II, as well as challenges focused on predicting overall affinity and stoichiometry.
+%Remove redundancy between this paragraph and the caption to save space? (i.e. refer to there for some of this content?)
+
+\textbf{SAMPL7-10: Rapid, responsive development of new model systems using a novel informatics platform.}
+
+We are developing a novel informatics platform aimed at identifying protein targets that can be rapidly developed into experimentally- and computationally-tractable model systems focusing on individual challenges (Figure~\ref{figure:mining-for-model-systems}).
+This tool filters all known protein targets with structural data available in the PDB, first selecting for experimental tractability, then annotating experimentally tractable targets to determine which targets possess (or are likely to be free of) specific challenges for physical modeling.
+This will allow us to select systems which introduce only specific modeling challenges.
 
 The Chodera lab has developed an automated wetlab to facilitate the development of such model protein-ligand systems using bacterial expression (see Equipment and Facilities).
 Potential targets matching desired challenge criteria will be screened for bacterial expression using high-throughput cloning, transformation, and expression testing, with purity and yield assessed by capillary electrophoresis on a Caliper GXII.
@@ -612,13 +641,12 @@ This can be performed and screened for expression in 96-well format.
 Thus, datasets will consist of a matrix of protein mutants and ligands, providing opportunity to deeply explore the effects of interest.
 
 
-%Aim 4 - Coordinate, run, and analyze blind challenges to advance modeling of binding (1.5 pages)
-%{\bf Aim 4. Coordinate, run, and analyze blind challenges to rapidly drive progress in quantitative physical modeling.}
 \textbf{\underline{Aim 4}: Field community blind challenges to advance quantitative biomolecular design.}
-The value of the targeted datasets generated in Aims 1--3 will be amplified enormously by the strategic release of this data through multiple iterations of coordinated SAMPL blind challenges (Figure~\ref{figure:timeline}).
+The value of the targeted datasets generated in Aims 1--3 will be amplified enormously by the strategic release of this data through iterative, coordinated SAMPL blind challenges (Figure~\ref{figure:timeline}).
 These blind challenges are designed to test the state of the art, provoke new methodological and force field innovations, allow comparative evaluation of methods, and drive downstream improvements.
 The new, progressive, targeted nature of the data generated means that SAMPL challenges will now build on one another, and for success in later challenges, participants must build on lessons learned from prior challenges.
 SAMPL challenges and subsequent data release activities will therefore facilitate rapid cycles of application, learning, and improvement.
+Each iteration will likely yield its own incremental benefits (e.g.. as in Figure~\ref{figure:sampl5_logD}) for molecular design, in addition to contributing to progress towards our larger goals.
 
 {\bf SAMPL blind challenges.} Challenges will have yearly submission deadlines and involve roughly the same size data sets as prior challenges.
 The full timeline for SAMPL challenges (Figure~\ref{figure:timeline}) will be made available on the website [\url{https://drugdesigndata.org/about/sampl}] at the outset, allowing participants to plan their work and select what challenges to be involved in.
@@ -630,33 +658,20 @@ As in SAMPL4 and SAMPL5, analysis will also be conducted by our automated Python
 All participant submissions and methodology descriptions will (as before) be made available publicly on the website, along with participant information (except for participants who specifically request to remain anonymous prior to submission).
 Aggregate statistics and historical performance will also be made available on our website, along with a record of linking publications to historical submissions.
 
-%Coordinate and run SAMPL blind challenges
 \textbf{Our goal is not just to run blind challenges, but to advance modeling by helping participants identify both modeling failures and potential solutions.} 
 To achieve this, we provide guidance to participants as to what known modeling issues we expect may be relevant when providing details on each SAMPL component.
 For a host-guest system, for example, we might highlight known buffer/salt effects, protonation state challenges, and point out previous work on sampling challenges, with pointers to the relevant experimental work and to modeling work from past SAMPL challenges and elsewhere~\cite{mobley_predicting_2016}.
 This helps participants design their approach.
-%Run reference calculations to:
 {\bf Additionally, we will run reference calculations using current best practices.} 
 This serves several purposes:
-		%a. Test current standard methods/FF
 It provides a test of the current methods and force fields we select; 
-		%b. Facilitate others learning (swap method or FF)
 it helps facilitate learning---we announce what calculations we plan to perform, make input files available in a wide variety of formats~\cite{shirts_lessons_2016, yin_overview_2016, bannan_blind_2016}, and others can repeat our calculations with a different method but same system and force field to compare methods, or swap force field but keep the method and system fixed to compare force fields, etc.; 
-		%c. Do sensitivity analysis (learn what?s important)
 and it allows us to conduct sensitivity analysis, as by varying the conditions of our simulations (protonation state, tautomer, etc.,~\cite{bannan_blind_2016}) we can see how much this impacts calculated values and thereby how important it is, even if participants don't do these tests.
-		%d. (Give examples of what we've learned from this)
 Reference calculations have, for example, helped us highlight the importance of a small amount of water in cyclohexane for accurately calculating log D values, show how an incorrect tautomer could affect calculated values by many log units~\cite{bannan_blind_2016}, and discover that small forcefield modifications could significantly improve results on hydration free energies~\cite{mobley_blind_2014-1}.
-		%e. (We will make inputs, outputs, and methods available too)
 To further aid follow-up studies, we will make the input files, results, and simulation workflows used for our reference calculations---along with the data---available via GitHub and Docker Hub.
 
 
-%Select and announce null models, run them
-Physical methods are only valuable if they can reliably outperform alternate methods, so \textbf{a new focus of SAMPL6-10 will be selecting quality null models and running them to provide a point of comparison for participants}.
-While SAMPL efforts in the past have used some null models, lack of manpower has required that these be particularly crude (such as ``guess zero'' models~\cite{bannan_blind_2016, paranahewage_predicting_2016, muddana_sampl4_2014}) which provide no predictive value. 
-Null models will be announced when each challenge component is opened.
-%Do statistical analysis of results (& compare to nulls), report back
-Statistical analysis of SAMPL performance, and comparison with nulls, will continue to be an important component of our work.
-%The paragraph above could probably be cut for space -- no one is going to fund us because we have great null models. May be better replaced by a figure.
+Physical methods are only valuable if they can reliably outperform alternate methods, so \textbf{a new focus of SAMPL6-10 will be selecting quality null models and running them to provide a point of comparison for participants}, going far beyond previous SAMPL nulls~\cite{bannan_blind_2016, paranahewage_predicting_2016, muddana_sampl4_2014}).
 
 %D3R coordination/meetings:
 Following submission and analysis of each SAMPL challenge, challenge results will be released and discussed, with SAMPL workshops allowing more formal presentations on and discussion of results in years 1, 3, and 5. 
@@ -738,7 +753,7 @@ The proposed series of carefully tailored challenges will focus our community on
 %\bibliography{full}{sampl-r01}{BIBLIOGRAPHY AND REFERENCES CITED}
 %\bibliography{sampl}{sampl-r01}{REFERENCES FROM PRIOR SAMPL CHALLENGES}
 
-\bibliographysampl{sampl-r01}
+\bibliographysampl{sampl}
 \eject
 \bibliography{sampl-r01}
 
