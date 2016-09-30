@@ -506,19 +506,19 @@ Thus D3R exercises serve the community well to understand current accuracy, but 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[h]
 \begin{centering}
-\resizebox{\textwidth}{!}{\includegraphics{figures/hsa-figure-draft4.pdf}}
+\resizebox{\textwidth}{!}{\includegraphics{figures/hsa-figure-draft7.pdf}}
 
 \end{centering}
-\vspace{0.1in}
+\vspace{-0.1in}
 \caption{\footnotesize {\bf The SAMPL6/7 protein-ligand challenge focuses on soluble drug fragment binding to human serum albumin (HSA).}
-\emph{(A)}~SAMPL6 will study binding of a library of 96 small soluble drug fragments to recombinant HSA.
-We will introduce a mutation in one of the binding pockets to create a challenge target for SAMPL7.
-\emph{(B)}~HSA has at least eight known binding sites, with major well-characterized sites (green, Sudlow's Site I; purple, Sudlow's Site II) which bind a variety of drugs%, often modulating their pharmacokinetics~\cite{Fasano:2005:IUBMBLife(InternationalUnionofBiochemistryandMolecularBiology:Life)} 
-(figure from~\cite{Hall:2013:JournalofChemicalInformationandModeling}).
-%DLM: Is the pharmacokinetics aspect relevant/important here? (Cutting for now since (a) this is also stated in the text, and (b) doesn't seem that relevant here)
-Two fluorescent probes---dansylamide and dansylglycine---have been shown to bind with $\sim$$\mu$M affinity and high selectivity to Site I and Site II, respectively; both exhibit binding-enhanced fluorescence at 480 nm, and can be used to site-specifically probe ligand affinities by competition.
-\emph{(C)}~Binding affinities of soluble molecules can easily be measured by isothermal titration calorimetry (ITC); here, the ITC titration of HSA by diclofenac (a Site II ligand~\cite{Rafols:2014:Talanta}) is shown~\cite{Bou-Abdallah:2016:TheJournalofChemicalThermodynamics}. 
-\emph{(D)}~HSA tryptophan fluorescence quenching can also be used to measure ligand binding affinity; here, HSA titration by diclofenac is shown, with the inset plot showing percent quenching at 346 nm~\cite{Epps:1999:JournalofPharmacyandPharmacology,Bou-Abdallah:2016:TheJournalofChemicalThermodynamics}
+\emph{(A)}~SAMPL6 will study binding of a library of 96 small soluble druglike fragments to recombinant HSA, with an engineered HSA mutant used for SAMPL7.
+\emph{(B)}~HSA has at least eight known binding sites, with two major well-characterized sites (green, Sudlow's Site I; purple, Sudlow's Site II) that bind a variety of drugs (figure from~\cite{Hall:2013:JournalofChemicalInformationandModeling}).
+Two fluorescent probes---dansylamide and dansylglycine---bind with $\sim$$\mu$M affinity and high selectivity to Site I and Site II, respectively; both exhibit binding-enhanced fluorescence at 480 nm, and can be used to site-specifically probe ligand affinities by competition.
+\emph{(C, D)}~Binding affinities of soluble molecules can be measured by isothermal titration calorimetry (ITC); here, the the \emph{(C)} differential power and \emph{(D)} integrated injection heats for the ITC titration of HSA by naproxen sodium collected using the Chodera lab automation pipeline is shown;
+\emph{(E)}~HSA tryptophan fluorescence quenching can also be used to measure ligand binding affinity; here, HSA titration by diclofenac is shown, with the inset plot showing percent quenching at 346 nm~\cite{Epps:1999:JournalofPharmacyandPharmacology,Bou-Abdallah:2016:TheJournalofChemicalThermodynamics}.
+\emph{(F)}~Direct fluorescence binding assay of Dansylamide (fluorescent ligand) and HSA collected on the Chodera lab automation system. 
+The binding curve can be constructed based on binding-induced fluorescence emission at 480 nm.
+\vspace{-0.2in}
 \label{figure:hsa-challenge}}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -547,8 +547,9 @@ As HSA is relatively rigid, and computational methods already show some promise 
 
 Recombinant HSA will be expressed in \emph{E.~coli} and purified via refolding from inclusion bodies~\cite{Latta:1987:Bio/Technology}, then defatted at low pH~\cite{Lang:2015:BiotechnologyProgress} to ensure the resulting protein is free of the glycosylation and bound fatty acids found in plasma-isolated HSA~\cite{Lang:2015:BiotechnologyProgress}.
 Recombinant expression will also allow a mutant form of HSA (engineered via single-primer mutagenesis) to be fielded for SAMPL7 (Figure~\ref{figure:hsa-challenge}).
-We will obtain a diverse library of 96 soluble drug-fragment-like molecules in pre-plated format as dry compound, and assay it for HSA binding using automated isothermal titration calorimetry (ITC) (Figure~\ref{figure:hsa-challenge}C) to characterize the overall binding affinity of each compound to HSA.
-The same ligands pre-plated in DMSO format will be used to conduct a separate set of fluorescence titration assays (monitoring tryptophan fluorescence quenching, Figure~\ref{figure:hsa-challenge}D) and competition assays in which the site-specific fluorescent probes daynsylamide (Site I) and dansylglycine (Site II) will be used to measure site-specific affinities for Sites I and II (Figure~\ref{figure:hsa-challenge}B), allowing participants to validate binding site predictions and site-specific affinity.
+We will obtain a diverse library of 96 soluble drug-fragment-like molecules in pre-plated format as dry compound, and use our automated isothermal titration calorimetry (ITC) pipeline (Figure~\ref{figure:hsa-challenge}C,D) to characterize overall binding affinities to HSA.
+The same ligands pre-plated in DMSO format will be used to conduct a separate set of fluorescence titration assays (monitoring tryptophan fluorescence quenching, Figure~\ref{figure:hsa-challenge}D) and competition assays with site-specific fluorescent probes (Figure~\ref{figure:hsa-challenge}B) to resolve site-specific affinities to Sudlow Sites I and II.
+We will field several levels of challenges, including challenges focused on affinities to Sites I and II, as well as challenges focused on predicting overall affinity and stoichiometry.
 %Remove redundancy between this paragraph and the caption to save space? (i.e. refer to there for some of this content?)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -574,9 +575,13 @@ The same ligands pre-plated in DMSO format will be used to conduct a separate se
 
 \textbf{SAMPL7-10: Rapid, responsive development of new model systems using a novel informatics platform.}
 
+We are developing a novel informatics platform aimed at identifying protein targets that can be rapidly developed into experimentally- and computationally-tractable model systems focusing on individual challenges (Figure~\ref{figure:mining-for-model-systems}).
+This tool filters all known protein targets with structural data available in the PDB, first selecting for experimental tractability, then annotating experimentally tractable targets to determine which targets possess (or are likely to be free of) specific challenges for physical modeling.
+This will allow us to select systems which introduce only specific modeling challenges.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\begin{wraptable}{r}{9.5cm}
-\begin{wrapfigure}[37]{r}[0pt]{9.5cm}
+\begin{wrapfigure}[38]{r}[0pt]{9.5cm}
 \vspace{-0.25in}
 \begin{centering}
 \resizebox{9.0cm}{!}{\includegraphics{figures/model-systems-figure-draft4.pdf}}
@@ -593,9 +598,6 @@ Additional filters annotate experimentally tractable systems with their potentia
 %\end{wrapfig}
 \end{wrapfigure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-We are developing a novel informatics platform aimed at identifying protein targets that can be rapidly developed into experimentally- and computationally-tractable model systems focusing on individual challenges (Figure~\ref{figure:mining-for-model-systems}).
-This tool filters all known protein targets with structural data available in the PDB, first selecting for experimental tractability, then annotating experimentally tractable targets to determine which targets possess (or are likely to be free of) specific challenges for physical modeling.
-This will allow us to select systems which introduce only specific modeling challenges.
 
 The Chodera lab has developed an automated wetlab to facilitate the development of such model protein-ligand systems using bacterial expression (see Equipment and Facilities).
 Potential targets matching desired challenge criteria will be screened for bacterial expression using high-throughput cloning, transformation, and expression testing, with purity and yield assessed by capillary electrophoresis on a Caliper GXII.
