@@ -610,8 +610,6 @@ This can be performed and screened for expression in 96-well format.
 Thus, datasets will consist of a matrix of protein mutants and ligands, providing opportunity to deeply explore the effects of interest.
 
 
-%Aim 4 - Coordinate, run, and analyze blind challenges to advance modeling of binding (1.5 pages)
-%{\bf Aim 4. Coordinate, run, and analyze blind challenges to rapidly drive progress in quantitative physical modeling.}
 \textbf{\underline{Aim 4}: Field community blind challenges to advance quantitative biomolecular design.}
 The value of the targeted datasets generated in Aims 1--3 will be amplified enormously by the strategic release of this data through multiple iterations of coordinated SAMPL blind challenges (Figure~\ref{figure:timeline}).
 These blind challenges are designed to test the state of the art, provoke new methodological and force field innovations, allow comparative evaluation of methods, and drive downstream improvements.
@@ -628,31 +626,22 @@ As in SAMPL4 and SAMPL5, analysis will also be conducted by our automated Python
 All participant submissions and methodology descriptions will (as before) be made available publicly on the website, along with participant information (except for participants who specifically request to remain anonymous prior to submission).
 Aggregate statistics and historical performance will also be made available on our website, along with a record of linking publications to historical submissions.
 
-%Coordinate and run SAMPL blind challenges
 \textbf{Our goal is not just to run blind challenges, but to advance modeling by helping participants identify both modeling failures and potential solutions.} 
 To achieve this, we provide guidance to participants as to what known modeling issues we expect may be relevant when providing details on each SAMPL component.
 For a host-guest system, for example, we might highlight known buffer/salt effects, protonation state challenges, and point out previous work on sampling challenges, with pointers to the relevant experimental work and to modeling work from past SAMPL challenges and elsewhere~\cite{mobley_predicting_2016}.
 This helps participants design their approach.
-%Run reference calculations to:
 {\bf Additionally, we will run reference calculations using current best practices.} 
 This serves several purposes:
-		%a. Test current standard methods/FF
 It provides a test of the current methods and force fields we select; 
-		%b. Facilitate others learning (swap method or FF)
 it helps facilitate learning---we announce what calculations we plan to perform, make input files available in a wide variety of formats~\cite{shirts_lessons_2016, yin_overview_2016, bannan_blind_2016}, and others can repeat our calculations with a different method but same system and force field to compare methods, or swap force field but keep the method and system fixed to compare force fields, etc.; 
-		%c. Do sensitivity analysis (learn what?s important)
 and it allows us to conduct sensitivity analysis, as by varying the conditions of our simulations (protonation state, tautomer, etc.,~\cite{bannan_blind_2016}) we can see how much this impacts calculated values and thereby how important it is, even if participants don't do these tests.
-		%d. (Give examples of what we've learned from this)
 Reference calculations have, for example, helped us highlight the importance of a small amount of water in cyclohexane for accurately calculating log D values, show how an incorrect tautomer could affect calculated values by many log units~\cite{bannan_blind_2016}, and discover that small forcefield modifications could significantly improve results on hydration free energies~\cite{mobley_blind_2014-1}.
-		%e. (We will make inputs, outputs, and methods available too)
 To further aid follow-up studies, we will make the input files, results, and simulation workflows used for our reference calculations---along with the data---available via GitHub and Docker Hub.
 
 
-%Select and announce null models, run them
 Physical methods are only valuable if they can reliably outperform alternate methods, so \textbf{a new focus of SAMPL6-10 will be selecting quality null models and running them to provide a point of comparison for participants}.
 While SAMPL efforts in the past have used some null models, lack of manpower has required that these be particularly crude (such as ``guess zero'' models~\cite{bannan_blind_2016, paranahewage_predicting_2016, muddana_sampl4_2014}) which provide no predictive value. 
 Null models will be announced when each challenge component is opened.
-%Do statistical analysis of results (& compare to nulls), report back
 Statistical analysis of SAMPL performance, and comparison with nulls, will continue to be an important component of our work.
 %The paragraph above could probably be cut for space -- no one is going to fund us because we have great null models. May be better replaced by a figure.
 
