@@ -267,9 +267,9 @@ Rapid dissemination of insights is critical for rapid progress, so we highly enc
 
 
 
-%c. Mention uniqueness of SAMPL -- there are other predictive challenges (D3R, pKa coop, CASP) but none focused on driving quantitatively predictive protein-ligand modeling
+%c. Mention uniqueness of SAMPL -- there are other predictive challenges (D3R, p$K_a$ coop, CASP) but none focused on driving quantitatively predictive protein-ligand modeling
 This work is also innovative because of the uniqueness of SAMPL.
-While there are other predictive challenges in the area of biomolecular modeling, such as D3R~\cite{gathiaka_d3r_2016}, the pKa cooperative~\cite{Nielsen:2011:Proteins}, CAPRI~\cite{Janin:2005:ProteinScience} and CASP~\cite{Moult:2014:Proteins},
+While there are other predictive challenges in the area of biomolecular modeling, such as D3R~\cite{gathiaka_d3r_2016}, the p$K_a$ cooperative~\cite{Nielsen:2011:Proteins}, CAPRI~\cite{Janin:2005:ProteinScience} and CASP~\cite{Moult:2014:Proteins},
 \textbf{no other blind challenge focuses specifically on data tailored and collected to drive quantitative protein-ligand modeling}.
 The SAMPL expansion we propose here is unique in its \emph{specific design} to drive improvements in modeling accuracy rather than simply serving an evaluative role.
 SAMPL benefits the whole modeling community---for example, protein-ligand docking software has improved as a direct result of SAMPL hydration challenges~\cite{coleman_sampl4_2014}, and commercial software vendors have introduced new features or scientific improvements based on participation in SAMPL challenges~\cite{reinisch_prediction_2012, klamt_prediction_2016}.
@@ -335,7 +335,7 @@ These properties allow us to directly probe force field accuracy and chemical ef
      %Maybe use a figure on log D accuracy?
 We will generate new solution-phase physical property measurements for drug-like molecules to motivate improvements in force fields and handling of protonation states and tautomers.
 This builds on our work on water-cyclohexane distribution coefficients for SAMPL5 (in partnership with Genentech), which revealed major issues with handling of protonation states and tautomers~\cite{bannan_blind_2016}  as well as serious forcefield limitations~\cite{paranahewage_predicting_2016} (Figure~\ref{figure:sampl5_logD}).
-Distribution coefficients give the ratio of concentrations of a solute between two different phases at equilibrium, and thus relate to transfer free energies from aqueous high-dielectric to low-dielectric environments.
+Distribution coefficients give the equilibrium ratio of concentrations of a solute between aqueous and nonpolar phases, and thus relate to transfer free energies from aqueous to more protein- or membrane-like environments.
 Thus, they capture many of the characteristics of transfer of drugs from water into binding sites but absent challenges with receptor conformational sampling and specific ligand-receptor interactions.
 In SAMPL5, distribution coefficients were challenging enough that many methods performed poorly, with even the best methods having accuracies less than would be expected based on hydration free energies in water~\cite{bannan_blind_2016}, yet failures were informative and the major sources of error were issues which will also plague prediction of ligand-receptor interactions.
 In some respects, distribution coefficients posed the ideal SAMPL challenge, hitting the sweet spot in terms of difficulty---difficult enough that clear failures were frequent, with ample room for improvement, but not so difficult that the reasons for failure were unclear in general. 
@@ -360,7 +360,8 @@ Below, we summarize plans for data collection for the SAMPL6-10 challenges of Ai
 These specific data sets were selected based on a desire to help the field resolve the problems encountered in SAMPL5 then progress to accurate estimation of new properties.
 Data sets will typically consist of at least 96 compounds for good statistics, though when possible, a much larger amount of data will be collected.
 
-\begin{wraptable}[20]{r}{6.5cm}
+\begin{wraptable}[18]{r}{6.5cm}
+\vspace{-0.2in}
 \footnotesize
 \begin{tabular}{l | l}
 {\bf drug} & {\bf features} \\
@@ -370,36 +371,37 @@ saxagliptin & adamantane; 1:1 \\
 premarin & steroid \\
 pancuronium & steroid\\
 varenicline & 1:1 vs 1:2 \\
-valsartan & pKa 4.37 \\ 
-omeprazole & pKa 4.77 \\
-ranolazine & pKa 7.17; epitopes \\
-pradaxa & pKa 3.87; epitopes \\
-nilotinib & epitopes; pKa 6.3 \\
+valsartan & p$K_a$ 4.37 \\ 
+omeprazole & p$K_a$ 4.77 \\
+ranolazine & p$K_a$ 7.17; epitopes \\
+pradaxa & p$K_a$ 3.87; epitopes \\
+nilotinib & epitopes; p$K_a$ 6.3 \\
 sensipar & epitopes; folding \\
 vyvance & diamine; epitopes; folding \\
 minocycline & tetracyclin; amino aniline \\
 \end{tabular}
 \caption{\label{table:CB} \textbf{Selected drugs whose binding to CB[$n$] hosts will be assayed for SAMPL6, 8, and 10 challenges (SA 2.1).} These drugs bind to the cucubituril-based host systems considered here, some at high affinity, so measuring their affinities provides a way to test methods for predicting binding interactions absent complexities present in protein-ligand systems.
 }
+\vspace{-0.1in}
 \end{wraptable}
 
-%Explain what science -- log D/logP, pKa primarily but mention possible other areas of interest
+%Explain what science -- log D/logP, p$K_a$ primarily but mention possible other areas of interest
 \textbf{SAMPL6: Cyclohexane/water and octanol/water distribution coefficients.}
 Building on the success of distribution coefficient measurements in SAMPL5 and their surprising ability to motivate rapid advances in physical modeling methodologies~\cite{bannan_blind_2016}, we will measure cyclohexane-water distribution coefficients at pH 7.4 for a new batch of commercially-available drug- and fragment-like molecules.
 %{\color{red}[JDC: Maybe the set can be broken into classes of varying chemical complexities? In general, I think clever experimental design ideas---indications we have really thought through how to maximize value---will be rewarded by the reviewers.]}
 %DLM: Need to revisit this comment.
 Given the routine nature of octanol-water distribution coefficient measurements and indications that their prediction may be computationally tractable~\cite{Bhatnagar:2013:PhysicalChemistryChemicalPhysics, bannan_calculating_2016} despite the heterogeneous structure of the wet octanol phase~\cite{Kollman:1996:AccountsofChemicalResearch}, we will also measure octanol-water distribution coefficients for the same compounds.
-Because pKa prediction was difficult but critical for SAMPL5, we will focus SAMPL6 on forcefields and tautomers by measuring pKa values, revisiting pKa prediction in SAMPL7 and 8.
+Because p$K_a$ prediction was difficult but critical for SAMPL5, we will focus SAMPL6 on forcefields and tautomers by measuring p$K_a$ values, revisiting p$K_a$ prediction in SAMPL7 and 8.
 
 
 \textbf{SAMPL7: pKa measurements for drug-like molecules.} 
 While much less complex than protein-ligand affinities, distribution coefficient measurements still conflate the challenging issues of protonation state and tautomer prediction, as well as transfer into different environments which may contain small but important quantities of cosolvents. 
 Thus, we will separate these issues and improve our handling of them one at a time. 
-For SAMPL7, then, we will measure pKa values for an extensive set of drug-like molecules in water which will serve as the focus of the challenge, paving the way for SAMPL8.
+For SAMPL7, then, we will measure p$K_a$ values for an extensive set of drug-like molecules in water which will serve as the focus of the challenge, paving the way for SAMPL8.
 
 \textbf{SAMPL8: pKa measurements and distribution coefficients.}
-In the next challenge, we will re-combine the pKa and transfer issues, measuring distribution coefficients \emph{and} pKa values for the same set of compounds, with participants predicting (a) distribution; (b) pKa; and (c) partition. 
-Unlike SAMPL6, pKa values will not be provided.
+In the next challenge, we will jointly explore p$K_a$ and transfer issues, measuring distribution coefficients \emph{and} p$K_a$ values for the same set of compounds, with participants predicting (a) log~D; (b) p$K_a$; and (c) log~P. 
+Unlike SAMPL6, p$K_a$ values will not be provided.
 
 \textbf{SAMPL9-10.}
 We will focus on solubility prediction in SAMPL9, and membrane permeability in SAMPL10, because of new computational developments.
@@ -476,7 +478,8 @@ This diversity drives more innovation than would a focus on a single host class.
 \end{centering}
 
 \caption{
-\label{figure:CB} \footnotesize {\bf SAMPL6-10 host-guest challenges will feature cucubituril hosts and analogs, including Me$_4$CB[8], glycoluril hexamer, and acyclic CB[n]-type receptors.} These receptors bind a variety of drug-like molecules, some with high affinity.
+\label{figure:CB} \footnotesize {\bf SAMPL6-10 host-guest challenges will feature cucubituril hosts and analogs, including Me$_4$CB[8], glycoluril hexamer, and acyclic CB[n]-type receptors (SA 2.1).} 
+These receptors bind a variety of drug-like molecules, some with high affinity.
 \vspace{-0.2in}
 }
 \end{figure}
@@ -497,7 +500,7 @@ All studies will be conducted in phosphate buffered saline (p$H$ 7.4 with physio
 \emph{SAMPL7} will revisit the same host, but use 15 different guests be selected from commercial sources on the basis of reference calculations (on a larger set of guests) to ensure that they cover substantial dynamic range and/or exhibit affinities that depend substantially on the force field or water model, thus effectively testing our force fields and methods.
 For \emph{SAMPL8}, we will focus on binding of the same 15 drugs (Table~\ref{table:CB}), but to glycoluril hexamer. 
 This host introduces the complication of increased conformational dynamics, and influences the number and energy of solvating (and unusually coordinated) water molecules implicated in the high binding constants for CB[$n$]-guest complexes~\cite{biedermann_release_2012, biedermann_hydrophobic_2014}.  
-The selected drugs include several with p$K_a$ values in the 3.8 to 7.4 range; given that CB[$n$]-type receptors (like biomolecular receptors) can induce pKa shifts in their guests of up to 4 pKa units~\cite{saleh_activation_2008, nau_deep_2011, ghosh_strategic_2012}, this will test how well models can predict these effects. 
+The selected drugs include several with p$K_a$ values in the 3.8 to 7.4 range; given that CB[$n$]-type receptors (like biomolecular receptors) can induce p$K_a$ shifts in their guests of up to 4 p$K_a$ units~\cite{saleh_activation_2008, nau_deep_2011, ghosh_strategic_2012}, this will test how well models can predict these effects. 
 Additionally, it will couple nicely with the focus on p$K_a$ values in Aim 1.
 \emph{SAMPL9} will revisit glycouril hexamer with the same 15 guests from \emph{SAMPL7}.
 \emph{SAMPL10} will shift to acyclic CB[$n$]-type receptors (e.g. M1C$_3$, M1C$_0$, and M1PC$_0$ that contain anionic solubilizing groups attached via different linker lengths.  
@@ -515,7 +518,7 @@ Moreover, the presence of 4 anionic groups near the cavity will likely impact th
 \end{centering}
 
 \vspace{-0.1in}
-\caption{\footnotesize {\bf Gibb deep cavity cavitands for the SAMPL6-10 datasets.} These hosts bind a variety of carboxylate and trimethylammonium guests in a strongly salt-dependent manner, providing a stringent test of our ability to model binding and how it depends on these effects.
+\caption{\footnotesize {\bf Gibb deep cavity cavitands for the SAMPL6-10 datasets (SA 2.2).} These hosts bind a variety of carboxylate and trimethylammonium guests in a strongly salt-dependent manner, providing a stringent test of our ability to model salt-dependent binding.
 \label{figure:gdccs}
 \vspace{-0.2in}
 }
@@ -566,7 +569,7 @@ Thus D3R exercises serve the community well to understand current accuracy, but 
 
 \end{centering}
 \vspace{-0.1in}
-\caption{\footnotesize {\bf The SAMPL6/7 protein-ligand challenge focuses on soluble drug fragment binding to human serum albumin (HSA).}
+\caption{\footnotesize {\bf The SAMPL6/7 protein-ligand challenge focuses on soluble drug fragment binding to human serum albumin (HSA) (Aim 3).}
 \emph{(A)}~SAMPL6 will study binding of a library of 96 small soluble druglike fragments to recombinant HSA, with an engineered HSA mutant used for SAMPL7.
 \emph{(B)}~HSA has at least eight known binding sites, with two major well-characterized sites (green, Sudlow's Site I; purple, Sudlow's Site II) that bind a variety of drugs (figure from~\cite{Hall:2013:JournalofChemicalInformationandModeling}).
 Two fluorescent probes---dansylamide and dansylglycine---bind with $\sim$$\mu$M affinity and high selectivity to Site I and Site II, respectively; both exhibit binding-enhanced fluorescence at 480 nm, and can be used to site-specifically probe ligand affinities by competition.
@@ -574,7 +577,7 @@ Two fluorescent probes---dansylamide and dansylglycine---bind with $\sim$$\mu$M 
 \emph{(E)}~HSA tryptophan fluorescence quenching can also be used to measure ligand binding affinity; here, HSA titration by diclofenac is shown, with the inset plot showing percent quenching at 346 nm~\cite{Epps:1999:JournalofPharmacyandPharmacology,Bou-Abdallah:2016:TheJournalofChemicalThermodynamics}.
 \emph{(F)}~Direct fluorescence binding assay of Dansylamide (fluorescent ligand) and HSA collected on the Chodera lab automation system. 
 The binding curve can be constructed based on binding-induced fluorescence emission at 480 nm.
-\vspace{-0.1in}
+\vspace{-0.25in}
 \label{figure:hsa-challenge}}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -602,15 +605,15 @@ As current advanced methodologies such as alchemical free energy calculations cu
 As HSA is relatively rigid, and computational methods already show some promise in computing binding affinities to HSA~\cite{Hall:2013:JournalofChemicalInformationandModeling,Lexa:2014:PLoSONE,Evoli:2016:bioRxiv}, this is an optimal model system for SAMPL6.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{wrapfigure}[38]{r}[0pt]{9.5cm}
+\begin{wrapfigure}[37]{r}[0pt]{9.5cm}
 \vspace{-0.25in}
 \begin{centering}
 \resizebox{9.0cm}{!}{\includegraphics{figures/model-systems-figure-draft4.pdf}}
-
+\vspace{-0.15in}
 \end{centering}
 \footnotesize
 \caption{\label{figure:mining-for-model-systems}  
-\textbf{Mining model protein-ligand systems to focus on individual modeling challenges via a structural and chemical informatics platform.}
+\textbf{Mining model protein-ligand systems to focus on individual modeling challenges via a structural and chemical informatics platform (Aim 3).}
 We are developing a structural and chemical informatics system called TargetExplorer [\url{https://github.com/choderalab/targetexplorer}] that applies successive filters to all potential protein-ligand systems for which structural data is available. 
 Suitable model systems should meet all experimental tractability criteria (green box) and possess only a few challenging properties, ideally only one (blue box).
 Tractability of experimental affinity measurements includes properties like known ligands with potentially fluorescent scaffolds (for fluorescence competition assays), highly soluble ligands (for ITC), or ligands above a minimal mass (for SPR or MST).
@@ -626,7 +629,7 @@ The same ligands pre-plated in DMSO format will be used to conduct a separate se
 We will field several levels of challenges, including challenges focused on affinities to Sites I and II, as well as challenges focused on predicting overall affinity and stoichiometry.
 %Remove redundancy between this paragraph and the caption to save space? (i.e. refer to there for some of this content?)
 
-\textbf{SAMPL7-10: Rapid, responsive development of new model systems using a novel informatics platform.}
+\textbf{SAMPL7-10: Rapid development of new tailored model systems using a novel informatics platform.}
 
 We are developing a novel informatics platform aimed at identifying protein targets that can be rapidly developed into experimentally- and computationally-tractable model systems focusing on individual challenges (Figure~\ref{figure:mining-for-model-systems}).
 This tool filters all known protein targets with structural data available in the PDB, first selecting for experimental tractability, then annotating experimentally tractable targets to determine which targets possess (or are likely to be free of) specific challenges for physical modeling.
@@ -644,6 +647,7 @@ Second, using single-primer quick-change mutagenesis, we will introduce site-dir
 This can be performed and screened for expression in 96-well format.
 Thus, datasets will consist of a matrix of protein mutants and ligands, providing opportunity to deeply explore the effects of interest.
 
+\eject
 
 \textbf{\underline{Aim 4}: Field community blind challenges to advance quantitative biomolecular design.}
 The value of the targeted datasets generated in Aims 1--3 will be amplified enormously by the strategic release of this data through iterative, coordinated SAMPL blind challenges (Figure~\ref{figure:timeline}).
@@ -726,10 +730,10 @@ Our vision is that long-term, instead of participants submitting a set of predic
 
 {\large \bf COLLABORATION MANAGEMENT PLAN} % 1 paragraph
 
-We have a strong previous history of successful collaboration, with Mobley and Chodera having co-authored roughly a dozen publications since 2006, as well as several workshops and other initiatives.
+We have a strong previous history of successful collaboration, with Mobley and Chodera having co-authored roughly a dozen publications and organized several workshops and other initiatives since 2006.
 Mobley, Isaacs, and Gibb have also worked together to coordinate past SAMPL challenges, and Mobley and Gibb a previous NSF workshop. 
-PI Mobley will oversee the project, with teams for the other aims (Mobley \& Chodera, Aim 1; Isaacs, Aim 2.1; Gibb, Aim 2.2; Chodera, Aim 3; Mobley \& Chodera, Aim 4) involving the other co-investigators as needed.
-Meetings will consist of a Google Hangout monthly and a yearly in-person planning meeting.
+PI Mobley will oversee the project, with teams for the other aims (Aim~1: Mobley \& Chodera; Aim~2.1: Isaacs; Aim~2.2: Gibb; Aim~3: Chodera; Aim~4: Mobley \& Chodera) involving the other co-investigators as needed.
+Meetings will consist of a monthly Google Hangout and a yearly in-person planning meeting.
 Chodera and Mobley will communicate more frequently due to the interlinked nature of their work.
 Publications are expected to be largely dictated by the overall Timeline, with an experimental publication associated with each challenge component being prepared for distribution to participants along with their results.
 Conflict resolution is expected to be straightforward, but if any serious difficulties arise, Michael Gilson (UCSD) will arbitrate given our close connections with D3R.
