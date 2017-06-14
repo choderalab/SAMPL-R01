@@ -1,12 +1,4 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% * <sonya.hanson@choderalab.org> 2015-04-23T18:56:00.248Z:
-%
-% 
-%
-% HEADER: DON'T EDIT THIS!
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% ^ <sonya.hanson@choderalab.org> 2015-04-23T18:57:46.938Z.
-% But why not?
+
 
 \documentclass[11pt]{article}
 
@@ -129,27 +121,15 @@
 % SIGNIFICANCE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-%NEED TO CAREFULLY CONSIDER GRAPHICS -- SOMETHING ON SIGNIFICANCE?
-
-%\begin{center}
-%{\large \bf SIGNIFICANCE}
-%\end{center}
-%\begin{center}
 {\Large \bf SIGNIFICANCE}
-%\end{center}
-%2 pages
 
-%Promise of physical methods, how they could transform drug discovery and the design of new small molecules for chemical biology
-% (If space permits here we will allude also to how this could help with broader areas too such as engineering of biologics)
+
 \textbf{Physical modeling is poised to transform drug discovery and chemical biology by enabling true molecular design.}
 While modeling is used extensively in drug discovery, its main role at present is to aid with idea generation or filter large libraries of compounds for screening. 
 Instead, we imagine using computational techniques extensively to guide the design process. 
 Consider a medicinal chemist in the not-too-distant future who has just finished synthesizing several new derivatives of an existing inhibitor, and has obtained binding affinity or potency data against the desired biomolecular target. 
 Before leaving work, she generates ideas for perhaps 100 new compounds which could be synthesized next, setting her computer to work overnight. 
 By morning, the idea compounds have been prioritized based on reliable predictions of their affinity for the desired target, selectivity against antitargets, solubility, and membrane permeability.  
-%{\color{red}[JDC: Should we say something about pharmacodynamics/kinetic and toxicity liabilities? We \emph{are} starting with HSA, after all.]}
-%I don't think so, for space reasons and because I think those are farther down the line than the thigns cited here -- i.e. we make the case below that methods for affinity, selectivity, solubility are already well on their way; I don't have cites showing that ADME/Tox is.
 The chemist looks through the predicted properties for the top few compounds, selecting some for synthesis. 
 If synthesizing and testing each compound takes several days, this workflow compresses roughly a year's work into a few days.
 
@@ -159,13 +139,15 @@ Given recent progress, the question now seems more one of \emph{when} rather tha
 
 Widespread availability of inexpensive graphics processing units (GPUs) provides a 100-fold increase in price-to-performance ratio over CPUs, while advances in automation~\cite{liu_lead_2013} and sampling protocols have helped simulation-based techniques reach the point where they now begin to be genuinely useful in guiding drug discovery for a limited \emph{domain of applicability}~\cite{mikulskis_large-scale_2014, homeyer_binding_2014, sherborne_preprint_2016,  schrodinger_accurate_2015, christ_binding_2016, cui_affinity_2016, verras_free_2016}.
 Specifically, in some situations, free energy calculations appear to be capable of achieving RMS errors of 1--2 kcal/mol with current force fields, even in prospective applications, sufficient to drastically reduce the number of molecules that must be synthesized and assayed~\cite{shirts_free-energy_2010}.
+%Add Aldeghi BRD work, Schrodinger JACS
 As a consequence, pharmaceutical companies are beginning to use these methods in active discovery projects.
 
-%Limitations of methods and of retrospective tests or application for methods improvements
-\textbf{Despite progress, current physical modeling methodologies suffer from severe limitations hindering their widespread use in molecular design.}
+\textbf{Despite progress, current modeling methods suffer from severe limitations hindering their widespread use in molecular design.}
 For example, even ``small'' protein conformational changes not gracefully handled by current methodologies can yield errors up to 5 kcal/mol in calculated binding free energies~\cite{lim_sensitivity_2016}, force field limitations still pose major challenges~\cite{rocklin_blind_2013}, and the inability to treat important chemical effects like protonation and tautomer equilibria drastically limits the domain of applicability.
 {\bf For many pharmaceutically relevant systems, the most important sources of error---and modeling challenges---are not yet clear.}
 
+%DLM: Below seems like key paragraph wasted or point not made strongly enough. I think we want to start making the crowdsourcing point here.
+%Part of the issue is not just about prospective tests -- it's that people all do different things, test them on different data (retrospectively) and so we simply can't compare them and learn what works best and why.  I think we need to make that point more strongly and sooner.
 Progress on addressing these challenges has been frustratingly slow, hindered by a lack of high-quality data and community focus.
 {\bf Neither retrospective tests nor prospective application in discovery projects provides the necessary impetus and data to rapidly overcome remaining barriers to widespread utility.}
 Large-scale retrospective tests can assess \emph{retrospective} performance, but they do not provide accurate guidance on utility for prospective design, nor do they effectively identify the most important sources of error.
@@ -176,16 +158,12 @@ This also means that in retrospective tests, researchers almost invariably try f
 Prospective tests, in contrast, force researchers to anticipate a multitude of potential situations rather than only those observed in a known benchmark dataset.
 Prospective application in actual discovery projects, while important, also does not provide the necessary impetus, partly because often, the predicted compounds are in fact never tested~\cite{christ_binding_2016} or the experimental data necessary to assess the quality of the predictions is absent---for example, because binding affinities are not measured or no crystallography is available. 
 
-%Explain need for blind challenges and how D3R only fills part of need
 {\bf To accelerate progress in quantitative predictive physical modeling, we need a series of community blind prediction challenges focused on pushing the limits of predictive techniques, providing a bridge between challenging but tractable problems and pharmacologically relevant but currently intractable problems.}
 These challenges should be designed to have the necessary high quality experimental data, but also be prospective, predictive tests.
 While the Drug Design Data Resource (D3R~\cite{gathiaka_d3r_2016}, discussed further below) provides an existing community blind challenge on protein-ligand binding, it focuses on using pre-existing pharmaceutical datasets, rather than on measuring new data carefully selected maximize community learning~\cite{gathiaka_d3r_2016}. 
 D3R serves well to assess where we are now---but we need a carefully-designed effort focused on improving modeling.
 
-%Discuss importance of SAMPL (including publication/citation count, previous successes in advancing the field, focus), need for funding to:
-%   a. Continue SAMPL
-%   b. Allow for "design" of SAMPL (rather than having it be driven by data availability)
-%   b. Extend SAMPL to bridge to D3R rather than leaving a "capability gap" (here's where I explain why this is distinct from D3R -- this is crucial)
+%DLM: Below is going to need to get into not just history of SAMPL (maybe reduce that some?) but also crowdfunding for science.
 \textbf{Physical modeling accuracy advances most rapidly when progress toward a complex goal can be decomposed into resolving a series of tractable problems, as revealed by carefully collected and curated data.}
 To make rapid progress, our field needs an effort which focuses on specific \emph{component} problems of the overall problem of interest, collects and curates data that highlights these problems, and drives progress via prospective challenges.
 This process allows the entire community to learn from both methodological success and failure. 
@@ -193,10 +171,10 @@ The model we propose here has been proven to drive dramatic improvements in mode
 SAMPL, born out of frustration with the lack of venues for comparing predictive accuracy on a level playing field, was initiated by Anthony Nicholls of OpenEye software in 2007/2008~\cite{nicholls_predicting_2008}, and has run challenges approximately every two years since then~\cite{nicholls_samp1_2009, mobley_predictions_2009, geballe_sampl2_2010, geballe_sampl3_2012, mobley_blind_2014-1, muddana_sampl4_2014, bannan_blind_2016, yin_overview_2016}.
 Governance transitioned to an unfunded academic collaboration during SAMPL3 in 2012; this collaboration ran subsequent challenges as SAMPL4 (2014) and SAMPL5 (2016).
 The PI of this proposal (Mobley) was a primary organizer of SAMPL4/5 (2014--2016).
-%SAMPL has always involved a component focused on calculation of solvation properties such as hydration free energies, but also introduced host-guest systems as model binding systems for SAMPL3--5 (2012--2016), supplementing protein-ligand challenges (on trypsin and HIV integrase) which appeared in SAMPL3-4 (2012--2014). 
 Much as unit testing is an indispensible tool for discovering where bugs in a program are hiding when complex integration tests fail, exercises like SAMPL are valuable in pinpointing and correcting modeling errors when the overall performance fails to live up to expectations for complex pharmacological targets.
 To accomplish this, SAMPL has historically focused on both simple challenges that attempt to isolate likely sources of modeling errors, such as physical properties of small molecules (hydration free energies, aqueous tautomer ratios, partition or distribution coefficients between aqueous and nonpolar phases) as well as small molecule binding to targets of reduced complexity (such as host-guest binding, and binding of fragments to trypsin and HIV integrase).
 {\bf SAMPL has already been a tremendous community resource, resulting in nearly 100 publications which are typically cited 5--50 times or more each}~\citesampl{monroe_converging_2014_sampl,muddana_blind_2014_sampl,gallicchio_bedam_2015-1_sampl,mikulskis_free-energy_2014_sampl,hsiao_prediction_2014_sampl,bhakat_resolving_2016_sampl,pal_combined_2016_sampl,yin_sampl5_2016_sampl,bosisio_blinded_2016_sampl,tofoleanu_absolute_2016_sampl,mobley_blind_2014-1_sampl,muddana_sampl4_2014_sampl,sullivan_binding_2016_sampl,deng_distinguishing_2015_sampl,li_testing_2014_sampl,paranahewage_predicting_2016_sampl,klamt_prediction_2016_sampl,tielker_sampl5_2016_sampl,konig_calculating_2016_sampl,luchko_sampl5:_2016_sampl,santos-martins_calculation_2016_sampl,perryman_virtual_2014_sampl,konig_predicting_2014_sampl,voet_combining_2014_sampl,park_extended_2014_sampl,rustenburg_measuring_2016_sampl,reinisch_prediction_2014_sampl,muddana_sampl4_2014-1_sampl,manzoni_prediction_2014_sampl,sandberg_predicting_2014_sampl,brini_adapting_2016_sampl,kamath_prediction_2016_sampl,diaz-rodriguez_predicting_2016_sampl,kenney_prediction_2016_sampl,caldararu_binding_2016_sampl,genheden_all-atom/coarse-grained_2016_sampl,chung_extended_2016_sampl,koziara_testing_2014_sampl,yin_overview_2016_sampl,bannan_blind_2016_sampl,Lee:2016:JComputAidedMolDes_sampl,Jones:2016:JComputAidedMolDes_sampl,Pickard:2016:JComputAidedMolDes_sampl, cao_absolute_2014_sampl,muddana_prediction_2012_sampl,gibb_binding_2013_sampl,klimovich_predicting_2010_sampl,mobley_alchemical_2012_sampl,muddana_sampl3_2012_sampl,skillman_sampl3_2012_sampl,Newman:2011:JComputAidedMolDes_sampl,gallicchio_virtual_2014_sampl,klamt_blind_2010_sampl,fennell_modeling_2011_sampl,ellingson_analysis_2010_sampl,surpateanu_evaluation_2011_sampl,purisima_rapid_2010_sampl,konig_predicting_2011_sampl,kehoe_testing_2011_sampl,kumar_computational_2012_sampl,meunier_predictions_2010_sampl,genheden_extensive_2014_sampl,beckstein_prediction_2014_sampl,coleman_sampl4_2014_sampl,hogues_exhaustive_2014_sampl,reinisch_prediction_2012_sampl,kulp_fragment-based_2012_sampl,klamt_conclusions_2010_sampl,fu_fast_2014_sampl,hamaguchi_force-field_2012_sampl,colas_virtual_2014_sampl,ellingson_efficient_2014_sampl,sulea_predicting_2011_sampl,geballe_sampl2_2010_sampl,ribeiro_prediction_2010_sampl,skillman_sampl2_2010_sampl,gallicchio_prediction_2012_sampl,mikulskis_binding_2011_sampl,geballe_sampl3_2012_sampl,guthrie_sampl4_2014_sampl,nicholls_sampl2_2010_sampl,soteras_performance_2010_sampl,lawrenz_thermodynamic_2012_sampl,sulea_exhaustive_2011_sampl,beckstein_prediction_2011_sampl,benson_prediction_2012_sampl,kast_prediction_2010_sampl, mobley_predictions_2009_sampl,newman_practical_2009_sampl,klamt_prediction_2009_sampl,guthrie_blind_2009_sampl,marenich_performance_2009_sampl,sulea_prediction_2009_sampl,nicholls_samp1_2009_sampl,nicholls_predicting_2008_sampl,chamberlin_performance_2008_sampl}.
+%Add references in the interim -- at the very least the Nathan Baker stuff but there are probably others.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -211,10 +189,13 @@ To accomplish this, SAMPL has historically focused on both simple challenges tha
 \caption{\label{figure:sampl_history}  
 \textbf{SAMPL historical participation~\cite{mobley_blind_2014-1}.} 
 Historical participation in SAMPL host-guest + solvation/distribution challenges has climbed rapidly, and we expect this trend to continue. The number of participating groups is shown in blue, and the number of submissions in green. The inset shows the diversity of methods employed for the SAMPL4 hydration challenge, which is typical for SAMPL. 
+%MAYBE NEED TO UPDATE TO EXPLAIN WHY PARTICIPATION FELL
 }
 \end{wrapfigure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%DLM: This would be a good place to start mentioning survey results suggesting we EXPAND the challenge. 
+%Probably post survey on website and reference it (in case it proves problematic to attach)
 Here, we \textbf{design a new series of SAMPL challenges specifically to guide the improvement of models}.
 Until now, this has been impossible, because SAMPL has been entirely unfunded; its very existence has required ``donation'' of data and time, giving us no ability to gather datasets tailored to our purpose. 
 Our proposed new challenges bridge the gap between calculations of simple physical properties that isolate forcefield inaccuracies from sampling challenges, like hydration---which can already be calculated fairly accurately~\cite{mobley_blind_2014-1}---and the D3R Grand Challenges on protein-ligand binding, which are a major source of consternation for the community so far~\cite{ignjatovic_binding-affinity_2016, deng_large_2016, sunseri_d3r_2016, gathiaka_d3r_2016}.
