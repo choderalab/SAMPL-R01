@@ -25,6 +25,8 @@
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, urlcolor=black, citecolor=black, linkcolor=black}
 
+\usepackage[numbers,sort&compress]{natbib}
+
 \newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{doi:#1}}
 
 \newcommand{\ac}[1]{{\sc \lowercase{#1}}}
@@ -35,6 +37,7 @@
 
 \usepackage{bibspacing}
 \setlength{\bibspacing}{\baselineskip}
+\usepackage{bibentry}
 
 
 \graphicspath{{figs/}}
@@ -95,10 +98,10 @@ The reviewers of our original proposal raised a number of concerns we have addre
 % - we're not innovating
 Overall, reviewers had several main points of criticism, the most profound of which is that our proposal will not actually develop any new methods, but instead relies on others to do the methodological innovations, thus they concluded that ``as such, the overall impact... is expected to be limited and would rely largely on others to make progress.''
 We agree with the reviewers that this work's goal is indeed to drive methods development in the field, rather than to produce our own methods developments.
-Indeed, the SAMPL challenge builds on a \emph{proven} model of blind challenges to motivate progress much more broadly than one single group -- a model already proven in computational biology by the CASP [ref] and DREAM [ref] challenges, but also proven at a more popular level by the Netflix challenge [ref] and to some extent the XPrize approach [ref]. 
-This model of ``crowdsourcing for innovation'' has achieved widespread success in diverse fields [refs], as we now discuss in the proposal, and is known to foster much more innovation than having groups work independently on their own problems [ref].
+Indeed, the SAMPL challenge builds on a \emph{proven} model of blind challenges to motivate progress much more broadly than one single group -- a model already proven in computational biology by the CASP~\cite{Moult:2014:Proteins, Monastyrskyy:2016:Proteins, Moult:2016:Proteins} and DREAM~\cite{Prill:2011:Sci.Signal., Eisenstein:2013:NatBiotech, Saez-Rodriguez:2016:NatRevGenet} challenges, but also proven at a more popular level by the Netflix Prize~\cite{Bell:2010:CHANCE} and to some extent the XPrize approach~\cite{::XPRIZE, Kay:2011:R&DManage, XPrize:2017:Wikipedia}. 
+This model of ``crowdsourcing for innovation'' has achieved widespread success in diverse fields~\cite{Kay:2011:R&DManage, Saez-Rodriguez:2016:NatRevGenet}, as we now discuss in the proposal, and is known to foster much more innovation than having groups work independently on their own problems~\cite{Bell:2010:CHANCE, Kay:2011:R&DManage, Saez-Rodriguez:2016:NatRevGenet}.
 Thus we, and the SAMPL community, disagree with the reviewers and believe the impact of SAMPL has been high and, with funding, will grow to be even higher. 
-We now attach (and reference in the proposal) the results of a survey of of SAMPL's impact on the field, as well as testimonials from a number of past participants highlighting ways in which SAMPL has helped method development work in their groups.
+We now attach the results of a survey of of SAMPL's impact on the field~\cite{Mobley:2017:eScholarship}, as well as testimonials from a number of past participants highlighting ways in which SAMPL has helped method development work in their groups.
 We hope these testimonials, together with more context on the crowdsourcing model employed here, will alleviate the concerns of the reviewers. 
 
 % - it's not enough data for training on
@@ -115,10 +118,8 @@ To address this, a variety of key leaders in the field have provided support let
 We also believe the roughly 100 (typically well-cited) publications about the SAMPL series of challenges also support this point.
 
 % Discuss surveys of community
-To assist with this revision, we surveyed the SAMPL community regarding our plans, and it is overwhelmingly supportive. 
-Out of 45 respondents (each typically representing an individual group) 95.6\% saw SAMPL as a valuable resource to the community (with the remaining percentage seeing it as ``somewhat valuable'') and more than 90\% seeing it as important in driving progress in the field (with no respondents seeing it as unimportant). 91\% are happy with the proposed future directions, and the remaining 9\% had modest suggestions for refinements to our directions, such as increasing the size of the datasets modestly, doing additional experimental follow-up after SAMPL challenges, and increased use of 3rd party testing. 
-We discuss some of these new innovations in our proposal; typically these will require expanding our planned work and make funding even more of an imperative.
-% Discuss recommendations made which require funding
+To assist with this revision, we surveyed the SAMPL community regarding our plans~\cite{Mobley:2017:eScholarship}, and found overwhelming support. 
+Out of 44 respondents (each typically representing an individual group) 95\% saw SAMPL as a valuable resource to the community (with the remaining percentage seeing it as ``somewhat valuable'') and more than 90\% seeing it as important in driving progress in the field (with no respondents seeing it as unimportant). 91\% are happy with the proposed future directions, and the remaining 9\% had modest suggestions for refinements which we have incorporated, such as increasing the size of the datasets modestly, doing additional experimental follow-up after SAMPL challenges, and increased use of 3rd party testing. Full survey results are available online~\cite{Mobley:2017:eScholarship}, and we can make respondent identities and contact info available if needed.
 
 The reviewers also critiqued the perceived lack of participation in SAMPL, noting that only 20 groups participated this last cycle. 
 We now address this in the proposal itself, but it is worth noting that this performance \emph{is increased} relative to previous SAMPL iterations since the protein-ligand binding component of prior SAMPL challenges has now been subsumed into D3R. 
@@ -176,7 +177,8 @@ Overall, we hope the overwhelming community support for our plans, the specific 
 %\bibliographystyle{myrefstyle}
 %\bibliography{chodera-research}
 
-
+\bibliographystyle{nci}
+\nobibliography{sampl-r01}
 \end{document}
 
 

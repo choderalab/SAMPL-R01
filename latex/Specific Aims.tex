@@ -27,6 +27,8 @@
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, urlcolor=black, citecolor=black, linkcolor=black}
 
+\usepackage[numbers,sort&compress]{natbib}
+
 \newcommand{\doi}[1]{\href{http://dx.doi.org/#1}{doi:#1}}
 
 \newcommand{\ac}[1]{{\sc \lowercase{#1}}}
@@ -37,6 +39,7 @@
 
 \usepackage{bibspacing}
 \setlength{\bibspacing}{\baselineskip}
+\usepackage{bibentry}
 
 
 \graphicspath{{figs/}}
@@ -111,9 +114,9 @@ Without such a bridge, these techniques may encounter the same problems faced by
 
 We propose a carefully tailored, crowdsourcing-based model to drive innovation. 
 Specifically, we will collect targeted experimental datasets that highlight specific modeling challenges and use these for blind prediction challenges which spur new, crowdsourced methods innovations from the community or highlight successes of the latest methods.
-This crowdsourcing model is proven to drive progress in a given area, both inside our community [refs] and for even more visible projects like Netflix [refs] and the XPrizes [ref]. 
+This crowdsourcing model is proven to drive progress in a given area, both inside the computational biology community~\cite{Moult:2014:Proteins, Monastyrskyy:2016:Proteins, Moult:2016:Proteins, Prill:2011:Sci.Signal., Eisenstein:2013:NatBiotech, Saez-Rodriguez:2016:NatRevGenet}, and for even more visible projects like Netflix~\cite{Bell:2010:CHANCE} and the XPrizes~\cite{::XPRIZE, Kay:2011:R&DManage, XPrize:2017:Wikipedia}. 
 Our blind challenges allow a wide variety of different approaches to compete on equal footing on the same data, fostering rapid innovation, quick recognition of the best and worst new technologies, and dissemination of these to the community. 
-The data we generate will allow several challenges of differing difficulty, between systems tractable with current methodologies to the pharmaceutically-relevant drug targets featured in the NIH-funded D3R effort [ref].
+The data we generate will allow several challenges of differing difficulty, between systems tractable with current methodologies to the pharmaceutically-relevant drug targets featured in the NIH-funded D3R effort~\cite{Gathiaka:2016:JComputAidedMolDes}.
 Central to this proposal is collecting targeted data and running blind challenges to drive progress, but the data itself will also be subsequently disseminated, having an even longer-term impact on the community.
 Here, we will:
 
@@ -149,7 +152,8 @@ Results will then feed back into improved treatment of these factors for subsequ
 Overall, the cyclic SAMPL challenges proposed here will result in crowdsourced innovations that provide the foundation for the next several generations of computational methods for pharmaceutical drug discovery. 
 
 
-
+\bibliographystyle{nci}
+\nobibliography{sampl-r01}
 \end{document}
 
 
