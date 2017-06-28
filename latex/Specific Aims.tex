@@ -96,30 +96,32 @@
 % SPECIFIC AIMS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%======================================
+%=====================================h=
 
 \noindent \begin{center}
 {\bf SPECIFIC AIMS}
 \end{center}
 
-While computational techniques are currently widely used in pharmaceutical drug discovery, current generation technologies (such as docking) are unsuitable for true molecular design. 
-Specifically, these techniques fail to to predict small molecule binding affinities to target and antitarget biomolecules with sufficient accuracy for the variety of applications currently of interest. 
-Computational screening techniques can do better than random selection of compounds, but they lack the accuracy to guide molecular design or optimization. 
-A new generation of physical techniques, alchemical free energy calculations, are poised to fill this void by providing a quantitative, predictive tool that can be used in multiple stages of the drug discovery pipeline, including lead optimization to improve affinity and selectivity or the retention of potency as other physical properties are optimized. 
+While computational techniques are widely used in pharmaceutical drug discovery, current generation technologies (such as docking) are unsuitable for true molecular design. 
+Specifically, these techniques fail to to predict small molecule binding affinities to target and antitarget biomolecules with sufficient accuracy for many applications. 
+While virtual screening techniques can improve enrichment, they lack accuracy to guide molecular design. 
+A new generation of physical techniques, alchemical free energy calculations, are poised to fill this void by providing quantitative, predictive tools useful in multiple stages of the drug discovery pipeline.
+%, notably in lead optimization to improve affinity and selectivity or the retention of potency as other physical properties are optimized. 
 
 Recent success of alchemical methods in predicting accurate affinities has sparked considerable enthusiasm, but the domain of applicability of these techniques is currently highly limited; broad application and routine use will require further evaluation, refinement, and development. 
-There is a vast gulf between targets within the domain of applicability and those which are outside it. 
+There is a vast gulf between targets within the domain of applicability and those which are outside it, frustrating progress. 
 Bridging this gulf will require focused study of carefully selected systems of intermediate complexity. 
 Without such a bridge, these techniques may encounter the same problems faced by docking and related techniques: routine failure without clear insights into why, and years to decades spent making small methodological modifications without dramatic improvements in predictive power.
 
-We propose a carefully tailored, crowdsourcing-based model to drive innovation. 
+We propose a carefully-designed, crowdsourcing-based model to drive innovation to bridge this gap. 
 %I capitalize Challenges now in keeping with the DREAM review -- makes it easier to distinguish between "challenges" in "protonation states challenge modeling" versus "Challenges" as in "yearly Challenges"... 
-Specifically, we will collect targeted experimental datasets that highlight specific modeling challenges and use these for blind prediction Challenges which spur new, crowdsourced methods innovations from the community.
-This model is proven to drive progress in a given area, both inside the computational biology community~\cite{Moult:2014:Proteins, Monastyrskyy:2016:Proteins, Moult:2016:Proteins, Prill:2011:Sci.Signal., Eisenstein:2013:NatBiotech, Saez-Rodriguez:2016:NatRevGenet}, and for even more visible projects like Netflix~\cite{Bell:2010:CHANCE} and the XPrizes~\cite{::XPRIZE, Kay:2011:R&DManage, XPrize:2017:Wikipedia}. 
-Here, we extend the Statistical Assessment of Modeling of Proteins and Ligand (SAMPL) series Challenges, which allow a wide variety of different approaches to compete on equal footing on the same data, fostering rapid innovation, quick recognition of the best new technologies, and dissemination of these to the community. 
+Specifically, we will collect targeted experimental datasets that highlight and focus the community on specific modeling Challenges, fielding blind prediction challenges to spur new, crowdsourced methodology innovation from the community.
+This model has been proven to drive progress in a given area, both inside the computational biology community~\cite{Moult:2014:Proteins, Monastyrskyy:2016:Proteins, Moult:2016:Proteins, Prill:2011:Sci.Signal., Eisenstein:2013:NatBiotech, Saez-Rodriguez:2016:NatRevGenet}, and for even more visible projects like Netflix~\cite{Bell:2010:CHANCE} and the XPrizes~\cite{::XPRIZE, Kay:2011:R&DManage, XPrize:2017:Wikipedia}. 
+We propose to execute a series of carefully-designed blind Challenges as future iterations of the Statistical Assessment of Modeling of Proteins and Ligands (SAMPL) exercises that have so far produced nearly a hundred publications in their first six unfunded incarnations~\cite{monroe_converging_2014_sampl,muddana_blind_2014_sampl,gallicchio_bedam_2015-1_sampl,mikulskis_free-energy_2014_sampl,hsiao_prediction_2014_sampl,bhakat_resolving_2016_sampl,pal_combined_2016_sampl,yin_sampl5_2016_sampl,bosisio_blinded_2016_sampl,tofoleanu_absolute_2016_sampl,mobley_blind_2014-1_sampl,muddana_sampl4_2014_sampl,sullivan_binding_2016_sampl,deng_distinguishing_2015_sampl,li_testing_2014_sampl,paranahewage_predicting_2016_sampl,klamt_prediction_2016_sampl,tielker_sampl5_2016_sampl,konig_calculating_2016_sampl,luchko_sampl5:_2016_sampl,santos-martins_calculation_2016_sampl,perryman_virtual_2014_sampl,konig_predicting_2014_sampl,voet_combining_2014_sampl,park_extended_2014_sampl,rustenburg_measuring_2016_sampl,reinisch_prediction_2014_sampl,muddana_sampl4_2014-1_sampl,manzoni_prediction_2014_sampl,sandberg_predicting_2014_sampl,brini_adapting_2016_sampl,kamath_prediction_2016_sampl,diaz-rodriguez_predicting_2016_sampl,kenney_prediction_2016_sampl,caldararu_binding_2016_sampl,genheden_all-atom/coarse-grained_2016_sampl,chung_extended_2016_sampl,koziara_testing_2014_sampl,yin_overview_2016_sampl,Bannan:2016:JComputAidedMolDes_sampl,Lee:2016:JComputAidedMolDes_sampl,Jones:2016:JComputAidedMolDes_sampl,Pickard:2016:JComputAidedMolDes_sampl, cao_absolute_2014_sampl,muddana_prediction_2012_sampl,gibb_binding_2013_sampl,klimovich_predicting_2010_sampl,mobley_alchemical_2012_sampl,muddana_sampl3_2012_sampl,skillman_sampl3_2012_sampl,Newman:2011:JComputAidedMolDes_sampl,gallicchio_virtual_2014_sampl,klamt_blind_2010_sampl,fennell_modeling_2011_sampl,ellingson_analysis_2010_sampl,surpateanu_evaluation_2011_sampl,purisima_rapid_2010_sampl,konig_predicting_2011_sampl,kehoe_testing_2011_sampl,kumar_computational_2012_sampl,meunier_predictions_2010_sampl,genheden_extensive_2014_sampl,beckstein_prediction_2014_sampl,coleman_sampl4_2014_sampl,hogues_exhaustive_2014_sampl,reinisch_prediction_2012_sampl,kulp_fragment-based_2012_sampl,klamt_conclusions_2010_sampl,fu_fast_2014_sampl,hamaguchi_force-field_2012_sampl,colas_virtual_2014_sampl,ellingson_efficient_2014_sampl,sulea_predicting_2011_sampl,geballe_sampl2_2010_sampl,ribeiro_prediction_2010_sampl,skillman_sampl2_2010_sampl,gallicchio_prediction_2012_sampl,mikulskis_binding_2011_sampl,geballe_sampl3_2012_sampl,guthrie_sampl4_2014_sampl,nicholls_sampl2_2010_sampl,soteras_performance_2010_sampl,lawrenz_thermodynamic_2012_sampl,sulea_exhaustive_2011_sampl,beckstein_prediction_2011_sampl,benson_prediction_2012_sampl,kast_prediction_2010_sampl,mobley_predictions_2009_sampl,newman_practical_2009_sampl,klamt_prediction_2009_sampl,guthrie_blind_2009_sampl,marenich_performance_2009_sampl,sulea_prediction_2009_sampl,nicholls_samp1_2009_sampl,nicholls_predicting_2008_sampl,chamberlin_performance_2008_sampl,Gosink:2017:J.Phys.Chem.B_sampl, Yang:2017:arXiv:1705.10035[q-bio]_sampl, shirts_lessons_2016_sampl, Bansal:2017:JComputAidedMolDes_sampl}.
+These Challenges permit a wide variety of approaches to compete on equal footing on the same data, fostering rapid innovation, quick recognition of the best new technologies, and dissemination of these to the community. 
 The data we generate will allow several Challenges of differing difficulty, between systems tractable with current methodologies to the pharmaceutically-relevant drug targets featured in the NIH-funded D3R effort~\cite{Gathiaka:2016:JComputAidedMolDes}.
 Central to this proposal is collecting targeted data and running blind Challenges to drive progress, but the data itself will have an even longer-term impact on the community.
-Here, we:
+Our Aims are:
 
 %old
 %Specifically, we will collect targeted experimental datasets, use them to conduct blind prediction challenges, and release curated benchmark sets in a manner designed to drive expansion of the domain of applicability and improvements to physical modeling techniques. 
@@ -151,10 +153,11 @@ While the initial year will feature fragment binding to human serum albumin, sub
 The data collected in Aims 1--3 will drive annual SAMPL Challenges, allowing the field to test the latest methods and force fields to assess progress, compare them against one another head-to-head, and perform sensitivity analysis to learn how much different factors (protonation state, tautomer selection, solvent model, force field, sampling method, etc.) affect predictive power. 
 Results will then feed back into improved treatment of these factors for subsequent Challenges, driving cycles of application, learning, and advancement -- an approach proven to work in a variety of previous crowdsourcing approaches to science, as well as in prior iterations of SAMPL itself.
 
-Overall, the cyclic SAMPL Challenges proposed here will result in crowdsourced innovations that provide the foundation for the next several generations of computational methods for pharmaceutical drug discovery. 
-
+Overall, these SAMPL Challenges provide the necessary catalyst for driving the next several generations of computational methodology innovation, development, and assessment for pharmaceutical drug discovery. 
+% Maybe "support" is better than catalyst?
 
 \bibliographystyle{nci}
+\nobibliography{sampl}
 \nobibliography{sampl-r01}
 \end{document}
 
