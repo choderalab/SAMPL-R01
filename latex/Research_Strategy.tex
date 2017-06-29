@@ -128,19 +128,18 @@
 \textbf{Physical modeling is poised to transform drug discovery and chemical biology by enabling true molecular design.}
 While modeling is used extensively in drug discovery, it mainly assists in idea generation and filtering large libraries of compounds for screening. 
 Instead, we envision using computational techniques extensively to guide design. 
-Consider a medicinal chemist in the not-too-distant future who has just finished synthesizing several new derivatives of an existing inhibitor, and has obtained binding affinity or potency data against the desired biomolecular target. 
+Consider a medicinal chemist in the not-too-distant future who has just received potency data for newly-synthesized inhibitors against a desired biomolecular target. 
 Before leaving work, she generates ideas for perhaps 100 new compounds for synthesis, setting her computer to work overnight. 
 By morning, the idea compounds have been prioritized based on reliable predictions of their affinity for the desired target, selectivity against antitargets, solubility, and membrane permeability.  
-The chemist looks through the top few compounds and selects some for synthesis. 
-If synthesizing and testing each compound takes several days, this workflow compresses roughly a year's work into a few days.
+Looking through the top few compounds, she selects some for synthesis. 
+If synthesizing and testing each compound takes several days, a sufficiently reliable version of this workflow compresses roughly a year's work into a few days.
 
-While this workflow is not yet a reality, significant strides have been made toward accurate binding affinities~\cite{mobley_perspective_2012, christ_accuracy_2014, deng_distinguishing_2015, Sherborne:2016:JComputAidedMolDes, schrodinger_accurate_2015, christ_binding_2016, cui_affinity_2016, verras_free_2016, Aldeghi:2017:J.Am.Chem.Soc.}, solubilities~\cite{Schnieders:2012:J.Chem.TheoryComput., park_absolute_2014, liu_using_2016}, selectivity and drug resistance~\cite{leonis_contribution_2013, Aldeghi:2017:J.Am.Chem.Soc.}, and membrane permeability~\cite{lee_permeability_2016, comer_permeability_2014}. 
-A considerable amount of science and engineering still remains to make this vision a reality.
-However, given recent progress, the question now seems more one of \emph{when} rather than \emph{whether}.
+While not yet a reality, significant strides have been made toward accurate binding affinities~\cite{mobley_perspective_2012, christ_accuracy_2014, deng_distinguishing_2015, Sherborne:2016:JComputAidedMolDes, schrodinger_accurate_2015, christ_binding_2016, cui_affinity_2016, verras_free_2016, Aldeghi:2017:J.Am.Chem.Soc.}, solubilities~\cite{Schnieders:2012:J.Chem.TheoryComput., park_absolute_2014, liu_using_2016}, selectivity and drug resistance~\cite{leonis_contribution_2013, Aldeghi:2017:J.Am.Chem.Soc.}, and membrane permeability~\cite{lee_permeability_2016, comer_permeability_2014}. 
+A considerable amount of science and engineering still remains to be done to make this vision a reality, but the question now seems more one of \emph{when} rather than \emph{whether} it is achieved.
 
 Widespread availability of inexpensive graphics processing units (GPUs) provides a 100-fold increase in price-to-performance ratio over CPUs, while advances in automation~\cite{liu_lead_2013} and sampling protocols have helped simulation-based techniques reach the point where they now begin to be genuinely useful in guiding drug discovery for a limited \emph{domain of applicability}~\cite{mikulskis_large-scale_2014, homeyer_binding_2014, Sherborne:2016:JComputAidedMolDes,  schrodinger_accurate_2015, christ_binding_2016, cui_affinity_2016, verras_free_2016}.
 Specifically, in some situations, free energy calculations appear to be capable of achieving RMS errors of 1--2 kcal/mol with current force fields, even in prospective applications, sufficient to drastically reduce the number of molecules that must be synthesized and assayed~\cite{shirts_free-energy_2010, Aldeghi:2017:J.Am.Chem.Soc., schrodinger_accurate_2015}.
-As a consequence, pharmaceutical companies are beginning to use these methods in active discovery projects~\cite{Sherborne:2016:JComputAidedMolDes}.
+As a consequence, pharmaceutical companies have rapidly adopted these methods in active discovery projects~\cite{Sherborne:2016:JComputAidedMolDes}.
 
 \textbf{Despite progress, current modeling methods suffer from severe limitations hindering their widespread use in molecular design.}
 For example, even ``small'' protein conformational changes not gracefully handled by current methodologies can yield errors up to 5 kcal/mol in calculated binding free energies~\cite{lim_sensitivity_2016}, force field limitations still pose major challenges~\cite{rocklin_blind_2013}, and the inability to treat important chemical effects like protonation and tautomer equilibria drastically limits the domain of applicability.
@@ -148,36 +147,31 @@ For example, even ``small'' protein conformational changes not gracefully handle
 
 These hurdles frustrate progress in the field. 
 Method developers focus on addressing some specific challenges, but {\bf new methods are tested on disparate data sets making it difficult to gauge progress and identify valuable methods when they are developed}.
-And applications projects tend not to take advantage of the latest methods -- in part because their value is not yet clear. 
-Thus valuable methods can languish relatively unused in the literature for many years without impacting applications in drug discovery.
+Applications projects tend not to take advantage of the latest methods---in part because their utility is not yet clear. 
+As a result, valuable methods can languish relatively unused in the literature for many years without impacting applications in drug discovery.
 
-{\bf Here, we propose a crowdsourcing, Challenge-based approach to leverage and drive methodological innovation, accelerating progress.} 
-Specifically, a series of community blind prediction Challenges will push the limits of predictive techniques, providing a bridge between challenging but tractable problems and pharmacologically relevant but currently intractable problems.
-Our Statistical Assessment of Modeling of Proteins and Ligands (SAMPL) Challenges take advantage of proven crowdsourcing-based approaches to science (discussed further below), allowing head-to-head comparisons of existing methods and fostering development of new methods.
-Regular, progressive Challenges provide an environment for rapid innovation from ``unconventional innovators''~\cite{Kay:2011:R&DManage} from diverse fields who form teams, applying and integrating diverse approaches~\cite{Saez-Rodriguez:2016:NatRevGenet}.
+{\bf We propose an iterated Challenge-based approach to drive methodological innovation via crowdsourcing.} 
+A series of community blind prediction Challenges will test the limits of predictive techniques, providing a bridge between challenging but tractable problems and pharmacologically relevant but currently intractable problems.
+Our Statistical Assessment of Modeling of Proteins and Ligands (SAMPL) Challenges take advantage of proven crowdsourcing-based approaches to science (discussed below), allowing head-to-head comparisons of existing methods and fostering development of new methods.
+Regular, progressive Challenges provide an environment for rapid innovation from ``unconventional innovators''~\cite{Kay:2011:R&DManage} from diverse fields who form collaborative teams, applying and integrating distinct approaches~\cite{Saez-Rodriguez:2016:NatRevGenet}.
 
-{\bf Meaningful Challenges require new data as their basis.}
-A key focus of this proposal is on generating the requisite data to fairly test methods in prospective Challenges. 
-This also provides additional value over retrospective tests on literature data.
-First, we are able to ensure high data quality, and revisit the same systems again as needed.
-Additionally, retrospective tests do not test predictive power. 
-Retrospective tests can easily result in over-fitting, where researchers apply a variety of protocols until apparently significant results are obtained by chance~\cite{Nuzzo:2015:Nature}.
+{\bf Meaningful Challenges require new targeted data collection.}
+A key focus of this proposal is on generating new data to test methods in prospective Challenges in an unbiased way. 
+New data provides additional value over retrospective tests on literature data:
+First, we are able to ensure high data quality and build the capability to collect additional data for the same systems.
+Additionally, retrospective tests do not test predictive power---they easily fall victim to significance hacking or inadvertent overfitting~\cite{Nuzzo:2015:Nature}.
 Retrospective work also may utilize prior knowledge, even if unintentionally.  
 For example, if the binding mode of a ligand is already known crystallographically, a researcher may use that binding mode in retrospective tests, whereas prospective or design work would require first selecting among candidate binding modes, introducing substantial uncertainty unaccounted for in the retrospective statistics~\cite{mobley_predicting_2007, boyce_predicting_2009, mobley_perspective_2012}.
-While discovery projects provide one opportunity for prospective tests, they are not adequate -- partly because often, the predicted compounds are in fact never tested~\cite{christ_binding_2016} or the experimental data necessary to assess prediction quality is absent---for example, because binding affinities are not measured or no crystallography is available.
+While discovery projects provide one opportunity for prospective tests, they are not adequate---partly because often, the predicted compounds are in fact never tested~\cite{christ_binding_2016} or the experimental data necessary to assess prediction quality is absent---for example, because binding affinities are not measured or no crystallography is available.
 
-{\bf The most productive Challenges are tractable -- not too easy but not too hard -- as unsolvable Challenges fail to drive progress}~\cite{Saez-Rodriguez:2016:NatRevGenet}. 
-Thus we require high quality Challenges carefully designed to maximize community learning by pushing the limits of today's technology.
-While the Drug Design Data Resource (D3R~\cite{Gathiaka:2016:JComputAidedMolDes}) provides one community Challenge on protein-ligand binding, it relies on pre-existing pharmaceutical datasets of variable difficulty rather than generating new data focused on specific modeling challenges~\cite{Gathiaka:2016:JComputAidedMolDes}. 
-These D3R Challenges can prove nearly intractable, resulting only modest new insight~\cite{D3R_lessons_learned}.
-While D3R serves well to assess where we are now, we need Challenges with the right level of difficulty.
+{\bf Tractable Challenges inspire rapid progress, while Challenges that are too difficult accomplish little}~\cite{Saez-Rodriguez:2016:NatRevGenet}. 
+We require high quality Challenges carefully designed specifically to maximize community learning by pushing the limits of current technology.
+While the Drug Design Data Resource (D3R~\cite{Gathiaka:2016:JComputAidedMolDes}) also fields blind community Challenges, these rely on contributed experimental protein-ligand datasets from now-defunct pharmaceutical discovery programs~\cite{Gathiaka:2016:JComputAidedMolDes}; they provide a necessary \emph{benchmark} for real-world performance, but provide only modest new insight to drive improvement because a multitude of issues could be responsible for poor performance~\cite{D3R_lessons_learned}.
 
-\textbf{Models improve most rapidly when complex goals are achieved via tractable intermediate steps} which can be independently assessed using high quality data~\cite{Saez-Rodriguez:2016:NatRevGenet}.
-Thus, we focus on exactly this decomposition -- using Challenges to drive and identify solutions to specific \emph{component} problems that make it difficult to predict biomolecular interactions.
-This allows the entire community to learn from both methodological success and failure. 
-
-Much as unit testing is indispensable for discovering where bugs in a program are hiding when complex integration tests fail, Challenges like SAMPL are valuable in pinpointing modeling errors, especially when projects like D3R highlight overall performance problems.
-Thus, SAMPL Challenges focus on properties that attempt to isolate likely sources of error, such as physical properties of small molecules (hydration free energies, aqueous tautomer ratios, partition or distribution coefficients between aqueous and nonpolar phases) as well as binding to targets of reduced complexity (such as host-guest binding, and binding of fragments to trypsin and HIV integrase).
+\textbf{Methodology improvement is most rapid when complex goals are achieved via tractable intermediate milestones} which can be independently assessed using high quality data~\cite{Saez-Rodriguez:2016:NatRevGenet}.
+We focus on developing Challenges designed to drive the development and evaluation of solutions to specific \emph{component} problems that make it difficult to predict biomolecular interactions in a manner that allows the entire community to learn from both failure and success.
+Much as \emph{unit testing} is indispensable for identifying software bugs when complex integration tests fail, Challenges like SAMPL are valuable in pinpointing modeling errors, especially when projects like D3R highlight overall performance problems.
+SAMPL Challenges focus on predicting properties that isolate likely sources of error, such as physical properties of small molecules (hydration free energies, aqueous tautomer ratios, partition or distribution coefficients between aqueous and nonpolar phases) or binding in systems of reduced complexity (such as host-guest complexation, or binding of fragments to trypsin and HIV integrase).
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -198,21 +192,21 @@ Despite this shift, the number of submissions in SAMPL5 was the highest yet.
 \end{wrapfigure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Our {\bf SAMPL series of Challenges has already proven it drives dramatic improvements of modeling}.
+The {\bf SAMPL series of Challenges has already proven it can drive dramatic improvements in modeling methodologies}.
 SAMPL, born out of frustration with the lack of venues for comparing predictive accuracy on a level playing field, was initiated by Anthony Nicholls of OpenEye software in 2007/2008~\cite{nicholls_predicting_2008}, and has run Challenges approximately every two years since then~\cite{nicholls_samp1_2009, mobley_predictions_2009, geballe_sampl2_2010, geballe_sampl3_2012, mobley_blind_2014-1, muddana_sampl4_2014, Bannan:2016:JComputAidedMolDes, yin_overview_2016}.
-Governance transitioned to an unfunded academic collaboration during SAMPL3 in 2012; this collaboration ran SAMPL4 (2014), SAMPL5 (2016), currently SAMPL6 (2017-2018). 
+Governance transitioned to an unfunded academic collaboration among the PI and co-Investigators during SAMPL3 in 2012; this collaboration ran SAMPL4 (2014), SAMPL5 (2016), currently SAMPL6 (2017-2018). 
 The PI of this proposal (Mobley) was a primary organizer of SAMPL4-6 (2014--present).
-{\bf SAMPL has already been a tremendous community resource, resulting in some 100 publications which are typically cited 5--50 times or more each}~\citesampl{monroe_converging_2014_sampl,muddana_blind_2014_sampl,gallicchio_bedam_2015-1_sampl,mikulskis_free-energy_2014_sampl,hsiao_prediction_2014_sampl,bhakat_resolving_2016_sampl,pal_combined_2016_sampl,yin_sampl5_2016_sampl,bosisio_blinded_2016_sampl,tofoleanu_absolute_2016_sampl,mobley_blind_2014-1_sampl,muddana_sampl4_2014_sampl,sullivan_binding_2016_sampl,deng_distinguishing_2015_sampl,li_testing_2014_sampl,paranahewage_predicting_2016_sampl,klamt_prediction_2016_sampl,tielker_sampl5_2016_sampl,konig_calculating_2016_sampl,luchko_sampl5:_2016_sampl,santos-martins_calculation_2016_sampl,perryman_virtual_2014_sampl,konig_predicting_2014_sampl,voet_combining_2014_sampl,park_extended_2014_sampl,rustenburg_measuring_2016_sampl,reinisch_prediction_2014_sampl,muddana_sampl4_2014-1_sampl,manzoni_prediction_2014_sampl,sandberg_predicting_2014_sampl,brini_adapting_2016_sampl,kamath_prediction_2016_sampl,diaz-rodriguez_predicting_2016_sampl,kenney_prediction_2016_sampl,caldararu_binding_2016_sampl,genheden_all-atom/coarse-grained_2016_sampl,chung_extended_2016_sampl,koziara_testing_2014_sampl,yin_overview_2016_sampl,Bannan:2016:JComputAidedMolDes_sampl,Lee:2016:JComputAidedMolDes_sampl,Jones:2016:JComputAidedMolDes_sampl,Pickard:2016:JComputAidedMolDes_sampl, cao_absolute_2014_sampl,muddana_prediction_2012_sampl,gibb_binding_2013_sampl,klimovich_predicting_2010_sampl,mobley_alchemical_2012_sampl,muddana_sampl3_2012_sampl,skillman_sampl3_2012_sampl,Newman:2011:JComputAidedMolDes_sampl,gallicchio_virtual_2014_sampl,klamt_blind_2010_sampl,fennell_modeling_2011_sampl,ellingson_analysis_2010_sampl,surpateanu_evaluation_2011_sampl,purisima_rapid_2010_sampl,konig_predicting_2011_sampl,kehoe_testing_2011_sampl,kumar_computational_2012_sampl,meunier_predictions_2010_sampl,genheden_extensive_2014_sampl,beckstein_prediction_2014_sampl,coleman_sampl4_2014_sampl,hogues_exhaustive_2014_sampl,reinisch_prediction_2012_sampl,kulp_fragment-based_2012_sampl,klamt_conclusions_2010_sampl,fu_fast_2014_sampl,hamaguchi_force-field_2012_sampl,colas_virtual_2014_sampl,ellingson_efficient_2014_sampl,sulea_predicting_2011_sampl,geballe_sampl2_2010_sampl,ribeiro_prediction_2010_sampl,skillman_sampl2_2010_sampl,gallicchio_prediction_2012_sampl,mikulskis_binding_2011_sampl,geballe_sampl3_2012_sampl,guthrie_sampl4_2014_sampl,nicholls_sampl2_2010_sampl,soteras_performance_2010_sampl,lawrenz_thermodynamic_2012_sampl,sulea_exhaustive_2011_sampl,beckstein_prediction_2011_sampl,benson_prediction_2012_sampl,kast_prediction_2010_sampl, mobley_predictions_2009_sampl,newman_practical_2009_sampl,klamt_prediction_2009_sampl,guthrie_blind_2009_sampl,marenich_performance_2009_sampl,sulea_prediction_2009_sampl,nicholls_samp1_2009_sampl,nicholls_predicting_2008_sampl,chamberlin_performance_2008_sampl, Gosink:2017:J.Phys.Chem.B_sampl, Yang:2017:arXiv:1705.10035[q-bio]_sampl, shirts_lessons_2016_sampl, Bansal:2017:JComputAidedMolDes_sampl}.
-SAMPL data sets become so valuable to the community that they foster retrospective tests long after the Challenges have ended (e.g.~\cite{Yang:2017:arXiv:1705.10035[q-bio], Gosink:2017:J.Phys.Chem.B, Harger::J.Comput.Chem., Bradshaw:2016:J.Chem.TheoryComput.}
+{\bf SAMPL has demonstrated its utility as a valuable community resource, resulting in $\sim$100 publications typically cited 5--50 times or more each}~\citesampl{monroe_converging_2014_sampl,muddana_blind_2014_sampl,gallicchio_bedam_2015-1_sampl,mikulskis_free-energy_2014_sampl,hsiao_prediction_2014_sampl,bhakat_resolving_2016_sampl,pal_combined_2016_sampl,yin_sampl5_2016_sampl,bosisio_blinded_2016_sampl,tofoleanu_absolute_2016_sampl,mobley_blind_2014-1_sampl,muddana_sampl4_2014_sampl,sullivan_binding_2016_sampl,deng_distinguishing_2015_sampl,li_testing_2014_sampl,paranahewage_predicting_2016_sampl,klamt_prediction_2016_sampl,tielker_sampl5_2016_sampl,konig_calculating_2016_sampl,luchko_sampl5:_2016_sampl,santos-martins_calculation_2016_sampl,perryman_virtual_2014_sampl,konig_predicting_2014_sampl,voet_combining_2014_sampl,park_extended_2014_sampl,rustenburg_measuring_2016_sampl,reinisch_prediction_2014_sampl,muddana_sampl4_2014-1_sampl,manzoni_prediction_2014_sampl,sandberg_predicting_2014_sampl,brini_adapting_2016_sampl,kamath_prediction_2016_sampl,diaz-rodriguez_predicting_2016_sampl,kenney_prediction_2016_sampl,caldararu_binding_2016_sampl,genheden_all-atom/coarse-grained_2016_sampl,chung_extended_2016_sampl,koziara_testing_2014_sampl,yin_overview_2016_sampl,Bannan:2016:JComputAidedMolDes_sampl,Lee:2016:JComputAidedMolDes_sampl,Jones:2016:JComputAidedMolDes_sampl,Pickard:2016:JComputAidedMolDes_sampl, cao_absolute_2014_sampl,muddana_prediction_2012_sampl,gibb_binding_2013_sampl,klimovich_predicting_2010_sampl,mobley_alchemical_2012_sampl,muddana_sampl3_2012_sampl,skillman_sampl3_2012_sampl,Newman:2011:JComputAidedMolDes_sampl,gallicchio_virtual_2014_sampl,klamt_blind_2010_sampl,fennell_modeling_2011_sampl,ellingson_analysis_2010_sampl,surpateanu_evaluation_2011_sampl,purisima_rapid_2010_sampl,konig_predicting_2011_sampl,kehoe_testing_2011_sampl,kumar_computational_2012_sampl,meunier_predictions_2010_sampl,genheden_extensive_2014_sampl,beckstein_prediction_2014_sampl,coleman_sampl4_2014_sampl,hogues_exhaustive_2014_sampl,reinisch_prediction_2012_sampl,kulp_fragment-based_2012_sampl,klamt_conclusions_2010_sampl,fu_fast_2014_sampl,hamaguchi_force-field_2012_sampl,colas_virtual_2014_sampl,ellingson_efficient_2014_sampl,sulea_predicting_2011_sampl,geballe_sampl2_2010_sampl,ribeiro_prediction_2010_sampl,skillman_sampl2_2010_sampl,gallicchio_prediction_2012_sampl,mikulskis_binding_2011_sampl,geballe_sampl3_2012_sampl,guthrie_sampl4_2014_sampl,nicholls_sampl2_2010_sampl,soteras_performance_2010_sampl,lawrenz_thermodynamic_2012_sampl,sulea_exhaustive_2011_sampl,beckstein_prediction_2011_sampl,benson_prediction_2012_sampl,kast_prediction_2010_sampl, mobley_predictions_2009_sampl,newman_practical_2009_sampl,klamt_prediction_2009_sampl,guthrie_blind_2009_sampl,marenich_performance_2009_sampl,sulea_prediction_2009_sampl,nicholls_samp1_2009_sampl,nicholls_predicting_2008_sampl,chamberlin_performance_2008_sampl, Gosink:2017:J.Phys.Chem.B_sampl, Yang:2017:arXiv:1705.10035[q-bio]_sampl, shirts_lessons_2016_sampl, Bansal:2017:JComputAidedMolDes_sampl}.
+SAMPL datasets are so valuable to the community that they foster retrospective tests long after the Challenges end (e.g.~\cite{Yang:2017:arXiv:1705.10035[q-bio], Gosink:2017:J.Phys.Chem.B, Harger::J.Comput.Chem., Bradshaw:2016:J.Chem.TheoryComput.}).
 
-While SAMPL has already proven valuable, until now, \textbf{SAMPL relied on donated data and time}, making it impossible to design Challenges specifically to improve modeling as we propose. 
-Despite these past limitations, our recent survey reveals that SAMPL has had a significant effect on the field and past participants are overwhelmingly enthusiastic~\cite{Mobley:2017:eScholarship}, including about these proposed plans. 
-One of our most frequent requests is for larger datasets, which we propose here. 
-Our proposed Challenges bridge the gap between calculations of simple physical properties that isolate forcefield inaccuracies from sampling challenges, like hydration---which can already be calculated fairly accurately~\cite{mobley_blind_2014-1}---and the D3R Grand Challenges on protein-ligand binding, which are a major source of community consternation~\cite{ignjatovic_binding-affinity_2016, deng_large_2016, sunseri_d3r_2016, Gathiaka:2016:JComputAidedMolDes}.
-Unless this gap is bridged, there is the very real possibility that modeling may simply continue to fall far short of expectations in pharmaceutical Challenges like D3R for reasons which are unclear.
+Until now, \textbf{SAMPL has relied on donated data and time}, making it impossible to design Challenges specifically to improve modeling as we propose here. 
+Despite these limitations, our recent survey reveals that SAMPL has already had a significant effect on the field; past participants are overwhelmingly enthusiastic about SAMPL and the plans we propose here~\cite{Mobley:2017:eScholarship}.
+One of our most frequent requests is for modestly larger datasets, which we propose here. 
+Our proposed Challenges bridge the gap between calculations of simple physical properties that isolate forcefield inaccuracies from slow conformational sampling challenges inherent to protein-ligand systems---such as hydration free energies, which can already be calculated fairly accurately~\cite{mobley_blind_2014-1}---and the D3R Grand Challenges on protein-ligand binding, which are a major source of community consternation~\cite{ignjatovic_binding-affinity_2016, deng_large_2016, sunseri_d3r_2016, Gathiaka:2016:JComputAidedMolDes}.
+Unless this gap is bridged, there is a very real possibility that modeling will continue to fall far short of expectations in pharmaceutical systems for reasons which remain unclear.
 
-
-\textbf{Our major goal is to rapidly advance predictive modeling to where it can guide biomolecular design}, and extending the SAMPL Challenges will do exactly that. This work will play a vital role in enhancing the work being done on \emph{existing} data by D3R, helping prepare methods for application to D3R's pharmaceutical Challenges. 
+\textbf{Our major goal is to rapidly advance predictive modeling to enable it to guide biomolecular design}; extending the SAMPL Challenges will accomplish this.
+This work will play a vital role in enhancing the work being done on \emph{existing} data by D3R, helping prepare methods for application to D3R's pharmaceutical Challenges. 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -224,7 +218,7 @@ Unless this gap is bridged, there is the very real possibility that modeling may
 \includegraphics[width=\textwidth]{figures/Timeline3_cropped.pdf}
 \end{centering}
 \vspace{-0.25in}
-\caption{\footnotesize {\bf Timeline for our activities.} Activities covered by this grant include data collection and SAMPL Challenges on our three major components (physical properties, host-guest binding, and protein-ligand binding), with each Challenge cycle color-coded separately.  
+\caption{\footnotesize {\bf Timeline for SAMPL activities.} Activities covered by this grant include data collection and SAMPL Challenges on our three major components (physical properties, host-guest binding, and protein-ligand binding), with each Challenge cycle color-coded separately.  
 Data collection within each Aim is shown by a colored bar indicating what is measured and curated.
 Data collection/curation is followed by a submission window for that Challenge component, then all results and analysis are returned to participants and posted on the SAMPL website; this also will nucleate more detailed long-term discussion on the relevant Slack channel.
 At this point, we will also release the data to the public as a high quality benchmark.
@@ -232,34 +226,33 @@ Each component will then wrap up with a virtual meeting focused on lessons learn
 Virtual meetings precede the submission window for the next SAMPL Challenge, giving the opportunity to incorporate lessons learned for the next Challenge.
 Submission windows and virtual meetings are staggered across categories so that participants can be involved in all three major areas without multiple simultaneous deadlines.
 In-person meetings are co-hosted with D3R and will occur every two years, supplemented by effort-wide virtual meetings in between.
-Special issues of JCAMD will have deadlines shortly after the virtual meeting on the protein-ligand Challenge for that year, and a 4-5 month timeline (based on historical experience) from the submission deadline until the special issue appears (with the first papers appearing online substantially sooner).
-Rapid dissemination of insights is critical for rapid progress, so we highly encourage the use of preprints and informal reports to supplement the special issue.
-\vspace{-0.1in}
+Special issues of JCAMD, where participants report lessons learned, will have deadlines shortly after the virtual meeting on the protein-ligand Challenge for that year, and a 4-5 month timeline (based on historical experience) from the submission deadline until the special issue appears (with the first papers appearing online substantially sooner).
+Rapid dissemination is critical for rapid progress, so we encourage the use of preprints and informal reports to supplement the special issue.
+\vspace{-0.25in}
 \label{figure:timeline}}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 {\Large \bf INNOVATION}
 
-This work proposes the SAMPL Challenge as an \emph{innovation engine} for molecular design.
+This work proposes a five-year plan for fielding SAMPL Challenges as an \emph{innovation engine} for molecular design.
 Specifically, collaborative scientific competitions or Challenges are a proven model for inducing innovation~\cite{Saez-Rodriguez:2016:NatRevGenet, Kay:2011:R&DManage, Eisenstein:2013:NatBiotech}, applying crowdsourcing to finding and identifying robust new methodologies~\cite{Saez-Rodriguez:2016:NatRevGenet}. 
 The proposed series of SAMPL Challenges brings crowdsourcing to bear on molecular interactions in a way which focuses on solving specific, incremental problems that impair our ability to accurately and robustly predict these interactions.
-
 Thus, while the proposed work is indeed innovative (as we argue below), the most important innovation comes from participants in SAMPL Challenges, as is the case in all crowdsourcing approaches to innovation~\cite{Saez-Rodriguez:2016:NatRevGenet, Kay:2011:R&DManage}.
-This reliance on others for innovation in fact is a strength of this model -- it is not always obvious where the most important innovations may come from, but Challenges draw together teams of diverse entrants, including unconventional innovators who may apply unorthodox, risky, or radical technologies~\cite{Kay:2011:R&DManage, Saez-Rodriguez:2016:NatRevGenet}, resulting in progress both from the usual suspects and from unexpected sources.
-This means it is not necessary to decide in advance who is best positioned to solve the key problems~\cite{Saez-Rodriguez:2016:NatRevGenet} -- the Challenge itself drives innovation and allows it to be recognized, regardless of the source.
+
+Reliance on others for innovation is a strength of this model---it is not always obvious where the most important innovations may come from, but Challenges draw together teams of diverse entrants, including unconventional innovators who may apply unorthodox, risky, or radical technologies~\cite{Kay:2011:R&DManage, Saez-Rodriguez:2016:NatRevGenet}; progress comes from the usual suspects and unexpected sources.
+It is not necessary to decide in advance who is best positioned to solve key problems~\cite{Saez-Rodriguez:2016:NatRevGenet}---the Challenge itself drives innovation and allows it to be recognized, regardless of source.
 
 Crowdsourcing models for innovation have an ample track record, with the XPrize driving major headlines~\cite{::XPRIZE, Kay:2011:R&DManage, XPrize:2017:Wikipedia}, and the Netflix Prize also familiar to many~\cite{Bell:2010:CHANCE}. 
 While there are other Challenges in the area of biomolecular modeling, such as D3R~\cite{Gathiaka:2016:JComputAidedMolDes}, the p$K_a$ cooperative~\cite{Nielsen:2011:Proteins}, CAPRI~\cite{Janin:2005:ProteinScience} and CASP~\cite{Moult:2014:Proteins},
-\textbf{no other blind Challenge focuses specifically on data tailored and collected to drive quantitative protein-ligand modeling}.
+\textbf{no other blind Challenge focuses specifically on datasets collected specifically to drive quantitative protein-ligand modeling}.
 
-SAMPL is designed in the spirit of the wildly successful biomedical DREAM Challenge~\cite{Prill:2011:Sci.Signal., Eisenstein:2013:NatBiotech, Saez-Rodriguez:2016:NatRevGenet} which had more than 800 participants in its most recent iteration. 
-As recommended by the DREAM Challenge organizers~\cite{Saez-Rodriguez:2016:NatRevGenet}, SAMPL focuses on high quality data, decomposing complex problems into component problems which are themselves tractable but difficult in order to benefit from crowdsourcing, and drawing together diverse teams and methods to allow various solutions to be tested and integrated.
+SAMPL is designed in the spirit of the wildly successful biomedical DREAM Challenge~\cite{Prill:2011:Sci.Signal., Eisenstein:2013:NatBiotech, Saez-Rodriguez:2016:NatRevGenet} which had more than 800 recent participants. 
+As recommended by the DREAM Challenge organizers~\cite{Saez-Rodriguez:2016:NatRevGenet}, SAMPL focuses on high-quality data, decomposing complex problems into tractable but difficult component problems in order to benefit from crowdsourcing, and drawing together diverse teams and methods to allow various solutions to be evaluated.
 
-\textbf{SAMPL has already been important in advancing protein-ligand modeling, as evidenced by the results of our survey of the field}~\cite{Mobley:2017:eScholarship}, and attached testimonials highlighting some specific ways SAMPL has advanced science.
+\textbf{Our recent survey indicates SAMPL has already been important in advancing protein-ligand modeling}~\cite{Mobley:2017:eScholarship}; attached testimonials highlight some specific ways SAMPL has advanced science.
 Several historical examples further serve to highlight how SAMPL can foster innovation (see also Figure~\ref{figure:sampl5_logD} and our SAMPL bibliography). 
-The first several SAMPL Challenges on hydration free energies had rather hit-and-miss performance, highlighting pitfalls of existing methods and force fields which led to marked improvements in PB models~\cite{nicholls_samp1_2009, ellingson_analysis_2010,ellingson_efficient_2014}, recognition of some limitations of fixed-charge force fields ~\cite{mobley_alchemical_2012, Fennell:2014:J.Phys.Chem.B},
-repair of some of these force field deficiencies~\cite{mobley_alchemical_2012, Fennell:2014:J.Phys.Chem.B, paranahewage_predicting_2016},
+While the first SAMPL Challenges focusing on hydration free energies saw heterogeneous performance, they highlighted pitfalls of existing methods and force fields which led to marked improvements in PB models~\cite{nicholls_samp1_2009, ellingson_analysis_2010,ellingson_efficient_2014}, identified some limitations of fixed-charge force fields~\cite{mobley_alchemical_2012, Fennell:2014:J.Phys.Chem.B} that spurred their repair~\cite{mobley_alchemical_2012, Fennell:2014:J.Phys.Chem.B, paranahewage_predicting_2016},
 and helped motivate alternate implicit or hybrid solvent models~\cite{sulea_predicting_2011, li_testing_2014, brini_adapting_2016}.
 Shifts in protonation state and tautomer proved particularly important in SAMPL5's log~D Challenge~\cite{Bannan:2016:JComputAidedMolDes, klamt_prediction_2016}, as they will in binding.
 Host-guest binding Challenges~\cite{Mobley:2017:AnnualReviewofBiophysics}
@@ -283,73 +276,72 @@ Predictions of log~D values for SAMPL5 provided a number of key lessons. (A) Met
 \end{wrapfigure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Thus, this work designs a new series of SAMPL Challenges tailored to progressively advance computational methods for binding (Aim 4), gathering the requisite experimental data to drive these Challenges (Aims 1-3). 
-
-\textbf{While the greatest innovation here is the new science resulting from our Challenges, we also innovate on several other fronts.}
-Aim 3 includes a development of an innovative informatics platform to facilitate the rapid identification and study of particularly informative protein-ligand systems that are both experimentally tractable for high-throughput biophysical measurements and focus on specific challenges of interest.
-And an innovative, automated wetlab helps produce the high quality data measured in Aim 3. 
-Additionally, students in our computational groups perform reference calculations to test the accuracy of current state-of-the-art techniques.
-These provide student training, but also drive innovation by (1) Benchmarking the latest method developments against current ``best practices'' (by doing calculations via both approaches); (2) Facilitating learning, allowing others to compare against our results to determine how a change in method or force field impacts results; (3) Focusing the field on key issues by doing sensitivity analysis to whether conditions such as ionic strength, protonation state, tautomer choice, etc., impact computed values.
+This proposal focuses on the development of SAMPL Challenges tailored to progressively advance computational methods for binding (Aim 4), gathering the requisite experimental data to drive these Challenges (Aims 1-3). 
+\textbf{While the primary innovation will result from our Challenges, we also innovate on several other fronts.}
+Aim 3 also develops a new informatics platform to facilitate the rapid identification and study of useful protein-ligand systems that are both experimentally tractable for high-throughput biophysical measurement and focus on specific challenges of interest; an innovative, automated wetlab helps produce our high quality data. 
+Additionally, students in our computational groups perform reference calculations to benchmark current state-of-the-art techniques.
+This provides student training, but also drives innovation by (1) Benchmarking advanced community method entries against our reference ``current best practices'' calculations; (2) Facilitating learning by allowing others to compare against our reference results to determine how methodology differences impact results; and (3) Focusing the field on key issues by analyzing sensitivity to conditions such as ionic strength, protonation states or tautomers.
 
 {\Large\textbf{APPROACH}}
 
 
 
-\textbf{A series of data-driven Challenges will induce systematic advances in modeling for biomolecular design.}
-We collect targeted experimental datasets focused on specific problems spanning a range of complexity (Aims 1--3), and use these to field SAMPL Challenges driving innovation (Aim 4), with each Challenge including components from each of Aims 1--3.
-Data collection bring togethers multiple laboratories and industrial collaborators, including both theorists and experimentalists: graduate students from the Mobley and Chodera laboratories are paired with well-equipped experimental groups in industry to collect physical property data (Aim 1); Gibb and Isaacs, leading experimentalists in supramolecular chemistry, work with theorist Mobley to perform host-guest affinity measurements (Aim 2); and the Chodera lab applies new automated approaches to identify suitable protein-ligand systems and measure binding (Aim 3).
+\textbf{A series of data-driven Challenges will spur systematic advances in modeling for biomolecular design.}
+We collect targeted experimental datasets focused on specific problems spanning a range of complexity (Aims 1--3), and use these to field SAMPL Challenges driving innovation (Aim 4).
+%, with each Challenge including components from each of Aims 1--3.
+Data collection brings together multiple laboratories and industrial collaborators, including both theorists and experimentalists: graduate students from the Mobley and Chodera laboratories are paired with well-equipped experimental groups in industry to collect physical property data (Aim 1); Gibb and Isaacs, leading experimentalists in supramolecular chemistry, work with theorist Mobley to perform host-guest affinity measurements (Aim 2); and the Chodera lab applies new automated approaches to identify suitable protein-ligand systems and measure binding (Aim 3).
 
 
 \textbf{\underline{Aim 1: Collect new physical property datasets to assess accuracy and spur improvements in force fields}}\\
 \textbf{\underline{and modeling of protonation states and tautomers.}} 
 
 
-Simple physical properties such as solvation, partitioning, and protonation equilibria can be calculated quite precisely (but not necessarily accurately) with physical methods, allowing quantitative comparison between calculations and experiment and revealing and isolating deficiencies in our models. 
+Simple physical properties such as solvation, phase partitioning, and protonation equilibria can be calculated precisely (but not necessarily accurately) with physical methods, allowing quantitative comparison between calculations and experiment and revealing and isolating deficiencies in our models. 
 These properties allow us to directly probe force field accuracy and chemical effects like protonation and tautomer handling in the absence of slow conformational changes and other effects which complicate assessment in protein-ligand systems. 
 
 
 {\bf Rationale:}
-We will generate new solution-phase physical property measurements for drug-like molecules to motivate improvements in force fields and handling of protonation states and tautomers.
-This builds on our work on water-cyclohexane distribution coefficients for SAMPL5 (with Genentech), which revealed major issues with handling of protonation states and tautomers~\cite{Bannan:2016:JComputAidedMolDes} as well as serious forcefield limitations~\cite{paranahewage_predicting_2016} (Figure~\ref{figure:sampl5_logD}).
-Distribution coefficients give the equilibrium ratio of concentrations of a solute between aqueous and nonpolar phases, and thus relate to transfer free energies from aqueous to more protein- or membrane-like environments.
-Thus, they capture many of the characteristics of transfer of drugs from water into binding sites but absent challenges with receptor conformational sampling and specific ligand-receptor interactions.
-Many methods performed poorly on SAMPL5's distribution coefficients, with even the best methods having accuracies less than would be expected based on hydration free energies~\cite{Bannan:2016:JComputAidedMolDes}, yet failures were informative and the major sources of error were issues which also plague prediction of ligand-receptor interactions.
-In some respects, distribution coefficients posed the ideal SAMPL Challenge, as they were difficult enough that clear failures were frequent, with ample room for improvement, but not so difficult that the reasons for failure were generally unclear. 
+We will perform new solution-phase physical property measurements for drug-like molecules to motivate improvements in force fields and handling of protonation states and tautomers.
+This builds on our work on water-cyclohexane distribution coefficients (log~D) for SAMPL5 (with Genentech), which revealed major issues with handling of protonation states and tautomers~\cite{Bannan:2016:JComputAidedMolDes} as well as serious forcefield limitations~\cite{paranahewage_predicting_2016} (Figure~\ref{figure:sampl5_logD}).
+Distribution coefficients---the equilibrium ratio of solute concentration between aqueous and nonpolar phases at a given pH---mimic transfer free energies from aqueous to protein- or membrane-like environments, capturing many of the same physical characteristics but without associated challenges of receptor conformational sampling and specific ligand-receptor interactions.
+Many methods performed poorly in predicting log~D in SAMPL5, with even the best methods having accuracies less than would be expected based on hydration free energies~\cite{Bannan:2016:JComputAidedMolDes}, yet failures were informative and the major sources of error were issues which also plague ligand-receptor binding.
+In many respects, distribution coefficients are an ideal SAMPL Challenge, as they are sufficiently difficult for clear failures to be frequent, with ample room for improvement, but not so difficult that reasons for failure were generally unclear. 
 Still, many methods consistently disagreed with experiment for some compounds~\cite{paranahewage_predicting_2016, klamt_prediction_2016, Bannan:2016:JComputAidedMolDes, rustenburg_measuring_2016}, revealing the impact that targeted follow-up experiments (such as those we will conduct here) can have on improving models.
 Thus, \textbf{targeted Challenges on solution-phase properties address some of the complexities of binding}.  
 
-Previous SAMPL Challenges in this area have already driven significant progress, but a frequent request is for more data and follow-up experiments to check questionable experimental values~\cite{Mobley:2017:eScholarship}. 
-This was impossible with donated data, but here, we will expand the size and quality of Challenge data sets, allowing us to do things like ensure the full dynamic range of log~D values is covered, unlike in SAMPL5~\cite{rustenburg_measuring_2016, Bannan:2016:JComputAidedMolDes}. 
-\textbf{Follow-up experiments will also become routine, improving our ability to learn from the data.}
-For example, SAMPL5's lack of dynamic range meant that, when calculated values often spanned a larger dynamic range than experiment, it was unclear if this was an artifact of the data set itself, experimental limitations, or force field problems~\cite{rustenburg_measuring_2016, Bannan:2016:JComputAidedMolDes, paranahewage_predicting_2016, klamt_prediction_2016}.  
+Previous physical property SAMPL Challenges have already driven significant progress, but a frequent request is for modestly larger datasets and follow-up experiments to revisit specific measurements using orthogonal techniques~\cite{Mobley:2017:eScholarship}. 
+While impossible with donated data, here we will expand the size and quality of Challenge datasets, allowing us to expand to provide greater coverage of the full dynamic range.%, which was not possible in SAMPL5~\cite{rustenburg_measuring_2016, Bannan:2016:JComputAidedMolDes}. 
+\textbf{Follow-up experiments will become routine, improving our ability to learn from failures.}
+For example, SAMPL5's lack of dynamic range meant that, when calculated values often spanned a larger dynamic range than experiment, it was unclear if this was due to the choice of compounds, experimental limitations, or force field deficiencies~\cite{rustenburg_measuring_2016, Bannan:2016:JComputAidedMolDes, paranahewage_predicting_2016, klamt_prediction_2016}.  
 
-Solution-phase data and Challenges will also improve lessons learned from our binding Challenges.
-Specifically, ligands studied in host-guest and protein-ligand binding Challenges will be prioritized for inclusion in solution-phase datasets; if solution-phase data is already public for these, analogs or fragments will be included. 
-Thus, for example, if a binding free energy proves difficult to predict, participants can determine if its solution-phase properties (such as protonation states or tautomers) were similarly difficult, thereby narrowing down the source of the error.
+{\bf Physical property data will be synergistically collected with binding datasets.}
+%Solution-phase data and Challenges will also improve lessons learned from our binding Challenges.
+Ligands studied in host-guest and protein-ligand binding Challenges will be prioritized for inclusion in solution-phase physical property datasets; if physical property data is already public for these, analogs or fragments will be included. 
+For example, if a binding free energy proves difficult to predict, participants can determine if its solution-phase properties (such as protonation states or tautomers) were similarly difficult, thereby narrowing down the source of the error.
 
 Below, we summarize plans for data collection for the SAMPL7-11 Challenges of Aim 4 (see also Figure~\ref{figure:timeline}).
-These specific data sets were selected to help the field resolve the problems encountered in SAMPL5 then progress to accurate estimation of additional properties.
-Data sets will be larger than prior SAMPL Challenges --- at least 96 compounds for good statistics ---  though when possible, a much larger amount of data will be collected.
+These specific data sets were selected to help the field first resolve problems encountered in SAMPL5 and then progress to accurate estimation of additional properties.
+Data sets will be larger than prior SAMPL Challenges---at least 96 compounds for good statistics---though when possible, a much larger amount of data will be collected.
 
 \textbf{SAMPL7: Cyclohexane/water and octanol/water distribution coefficients, given pKa.}
-Building on the success of distribution coefficients at motivating rapid modeling advances~\cite{Bannan:2016:JComputAidedMolDes}, we will measure cyclohexane-water distribution coefficients at pH 7.4 for a new batch of commercially-available drug- and fragment-like molecules overlapping with compounds being studied in Aims 2 and 3.
+Building on the success of distribution coefficients at motivating rapid modeling advances~\cite{Bannan:2016:JComputAidedMolDes}, we will measure cyclohexane-water distribution coefficients at pH 7.4 for a new batch of commercially-available drug- and fragment-like molecules overlapping with compounds studied in Aims 2 and 3.
 We will also measure octanol-water distribution coefficients for the same compounds, given indications that their prediction may be computationally tractable~\cite{Bhatnagar:2013:PhysicalChemistryChemicalPhysics, bannan_calculating_2016} despite the heterogeneous structure of the wet octanol phase~\cite{Kollman:1996:AccountsofChemicalResearch}.
 Because p$K_a$ prediction was difficult but critical for SAMPL5, we will focus SAMPL7 on forcefields and tautomers by measuring and providing p$K_a$ values, revisiting p$K_a$ prediction in SAMPL8 and 9.
-A similar approach is currently being applied for SAMPL6 (data collection is in process), so plans here may be adjusted modestly depending on SAMPL6 outcomes.
+A similar approach is currently being applied for SAMPL6 (data collection is in process in collaboration with Merck), so plans here may be adjusted modestly depending on SAMPL6 outcomes.
 
 \textbf{SAMPL8 and SAMPL9: Distribution coefficients and pKa's for drug-like molecules.} 
 Distribution coefficient measurements conflate the challenging issues of protonation state and tautomer prediction, as well as transfer into different environments. 
 After allowing participants to predict distribution coefficients given p$K_a$ values for SAMPL6-7, the SAMPL8-9 data sets will include distribution coefficients and p$K_a$ values, with participants asked to predict both. 
 The data sets will include p$K_a$ values and distribution coefficients for an extensive set of drug-like molecules.
 SAMPL8 will focus on octanol-water and cyclohexane-water, and SAMPL9 will shift to alternate solvents to ensure that models are capable of handling varied non-water phases. 
-As in SAMPL7, we plan to focus partly on molecules and fragments overlapping with compounds being studied in Aims 2-3.
+As in SAMPL7, we plan to focus partly on molecules and fragments overlapping with compounds being studied in Aims 2--3.
 
 \textbf{SAMPL10-11: Solubility prediction and membrane permeability.}
 With solubility predictions now becoming tractable~\cite{Schnieders:2012:J.Chem.TheoryComput., park_absolute_2014, liu_using_2016} (with Schr\"{o}dinger also working on amorphous solubility), solubility measurements will be a valuable test for SAMPL10, combining the solvation aspects of SAMPL1-8 with a new solid phase component.
 New computational techniques are targeting membrane permeability~\cite{lee_permeability_2016, comer_permeability_2014}, and this is experimentally accessible (see support letters from Pfizer and Merck), leading to our interest in permeability for SAMPL11.
 However, it is likely that both solubility and permeability will still be extremely challenging -- so we plan to also measure distribution coefficients and pKa's for the same compounds to help participants isolate potential points of failure.
 
-We are also interested in subsequent SAMPL Challenges on hydration and conformational free energies (as per community feedback~\cite{Mobley:2017:eScholarship}) and will seek suitable sources of reliable experimental data.
+Based on community feedback~\cite{Mobley:2017:eScholarship}, we are also interested in subsequent SAMPL Challenges on hydration and conformational free energies, and will seek suitable sources of reliable experimental data.
 
 {\bf Experimental plan:}
 Experimental data will be collected in collaboration with our pharma partners, roughly following the model used for SAMPL5, where Chodera lab student Bas Rustenburg worked with Genentech and adapted an existing workflow to measure cyclohexane-water log~D~\cite{rustenburg_measuring_2016}.
@@ -360,6 +352,7 @@ This approach works~\cite{rustenburg_measuring_2016}, and our partners see the v
 
 Overall, Aim 1 extends prior SAMPL Challenges via data focused on quantitative prediction of physical properties relevant to accurately predicting biomolecular interactions, paving the way to applications in more complex systems.
 
+\eject
 
 \textbf{\underline{Aim 2: Measure affinities of drug-like compounds in supramolecular hosts to challenge quantitative}}\\
 \textbf{\underline{models of binding in systems not plagued by major receptor sampling issues.}}
@@ -371,6 +364,7 @@ Overall, Aim 1 extends prior SAMPL Challenges via data focused on quantitative p
 \begin{centering}
 \includegraphics[width=\textwidth]{figures/sampl3_and_sampl5.pdf}
 
+\vspace{-0.10in}
 \end{centering}
 \footnotesize
 \caption{\label{figure:hg_sampl}  
@@ -383,7 +377,7 @@ Binding free energy predictions have shown clear improvements from SAMPL3 to SAM
 Moving beyond solution-phase physical properties, we want Challenge data which introduces some of the additional complexity of binding in a controlled manner.  
 Aim 1 focuses on the behavior of small molecules in different environments, in the absence of receptors and the associated potential for slow sampling, strong specific interactions, and other challenges like salt effects.
 Binding in host-guest systems (Aim 2) retains many of these same challenges and introduces strong specific interactions and other issues like salt effects~\cite{Mobley:2017:AnnualReviewofBiophysics}, while still avoiding many of the issues with slow sampling (of protein conformational changes, ions, and ligand binding modes) seen in biomolecular interactions.
-\textbf{Thus, binding in host-guest systems introduces new challenges relevant to biomolecular interactions, but without the full complexity of protein-ligand interactions}, as reviewed recently~\cite{Mobley:2017:AnnualReviewofBiophysics}.
+\textbf{Thus, binding in host-guest systems introduces new challenges relevant to biomolecular interactions, but without the full complexity of protein-ligand interactions}, as recently reviewed~\cite{Mobley:2017:AnnualReviewofBiophysics}.
 
 Already, host-guest SAMPL Challenges have provided key tests for modeling of binding interactions~\cite{Mobley:2017:AnnualReviewofBiophysics}, resulting in new attention paid to how co-solvents and ions modulate binding (resulting in errors of up to 5 kcal/mol when these effects are neglected) and the importance of adequately sampling water rearrangements~\cite{muddana_sampl4_2014, Mobley:2017:AnnualReviewofBiophysics, yin_overview_2016, bhakat_resolving_2016}.
 This new attention has resulted in clear improvements (Figure~\ref{figure:hg_sampl}), though host-guest binding remains difficult to model accurately~\cite{henriksen_computational_2015}, in part due to force field limitations (resulting in new force field work~\cite{yin_toward_2015}).
@@ -431,11 +425,13 @@ CB[$n$] receptors are particularly well suited to our goals because they exhibit
 For SAMPL7-11, we will resynthesize a series of CB[$n$]-type receptors of increasing complexity, measure $K_a$ values, and determine host-guest stoichiometry and geometry toward pharmaceutically relevant guests (selected drugs) in order to stringently test methods for predicting binding.  
 Figure~\ref{figure:CB} shows the chemical structures of three hosts---Me$_4$CB[8]~\cite{vinciguerra_synthesis_2015}, glycoluril hexamer~\cite{lucas_templated_2011}, and acyclic CB[$n$]-type receptors~\cite{ma_acyclic_2012, ma_acyclic_2012-1, zhang_acyclic_2014, gilberg_acyclic_2015, sigwalt_acyclic_2016, zhang_acyclic_2014-1} which span a range in terms of level of preorganization and formal charge.
 
+\eject 
 
 \textbf{SAMPL7-11 cucurbituril Challenges.} 
 
 
 \begin{figure}[h]
+\vspace{-0.2in}
 \begin{centering}
 \resizebox{\textwidth}{!}{\includegraphics{figures/CB.pdf}}
 
@@ -444,7 +440,7 @@ Figure~\ref{figure:CB} shows the chemical structures of three hosts---Me$_4$CB[8
 \caption{
 \label{figure:CB} \footnotesize {\bf SAMPL7-11 host-guest Challenges will feature cucubituril hosts and analogs, including Me$_4$CB[8], glycoluril hexamer, and acyclic CB[n]-type receptors (SA 2.1).} 
 These receptors bind a variety of drug-like molecules, some with high affinity.
-\vspace{-0.2in}
+\vspace{-0.15in}
 }
 \end{figure}
 
@@ -480,6 +476,7 @@ Octa-trimethylammonuim cavitand (``positand'' {\bf 3}) has the same overall arch
 While it is not yet clear if this switch in groups relatively remote from the pocket will directly affect guest complexation, results from related systems suggest it can (unpublished). 
 
 \begin{figure}[h]
+\vspace{-0.1in}
 \begin{centering}
 \resizebox{\textwidth}{!}{\includegraphics{figures/gdccs.pdf}}
 
@@ -488,7 +485,7 @@ While it is not yet clear if this switch in groups relatively remote from the po
 \vspace{-0.1in}
 \caption{\footnotesize {\bf Gibb deep cavity cavitands for the SAMPL7-11 datasets (SA 2.2).} These hosts bind a variety of carboxylate and trimethylammonium guests in a strongly salt-dependent manner, providing a stringent test of our ability to model salt-dependent binding.
 \label{figure:gdccs}
-\vspace{-0.2in}
+\vspace{-0.1in}
 }
 \end{figure}
 
@@ -508,11 +505,12 @@ Regardless, the total number of binding affinities measured for the family is su
 
 \textbf{\underline{Aim 3: Develop model protein-ligand systems that isolate specific modeling challenges of drug targets.}}
 
-To drive real improvement in quantitative modeling of protein-ligand interactions, we need to be able to revisit the same systems again and again in order to gauge and drive progress -- in much the same way as participants in the Netflix Challenge had to genuinely improve their ability to predict user feedback to succeed~\cite{Bell:2010:CHANCE}.
-While D3R~\cite{Gathiaka:2016:JComputAidedMolDes} benchmarks accuracy of current methods on for targets of pharmaceutical interest, it relies on the release of pharmaceutical datasets, so performance each iteration varies widely depending on the difficulty of the target and the nature of the dataset.
-The large number complexities exhibited by D3R targets make it difficult to identify clear points of failure~\cite{ignjatovic_binding-affinity_2016, deng_large_2016, sunseri_d3r_2016, Gathiaka:2016:JComputAidedMolDes}.
-For example, while kinases are targets of great interest to drug discovery, blind Challenges involving kinase targets conflate issues of slow protein conformational dynamics~\cite{Lin:2013:Proc.Natl.Acad.Sci.}, protonation state effects of both protein~\cite{Shan:2009:PNAS} and ligand~\cite{Szakacs:2005:JournalofMedicinalChemistry,Grante:2014:SpectrochimicaActaPartA:MolecularandBiomolecularSpectroscopy}, charged ligands, and the modeling of complex divalent salt environments and phosphorylation state effects along with the standard challenges of conformational sampling and forcefield accuracy.
-Failure on such targets is thus often unexplained. 
+To drive real improvement in quantitative modeling of protein-ligand interactions, we need to be able to revisit the same systems again and again in order to gauge and drive progress---in much the same way as participants in the Netflix Challenge had to genuinely improve their ability to predict user feedback to succeed~\cite{Bell:2010:CHANCE}.
+While D3R~\cite{Gathiaka:2016:JComputAidedMolDes} evaluates the accuracy of current protein-ligand binding methods, performance in each Challenge iteration varies widely depending on the difficulty of the donated pharmaceutical data and nature of the dataset.
+The high complexities of D3R targets make it difficult to identify clear points of failure~\cite{ignjatovic_binding-affinity_2016, deng_large_2016, sunseri_d3r_2016, Gathiaka:2016:JComputAidedMolDes}.
+For example, while kinases are targets of great interest to drug discovery, blind Challenges involving kinase targets also conflate issues of slow protein conformational dynamics~\cite{Lin:2013:Proc.Natl.Acad.Sci.}, protonation state effects ofor protein~\cite{Shan:2009:PNAS} and ligand~\cite{Szakacs:2005:JournalofMedicinalChemistry,Grante:2014:SpectrochimicaActaPartA:MolecularandBiomolecularSpectroscopy}, charged ligands, and other challenges;
+% along with the standard challenges of conformational sampling and forcefield accuracy.
+failures on such targets are thus often unexplained. 
 
 Only by revisiting the same systems repeatedly will we benefit from the wisdom of the crowds in identifying specific problems and validating solutions to these problems. 
 Thus, here, {\bf we identify and develop model protein-ligand systems to \emph{isolate} specific accuracy-limiting effects in a series of SAMPL Challenges.}
@@ -547,19 +545,19 @@ Within two years, multiple laboratories developed solutions to this problem~\cit
 
 \textbf{SAMPL7-11 model protein-ligand Challenges.} 
 We will introduce a new model protein-ligand system each SAMPL (revisiting the prior SAMPL's system if this becomes too difficult), with multiple Challenges on each system (Figure~\ref{figure:timeline}) to allow iterative improvement and assessment.
-Our SAMPL7 data will focus on binding of small soluble drug fragments to one particular protein (below), with fragments also studied in Aim 1. 
+Our SAMPL7 data will focus on the binding of small soluble drug fragments to one particular protein (below), with fragments also studied in Aim 1. 
 However, maximizing gains in this area requires adapting subsequent Challenges based on deficiencies identified by prior Challenges, so our new informatics platform (below) will aid in system selection.
 
 \textbf{SAMPL7: Assessing predictive modeling of binding to multiple weak sites via measuring fragment binding to human serum albumin (HSA).}
-HSA, the most abundant blood plasma protein, has a remarkable ability to bind a great variety of small molecule drugs in multiple binding sites (Figure~\ref{figure:hsa-challenge}B)~\cite{Fasano:2005:IUBMBLife(InternationalUnionofBiochemistryandMolecularBiology:Life)}.
-As a result, HSA not only helps isolate the challenge of multiple weak ligands binding to a stable rigid protein, but it is also pharmacologically relevant because of its dramatic modulation of drug pharmacokinetics~\cite{Hall:2013:JournalofChemicalInformationandModeling}.
+HSA, the most abundant blood plasma protein, has a remarkable ability to bind a variety of small molecule drugs in multiple binding sites (Figure~\ref{figure:hsa-challenge}B)~\cite{Fasano:2005:IUBMBLife(InternationalUnionofBiochemistryandMolecularBiology:Life)}.
+Using HSA as a model receptor isolates the challenge of multiple weak ligands binding to a stable rigid protein that is also pharmacologically relevant because of its dramatic modulation of drug pharmacokinetics~\cite{Hall:2013:JournalofChemicalInformationandModeling}.
 HSA has at least \emph{eight} known binding sites, with numerous crystal structures available for drugs binding to two predominant sites (Site I and II)~\cite{Hall:2013:JournalofChemicalInformationandModeling}.
 Small soluble molecules resembling drug fragments are highly likely to bind to HSA ($\ge$90\% of such fragments, as detected by SPR~\cite{Elinder:2011:JournalofBiomolecularScreening}), providing an experimentally-tractable diverse set of ligands spanning several orders of magnitude in affinity~\cite{Elinder:2011:JournalofBiomolecularScreening}.
-As current methods such as alchemical free energy calculations assume a single well-defined binding site with high affinity~\cite{Gilson:1997:BiophysicalJournal}, this Challenge will allow the isolation of the effect of weak multiple binding from the majority of other confounding factors in protein-ligand binding.
-As HSA is relatively rigid, and computational methods already show some promise in computing binding affinities to HSA~\cite{Hall:2013:JournalofChemicalInformationandModeling,Lexa:2014:PLoSONE,Evoli:2016:Phys.Chem.Chem.Phys.}, this is an optimal model system for SAMPL7.
+As many current physical modeling methods assume a single well-defined binding site with high affinity~\cite{Gilson:1997:BiophysicalJournal}, this Challenge will allow the isolation of the effect of weak multiple binding from the majority of other confounding factors in protein-ligand binding.
+HSA is relatively rigid, and computational methods already show some promise in computing binding affinities to HSA~\cite{Hall:2013:JournalofChemicalInformationandModeling,Lexa:2014:PLoSONE,Evoli:2016:Phys.Chem.Chem.Phys.}, making this an optimal model system.
 
 Recombinant HSA will be expressed in \emph{E.~coli} and purified via refolding from inclusion bodies~\cite{Latta:1987:Bio/Technology}, then defatted at low pH~\cite{Lang:2015:BiotechnologyProgress} to ensure the resulting protein is free of the glycosylation and bound fatty acids found in plasma-isolated HSA~\cite{Lang:2015:BiotechnologyProgress}.
-Recombinant expression will also allow a mutant form of HSA (engineered via single-primer mutagenesis) to be fielded for SAMPL8 (Figure~\ref{figure:hsa-challenge}).
+Recombinant expression will allow mutant forms of HSA (engineered via single-primer mutagenesis) to be fielded for SAMPL8 (Figure~\ref{figure:hsa-challenge}).
 We will obtain a diverse library of at least 96 soluble drug-fragment-like molecules in pre-plated format as dry compound, and use our automated ITC pipeline (Figure~\ref{figure:hsa-challenge}C,D) to characterize overall binding affinities to HSA.
 The same ligands pre-plated in DMSO format will be used to conduct a separate set of fluorescence titration assays (monitoring tryptophan fluorescence quenching, Figure~\ref{figure:hsa-challenge}D) and competition assays with site-specific fluorescent probes (Figure~\ref{figure:hsa-challenge}B) to resolve site-specific affinities to Sites I and II.
 We will field several levels of Challenges, including Challenges focused on affinities to Sites I and II, as well as Challenges focused on predicting overall affinity and stoichiometry.
@@ -609,7 +607,7 @@ Each iteration will likely yield its own incremental benefits (e.g.. as in Figur
 \textbf{SAMPL blind Challenges.} Yearly SAMPL Challenges following our timeline (Figure~\ref{figure:timeline}) serve to advance the state-of-the-art.
 As is critical for such Challenges~\cite{Saez-Rodriguez:2016:NatRevGenet}, we will advertise aggressively via press releases, commentaries in relevant journals, CCL, e-mail, and Twitter. 
 As experimental data for each component becomes available and is curated, input files and Challenge details will be made available at least six months prior to the Challenge deadline; data not yet available at that time will be held for a subsequent Challenge (with the exception of three months for year 1 due to startup timescales).
-Advertising will feature our full timeline (which will also be available at \url{https://drugdesigndata.org/about/sampl}] along with details of plans) allowing planning of participation. 
+Advertising will feature our full timeline (which will also be available at \url{https://drugdesigndata.org/about/sampl} along with details of plans) allowing planning of participation. 
 Challenge data sets will now also be larger than prior SAMPLs, as frequently requested~\cite{Mobley:2017:eScholarship}. 
 
 
@@ -645,8 +643,8 @@ The most critical phase of each Challenge occurs after results are released.
 Typically, some participants uncover specific problems or solutions which are missed by others, so dissemination of these insights becomes critical to drive improvements.
 SAMPL workshops will occur after Challenges every two years (years 1, 3, and 5), co-hosted with D3R Grand Challenge workshops (see support letter)
 During the off years, discussion and dissemination of results will be via asynchronous means (below) and a ``virtual workshop'' consisting of talks and interaction over Google Hangouts or YouTube Live.
-For all workshops, virtual or otherwise, talks will be selected from abstracts written to describe what each participant learned from participating -- allowing us to prioritize presentations from those who have learned a great deal or done exceptionally well, rather than those who are simply testing an existing method with no new insight gained. 
-If the D3R effort is not renewed, we will run SAMPL workshops independently, controlling costs via the model we use for our Workshops on Free Energy Methods in Drug Design---specifically, most participants will pay their own way to the workshop, and we will seek pharmaceutical and software industry sponsorships to defray costs. 
+For all workshops, virtual or otherwise, talks will be selected from abstracts written to describe what each participant learned from participating---allowing us to prioritize presentations from those who have learned a great deal or done exceptionally well, rather than those who are simply testing an existing method with no new insight gained. 
+If the D3R effort is not renewed, we will run SAMPL workshops independently, controlling costs via the model we use for our Workshops on Free Energy Methods in Drug Design---specifically, most participants will pay their own way to the workshop, seeking pharmaceutical and software industry sponsorships to defray costs. 
 
 Rapid dissemination of results is critical so that new insights can be used in subsequent Challenges.
 We will continue to publish special issues of the \emph{Journal of Computer Aided Molecular Design} (JCAMD) collecting publications related to each year's SAMPL Challenges (see Letter of Support).
